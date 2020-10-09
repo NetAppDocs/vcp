@@ -25,12 +25,13 @@ QoSSIOC events are displayed from locally added clusters. In a Linked Mode envir
 * The QoSSIOC service must be configured and verified running using the QoSSIOC Settings page for the plug-in.
 * At least one datastore must have QoSSIOC automation enabled.
 
+
 .Steps
 
 . From the vCenter Plug-in, select *NetApp Element Configuration*.
 . Select *QoSSIOC Events*.
 
-= QoSSIOC event data
+== QoSSIOC event data
 
 * *Date*: The date and time of the QoSSIOC event.
 * *Datastore Name*: The user-defined datastore name.

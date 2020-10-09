@@ -15,6 +15,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 [.lead]
 You can review event logs for operations performed on the selected cluster along with cluster faults that might occur. Most errors are resolved automatically by the system. Other faults might require manual intervention.
 
+
 .Steps
 
 . From the vCenter Plug-in, select *NetApp Element Management*.
@@ -24,7 +25,7 @@ You can review event logs for operations performed on the selected cluster along
 * *Service ID*: The ID of the service that reported the event (if applicable). The value is zero  if the fault is not associated with a service.
 * *Node* or *Drive ID*: The ID of the node or drive that reported the event (if applicable).
 
-= Event types
+== Event types
 
 The system reports multiple types of events; each event is an operation that the system has completed. Events can be routine, normal events or events that require administrator attention. The Event Type column on the Event Log page indicates in which part of the system the event occurred.
 

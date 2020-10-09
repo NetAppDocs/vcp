@@ -15,12 +15,13 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 [.lead]
 You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
 
+
 .Steps
 
 . From the vCenter Plug-in, select *NetApp Element Management*.
 . Select *Reporting* > *iSCSI Sessions*.
 
-= iSCSI session data
+== iSCSI session data
 
 * *Node*: The node hosting the primary metadata partition for the volume.
 * *Account*: The name of the account that owns the volume. If value is blank, a dash (-) will be displayed.

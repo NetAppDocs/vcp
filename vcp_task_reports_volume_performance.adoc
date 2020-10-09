@@ -23,7 +23,7 @@ You can view performance information for all volumes in the selected cluster fro
 +
 The default refresh interval is 10 seconds if the cluster has less than 1000 volumes; otherwise, the default is 60 seconds. If you choose a value of Never, automatic page refreshing is disabled.
 
-= Volume performance data
+== Volume performance data
 
 * *Name*: Name of the volume when it was created.
 * *Account*: The name of the account assigned to the volume.

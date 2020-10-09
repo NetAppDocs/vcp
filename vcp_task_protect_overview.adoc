@@ -15,6 +15,7 @@ keywords: netapp, hci, vcp, vcenter, element, protect
 [.lead]
 You can ensure that copies of your data are created and stored where you need them by using the NetApp Element Plug-in for vCenter Server. To do this, you can create and manage volume and group snapshots, set up snapshot schedules, and create volume and cluster pair relationships for replication between remote clusters.
 
+
 Using the vCenter Plug-in, you can protect your data with the following methods:
 
 * link:vcp_task_protect_snapshots_volume.html[Create and manage volume snapshots]

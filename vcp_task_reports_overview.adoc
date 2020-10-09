@@ -20,7 +20,7 @@ You can view high-level cluster information for the selected cluster, including 
 . Select *Reporting*.
 . Monitor the data on the Overview page.
 
-= Reporting Overview page data
+== Reporting Overview page data
 
 The following data appears on the Reporting Overview page:
 
