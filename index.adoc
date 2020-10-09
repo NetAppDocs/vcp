@@ -1,0 +1,35 @@
+---
+sidebar: sidebar
+permalink: index.html
+summary: Use the NetApp Element Plug-in for vCenter Server (VCP), a plug-in to the VMware vSphere interface, to manage and monitor storage clusters running NetApp Element software.
+keywords: netapp, vcp, on premise, hybrid cloud control, hcc
+---
+
+= NetApp Element Plug-in for vCenter Server documentation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+NetApp Element Plug-in for vCenter Server (VCP) provides a plug-in to the VMware vSphere interface so that you can manage and monitor storage clusters running NetApp Element software.
+
+
+== Discover what's new
+
+* link:rn_vcp_whatsnew.html[What's new in NetApp Element Plug-in for vCenter Server]
+* http://docs.netapp.com/sfe-122/index.jsp[What's new in NetApp Element software^]
+* https://kb.netapp.com/app/answers/answer_view/a_id/1087586[What's new in management services for Element software and NetApp HCI^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[What's new in NetApp Element Plug-in for vCenter Server^]
+
+== Get started with NetApp Element Plug-in for vCenter Server
+
+* link:task_vcp_getstarted.html[NetApp VCP installation and deployment overview]
+* link:concept_vcp_product_overview.html[Review basic concepts]
+
+[discrete]
+== Find more information
+
+* https://www.netapp.com/us/documentation/hci.aspx[NetApp HCI Resources page^]
+* https://www.netapp.com/us/documentation/solidfire.aspx[NetApp SolidFire and Element Resources page^]

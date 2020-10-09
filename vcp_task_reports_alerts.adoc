@@ -1,0 +1,52 @@
+---
+sidebar: sidebar
+permalink: vcp_task_reports_alerts.html
+summary: Monitor alerts, which provide information, warnings, or errors that indicate how well the cluster is running by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance
+---
+
+= Monitor and respond to system alerts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can monitor alerts, which are information, warnings, or errors that indicate how well the cluster is running.
+
+You can view alerts on the Alerts page of the Reporting tab from the NetApp Element Management extension point.
+
+Alerts are cluster faults or errors and are reported as they occur. Most errors resolve themselves automatically; however, some might require manual intervention.
+
+After you resolve the issue, the system polls itself and identifies the issue as resolved. Then, all information about the alert including the date it was resolved is moved to the Resolved view.
+
+.Steps
+
+. From the vCenter Plug-in, select *NetApp Element Management*.
+. Select *Reporting* > *Alerts*.
+. Monitor the following cluster alert information:
+* *Severity*:
+** *warning*: A minor issue that might soon require attention. System upgrades are still allowed at this severity level.
+** *error*: A failure that might cause performance degradation or loss of high availability (HA). Errors generally should not affect service otherwise.
+** *critical*: A serious failure that affects service. The system is unable to serve API or client I/O requests. Operating in this state could lead to potential loss of data.
+** *bestPractice*: A recommended system configuration best practice is not being used.
+* *Type*
+** *node*: Fault affecting an entire node.
+** *drive*: Fault affecting an individual drive.
+** *cluster*: Fault affecting the entire cluster.
+** *service*: Fault affecting a service on the cluster.
+** *volume*: Fault affecting a volume on the cluster.
+* *Node*: Node ID for the node that this fault refers to. Included for node and drive faults, otherwise set to - (dash).
+* *Drive ID*: Drive ID for the drive that this fault refers to. Included for drive faults, otherwise set to - (dash).
+* *Error Code*: A descriptive code that indicates what caused the fault.
+* *Details*: Detailed description of the fault.
+* *Time*: This heading is visible only in the Active filter view. The date and time the fault was logged.
+* *Resolution Date*: This heading is visible only in the Resolved filter view. The date and time the fault was resolved.
+* *Alert error codes*: The system reports error codes with each alert on the Alerts page. Error codes help you determine what component of the system experienced the alert and why the alert was generated. See link:vcp_reference_reports_alert_errors.html[System alerts list].
+. To validate that the issue was resolved, look for it in the Resolved view.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

@@ -1,0 +1,74 @@
+---
+sidebar: sidebar
+permalink: vcp_task_reports_overview.html
+summary: View information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+keywords: netapp, hci, vcp, vcenter, element, monitor, report
+---
+
+= Monitor overall cluster health on the Overview page
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can view high-level cluster information for the selected cluster, including overall capacity, efficiency, and performance, on the Overview page of the Reporting tab from the NetApp Element Management extension point of the NetApp Element Plug-in for vCenter Server.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management*.
+. Select *Reporting*.
+. Monitor the data on the Overview page.
+
+= Reporting Overview page data
+
+The following data appears on the Reporting Overview page:
+
+* *Cluster Capacity*: The capacity remaining for block storage, metadata, and provisioned space. Move the pointer over the progress bar to see threshold information.
+* *Cluster Information*: Information specific to the cluster, such as cluster name, the version of NetApp Element software running on the cluster, MVIP and SVIP addresses, and the number of nodes, 4k IOPS, volumes, and sessions on the cluster.
+** *Cluster Name*: The name for the cluster.
+** *Storage IP (SVIP)*: The storage virtual IP address (SVIP).
+** *Management IP (MVIP)*: The management virtual IP address (MVIP).
+** *SVIP VLAN Tag*: The VLAN identifier for the master SVIP address.
+** *MVIP VLAN Tag*: The VLAN identifier for the master MVIP address.
+** *Node Count*: The number of active nodes in the cluster.
+** *Cluster 4K IOPS*: The number of 4096 (4K) blocks that can be read/written by the cluster in a second.
+** *Element OS Version*: The version of the NetApp Element software that the cluster is running.
+** *Volume Count*: The total number of volumes, excluding virtual volumes, on the cluster.
+** *Virtual Volume Count*: The total number of virtual volumes on the cluster.
+** *iSCSI Sessions*: The iSCSI sessions that are connected to the cluster.
+** *Fibre Channel Sessions*: The Fibre Channel sessions that are connected to the cluster.
+* *Cluster Efficiency*: Overall system capacity that is being utilized that takes into account thin provisioning, deduplication, and compression. The calculated benefit achieved on the cluster is calculated by comparing what the capacity utilization would be without thin provisioning, deduplication, and compression on a traditional storage device.
+* *Protection Domains*: A summary of protection domains monitoring for the cluster.
++
+NOTE: The protection domains feature is not compatible with two-node clusters.
+
+** *Protection Domains Monitoring Level*: The protection domain resiliency levels as selected by the user. Possible values are Chassis or Node. Green indicates that the cluster is capable of the selected monitoring level. Red indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
+** *Remaining Block Capacity*: Indicates the percentage of block capacity that is remaining to maintain the selected resiliency level.
+** *Metadata Capacity*: Indicates if there is sufficient metadata capacity to heal from failure while also maintaining undisrupted data availability. Normal (green) indicates that the cluster has sufficient metadata to maintain the selected monitoring level. Full (red) indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
+* *Provisioned IOPS*: A summary of how volume IOPS might be overprovisioned on the cluster. Provisioned IOPS calculations are determined by the sum of the total minimum IOPS, maximum IOPS, and burst IOPS for all volumes on the cluster divided by the maximum IOPS rated for the cluster.
++
+NOTE: For example, if there are four volumes in the cluster, each with minimum IOPS of 500, maximum IOPS of 15,000, and burst IOPS of 15,000, the total number of minimum IOPS would be 2,000, total maximum IOPS would be 60,000, and total burst IOPS would be 60,000. If the cluster is rated at maximum IOPS of 50,000,then the calculations would be the following:
+*Minimum IOPS*: 2000/50000 = 0.04x
+*Maximum IOPS*: 60000/50000 = 1.20x
+*Burst IOPS*: 60000/50000 = 1.20x 1.00x
+1.00x is the baseline at which provisioned IOPS is equal to the rated IOPS for the cluster.
+
+* *Cluster Health*: The hardware, capacity, and security components of the health of the cluster. Color codes indicate the following:
+** *Green*: Healthy
+** *Yellow*: Critical
+** *Red*: Error
+* *Cluster Input/Output*: The I/O currently running on the cluster. The values are calculated based on the previous I/O measurement against the current I/O measurements. These are the measurements shown in the graph:
+** *Total*: The combined read and write IOPS occurring in the system.
+** *Read*: The number of read IOPS occurring.
+** *Write*: The number of write IOPS.
+* *Cluster Throughput*: The bandwidth activity for read, write, and total bandwidth on the cluster:
+** *Total*: The total MB/s used for both read and write activity in the cluster.
+** *Read*: The read activity in MB/s for the cluster.
+** *Write*: The write activity in MB/s for the cluster.
+* *Performance Utilization*: The percentage of cluster IOPS being consumed. For example, a 250K IOPS cluster running at 100K IOPS would show 40% consumption.
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

@@ -1,0 +1,79 @@
+---
+sidebar: sidebar
+permalink: vcp_task_protect_snapshots_schedules.html
+summary: Create a snapshot schedule in vCenter task_mnode_configure_proxy_server.
+keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, schedule
+---
+
+= Create snapshot schedules in vCenter Server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can schedule a snapshot of a volume to occur automatically at specified date and time intervals. You can schedule either single volume snapshots or group snapshots to run automatically.
+
+When you create snapshot schedules, you can store the resulting snapshots on a remote NetApp Element storage system if the volume is being replicated.
+
+NOTE: Schedules are created using UTC+0 time. You may need to adjust the actual time a snapshot will run based on your time zone.
+
+* <<Create a snapshot schedule>>
+* <<View snapshot schedule details>>
+
+
+== Create a snapshot schedule
+You can schedule a snapshot of a volume or volumes to occur automatically at specified intervals.
+
+When you configure a snapshot schedule, you can choose from time intervals based on days of the week or days of the month. You can also specify the days, hours, and minutes before the next snapshot occurs.
+
+If you schedule a snapshot to run at a time period that is not divisible by 5 minutes, the snapshot will run at the next time period that is divisible by 5 minutes. For example, if you schedule a snapshot to run at 12:42:00 UTC, it will run at 12:45:00 UTC. You cannot schedule a snapshot to run at intervals of less than 5 minutes.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Click the *Schedules* sub-tab.
+. Click *Create Schedule*.
+. In the *Volume IDs CSV* field, enter a single volume ID or a comma-separated list of volume IDs to include in the snapshot schedule operation.
+. Enter a schedule name.
+. Select a schedule type and configure the details.
+. *Optional*: To repeat the schedule indefinitely, check *Recurring Schedule*.
+. *Optional*: In the New Snapshot Name field, enter a name for the new snapshot.
++
+NOTE: If you do not enter a name, the system creates a default snapshot name using the date and time the snapshot was created.
+
+. *Optional*: Check *Include snapshot in replication when paired* to ensure that the snapshot is replicated when the parent volume is paired.
+. Select one of the following as the retention period for the snapshot:
++
+* *Keep forever*: Retains the snapshot on the system indefinitely.
+* *Set retention period*: Determine a length of time (days, hours, or minutes) for the system to retain the snapshot.
++
+NOTE: When you set a retention period, you select a period that begins at the current time. (Retention is not calculated from the snapshot creation time.)
+
+. Click *OK*.
+
+== View snapshot schedule details
+You might want to verify that the snapshot was added.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to view is selected in the navigation bar.
+
+. Click the *Schedules* page.
+. View the schedule details:
++
+* *Frequency*: The frequency at which the schedule is run. The frequency can be set in hours and minutes, days of the week, or days of the month.
+* *Recurring*: Indicates if the schedule is to run only once or at regular intervals.
+* *Paused*: Identifies whether or not the schedule has been manually paused.
+* *Last Run Status*: Displays the outcome of the last schedule execution. Can be either Success or Failure.
+
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]

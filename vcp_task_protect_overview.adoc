@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: vcp_task_protect_overview.html
+summary: You can ensure that copies of your data are created and stored where you need them.
+keywords: netapp, hci, vcp, vcenter, element, protect
+---
+
+= Protect data with the NetApp Element Plug-in for vCenter Server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can ensure that copies of your data are created and stored where you need them by using the NetApp Element Plug-in for vCenter Server. To do this, you can create and manage volume and group snapshots, set up snapshot schedules, and create volume and cluster pair relationships for replication between remote clusters.
+
+Using the vCenter Plug-in, you can protect your data with the following methods:
+
+* link:vcp_task_protect_snapshots_volume.html[Create and manage volume snapshots]
+* link:vcp_task_protect_snapshots_group.html[Create and manage group snapshots]
+* link:vcp_task_protect_snapshots_schedules.html[Create snapshot schedules]
+* link:vcp_task_protect_remote_replication.html[Perform remote replication between clusters]
+
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
