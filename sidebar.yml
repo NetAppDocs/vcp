@@ -58,12 +58,10 @@ entries:
             url: task_vcp_validate_config_advisor.html
           - title: Configure IPMI for each node
             url: task_vcp_final_prep.html
-      - title: Manage NetApp VCP
+      - title: Manage the plug-in
         entries:
-          - title: Monitor your NetApp HCI system
-            entries:
-              - title: View resources on the HCC Dashboard
-                url: task_hcc_dashboard.html
+          - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
+            url: prereqs_vcp_witness_nodes.html
       - title: Monitor system Performance
         entries:
           - title: Monitor system performance with Reporting options
