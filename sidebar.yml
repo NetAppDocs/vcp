@@ -61,9 +61,9 @@ entries:
       - title: Manage the plug-in
         entries:
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
-            url: vcp_task_qossioc.adoc
+            url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
-            url: vcp_task_qos_policies.adoc
+            url: vcp_task_qos_policies.html
       - title: Monitor system Performance
         entries:
           - title: Monitor system performance with Reporting options
