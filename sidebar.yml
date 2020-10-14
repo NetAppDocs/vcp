@@ -61,7 +61,9 @@ entries:
       - title: Manage the plug-in
         entries:
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
-            url: prereqs_vcp_witness_nodes.html
+            url: vcp_task_qossioc.adoc
+          - title: Create and manage volume QoS policies
+            url: vcp_task_qos_policies.adoc
       - title: Monitor system Performance
         entries:
           - title: Monitor system performance with Reporting options

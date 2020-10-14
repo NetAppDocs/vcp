@@ -13,7 +13,7 @@ keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can set up QoSSIOC for individual volumes and datastores controlled by the plug-in. QoSSIOC is automatic quality of service (QoS) based on storage I/O control (SIOC) settings of all VMs on a standard datastore.
+You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. QoSSIOC is automatic quality of service (QoS) based on storage I/O control (SIOC) settings of all VMs on a standard datastore.
 
 The QoSSIOC service on the management node communicates with vCenter and monitors VM activity on datastores. QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. QoSSIOC is an optional feature and is not required for the plug-in to manage storage clusters.
 
@@ -26,9 +26,11 @@ For Linked Mode, the NetApp Element Plug-in for vCenter Server registers all vCe
 Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:
 
 * <<Configure QoSSIOC settings>>
+* <<Enabling QoSSIOC automation on datastores>>
 * <<Edit QoSSIOC settings>>
-* <<Clear QoSSIOC settings>>
 * <<Change the QoSSIOC service password>>
+* <<Disable QoSSIOC automation for a datastore>>
+* <<Clear QoSSIOC settings>>
 
 == Configure QoSSIOC settings
 You can configure QoSSIOC and vCenter credentials that will enable the QoSSIOC service to communicate with vCenter. After the QoSSIOC service is enabled, you can configure QoSSIOC performance on individual datastores.
@@ -58,6 +60,45 @@ NOTE: See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Sof
 * `Not Configured`: QoSSIOC settings have not been configured.
 * `Network Down`: vCenter cannot communicate with the QoSSIOC service on the network. The mNode and SIOC service might still be running.
 
+== Enabling QoSSIOC automation on datastores
+You can enable QoSSIOC automation and customize virtual machine disk (VMDK) performance levels for datastores after you enable the QoSSIOC service for the plug-in.
+
+.What you'll need
+You have <<Configure QoSSIOC settings,configured the QoSSIOC service settings>> on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
+
+.About this task
+QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols). QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration
+activity.
+
+IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for any volume QoS settings regardless of policy.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the status button in the *QoSSIOC Automation* column for the selected datastore.
++
+TIP: Ensure that the datastore does not have QoSSIOC integration enabled on another vCenter to prevent unexpected changes in QoS.
+
+. Select *Enable QoS & SIOC*.
+. Configure the *Burst Factor*.
++
+The burst factor is a multiple of the IOPS limit (SIOC) setting for the VMDK. If you change the default, make sure to use a burst factor value that will not exceed the maximum burst limit for a NetApp Element software-based volume when the burst factor value is multiplied by the IOPS limit for any VMDK.
+
+. (Optional) Select *Override Default QoS* and configure the settings.
++
+If the Override Default QoS setting is disabled for the datastore, the Shares and Limit IOPS values are automatically set based on the default SIOC settings of each VM.
++
+TIP: Do not customize the SIOC share limit without also customizing the SIOC IOPS limit.
+
++
+TIP: By default, the maximum SIOC disk shares are set to Unlimited. In a large VM environment such as VDI, this can lead to overcommitting maximum IOPS on the cluster. When you enable QoSSIOC, always check the Override Default QoS and set the Limit IOPS option to something reasonable.
+
+. Click *OK*.
++
+When you enable the QoSSIOC Automation for a datastore, the button changes from `Disabled` to `Enabled`.
+
 == Edit QoSSIOC settings
 You can change the QoSSIOC and vCenter credentials of an active Element management node.
 
@@ -85,17 +126,6 @@ mNode and SIOC service might still be running.
 +
 NOTE: After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.
 
-== Clear QoSSIOC settings
-You can clear the QoSSIOC configuration details for the Element storage management node (mNode). You must clear the settings for the configured management node before configuring the credentials for a new management node or changing the QoSSIOC service password. Clearing the QoSSIOC settings removes active QoSSIOC from the vCenter, cluster, and datastores.
-
-.Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
-. In the resulting menu, select *Clear*.
-. Confirm the action.
-+
-The *QoSSIOC Status* field displays `Not Configured` after the process is complete.
-
 == Change the QoSSIOC service password
 You can change the password for the QoSSIOC service on the management node using the registration utility UI.
 
@@ -117,7 +147,7 @@ The *QoSSIOC Status* field displays `Not Configured` after the process is comple
 +
 The registration utility UI displays the *Manage QoSSIOC Service Credentials* page for the plug-in.
 +
-GRAPHIC HERE!!!!!!
+image::vcp_registration_ui_qossioc[VCP registration utility menu]
 
 . Enter the following information:
 .. `Old Password`: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of `solidfire`.
@@ -139,6 +169,31 @@ Password* field.
 +
 The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with
 the service.
+
+== Disable QoSSIOC automation for a datastore
+You can disable QoSSIOC integration for a datastore.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the button in the *QoSSIOC Automation* column for the selected datastore.
+. Clear the *Enable QoS & SIOC* check box to disable the integration.
++
+Clearing the Enable QoS & SIOC check box automatically disables the Override Default QoS option.
+. Click *OK*.
+
+== Clear QoSSIOC settings
+You can clear the QoSSIOC configuration details for the Element storage management node (mNode). You must clear the settings for the configured management node before configuring the credentials for a new management node or changing the QoSSIOC service password. Clearing the QoSSIOC settings removes active QoSSIOC from the vCenter, cluster, and datastores.
+
+.Steps
+. Select *NetApp Element Configuration > QoSSIOC Settings*.
+. Click *Actions*.
+. In the resulting menu, select *Clear*.
+. Confirm the action.
++
+The *QoSSIOC Status* field displays `Not Configured` after the process is complete.
 
 [discrete]
 == Find more information
