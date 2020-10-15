@@ -25,6 +25,8 @@ entries:
             url: concept_vcp_security.html
           - title: Performance
             url: concept_vcp_performance.html
+          - title: QoSSIOC
+            url: vcp_concept_qossioc.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements
@@ -49,6 +51,8 @@ entries:
         entries:
           - title: NetApp VCP installation and deployment overview
             url: task_vcp_getstarted.html
+          - title: Configure QoSSIOC settings
+            url: vcp_task_configure_qossioc.html
           - title: Install H-series hardware
             url: task_vcp_installhw.html
             # For 20.2 consider putting multiple access topics or URLs
