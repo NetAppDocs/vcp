@@ -58,19 +58,19 @@ entries:
             url: task_vcp_validate_config_advisor.html
           - title: Configure IPMI for each node
             url: task_vcp_final_prep.html
-      - title: Manage NetApp VCP
+      - title: Manage storage
         entries:
           - title: Monitor your NetApp HCI system
             entries:
               - title: View resources on the HCC Dashboard
                 url: task_hcc_dashboard.html
-      - title: Monitor system Performance
+      - title: Monitor system performance
         entries:
           - title: Monitor system performance with Reporting options
             url: vcp_task_reports_intro.html
           - title: Monitor overall cluster health on the Overview page
             url: vcp_task_reports_overview.html
-          - title: Monitor to system alerts
+          - title: Monitor system alerts
             url: vcp_task_reports_alerts.html
             entries:
               - title: System alerts list
@@ -83,7 +83,7 @@ entries:
             url: vcp_task_reports_volume_performance.html
           - title: Monitor iSCSI sessions to determine connection status
             url: vcp_task_reports_isci.html
-          - title: Monitor QOSSIOC events to determine performance tiering
+          - title: Monitor VM performance with QOSSIOC events
             url: vcp_task_reports_qossioc.html
       - title: Protect data with the vCenter Plug-in
         entries:
