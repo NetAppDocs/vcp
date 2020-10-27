@@ -10,58 +10,54 @@ entries:
       - title: Concepts
         entries:
           - title: Product overview
-            url: concept_vcp_product_overview.html
+            url: vcp_concept_product_overview.html
+          - title: NetApp Element Configuration extension point
+            url: vcp_concept_extension_point.html 
           - title: Accounts
-            url: concept_vcp_accounts.html
-          - title: Data protection
-            url: concept_vcp_dataprotection.html
-          - title: Clusters
-            url: concept_vcp_clusters.html
-          - title: Nodes
-            url: concept_vcp_nodes.html
+            url: vcp_concept_accounts.html
+          - title: Protection domains in the vCenter Plug-in
+            url: vcp_concept_protection_domains.html
+          - title: Linked mode in the vCenter Plug-in
+            url: vcp_concept_linkedmode.html
           - title: Licensing
-            url: concept_vcp_licensing.html
-          - title: Security
-            url: concept_vcp_security.html
-          - title: Performance
-            url: concept_vcp_performance.html
+            url: vcp_concept_licensing.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements
-            url: prereqs_vcp_network_ports.html
+            url: vcp_concept_prereqs_network_ports.html
           - title: Network and switch requirements
-            url: prereqs_vcp_network_portsnetwork_switch.html
+            url: vcp_concept_prereqs_network_portsnetwork_switch.html
           - title: Network cable requirements
-            url: prereqs_vcp_network_cables.html
+            url: vcp_concept_prereqs_network_cables.html
           - title: IP address requirements
-            url: prereqs_vcp_ip_address.html
+            url: vcp_concept_prereqs_vcp_ip_address.html
           - title: Network configuration
-            url: prereqs_vcp_network_configuration.html
+            url: vcp_concept_prereqs_network_configuration.html
           - title: DNS and timekeeping requirements
-            url: prereqs_vcp_timekeeping.html
+            url: vcp_concept_prereqs_timekeeping.html
           - title: Environmental requirements
-            url: prereqs_vcp_environmental.html
+            url: vcp_concept_prereqs_environmental.html
           - title: Protection Domains
-            url: prereqs_vcp_protection_domains.html
+            url: vcp_concept_prereqs_protection_domains.html
           - title: Witness Node resource requirements for two-node storage clusters
-            url: prereqs_vcp_witness_nodes.html
+            url: vcp_concept_prereqs_witness_nodes.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:
           - title: NetApp VCP installation and deployment overview
-            url: task_vcp_getstarted.html
+            url: vcp_task_getstarted.html
           - title: Configure QoSSIOC settings
             url: vcp_task_configure_qossioc.html
           - title: Install H-series hardware
-            url: task_vcp_installhw.html
+            url: vcp_task_installhw.html
             # For 20.2 consider putting multiple access topics or URLs
           - title: Configure LACP for optimal storage performance
-            url: task_vcp_LACP_configuration.html
+            url: vcp_task_LACP_configuration.html
           - title: Validate your environment with Active IQ Config Advisor
             url: task_vcp_validate_config_advisor.html
           - title: Configure IPMI for each node
-            url: task_vcp_final_prep.html
+            url: vcp_task_final_prep.html
       - title: Manage storage with the vCenter Plug-in
         entries:
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
