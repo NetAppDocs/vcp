@@ -25,6 +25,8 @@ entries:
             url: concept_vcp_security.html
           - title: Performance
             url: concept_vcp_performance.html
+          - title: QoSSIOC
+            url: vcp_concept_qossioc.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements
@@ -49,6 +51,8 @@ entries:
         entries:
           - title: NetApp VCP installation and deployment overview
             url: task_vcp_getstarted.html
+          - title: Configure QoSSIOC settings
+            url: vcp_task_configure_qossioc.html
           - title: Install H-series hardware
             url: task_vcp_installhw.html
             # For 20.2 consider putting multiple access topics or URLs
@@ -58,15 +62,15 @@ entries:
             url: task_vcp_validate_config_advisor.html
           - title: Configure IPMI for each node
             url: task_vcp_final_prep.html
-      - title: Manage storage
+      - title: Manage storage with the vCenter Plug-in
         entries:
-          - title: Monitor your NetApp HCI system
-            entries:
-              - title: View resources on the HCC Dashboard
-                url: task_hcc_dashboard.html
-      - title: Monitor system performance
+          - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
+            url: vcp_task_qossioc.html
+          - title: Create and manage volume QoS policies
+            url: vcp_task_qos_policies.html
+      - title: Monitor system performance with Reporting features
         entries:
-          - title: Monitor system performance with Reporting options
+          - title: Monitor system performance with Report options
             url: vcp_task_reports_intro.html
           - title: Monitor overall cluster health on the Overview page
             url: vcp_task_reports_overview.html

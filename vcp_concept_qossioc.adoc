@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: vcp_concept_qossioc.html
+summary:
+keywords: netapp, quality of service, volume performance, sioc, storage I/O control, vcp
+---
+
+= QoSSIOC
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+The NetApp Element Plug-in for vCenter Server allows, as an optional setting, automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC]) settings of all VMs on a standard datastore. QoS and SIOC integration (QoSSIOC), which can be enabled for any standard datastore, runs a scan of all SIOC settings on all associated VMs.
+
+QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. The QoSSIOC service uses the sum of all SIOC reservations or shares and the sum of IOPS limits to determine minimum and maximum QoS for the underlying volume of each datastore. A configurable burst factor is also available.
+
+The following items should be considered before using QoSSIOC automation:
+
+* QoSSIOC automation and https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html#qos-policies[QoS policies] should not be used together. If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
+* QoSSIOC is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day.
+* QoSSIOC is less suitable for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. QoS policies are best suited for these environments.
+* QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols).
+
+NOTE: When SIOC settings for a VMDK are at the default shares level of Normal and the default IOPS limit of Unlimited, the Shares and Limit IOPS values contribute toward the total QoS for the underlying volume. If the SIOC settings for the VMDK are not at default levels, SIOC shares contribute to Min QoS and SIOC IOPS limit values contribute to Max QoS for the underlying volume.
+
+TIP: It is possible to set a reservation value through vSphere API. If a reservation value is set for a VMDK, shares are ignored and the reservation value is used instead.
+
+TIP: https://activeiq.solidfire.com[SolidFire Active IQ^] has a QoS recommendations page that provides advice on optimal configuration and set up of QoS settings.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
