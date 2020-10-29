@@ -12,7 +12,7 @@ entries:
           - title: Product overview
             url: vcp_concept_product_overview.html
           - title: NetApp Element Configuration extension point
-            url: vcp_concept_extension_point.html 
+            url: vcp_concept_extension_point.html
           - title: Accounts
             url: vcp_concept_accounts.html
           - title: Protection domains in the vCenter Plug-in
@@ -45,19 +45,8 @@ entries:
             url: vcp_concept_prereqs_witness_nodes.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:
-          - title: NetApp VCP installation and deployment overview
+          - title: Install and configure the NetApp Element Plug-in for vCenter Server
             url: vcp_task_getstarted.html
-          - title: Configure QoSSIOC settings
-            url: vcp_task_configure_qossioc.html
-          - title: Install H-series hardware
-            url: vcp_task_installhw.html
-            # For 20.2 consider putting multiple access topics or URLs
-          - title: Configure LACP for optimal storage performance
-            url: vcp_task_LACP_configuration.html
-          - title: Validate your environment with Active IQ Config Advisor
-            url: task_vcp_validate_config_advisor.html
-          - title: Configure IPMI for each node
-            url: vcp_task_final_prep.html
       - title: Manage storage with the vCenter Plug-in
         entries:
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
