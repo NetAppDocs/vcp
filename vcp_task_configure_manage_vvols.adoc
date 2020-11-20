@@ -15,10 +15,17 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 [.lead]
 You can view information and perform tasks for virtual volumes and their associated storage containers, protocol endpoints, bindings, and hosts from the NetApp Element Management extension point. You must enable Virtual Volume functionality for it to be available on the cluster.
 
+.What you'll need
+* The NetApp Element 10 or later cluster must be connected to an ESXi 6.5 or later environment that is compatible with VVols.
+* You are using vCenter 6.5 or later.
+
 === Setup tasks:
-. <<Enable virtual volumes functionality>>
-. <<Register the VASA provider>>
-. <<Create a storage container and associated VVol datastore>>
+You must perform initial configuration steps to use virtual volumes (VVols) in the NetApp Element Plug-in for vCenter Server.
+
+.Steps
+. Enable the virtual volumes feature on the NetApp Element cluster using the NetApp Element Configuration extension point. <<Enable virtual volumes functionality>>
+. Register the VASA provider with vCenter. <<Register the VASA provider>>
+. Create a storage container and associated VVol datastore using the NetApp Element Management extension point. <<Create a storage container and associated VVol datastore>>
 
 === Management tasks:
 * <<Monitor virtual volume resources>>
@@ -29,35 +36,97 @@ You can view information and perform tasks for virtual volumes and their associa
 
 == Enable virtual volumes functionality
 
+You must manually enable vSphere Virtual Volumes (VVols) functionality using the NetApp Element Configuration extension point. The Element system comes with VVols functionality disabled by default, and it is not automatically enabled as part of a new installation or upgrade. Enabling the VVols feature is a one-time configuration task.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Select a cluster from the list that you want to enable.
+. Click *Actions*.
+. In the resulting menu, click *Enable VVols*.
++
+CAUTION: After VVols functionality is enabled, it cannot be disabled. Enabling vSphere Virtual Volumes functionality permanently changes NetApp Element software configuration. You should only enable VVols functionality if your cluster is connected to a VMware ESXi VVols-compatible environment. You can only disable the VVols feature and restore the default settings by returning the cluster to the factory image.
+
+. Click *Yes* to confirm the Virtual Volumes configuration change.
++
+NOTE: When VVols functionality is enabled, the Element cluster starts the VASA Provider, opens port 8444 for VASA traffic, and creates protocol endpoints that can be discovered by vCenter and all ESXi hosts.
+
+. Click *Actions* for the selected cluster.
+. In the resulting menu, select *Details*.
+. Copy the VASA Provider URL from the *VASA Provider URL* field. You will use this URL to register the VASA Provider in vCenter.
+. See <<Register the VASA provider>> for the next steps.
+
 == Register the VASA provider
+
+You must register the NetApp Element VASA Provider with vCenter so that vCenter is aware of VVol functionality on the cluster. Registering the VASA provider with vCenter is a one-time configuration task.
+
+.What you'll need
+* You have enabled VVols functionality for the cluster.
+
+.About this task
+This procedure describes the steps available in version 6.7 of vSphere. Your vSphere user interface may differ slightly from what is described depending on the version of vSphere installed. For additional help, see VMware vCenter documentation.
+
+CAUTION: Do not register a NetApp Element VASA provider to more than one vCenter instance. The NetApp Element VASA provider can only be registered to a single vCenter due to limitations with how vCenter handles SSL. A single vCenter can have multiple NetApp Element clusters, but a cluster cannot be shared between two instances of vCenter.
+
+NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the NetApp Software Downloads site. The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
+
+.Steps
+. From vSphere Client Home, click *Hosts and Clusters*.
+. Select a vCenter instance on which to register the NetApp Element VASA Provider.
+. Click *Configure > Storage Providers*.
+. From *Storage Providers*, click the add icon.
+The *New Storage Provider* dialog box appears.
+. Enter the following information:
+* VASA Provider name.
+* VASA Provider URL.
++
+NOTE: The VASA Provider URL is provided to you when you enable VVols in the vCenter Plug-in. You can also find the URL in the following locations:
+- vCenter Plug-in: Select *NetApp Element Configuration > Clusters*, click *Actions* for the cluster you are enabling, and click *Details*.
+- Element UI: From https://MVIP/cluster, select *Cluster > Settings*.
+
+* Administrative account user name for the NetApp Element cluster.
+* Administrative account password for the NetApp Element cluster.
+. Click *OK* to add the VASA Provider.
+. Approve the thumbprint of the SSL cert when prompted.
+
+The NetApp Element VASA Provider should now be registered with a status of `Connected`.
+
+NOTE: Refresh the storage provider, if necessary, to show the current status of the provider after registering the provider for the first time. You can also verify that the provider is enabled in *NetApp Element Configuration > Clusters*. Click *Actions* for the cluster you are enabling and click *Details*.
 
 == Create a storage container and associated VVol datastore
 
+You can create storage containers from the VVols tab in the NetApp Element Management extension point. You must create at least one storage container to begin provisioning VVol-backed= virtual machines.
+
+.Before you begin
+* You have enabled VVols functionality for the cluster.
+* You have registered the NetApp Element VASA Provider for virtual volumes with vCenter.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
-. In the resulting menu, select *Configure*.
-. In the *Configure QoSSIOC Settings* dialog box, enter the following information:
-* *mNode IP Address/FQDN*: The IP address of the management node for the cluster that contains the QoSSIOC service.
-* *mNode Port*: The port address for the management node that contains the QoSSIOC service. The default port is 8443.
-* *QoSSIOC User ID*: The user ID for the QoSSIOC service. The QoSSIOC service default user ID is admin. For NetApp HCI, the user ID is the same one entered during installation using the NetApp Deployment Engine.
-* *QoSSIOC Password*: The password for the Element QoSSIOC service. The QoSSIOC service default password is `solidfire`. If you have not created a custom password, you can create one from the registration utility UI (`https://[management node IP]:9443`).
+. Select *NetApp Element Management > VVols*.
 +
-NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] article.
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-* *vCenter User ID*: The user name for the vCenter admin with full Administrator role privileges.
-* *vCenter Password*: The password for the vCenter admin with full Administrator role privileges.
-. Click *OK*.
-The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
+. Click the *Storage Containers* sub-tab.
+. Click *Create Storage Container*.
+. Enter storage container information in the *Create a New Storage Container* dialog box:
+.. Enter a name for the storage container.
 +
-NOTE: See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] to troubleshoot if the status is any of the following:
-* `Down`: QoSSIOC is not enabled.
-* `Not Configured`: QoSSIOC settings have not been configured.
-* `Network Down`: vCenter cannot communicate with the QoSSIOC service on the network. The mNode and SIOC service might still be running.
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
 
+.. Configure initiator and target secrets for CHAP.
 +
-After the QoSSIOC service is enabled, you can configure QoSSIOC performance on individual datastores.
+TIP: Leave the CHAP Settings fields blank to automatically generate secrets.
+
+.. Enter a name for the datastore. The *Create a datastore* check box is selected by default.
++
+NOTE: A VVol datastore is required to use the storage container in vSphere.
+
+.. Select one or more hosts for the datastore.
++
+NOTE: If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
+
+.. Click *OK*.
+. Verify that the new storage container appears in the list in the *Storage Containers* sub-tab. Because a NetApp Element account ID is created automatically and assigned to the storage container, it is not necessary to manually create an account.
+. Verify that the associated datastore has also been created on the selected host in vCenter.
 
 [discrete]
 == Find more information
