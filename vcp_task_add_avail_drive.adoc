@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: vcp_task_add_avail_drive.html
 summary: You can add an available drive to the storage cluster using the plug-in.
-keywords: netapp, set up qossioc, configure qos, quality of service, qos, sioc, vcp, vcenter, element
+keywords: netapp, drives, add, vcp, vcenter, element
 ---
 
 = Add available drives to a cluster
