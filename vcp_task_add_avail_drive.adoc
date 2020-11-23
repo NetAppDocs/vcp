@@ -17,6 +17,7 @@ You can add drives to a cluster using the NetApp Element Management extension po
 
 .About this task
 Drives are not displayed in the Available list when the following conditions exist:
+
 * Drives are in an `Active`, `Removing`, `Erasing`, or `Failed` state.
 * The node of which the drive is a part is in `Pending` state.
 
