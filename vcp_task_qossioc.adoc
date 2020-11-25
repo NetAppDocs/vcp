@@ -13,7 +13,7 @@ keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. link:vcp_task_configure_qossioc.html[QoSSIOC] is automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC]) settings of all VMs on a standard datastore.
+You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. link:vcp_task_configure_qossioc.html[QoSSIOC] is automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC^]) settings of all VMs on a standard datastore.
 
 The QoSSIOC service on the management node communicates with vCenter and monitors VM activity on datastores. QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. QoSSIOC is an optional feature and is not required for the plug-in to manage storage clusters.
 
@@ -25,12 +25,12 @@ For Linked Mode, the NetApp Element Plug-in for vCenter Server registers all vCe
 
 Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:
 
-=== Setup tasks:
-* link:vcp_task_configure_qossioc.html[Configure QoSSIOC settings]
+=== Setup tasks
+* link:vcp_task_configure_qossioc.html[Configure QoSSIOC settings^]
 * <<Enabling QoSSIOC automation on datastores>>
 
-=== Management tasks:
-* link:vcp_task_reports_qossioc.html#qossioc-event-data[Monitor VM performance tiering with QoSSIOC events]
+=== Management tasks
+* link:vcp_task_reports_qossioc.html#qossioc-event-data[Monitor VM performance tiering with QoSSIOC events^]
 * <<Edit QoSSIOC settings>>
 * <<Change the QoSSIOC service password>>
 * <<Disable QoSSIOC automation for a datastore>>
@@ -109,7 +109,7 @@ You can change the password for the QoSSIOC service on the management node using
 * Your management node is powered on.
 
 .About this task
-This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <<Configure QoSSIOC settings, QoSSIOC Settings>> page of the NetApp Element Configuration extension point.
+This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <<Edit QoSSIOC settings, QoSSIOC Settings>> page of the NetApp Element Configuration extension point.
 
 .Steps
 . Select *NetApp Element Configuration > QoSSIOC Settings*.
@@ -123,10 +123,10 @@ The *QoSSIOC Status* field displays `Not Configured` after the process is comple
 +
 The registration utility UI displays the *Manage QoSSIOC Service Credentials* page for the plug-in.
 +
-image::vcp_registration_ui_qossioc[VCP registration utility menu]
+image::vcp_registration_ui_qossioc.png[VCP registration utility menu]
 
 . Enter the following information:
-.. `Old Password`: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of `solidfire`.
+.. *Old Password*: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of `solidfire`.
 +
 NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] article.
 
@@ -139,12 +139,10 @@ NOTE: The QoSSIOC service automatically restarts after you submit changes.
 . In your vSphere Web Client, select *NetApp Element Configuration > QoSSIOC Settings*.
 . Click *Actions*.
 . In the resulting menu, select *Configure*.
-. In the *Configure QoSSIOC Settings* dialog box, enter the new password in the *QoSSIOC
-Password* field.
+. In the *Configure QoSSIOC Settings* dialog box, enter the new password in the *QoSSIOC Password* field.
 . Click *OK*.
 +
-The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with
-the service.
+The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
 
 == Disable QoSSIOC automation for a datastore
 You can disable QoSSIOC integration for a datastore.
