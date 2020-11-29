@@ -21,7 +21,7 @@ You have stopped I/O and disconnected all iSCSI sessions if you are restarting m
 .About this task
 To restart the cluster, you can select all cluster nodes and perform a restart.
 
-CAUTION: This method restarts all networking services on a node, causing temporary loss of networking connectivity.
+IMPORTANT: This method restarts all networking services on a node, causing temporary loss of networking connectivity.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
