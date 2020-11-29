@@ -1,0 +1,72 @@
+---
+sidebar: sidebar
+permalink: vcp_task_create_vlan.html
+summary: You can create a new virtual network in the cluster configuration using the plug-in.
+keywords: netapp, VLANs, create, vcp, vcenter, element
+---
+
+= Create a VLAN
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add a new virtual network to a cluster configuration to enable a multi-tenant environment connection to a cluster running NetApp Element software.
+
+.What you'll need
+
+* ESXi hosts have a single iSCSI software adapter.
+* Hosts or switches are configured for the VLAN.
+* You have identified the block of IP addresses that will be assigned to the virtual networks on the cluster nodes.
+* You have identified a storage network IP (SVIP) address that will be used as an endpoint for all NetApp Element storage traffic.
+
+IMPORTANT: The following criteria should be considered for this configuration:
+* VRF can only be enabled at the time of creating a VLAN. If you want to switch back to non-VRF, you must delete and re-create the VLAN.
+* VLANs that are not VRF-enabled require initiators to be in the same subnet as the SVIP.
+* VLANs that are VRF-enabled do not require initiators to be in the same subnet as the SVIP, and routing is supported.
+
+.About this task
+When a virtual network is added, an interface for each node is created and each requires a virtual network IP address. The number of IP addresses you specify when creating a new virtual network must be equal to or greater than the number of nodes in the cluster. Virtual network addresses are bulk provisioned by and assigned to individual nodes automatically. You do not need to manually assign virtual network addresses to the nodes in the cluster.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Network* sub-tab.
+. Select *Create VLAN*.
+. In the *Create VLAN* dialog box, enter a name for the VLAN.
+. Enter an integer for the VLAN tag.
+. Enter the Storage Virtual IP (SVIP) address for the storage cluster.
+. Adjust the netmask, as needed.
++
+The default is `255.255.255.0`.
+. Optional: Enter a description for the VLAN.
+. Optional: Select the *Enable Virtual Routing and Forwarding* check box.
++
+NOTE: Virtual routing and forwarding (VRF) allows multiple instances of a routing table to exist in a router and work simultaneously. This functionality is available for storage networks only.
+
+.. Enter an IP address of a gateway of the virtual network.
+. Select the hosts that you want to include in the VLAN.
++
+NOTE: Note: If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
+
+. Configure the IP address blocks for the storage nodes as follows:
++
+NOTE: Note: A minimum of one IP address block must be created.
+
+.. Click *Create Block*.
+.. Enter the starting address for the IP range.
+.. Enter the number of IP addresses to include in the address block.
++
+NOTE: The total number of IP addresses must match the number of nodes in the storage cluster.
+
+.. Click outside the entry to accept the values.
+. Click *OK* to create the VLAN.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
