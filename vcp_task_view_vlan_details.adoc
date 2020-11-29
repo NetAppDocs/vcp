@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: vcp_task_view_vlan_details.html
+summary: You can view detailed information about existing VLANs using the plug-in.
+keywords: netapp, vlans, view, details, vcp, vcenter, element
+---
+
+= View virtual network details
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+ You can view network information for VLANs on the Network page of the Cluster tab from the NetApp Element Management extension point.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+. Select the *Active* view.
+. View the details of the nodes in the storage cluster.
++
+You can view information such as the ID and name of each VLAN, the tag associated with each VLAN, the SVIP assigned to each VLAN, and the IP range used for each VLAN.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
