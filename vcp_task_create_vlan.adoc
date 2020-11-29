@@ -22,10 +22,14 @@ You can add a new virtual network to a cluster configuration to enable a multi-t
 * You have identified the block of IP addresses that will be assigned to the virtual networks on the cluster nodes.
 * You have identified a storage network IP (SVIP) address that will be used as an endpoint for all NetApp Element storage traffic.
 
-IMPORTANT: The following criteria should be considered for this configuration:
+[IMPORTANT]
+======================
+The following criteria should be considered for this configuration:
+
 * VRF can only be enabled at the time of creating a VLAN. If you want to switch back to non-VRF, you must delete and re-create the VLAN.
 * VLANs that are not VRF-enabled require initiators to be in the same subnet as the SVIP.
 * VLANs that are VRF-enabled do not require initiators to be in the same subnet as the SVIP, and routing is supported.
+======================
 
 .About this task
 When a virtual network is added, an interface for each node is created and each requires a virtual network IP address. The number of IP addresses you specify when creating a new virtual network must be equal to or greater than the number of nodes in the cluster. Virtual network addresses are bulk provisioned by and assigned to individual nodes automatically. You do not need to manually assign virtual network addresses to the nodes in the cluster.
