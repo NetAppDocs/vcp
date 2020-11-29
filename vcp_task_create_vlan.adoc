@@ -5,7 +5,7 @@ summary: You can create a new virtual network in the cluster configuration using
 keywords: netapp, VLANs, create, vcp, vcenter, element
 ---
 
-= Create a VLAN
+= Create a virtual network
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -90,9 +90,9 @@ entries:
                 url: vcp_task_restart_node.html
               - title: Shut down a node
                 url: vcp_task_shut_down_node.html
-          - title: Manage VLANs
+          - title: Manage virtual networks
             entries:
-              - title: Create a VLAN
+              - title: Create a virtual network
                 url: vcp_task_create_vlan.html
               - title: View virtual network details
                 url: vcp_task_view_vlan_details.html
