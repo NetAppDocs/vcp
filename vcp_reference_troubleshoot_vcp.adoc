@@ -37,7 +37,7 @@ Registration shows as successful, but the plug-in icons are not visible from the
 NOTE: Note: You might need to correct an unreachable or bad URL. Update the plug-in registration or unregister and register the plug-in again with a corrected URL. Failure to download the ZIP can also occur if you specified an HTTP URL without changing the `allowHTTP` setting.
 
 * Verify networking ports. Ensure the management node is reachable from vCenter bidirectionally on the required ports.
-* Check the vCenter’s MOB extension record (`https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList[%22com.solidfire%22].server`) that contains the download location URL for the plug-in ZIP:
+* Check the vCenter’s MOB extension record (`https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList["com.solidfire"].server`) that contains the download location URL for the plug-in ZIP:
 . Paste the URL into a browser.
 . Verify that the plug-in ZIP can be downloaded.
 +
@@ -51,7 +51,7 @@ NOTE: Note: You might need to correct an unreachable or bad URL. Update the plug
 
 .Description
 
-When using the registration utility, there is an error registering the plug-in against the vCenter server. A plug-in with the key com.solidfire is already installed.
+When using the registration utility, there is an error registering the plug-in against the vCenter server. A plug-in with the key `com.solidfire` is already installed.
 
 .Corrective Action
 
@@ -61,7 +61,7 @@ In the registration utility, use Update Plug-in instead of Register Plug-in.
 
 .Description
 
-When using the registration utility, there is an error updating the plug-in against the vCenter server. A plug-in with the key com.solidfire is not installed for the update.
+When using the registration utility, there is an error updating the plug-in against the vCenter server. A plug-in with the key `com.solidfire` is not installed for the update.
 
 .Corrective Action
 
@@ -83,7 +83,6 @@ During a Windows vCenter Server upgrade from version 6.0 to 6.5, you see a warni
 . Reboot the vCenter.
 . Register the plug-in.
 . Log in to the vSphere Web Client.
-
 
 == Removing plug-in completes successfully but icons remain
 
