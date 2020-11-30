@@ -1,0 +1,123 @@
+---
+sidebar: sidebar
+permalink: vcp_reference_troubleshoot_vcp.html
+summary: You can learn about some of the common issues with the plug-in and steps to resolve them.
+keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, alert, cluster, performance
+---
+
+= Troubleshoot the vCenter Plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: media/
+
+[.lead]
+You need to be aware of some of the common issues with the NetApp Element Plug-in for vCenter Server and the steps to resolve them.
+
+== Plug-in registration successful but icons do not appear in web client
+
+.Description
+
+Registration shows as successful, but the plug-in icons are not visible from the vSphere Web Client.
+
+
+
+.Corrective Action
+
+* Log out of the vSphere Web Client and log in again. Closing and re-opening your browser may be required.
+* Clear your browser cache.
+* From vCenter, restart the vSphere Web Client Service from the Services menu within Windows Administrative Tools or reboot vCenter.
+* Ensure that you have all required default administrative privileges associated with the vCenter Administrator role.
+* Check that the plug-in ZIP file successfully downloaded to vCenter:
+. Open `vsphere_client_virgo.log` in vCenter. vCenter log files for versions 6.5 and 6.7 are in the following locations:
++
+** Flash installations: /var/log/vmware/vsphere-client/logs/vsphere_client_virgo.log
+** HTML5 installations: /var/log/vmware/vsphere-ui/logs/vsphere_client_virgo.log
+. If a failure message indicates that the ZIP download failed, download the ZIP again.
++
+NOTE: Note: You might need to correct an unreachable or bad URL. Update the plug-in registration or unregister and register the plug-in again with a corrected URL. Failure to download the ZIP can also occur if you specified an HTTP URL without changing the `allowHTTP` setting.
+
+* Verify networking ports. Ensure the management node is reachable from vCenter bidirectionally on the required ports.
+* Check the vCenter’s MOB extension record (`https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList[%22com.solidfire%22].server`) that contains the download location URL for the plug-in ZIP:
+. Paste the URL into a browser.
+. Verify that the plug-in ZIP can be downloaded.
++
+** If the plug-in ZIP can be downloaded, proceed to the next step.
+** If the plug-in ZIP cannot be downloaded, check for networking issues between vCenter Server and the management node.
+. If the plug-in cannot be downloaded, compare the serverThumbprint in the MOB record with the certificate SHA-1 for the ZIP URL that is displayed in the browser:
+.. If the registration record in the MOB has an incorrect or stale URL or SHA-1, unregister the plug-in and register the plug-in again.
+.. If the problem persists and the ZIP is unreachable, inspect the ZIP URL to determine if there is an issue with the management node address used. In some cases, it might be necessary to customize a URL using the registration utility for the plug-in so that the ZIP file can be downloaded.
+
+== Error registering plug-in using Registration UI
+
+.Description
+
+.Corrective Action
+
+
+== Error updating plug-in using Registration UI
+
+.Description
+
+.Corrective Action
+
+== Error message that NetApp extension cannot be upgraded
+
+.Description
+
+.Corrective Action
+
+== Removing plug-in completes successfully but icons remain
+
+.Description
+
+.Corrective Action
+
+== Plug-in cannot be unregistered or removed after admin password change
+
+.Description
+
+.Corrective Action
+
+== Plug-in management tasks fail or volumes are not accessible to ESXi host
+
+.Description
+
+.Corrective Action
+
+== Failure occurs during vCenter Plug-in use on Firefox 59.0.2 browsers
+
+.Description
+
+.Corrective Action
+
+== Delete datastore operation fails
+
+.Description
+
+.Corrective Action
+
+== Cluster pair cannot connect using a pairing key
+
+.Description
+
+.Corrective Action
+
+== Error message for QoSSIOC status
+
+.Description
+
+.Corrective Action
+
+== QoSSIOC service shown as available but is unavailable
+
+.Description
+
+.Corrective Action
+
+== QoSSIOC is enabled for datastore but unavailable
+
+.Description
+
+.Corrective Action

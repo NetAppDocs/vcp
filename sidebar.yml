@@ -133,5 +133,9 @@ entries:
             url: vcp_task_protect_snapshots_schedules.html
           - title: Perform remote replication between clusters
             url: vcp_task_protect_remote_replication.html
+      - title: Troubleshooting
+        entries:
+          - title: Troubleshoot the vCenter Plug-in
+            url: vcp_reference_troubleshoot_vcp.html
       - title: Legal notices
         url: reference_notices_vcp.html
