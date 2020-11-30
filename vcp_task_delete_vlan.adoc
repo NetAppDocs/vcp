@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: vcp_task_delete_vlan.html
+summary: You can remove an existing virtual network from the cluster configuration using the plug-in.
+keywords: netapp, VLANs, remove, delete, vcp, vcenter, element
+---
+
+= Delete a virtual network
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can permanently delete a VLAN object and its block of IPs. Address blocks that were assigned to the VLAN are disassociated with the virtual network and can be reassigned to another virtual network.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Network* sub-tab.
+. Select the check box for the VLAN you want to delete.
+. Click *Actions*.
+. In the resulting menu, click *Delete*.
+. Confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

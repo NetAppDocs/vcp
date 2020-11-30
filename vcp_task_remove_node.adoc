@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: vcp_task_remove_node.html
+summary: You can remove a node from the storage cluster using the plug-in.
+keywords: netapp, nodes, remove, details, vcp, vcenter, element
+---
+
+= Remove a node from a cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can remove nodes from a cluster without service interruption when their storage is no longer needed or they require maintenance.
+
+.What you'll need
+You have removed all the drives in the node from the cluster. You cannot remove a node until the `RemoveDrives` process has completed and all data has been migrated away from the node.
+
+.About this task
+At least two Fibre Channel nodes are required for Fibre Channel connectivity in a NetApp Element cluster. If only one Fibre Channel node is connected, the system triggers alerts in the Event Log until you add another Fibre Channel node to the cluster, even though all Fibre Channel network traffic continues to operate with only one Fibre Channel node.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+. To remove one or more nodes, perform the following steps:
+.. From the *Active* view, select the check box for each node you want to remove.
+.. Click *Actions*.
+.. Select *Remove*.
+. Confirm the action.
++
+Any nodes removed from a cluster appear in the list of Pending nodes.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
