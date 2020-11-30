@@ -16,7 +16,7 @@ keywords: netapp, VLANs, edit, vcp, vcenter, element
 You can change VLAN attributes, such as VLAN name, netmask, and size of the IP address blocks.
 
 .About this task
- The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can only be modified for VRF VLANs. If any iSCSI, remote replication, or other network sessions exist, the modification might fail.
+The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can only be modified for VRF VLANs. If any iSCSI, remote replication, or other network sessions exist, the modification might fail.
 
 .Steps
 . Select *NetApp Element Management > Cluster*.

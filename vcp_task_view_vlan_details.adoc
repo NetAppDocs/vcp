@@ -13,7 +13,7 @@ keywords: netapp, vlans, view, details, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
- You can view network information for VLANs on the Network page of the Cluster tab from the NetApp Element Management extension point.
+You can view network information for VLANs on the Network page of the Cluster tab from the NetApp Element Management extension point.
 
 .Steps
 . Select *NetApp Element Management > Cluster*.
