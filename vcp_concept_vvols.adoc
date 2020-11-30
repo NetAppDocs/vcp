@@ -5,7 +5,7 @@ summary:
 keywords: netapp, vvol, virtual volume, storage container, protocol endpoint, vcp, vcenter, element
 ---
 
-= Virtual volumes (VVols)
+= Virtual volumes (vVols)
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,8 +13,7 @@ keywords: netapp, vvol, virtual volume, storage container, protocol endpoint, vc
 :imagesdir: ../media/
 
 [.lead]
-vSphere Virtual Volumes is a storage paradigm for VMware that moves much of the storage management for vSphere from the storage system to VMware vCenter.
-With Virtual Volumes (vVols), you can allocate storage according to the  requirements of individual virtual machines.
+vSphere Virtual Volumes is a storage paradigm for VMware that moves much of the storage management for vSphere from the storage system to VMware vCenter. With Virtual Volumes (vVols), you can allocate storage according to the  requirements of individual virtual machines.
 
 == Bindings
 The NetApp Element cluster chooses an optimal protocol endpoint, creates a binding that associates the ESXi host and virtual volume with the protocol endpoint, and returns the binding to the ESXi host. After it is bound, the ESXi host can perform I/O operations with the bound virtual volume.

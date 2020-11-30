@@ -27,6 +27,8 @@ entries:
             url: concept_vcp_performance.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
+          - title: Virtual volumes (vVols)
+            url: vcp_concept_vvols.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements

@@ -13,7 +13,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 :imagesdir: ../media/
 
 [.lead]
-You can enable VMware vSphere link:vcp_concept_vvols.html[Virtual Volumes (VVols)] functionality and set up a virtual volumes configuration on a NetApp Element storage cluster. The Element Plug-in for vCenter Server monitors performance and gives you options to manage virtual volumes, link:vcp_concept_vvols.html#Storage-containers[storage containers], link:vcp_concept_vvols.html#Protocol-endpoints[protocol endpoints], and hosts from the NetApp Element Management extension point.
+You can enable VMware vSphere link:vcp_concept_vvols.html[Virtual Volumes (VVols)] functionality and set up a virtual volumes configuration on a NetApp Element storage cluster. The Element Plug-in for vCenter Server monitors performance and gives you options to manage virtual volumes, link:vcp_concept_vvols.html#storage-containers[storage containers], link:vcp_concept_vvols.html#protocol-endpoints[protocol endpoints], and hosts from the NetApp Element Management extension point.
 
 .What you'll need
 * You are using a NetApp Element 10 or later cluster that is connected to an ESXi 6.5 or later environment with VVols compatibility.
