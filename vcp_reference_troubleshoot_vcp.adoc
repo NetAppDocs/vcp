@@ -1,0 +1,185 @@
+---
+sidebar: sidebar
+permalink: vcp_reference_troubleshoot_vcp.html
+summary: You can learn about some of the common issues with the plug-in and steps to resolve them.
+keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, alert, cluster, performance
+---
+
+= Troubleshoot the vCenter Plug-in
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: media/
+
+[.lead]
+You need to be aware of some of the common issues with the NetApp Element Plug-in for vCenter Server and the steps to resolve them.
+
+== Plug-in registration successful but icons do not appear in web client
+
+.Description
+
+Registration shows as successful, but the plug-in icons are not visible from the vSphere Web Client.
+
+.Corrective Action
+
+* Log out of the vSphere Web Client and log in again. Closing and re-opening your browser may be required.
+* Clear your browser cache.
+* From vCenter, restart the vSphere Web Client Service from the Services menu within Windows Administrative Tools or reboot vCenter.
+* Ensure that you have all required default administrative privileges associated with the vCenter Administrator role.
+* Check that the plug-in ZIP file successfully downloaded to vCenter:
+. Open `vsphere_client_virgo.log` in vCenter. vCenter log files for versions 6.5 and 6.7 are in the following locations:
++
+** Flash installations: `/var/log/vmware/vsphere-client/logs/vsphere_client_virgo.log`
+** HTML5 installations: `/var/log/vmware/vsphere-ui/logs/vsphere_client_virgo.log`
+. If a failure message indicates that the ZIP download failed, download the ZIP again.
++
+NOTE: Note: You might need to correct an unreachable or bad URL. Update the plug-in registration or unregister and register the plug-in again with a corrected URL. Failure to download the ZIP can also occur if you specified an HTTP URL without changing the `allowHTTP` setting.
+
+* Verify networking ports. Ensure the management node is reachable from vCenter bidirectionally on the required ports.
+* Check the vCenter’s MOB extension record (`https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList["com.solidfire"].server`) that contains the download location URL for the plug-in ZIP:
+. Paste the URL into a browser.
+. Verify that the plug-in ZIP can be downloaded.
++
+** If the plug-in ZIP can be downloaded, proceed to the next step.
+** If the plug-in ZIP cannot be downloaded, check for networking issues between vCenter Server and the management node.
+. If the plug-in cannot be downloaded, compare the `serverThumbprint` in the MOB record with the certificate SHA-1 for the ZIP URL that is displayed in the browser:
+.. If the registration record in the MOB has an incorrect or stale URL or SHA-1, unregister the plug-in and register the plug-in again.
+.. If the problem persists and the ZIP is unreachable, inspect the ZIP URL to determine if there is an issue with the management node address used. In some cases, it might be necessary to customize a URL using the registration utility for the plug-in so that the ZIP file can be downloaded.
+
+== Error registering plug-in using Registration UI
+
+.Description
+
+When using the registration utility, there is an error registering the plug-in against the vCenter server. A plug-in with the key `com.solidfire` is already installed.
+
+.Corrective Action
+
+In the registration utility, use *Update Plug-in* instead of *Register Plug-in*.
+
+== Error updating plug-in using Registration UI
+
+.Description
+
+When using the registration utility, there is an error updating the plug-in against the vCenter server. A plug-in with the key `com.solidfire` is not installed for the update.
+
+.Corrective Action
+
+In the registration utility, use *Register Plug-in* instead of *Update Plug-in*.
+
+== Error message that NetApp extension cannot be upgraded
+
+.Message
+----
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Could not open connection.
+----
+
+.Description
+During a Windows vCenter Server upgrade from version 6.0 to 6.5, you see a warning that the NetApp Extension cannot be upgraded or may not work with the new vCenter Server. After you complete the upgrade and log in to the vSphere Web Client, the error occurs when you select a vCenter Plug-in extension point. This error occurs because the directory that stores the runtime database has changed from version 6.0 to 6.5. The vCenter Plug-in is unable to create the needed files for runtime.
+
+.Corrective Action
+
+. Unregister the plug-in.
+. Remove plug-in files.
+. Reboot the vCenter.
+. Register the plug-in.
+. Log in to the vSphere Web Client.
+
+== Removing plug-in completes successfully but icons remain
+
+.Description
+Removing vCenter Plug-in package files completed successfully, but plug-in icons are still visible in the vSphere Web Client.
+
+.Corrective Action
+Log out of the vSphere Web Client and log in again. Closing and re-opening your browser might be required. If logging out of vSphere Web Client does not resolve the issue, it might be necessary to reboot the vCenter server web services. Additionally, other users might have existing sessions. All user sessions must be closed.
+
+== Plug-in cannot be unregistered or removed after admin password change
+
+.Description
+After the admin password for the vCenter that was used to register the plug-in is changed, the vCenter Plug-in cannot be unregistered or removed.
+
+.Corrective Action
+For plug-in 2.6, go to the vCenter Plug-in *Register*/*Unregister* page. Click the *Update* button to change the vCenter IP address, user ID, and password.
+
+For plug-in 2.7 or later, update the vCenter Administrator password in mNode Settings in the plug-in.
+
+For plug-in 4.4 or later, update the vCenter Administrator password in QoSSIOC Settings in the plug-in.
+
+== Plug-in management tasks fail or volumes are not accessible to ESXi host
+
+.Description
+Create, clone, and share datastore tasks fail or volumes are not accessible by the ESXi host.
+
+.Corrective Action
+* Check that the software iSCSI HBA is present and enabled on the ESXi host for datastore operations.
+* Check that the volume is not deleted or assigned to an incorrect volume access group.
+* Check that the volume access group has the correct host IQN.
+* Check that the associated account has the correct CHAP settings.
+* Check that volume status is active, volume access is `readWrite`, and `512e` is set to true.
+
+== Failure occurs during vCenter Plug-in use on Firefox 59.0.2 browsers
+
+.Message
+`Name:HttpErrorResponse Raw Message:Http failure response for https://vc6/ui/solidfire-war-4.2.0-SNAPSHOT/rest/vsphere//servers: 500 Internal Server Error Return Message:Server error. Please try again or contact NetApp support`
+
+.Description
+This issue occurs in vSphere HTML5 web clients using Firefox. The vSphere Flash client is not affected.
+
+.Corrective Action
+Use the full FQDN in the browser URL. VMware requires full forward and reverse resolution of IP, short name, and FQDN.
+
+== Delete datastore operation fails
+
+.Description
+A delete datastore operation fails.
+
+.Corrective Action
+Check that all VMs have been deleted from the datastore. You must delete VMs from a datastore before the datastore can be deleted.
+
+== Cluster pair cannot connect using a pairing key
+
+.Description
+A connection error occurs during cluster pairing using a pairing key. The error message in the *Create Cluster Pairing* dialog box indicates that there is no route to host.
+
+.Corrective Action
+Manually delete the unconfigured cluster pair the process created on the local cluster and perform the cluster pairing again.
+
+== Error message for QoSSIOC status
+
+.Description
+QoSSIOC status for the plug-in displays a warning icon and error message.
+
+.Corrective Action
+* Unable to reach IP address
+The IP address is invalid or no responses are received. Verify that the address is correct and that the management node is online and available.
+
+* Unable to communicate
+The IP address can be reached but calls to the address fail. This might indicate that the QoSSIOC service is not running at the specified address or a firewall might be blocking traffic.
+
+* Unable to connect to the SIOC service
+Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes) to verify that the SIOC service started successfully. SIOC service startup can take 50 seconds or more. If the service did not start successfully, try again.
+
+== QoSSIOC service shown as available but is unavailable
+
+.Description
+QoSSIOC service settings displays as UP, but QoSSIOC is unavailable.
+
+.Corrective Action
+From the *QoSSIOC Settings* tab in the NetApp Element Configuration extension point, click the refresh button. Update the IP address or user authentication information as needed.
+
+== QoSSIOC is enabled for datastore but unavailable
+
+.Description
+QoSSIOC is enabled for a datastore, but QoSSIOC is unavailable.
+
+.Corrective Action
+Check that the VMware SIOC is enabled on the datastore:
+
+. Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes).
+. Search for this text:
++
+----
+SIOC is not enabled
+----
+. See {url-peak}[this article] for the corrective action specific to your issue.

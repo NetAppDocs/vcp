@@ -139,5 +139,9 @@ entries:
         entries:
           - title: Set up and manage virtual volumes with the vCenter Plug-in
             url: vcp_task_configure_manage_vvols.html
+      - title: Troubleshooting
+        entries:
+          - title: Troubleshoot the vCenter Plug-in
+            url: vcp_reference_troubleshoot_vcp.html
       - title: Legal notices
         url: reference_notices_vcp.html
