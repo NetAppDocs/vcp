@@ -27,6 +27,8 @@ entries:
             url: concept_vcp_performance.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
+          - title: Virtual volumes (vVols)
+            url: vcp_concept_vvols.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements
@@ -133,6 +135,10 @@ entries:
             url: vcp_task_protect_snapshots_schedules.html
           - title: Perform remote replication between clusters
             url: vcp_task_protect_remote_replication.html
+      - title: Manage virtual volumes with the vCenter Plug-in
+        entries:
+          - title: Set up and manage virtual volumes with the vCenter Plug-in
+            url: vcp_task_configure_manage_vvols.html
       - title: Troubleshooting
         entries:
           - title: Troubleshoot the vCenter Plug-in

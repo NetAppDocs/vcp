@@ -37,8 +37,7 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 . Click *Create QoS Policy*.
 . Enter the *Policy Name*.
 +
-TIP: Use descriptive naming best practices. This is especially important if multiple clusters
-or vCenter Servers are used in your environment.
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
 
 . Enter the minimum IOPS, maximum IOPS, and burst IOPS values.
 . Click *OK*.
