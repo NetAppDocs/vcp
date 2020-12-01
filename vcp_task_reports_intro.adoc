@@ -18,7 +18,7 @@ You can view information about the cluster's components and performance by using
 Using the vCenter Plug-in, you can monitor cluster components and performance in the following ways:
 
 * link:vcp_task_reports_overview.html[Monitor overall cluster health on the Overview page]
-* link:vcp_task_reports_alerts.html[Monitor and respond to system alerts]
+* link:vcp_task_reports_alerts.html[Monitor system alerts]
 * link:vcp_task_reports_event_logs.html[Monitor event logs for troubleshooting]
 * link:vcp_task_reports_running_tasks.html[Monitor the status of running tasks]
 * link:vcp_task_reports_volume_performance.html[Monitor volume performance]

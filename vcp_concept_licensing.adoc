@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: vcp_concept_licensing.html
+summary:
+keywords: netapp, vcp, element, plugin, plug-in, product
+---
+
+= NetApp Element Plug-in for vCenter Server licensing
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+When you use NetApp HCI and the NetApp Element Plug-in for vCenter Server, you might need additional licenses depending on what you are using.
+
+== NetApp HCI and VMware vSphere licensing
+
+VMware vSphere licensing depends on your configuration:
+
+[cols=2*,options="header",cols="25,75"]
+|===
+| Networking option
+| Licensing
+| Option A: Two cables for compute nodes using VLAN tagging (All compute nodes) | Requires use of vSphere Distributed Switch, which requires VMware vSphere Enterprise Plus licensing.
+| Option B: Six cables for compute nodes using tagged VLANs (H410C 2RU 4-Node compute node)	 | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+| Option C: Six cables for compute nodes using native and tagged VLANs (H410C, 2RU 4-Node Compute Node) | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+|===
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

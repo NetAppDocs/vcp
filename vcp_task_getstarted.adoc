@@ -1,0 +1,430 @@
+---
+sidebar: sidebar
+permalink: vcp_task_getstarted.html
+summary: You can ensure that copies of your data are created and stored where you need them.
+keywords: netapp, hci, vcp, vcenter, element, protect
+---
+
+= Install and configure the NetApp Element Plug-in for vCenter Server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Use these instructions to install and configure NetApp Element Plug-in for vCenter Server. These instructions include links to more details.
+
+You can install the most recent version of the NetApp Element Plug-in for vCenter Server (VCP) directly to your vCenter and access the plug-in with the vSphere Web Client.
+
+After installation is complete, you can use the quality of service based on storage I/O control (QoSSIOC) service as well as other services of the vCenter Plug-in.
+
+Here is an overview of the process:
+
+* <<Prepare for installation>>
+* <<Install the management node>>
+* <<Register the plug-in with vCenter>>
+* <<Modify vCenter properties for a dark site HTTP server>>
+* <<Access the plug-in and verify successful installation>>
+* <<Add storage clusters using the plug-in>>
+* <<Configure management node and QoSSIOC settings using the plug-in>>
+* <<Configure user accounts>>
+* <<Configure datastores>>
+* <<Manage NetApp HCI data with the vCenter Plug-in>>
+
+
+
+== Prepare for installation
+
+Before you begin the installation, review network requirements.  ZZ *LINK TO VCP REQUIREMENTS*
+
+== Install the management node
+
+You can manually install the management node for your cluster running NetApp Element software using the appropriate image for your configuration.
+
+This manual process is intended for SolidFire all-flash storage administrators and NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
+
+ZZ *LINK TO GH Install a management node*
+
+== Register the plug-in with vCenter
+Deploying the vCenter Plug-in package in the vSphere Web Client involves registering the package as an extension on vCenter Server. After registration is complete, the plug-in is available to any vSphere Web Client that connects to your vSphere environment.
+
+.What you'll need
+
+* For vSphere 6.5 and 6.7, ensure you have logged out of the vSphere Web Client. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out. For vSphere 7.0, you do not need to log out of the web client.
+* You have vCenter Administrator role privileges to register a plug-in.
+* You have deployed a management node OVA running Element software 11.3 or later.
+* Your management node is powered on with its IP address or DHCP address configured.
+* You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
+* Your firewall rules allow open network communication between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.
+
+.About this task
+
+You must register the vCenter Plug-in on every vCenter Server where you need to use the plug-in.
+
+For Linked Mode environments, the plug-in must be registered with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
+
+ZZ *CONNECT THE MODIFY vCENTER PROPERTIES FOR INHOUSE DARK SITE HTTP SERVER procedure in this task*.
+
+
+.Steps
+
+. Enter the IP address for your management node in a browser, including the TCP port for registration:
++
+`https://<management node IP>:9443`
+
++
+The registration UI displays the Manage QoSSIOC Service Credentials page for the plug-in.
++
+ZZ *INSERT IMAGE*
+
+. *Optional*: Change the password for the QoSSIOC service before registering the vCenter Plug-in:
+.. For the Old Password, enter the current password of the QoSSIOC service. If you have not yet assigned a password, type the default password:
++
+`solidfire`
+.. Select *Submit Changes*.
++
+NOTE: After you submit changes, the QoSSIOC service automatically restarts.
+
+. Select *vCenter Plug-in Registration*.
++
+ZZ *INSERT IMAGE*
+
+. Enter the following information:
+
+* The IPv4 address or the FQDN of the vCenter service on which you will register your plug-in.
+* The vCenter Administrator user name.
++
+NOTE: The user name and password credentials you enter must be for a user with vCenter Administrator role privileges.
+
+* The vCenter Administrator password.
+* (For in-house servers/dark sites) A custom URL for the plug-in ZIP.
++
+NOTE: Most installations use the default path. To customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings, select *Custom URL*. For additional steps if you intend to customize a URL, see information about modifying vCenter properties for an in-house (dark site) HTTP server.  ZZ *INSERT LINK TO TOPIC**
+
+. Select *Register*.
+. *Optional*: Verify registration status:
+.. Select *Registration Status*.
+.. Enter the following information:
++
+* The IPv4 address or the FQDN of the vCenter service on which you are registering your plug-in
+* The vCenter Administrator user name
+* The vCenter Administrator password
+.. Select *Check Status* to verify that the new version of the plug-in is registered on the vCenter Server.
+
+. (For vSphere 6.5 and 6.7 users) Log in to the vSphere Web Client as a vCenter Administrator.
++
+NOTE: This action completes the installation in the vSphere Web Client. If the vCenter Plug-in icons are not visible from the vSphere main page, see documentation about troubleshooting the plug-in. ZZ *INSERT LINK*
+
+. In the vSphere Web Client, look for the following completed tasks in the task monitor to ensure installation has completed: Download plug-in and Deploy plug-in.
+
+== Modify vCenter properties for a dark site HTTP server
+
+If you intend to customize a URL for an in-house (dark site) HTTP server during vCenter Plug-in registration, you must modify the vSphere Web Client properties file `webclient.properties`.
+
+If you want to enable vCenter to download from an HTTP server, use this process.
+
+You can use vCSA or Windows to complete this.
+
+.What you'll need
+
+You'll need permissions to download software from the NetApp Support Site.
+
+
+.Steps using vCSA
+. SSH into the vCenter Server:
++
+----
+Connected to service
+    * List APIs: "help api list"
+    * List Plugins: "help pi list"
+    * Launch BASH: "shell"
+Command>
+----
+
+. Enter `shell` in the command prompt to access root:
++
+----
+Command> shell
+Shell access is granted to root
+----
+
+. Stop the VMware vSphere Web Client service:
++
+
+----
+service-control --stop vsphere-client
+service-control --stop vsphere-ui
+----
+
+. Change the directory:
++
+----
+cd /etc/vmware/vsphere-client
+----
+
+. Edit the `webclient.properties` file and add `allowHttp=true`.
+
+. Change the directory:
++
+----
+cd /etc/vmware/vsphere-ui
+----
+
+. Edit the `webclient.properties` file and add `allowHttp=true`.
+. Start the VMware vSphere Web Client service:
++
+----
+service-control --start vsphere-client
+service-control --start vsphere-ui
+----
++
+NOTE: After you have completed the registration procedure, you can remove `allowHttp=true` from the files you modified. ZZ *IS THIS IN THE RIGHT PLACE? Shouldn't it move or be copied to after the Registration procedure?*
+
+. Reboot vCenter.
+
+.Steps using Windows
+
+. Change the directory from a command prompt:
++
+----
+cd c:\Program Files\VMware\vCenter Server\bin
+----
+
+. Stop the VMware vSphere Web Client service:
++
+----
+service-control --stop vsphere-client
+service-control --stop vsphere-ui
+----
+
+. Change the directory:
++
+----
+cd c:\ProgramData\VMware\vCenterServer\cfg\vsphere-client
+----
+
+. Edit the `webclient.properties` file and add `allowHttp=true`.
+. Change the directory:
++
+----
+cd  c:\ProgramData\VMware\vCenterServer\cfg\vsphere-ui
+----
+
+. Edit the `webclient.properties` file and add `allowHttp=true`.
+
+. Change the directory from a command prompt:
++
+----
+cd c:\Program Files\VMware\vCenter Server\bin
+----
+
+. Start the VMware vSphere Web Client service:
++
+----
+service-control --start vsphere-client
+service-control --start vsphere-ui
+----
++
+NOTE: After you have completed the registration procedure, you can remove `allowHttp=true` from the files you modified.
+
+. Reboot vCenter.
+
+
+== Access the plug-in and verify successful installation
+
+After successful installation or upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
+
+ZZ *INSERT IMAGE*
+
+NOTE: If the vCenter Plug-in icons are not visible, see documentation about troubleshooting the plug-in. ZZ *INSERT LINK**
+
+== Add storage clusters using the plug-in
+You can add a cluster running Element software using the NetApp Element Configuration extension point.
+
+After a connection has been established to the cluster, the cluster can then be managed using the NetApp Element Management extension point.
+
+.What you'll need
+
+* At least one cluster must be available and its IP or FQDN address known.
+* Current full Cluster Admin user credentials for the cluster.
+* Firewall rules allow open network communication between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
+
+NOTE: You must add at least one cluster to use NetApp Element Management extension point functions.
+
+.About this task
+This procedure describes how to add a cluster profile so that the cluster can be managed by the plug-in. You cannot modify cluster administrator credentials using the plug-in.
+
+For instructions on changing credentials for a cluster administrator account, see the _NetApp Element Software User Guide_.
+ZZ *INSERT LINK*
+
+IMPORTANT: The vSphere HTML5 web client and Flash web client have separate databases that cannot be combined. Clusters added in one client will not be visible in the other. If you intend to use both clients, add your clusters in both.
+
+.Steps
+
+. Select *NetApp Element Configuration* > *Clusters*.
+. Select *Add Cluster*.
+. Enter the following information:
++
+* *IP address/FQDN*: Enter the cluster MVIP address.
+* *User ID*: Enter a cluster administrator user name.
+* *Password*: Enter a cluster administrator password.
+* *vCenter Server*: If you set up a Linked Mode group, select the vCenter Server you want to access the cluster. If you're not using Linked Mode, the current vCenter Server is the default.
++
+NOTE: The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
+
+. Select *OK*.
+
+When the process completes, the cluster appears in the list of available clusters and can be used in the NetApp Element Management extension point.
+
+== Configure management node and QoSSIOC settings using the plug-in
+
+You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in.
+
+QoSSIOC is automatic quality of service (QoS) based on Storage I/O Control (SIOC) settings of all VMs on a standard datastore.
+
+link:https://docs.netapp.com/us-en/hci/docs/vcp_task_configure_qossioc.html[Set up and manage QoSSIOC for Element volumes and VMware datastores]
+
+
+== Configure user accounts
+To enable access to volumes, you'll need to create at least one user account.
+
+After you create an account, you can assign up to 2000 volumes to the account. Each account name in the system must be unique. ZZ *MOVE THIS INFO TO RN?*
+
+.What you'll need
+At least one cluster must be added and running.
+
+.Steps
+. Select *NetApp Element Management* > *Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Accounts* tab.
+. Select *Create Account*.
+. Enter a user name.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+. In the CHAP Settings section:
+.. Enter the initiator secret for CHAP node session authentication.
+.. Enter the target secret for CHAP node session authentication.
++
+Initiator and target secrets must differ. If these fields are left blank, the system generates the authentication credentials.
+
+. Select *OK*.
+
+== Configure datastores
+
+The NetApp Element Plug-in for vCenter Server enables you to manage datastores that are created on Element volumes. You can create, extend, clone, share, or delete datastores. You can also use VAAI UNMAP to enable a cluster to reclaim freed block space from thinly provisioned VMFS datastores.
+
+Datastore operations can be monitored for completion using task monitoring in vSphere.
+
+Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
+
+.What you'll need
+* At least one host must be connected to the vCenter Server.
+* At least one user account must be created.
+* At least one cluster must be added and running.
++
+NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
+
+* If you want to use QoSSIOC service with datastores, you must first configure settings on the QoSSIOC Settings page from the NetApp Element Configuration extension point.
+
+.Steps
+
+. Select *NetApp Element Management* > *Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. From the Datastore page, select *Create Datastore*.
+. Enter a name for the datastore.
++
+TIP: Use a unique name for each datastore in a data center. For multiple cluster or vCenter Server environments, use descriptive naming best practices.
+
+. Select *Next*.
+. Select one or more required hosts for the datastore.
++
+NOTE: You need at least one connected host before you can create a new datastore. If your host has multiple initiators, select an initiator or the host to select all initiators. If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
+
+. Select *Next*.
+. In the Configure Volume pane, select an existing volume and proceed to the next step, or create a new volume for the new datastore:
++
+NOTE: If you select an existing volume to create a new datastore, existing data will be lost. For existing VMFS volumes, see VMware documentation about mounting a VMFS datastore copy and managing duplicate VMFS datastores. ZZ *INSERT BOTH LINKS FROM HCI DC*
+
+. Enter a name for the volume that backs the datastore.
+. Select a user account from the account list.
+. Enter the total size of the volume you want to create.
++
+NOTE: The default volume size selection is in GB. You can create volumes using sizes measured in GB or GiB:
+1GB = 1 000 000 000 bytes
+1GiB = 1 073 741 824 bytes
+
++
+By default, 512 byte emulation is set to ON for all the new volumes.
+
+. In the Quality of Service area, do one of the following:
+.. Under Policy, select an existing QoS policy.
+.. Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
++
+QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
++
+TIP: Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
+
+. Select *Next*.
+. Configure the authorization type for host access by choosing one of the following:
+.. Use Volume Access Group to explicitly limit which initiators can see volumes.
+.. Use CHAP for secure secret-based access with no limits on initiators.
+
+. Select *Next*.
+. If you selected *Use Volume Access Group*, configure the volume access groups for the selected hosts.
++
+The volume access groups listed in Required by Selected Initiators are already associated with one or more of the hos
+
+.. Select additional volume access groups or create new ones to associate with available initiators:
++
+* Available: Other volume access group options in the cluster.
+* Create New Access Group: Enter the name of the new access group and select *Add*.
+.. Select *Next*.
+.. In the Configure Hosts' Access pane, associate available host initiators (IQN or WWPN) with the volume access groups you selected in the previous pane. If a host initiator is already associated with a volume access group, the field is read-only for that initiator. If a host initiator does not have a volume access group association, select an option from the list next to the initiator.
+.. Select *Next*.
+. If you want to enable QoSSIOC automation, check  *Enable QoS & SIOC* and then configure the QoSSIOC settings.
++
+TIP: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
++
+If the QoSSIOC service is not available, first configure settings on the QoSSIOC Settings page from the NetApp Element Configuration extension point.
+
+. Select *Enable QoS & SIOC*.
+
+. Configure the *Burst Factor*.
++
+NOTE: The burst factor is a multiple of the IOPS limit (SIOC) setting for the VMDK. If you change the default, make sure to use a burst factor value that will not exceed the maximum burst limit for an Element volume when the burst factor value is multiplied by the IOPS limit for any VMDK.
+
+. *Optional*: Select *Override Default QoS* and configure the settings.
++
+NOTE: If the Override Default QoS setting is disabled for the datastore, the Shares and Limit IOPS values are automatically set based on the default SIOC settings of each VM.
++
+TIP: Do not customize the SIOC share limit without also customizing the SIOC IOPS limit.
++
+TIP: By default, the maximum SIOC disk shares are set to `Unlimited`. In a large VM environment such as VDI, this can lead to overcommitting maximum IOPS on the cluster. When you enable QoSSIOC, always check the Override Default QoS and set the Limit IOPS option to something reasonable.
+
+. Select *Next*.
+. Confirm the selections and click *Finish*.
+. To view the progress of the task, use Task Monitoring in vSphere. If the datastore does not appear in the list, refresh the view.
+
+
+== Manage NetApp HCI data with the vCenter Plug-in
+
+Configure clusters, volumes, datastores, logs, access groups, initiators, and Quality of Service (QoS) policies by using the NetApp Element Plug-in for vCenter Server.
+
+For details, see the http://docs.netapp.com/hci/topic/com.netapp.doc.hci-vcp-ug-180/home.html[_NetApp Element Plug-in for vCenter Server Guide_^].  ZZ *FIX LINK TO GO TO GH*
+
+ZZ *INSERT IMAGE**
+image::vcp_shortcuts_page.png[vSphere Client Shortcuts page]
+
+
+
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
