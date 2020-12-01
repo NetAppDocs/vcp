@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: vcp_task_add_node.html
+summary: You can add a node to the storage cluster using the plug-in.
+keywords: netapp, nodes, add, vcp, vcenter, element
+---
+
+= Add available drives to a cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add storage nodes when a cluster is created or when more storage is needed.
+
+.What you'll need
+
+* The node you are adding has been set up, powered on, and configured.
+* Both the major or minor version numbers of the software on each node in a cluster must match for the software to be compatible. For example, Element 9.0 is not compatible with version 9.1.
+
+NOTE: If the node you are adding has a different major or minor version of NetApp Element software than the version running on the cluster, the cluster asynchronously updates the node to the version of NetApp Element software running on the cluster master. After the node is updated, it automatically adds itself to the cluster. During this asynchronous process, the node will be in a `pendingActive` state.
+
+.About this task
+Nodes require initial configuration when they are first powered on. When the node has been set up and configured, it registers itself on the cluster identified when the node was configured and appears in the list of pending nodes on the *Cluster > Nodes* page of the NetApp Element Management extension point.
+
+You can add nodes of smaller or larger capacities to an existing cluster.
+
+The procedure is the same for adding Fibre Channel nodes or storage nodes that are running NetApp Element software.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Nodes* sub-tab.
+. Select *Pending* from the drop-down list to view the list of nodes.
+. To add one or more nodes, perform the following steps:
+.. Select the check box for each node you want to add.
+.. Click *Add Node*.
+. Review the details of the nodes you are intending to add and confirm the action.
++
+When the action is complete, the node appears in the list of active nodes for the cluster.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

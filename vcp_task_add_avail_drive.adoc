@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: vcp_task_add_avail_drive.html
+summary: You can add an available drive to the storage cluster using the plug-in.
+keywords: netapp, drives, add, vcp, vcenter, element
+---
+
+= Add available drives to a cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add drives to a cluster using the NetApp Element Management extension point. When you add a node to the cluster or install new drives in an existing node, the drives automatically register as `Available`. You must add the drives to the cluster before each drive can participate in the cluster.
+
+.About this task
+Drives are not displayed in the Available list when the following conditions exist:
+
+* Drives are in an `Active`, `Removing`, `Erasing`, or `Failed` state.
+* The node of which the drive is a part is in `Pending` state.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. From the *Drives* sub-tab, select *Available* from the drop-down list to view the list of available drives.
+. Add drives as follows:
+.. Select the check box for each drive you want to add.
+.. Click *Add Drives*.
+. Review the details of the drives you are intending to add and confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

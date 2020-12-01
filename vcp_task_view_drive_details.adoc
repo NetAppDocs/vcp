@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: vcp_task_view_drive_details.html
+summary: You can view detailed information about the drives that your storage cluster is currently using.
+keywords: netapp, drives, view, details, vcp, vcenter, element
+---
+
+= View drive details
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can view a list of the active drives in the cluster using the Active view on the Drives page of the Cluster tab from the NetApp Element Management extension point. You can change the view by selecting available options using the drop-down filter.
+
+.About this task
+When you first initialize a cluster, the active drives list is empty. You can add drives that are unassigned to a cluster and listed in the Available tab after a new cluster is created.
+
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Drives* sub-tab.
+. Select the *Active* view.
+. View the details of the drives that are currently active in the system.
++
+You can view information such as drive IDs, the capacity and status of each drive, and information about the node the drive resides in.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

@@ -23,6 +23,8 @@ entries:
             url: vcp_concept_licensing.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
+          - title: Virtual volumes (vVols)
+            url: vcp_concept_vvols.html
       - title: Requirements and pre-deployment tasks
         entries:
           - title: Network port requirements
@@ -53,7 +55,39 @@ entries:
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
             url: vcp_task_qos_policies.html
-      - title: Monitor system performance with Reporting features
+      - title: Manage the cluster
+        entries:
+          - title: Manage drives
+            entries:
+              - title: Add available drives to a cluster
+                url: vcp_task_add_avail_drive.html
+              - title: View drive details
+                url: vcp_task_view_drive_details.html
+              - title: Remove a drive
+                url: vcp_task_remove_drive.html
+          - title: Manage nodes
+            entries:
+              - title: Add a node to a cluster
+                url: vcp_task_add_node.html
+              - title: View node details
+                url: vcp_task_view_node_details.html
+              - title: Remove a node from a cluster
+                url: vcp_task_remove_node.html
+              - title: Restart a node
+                url: vcp_task_restart_node.html
+              - title: Shut down a node
+                url: vcp_task_shut_down_node.html
+          - title: Manage virtual networks
+            entries:
+              - title: Create a virtual network
+                url: vcp_task_create_vlan.html
+              - title: View virtual network details
+                url: vcp_task_view_vlan_details.html
+              - title: Edit a virtual network
+                url: vcp_task_edit_vlan.html
+              - title: Delete a virtual network
+                url: vcp_task_delete_vlan.html
+      - title: Monitor system Performance
         entries:
           - title: Monitor system performance with Report options
             url: vcp_task_reports_intro.html
@@ -86,5 +120,13 @@ entries:
             url: vcp_task_protect_snapshots_schedules.html
           - title: Perform remote replication between clusters
             url: vcp_task_protect_remote_replication.html
+      - title: Manage virtual volumes with the vCenter Plug-in
+        entries:
+          - title: Set up and manage virtual volumes with the vCenter Plug-in
+            url: vcp_task_configure_manage_vvols.html
+      - title: Troubleshooting
+        entries:
+          - title: Troubleshoot the vCenter Plug-in
+            url: vcp_reference_troubleshoot_vcp.html
       - title: Legal notices
         url: reference_notices_vcp.html

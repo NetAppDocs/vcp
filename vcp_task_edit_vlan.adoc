@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: vcp_task_edit_vlan.html
+summary: You can edit an existing virtual network in the cluster configuration using the plug-in.
+keywords: netapp, VLANs, edit, vcp, vcenter, element
+---
+
+= Edit a virtual network
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can change VLAN attributes, such as VLAN name, netmask, and size of the IP address blocks.
+
+.About this task
+The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can only be modified for VRF VLANs. If any iSCSI, remote replication, or other network sessions exist, the modification might fail.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Network* sub-tab.
+. Select the check box for the VLAN you want to edit.
+. Click *Actions*.
+. In the resulting menu, click *Edit*.
+. In the resulting menu, enter the new attributes for the VLAN.
+. Click *Create Block* to add a non-continuous block of IP addresses for the virtual network.
+. Click *OK*.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
