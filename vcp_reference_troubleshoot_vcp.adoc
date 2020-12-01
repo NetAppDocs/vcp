@@ -56,7 +56,7 @@ When using the registration utility, there is an error registering the plug-in a
 
 .Corrective Action
 
-In the registration utility, use Update Plug-in instead of Register Plug-in.
+In the registration utility, use *Update Plug-in* instead of *Register Plug-in*.
 
 == Error updating plug-in using Registration UI
 
@@ -66,7 +66,7 @@ When using the registration utility, there is an error updating the plug-in agai
 
 .Corrective Action
 
-In the registration utility, use Register Plug-in instead of Update Plug-in.
+In the registration utility, use *Register Plug-in* instead of *Update Plug-in*.
 
 == Error message that NetApp extension cannot be upgraded
 
@@ -100,7 +100,7 @@ Log out of the vSphere Web Client and log in again. Closing and re-opening your 
 After the admin password for the vCenter that was used to register the plug-in is changed, the vCenter Plug-in cannot be unregistered or removed.
 
 .Corrective Action
-For plug-in 2.6, go to the vCenter Plug-in Register/Unregister page. Click the Update button to change the vCenter IP address, user ID, and password.
+For plug-in 2.6, go to the vCenter Plug-in *Register*/*Unregister* page. Click the *Update* button to change the vCenter IP address, user ID, and password.
 
 For plug-in 2.7 or later, update the vCenter Administrator password in mNode Settings in the plug-in.
 
