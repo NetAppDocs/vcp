@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 ---
 
 = Troubleshoot the vCenter Plug-in
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -78,6 +79,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 During a Windows vCenter Server upgrade from version 6.0 to 6.5, you see a warning that the NetApp Extension cannot be upgraded or may not work with the new vCenter Server. After you complete the upgrade and log in to the vSphere Web Client, the error occurs when you select a vCenter Plug-in extension point. This error occurs because the directory that stores the runtime database has changed from version 6.0 to 6.5. The vCenter Plug-in is unable to create the needed files for runtime.
 
 .Corrective Action
+
 . Unregister the plug-in.
 . Remove plug-in files.
 . Reboot the vCenter.
@@ -114,7 +116,7 @@ Create, clone, and share datastore tasks fail or volumes are not accessible by t
 * Check that the volume is not deleted or assigned to an incorrect volume access group.
 * Check that the volume access group has the correct host IQN.
 * Check that the associated account has the correct CHAP settings.
-* Check that volume status is active, volume access is readWrite, and 512e is set to true.
+* Check that volume status is active, volume access is `readWrite`, and `512e` is set to true.
 
 == Failure occurs during vCenter Plug-in use on Firefox 59.0.2 browsers
 
@@ -138,7 +140,7 @@ Check that all VMs have been deleted from the datastore. You must delete VMs fro
 == Cluster pair cannot connect using a pairing key
 
 .Description
-A connection error occurs during cluster pairing using a pairing key. The error message in the Create Cluster Pairing dialog box indicates that there is no route to host.
+A connection error occurs during cluster pairing using a pairing key. The error message in the *Create Cluster Pairing* dialog box indicates that there is no route to host.
 
 .Corrective Action
 Manually delete the unconfigured cluster pair the process created on the local cluster and perform the cluster pairing again.
@@ -156,7 +158,7 @@ The IP address is invalid or no responses are received. Verify that the address 
 The IP address can be reached but calls to the address fail. This might indicate that the QoSSIOC service is not running at the specified address or a firewall might be blocking traffic.
 
 * Unable to connect to the SIOC service
-Open sioc.log in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes) to verify that the SIOC service started successfully. SIOC service startup can take 50 seconds or more. If the service did not start successfully, try again.
+Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes) to verify that the SIOC service started successfully. SIOC service startup can take 50 seconds or more. If the service did not start successfully, try again.
 
 == QoSSIOC service shown as available but is unavailable
 
@@ -164,7 +166,7 @@ Open sioc.log in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/
 QoSSIOC service settings displays as UP, but QoSSIOC is unavailable.
 
 .Corrective Action
-From the QoSSIOC Settings tab in the NetApp Element Configuration extension point, click the refresh button. Update the IP address or user authentication information as needed.
+From the *QoSSIOC Settings* tab in the NetApp Element Configuration extension point, click the refresh button. Update the IP address or user authentication information as needed.
 
 == QoSSIOC is enabled for datastore but unavailable
 
@@ -173,10 +175,11 @@ QoSSIOC is enabled for a datastore, but QoSSIOC is unavailable.
 
 .Corrective Action
 Check that the VMware SIOC is enabled on the datastore:
+
 . Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes).
 . Search for this text:
 +
 ----
 SIOC is not enabled
 ----
-. See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[article] for the corrective action specific to your issue.
+. See {url-peak}[this article] for the corrective action specific to your issue.
