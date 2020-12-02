@@ -9,7 +9,7 @@ entries:
             url: rn_vcp_relatedrn.html
       - title: Concepts
         entries:
-          - title: Product overview
+          - title: NetApp Element Plug-in for vCenter Server product overview
             url: concept_vcp_product_overview.html
           - title: Accounts
             url: concept_vcp_accounts.html
@@ -30,26 +30,9 @@ entries:
           - title: Virtual volumes (vVols)
             url: vcp_concept_vvols.html
       - title: Pre-deployment requirements
-        url: reference_requirements_vcp.html
         entries:
-          - title: Network port requirements
-            url: prereqs_vcp_network_ports.html
-          - title: Network and switch requirements
-            url: prereqs_vcp_network_portsnetwork_switch.html
-          - title: Network cable requirements
-            url: prereqs_vcp_network_cables.html
-          - title: IP address requirements
-            url: prereqs_vcp_ip_address.html
-          - title: Network configuration
-            url: prereqs_vcp_network_configuration.html
-          - title: DNS and timekeeping requirements
-            url: prereqs_vcp_timekeeping.html
-          - title: Environmental requirements
-            url: prereqs_vcp_environmental.html
-          - title: Protection Domains
-            url: prereqs_vcp_protection_domains.html
-          - title: Witness Node resource requirements for two-node storage clusters
-            url: prereqs_vcp_witness_nodes.html
+          - title: = Requirements for the Element Plug-in for vCenter Server
+            url: reference_requirements_vcp.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:
           - title: NetApp VCP installation and deployment overview

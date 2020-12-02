@@ -1,7 +1,7 @@
 ---
 sidebar: docs_sidebar
 permalink: reference_requirements_vcp.html
-summary: Before you begin using cloud services on NetApp HCI, look at these prerequisites.
+summary: Before you begin using the NetApp Element Plug-in for vCenter Server, you need to understand prerequisites for product installation and use.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
 
@@ -16,10 +16,11 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 Before you use NetApp Element Plug-in for vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.​
 
 == VMware vSphere prerequisites
-VMware vSphere 7.0, 6.7, or 6.5, including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server.
+VMware vSphere 7.0, 6.7, or 6.5, including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server. To learn more, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[release notes].
 
 == vSphere compatibility and best practices
 Consider the following capabilities and recommendations before using the plugin:
+
 * The plug-in supports vSphere 7.0. The plug-in is not compatible with vSphere 7.0 U1.
 * The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client.
 * The plug-in supports version 6.7 U2 vSphere Web Client for Flash/FLEX and the vSphere 6.7 U3 release for both Flash and HTML5 clients.
@@ -30,64 +31,7 @@ Consider the following capabilities and recommendations before using the plugin:
 == Network port requirements
 You need to allow some TCP ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. For a comprehensive list of ports used in NetApp HCI and SolidFire systems, see this link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html[page].
 
-== System requirements
-* A NetApp HCI 1.6 or later system deployed by the NetApp Deployment Engine (NDE)
-* Upgraded NetApp HCI management services. See management services information in the http://docs.netapp.com/sfe-113/topic/com.netapp.doc.sfe-ug/home.html[NetApp Element User Guide^].
-* NetApp Hybrid Cloud Control available on the management node of your system
-* NetApp HCI management node 2.2 or later (requires updates from the 2.0 version)
-* Your version of VMware vCenter supported by the NetApp HCI Deployment Engine
-* All nodes must have IP addresses assigned to them by Dynamic DHCP. A DHCP server must be able to run on all NKS networks.
-* The “NetApp-HCI-Datastore-02” datastore must exist in vSphere. It is a requirement for enabling NKS. If the datastore does not exist, the cloud services installation will not be successful. Before enabling cloud services, check vSphere to see that the datastore is there. If you are creating the datastore, it must meet the following conditions: 2 TiB in size, formatted as a VMware Virtual Machine File System (VMFS), shared with all compute hosts, and with the default QoS (or higher).
-* Ports must be opened in the firewall as specified in NKS information. https://docs.netapp.com/us-en/kubernetes-service/whitelist-ports-and-ip-addresses.html
-
-NOTE: Running NKS services through a proxy server is not supported.
-
-== Networking requirements
-* You must have already configured the required vSphere distributed switches (VDS). VMware standard switches (VSS) are not supported.
-* You must have the recommended vSphere distributed switch (VDS) port groups, which you can create before or even while you enable cloud services. The port group names should be in this format:
-** HCI_NKS_Management_01
-** HCI_NKS_Workload_01
-** HCI_NKS_Data_01
-* Using VDS requires a vSphere Enterprise Plus license. You must have this license.
-* For the switch, you need at least two uplinks on VMK adapters for management and vMotion and two uplinks on the iSCSI adapter.
-
-== System size requirements
-* 2x4 systems are not supported for production use. However, you can use these for nonproduction work.
-* 3x4 systems are the minimum production system size we support.
-* 4x4 systems are the recommended minimum size.
-
-== IP requirements for NetApp Kubernetes Service
-Several IPs are required:
-
-* Management network IP requirements (Total: 10 IPs)
-** 1 IP for the bootstrap VM (released after successful registration)
-** 6 service cluster machines (3 master nodes and 3 worker nodes)
-** 1 virtual IP shared between the load balancer machines. There are two load balancers each having its own assigned IP.
-
-
-*	Workload network IP requirements (Total minimum of 5 IP addresses with a recommendation of 256 to meet potential workload increase)
-** 1 IP for each worker node (default is 2 worker nodes)
-** Pool of IPs for load balancer (depending upon your deployment intent and defined at installation time)
-
-
-*	Data (iSCSI Storage) network (Total of 111 IP addresses per workload cluster, default is /16 or 65534 IPs)
-** 1 IP for each master node (default is 1 master node)
-** 1 IP for each of the worker nodes (default is 2 worker nodes)
-** You can use the default of /16 IPs or create your own range, where you need to assign a minimum of 111 IP addresses (100 reserved for storage nodes, 1 for Storage Virtual IP, and 10 for user clusters).
-
-
-== NetApp Kubernetes Service requirements
-* A NetApp Kubernetes Service (NKS) account
-* A NetApp Kubernetes Service API token, which authorizes the installer to access the NKS organization. You can create this before or during the process of enabling cloud services on NetApp HCI.
-
-
-== Browser requirements
-*	Any modern browser
-
-
-
 [discrete]
 == Find more information
-* https://cloud.netapp.com/home[NetApp Cloud Central^]
-* https://docs.netapp.com/us-en/cloud/[NetApp Cloud Documentation]
-* http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
