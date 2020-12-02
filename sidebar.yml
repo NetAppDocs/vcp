@@ -57,36 +57,14 @@ entries:
             url: vcp_task_qos_policies.html
       - title: Manage the cluster
         entries:
-          - title: Manage drives
-            entries:
-              - title: Add available drives to a cluster
-                url: vcp_task_add_avail_drive.html
-              - title: View drive details
-                url: vcp_task_view_drive_details.html
-              - title: Remove a drive
-                url: vcp_task_remove_drive.html
-          - title: Manage nodes
-            entries:
-              - title: Add a node to a cluster
-                url: vcp_task_add_node.html
-              - title: View node details
-                url: vcp_task_view_node_details.html
-              - title: Remove a node from a cluster
-                url: vcp_task_remove_node.html
-              - title: Restart a node
-                url: vcp_task_restart_node.html
-              - title: Shut down a node
-                url: vcp_task_shut_down_node.html
-          - title: Manage virtual networks
-            entries:
-              - title: Create a virtual network
-                url: vcp_task_create_vlan.html
-              - title: View virtual network details
-                url: vcp_task_view_vlan_details.html
-              - title: Edit a virtual network
-                url: vcp_task_edit_vlan.html
-              - title: Delete a virtual network
-                url: vcp_task_delete_vlan.html
+          - title: Manage the cluster overview
+            url: vcp_task_manage_cluster_overview.html
+          - title: Add and manage drives
+            url: vcp_task_add_manage_drive.html
+          - title: Add and manage nodes
+            url: vcp_task_add_manage_nodes.html
+          - title: Create and manage virtual networks
+            url: vcp_task_create_manage_vlans.html
       - title: Monitor system Performance
         entries:
           - title: Monitor system performance with Report options
