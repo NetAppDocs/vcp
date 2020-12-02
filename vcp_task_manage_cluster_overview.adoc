@@ -1,0 +1,22 @@
+---
+sidebar: sidebar
+permalink: vcp_task_create_manage_vlans.html
+summary: You can create and manage virtual networks in the cluster configuration using the plug-in.
+keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
+---
+
+= Manage the cluster overview
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+From the Cluster tab in the NetApp Element Management extension point, you can view and change cluster-wide settings and perform cluster-specific tasks.
+
+You can use the Cluster tab to perform the following cluster management tasks:
+
+* link:vcp_task_add_manage_drive.html[Add and manage drives]
+* link:vcp_task_add_manage_nodes.html[Add and manage nodes]
+* link:vcp_task_create_manage_vlans.html[Create and manage virtual networks]

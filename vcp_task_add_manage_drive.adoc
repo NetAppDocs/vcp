@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: vcp_task_add_manage_drives.html
+permalink: vcp_task_add_manage_drive.html
 summary: You can add and manage drives to the cluster using the plug-in.
 keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 ---

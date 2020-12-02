@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: vcp_task_manage_nodes.html
+permalink: vcp_task_add_manage_nodes.html
 summary: You can create and manage nodes in the cluster configuration using the plug-in.
 keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 ---

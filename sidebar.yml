@@ -75,7 +75,7 @@ entries:
           - title: Add and manage drives
             url: vcp_task_add_manage_drive.html
           - title: Add and manage nodes
-            url: vcp_task_manage_nodes.html
+            url: vcp_task_add_manage_nodes.html
           - title: Create and manage virtual networks
             url: vcp_task_create_manage_vlans.html
       - title: Monitor system Performance
