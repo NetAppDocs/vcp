@@ -1,6 +1,6 @@
 ---
 sidebar: docs_sidebar
-permalink: docs/reference_requirements_beforeyoubegin.html
+permalink: reference_requirements_vcp.html
 summary: Before you begin using cloud services on NetApp HCI, look at these prerequisites.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
