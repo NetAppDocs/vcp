@@ -23,9 +23,9 @@ VMware vSphere licensing depends on your configuration:
 |===
 | Networking option
 | Licensing
-| Option A: Two cables for compute nodes using VLAN tagging (All compute nodes) | Requires use of vSphere Distributed Switch, which requires VMware vSphere Enterprise Plus licensing.
-| Option B: Six cables for compute nodes using tagged VLANs (H410C 2RU 4-Node compute node)	 | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
-| Option C: Six cables for compute nodes using native and tagged VLANs (H410C, 2RU 4-Node Compute Node) | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+| *Option A*: Two cables for compute nodes using VLAN tagging (All compute nodes) | Requires use of vSphere Distributed Switch, which requires VMware vSphere Enterprise Plus licensing.
+| *Option B*: Six cables for compute nodes using tagged VLANs (H410C 2RU 4-Node compute node)	 | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
+| *Option C*: Six cables for compute nodes using native and tagged VLANs (H410C, 2RU 4-Node Compute Node) | This configuration uses vSphere Standard Switch as the default. Optional use of vSphere Distributed Switch requires VMware Enterprise Plus licensing.
 |===
 
 

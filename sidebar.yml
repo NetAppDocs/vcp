@@ -13,7 +13,7 @@ entries:
             url: vcp_concept_product_overview.html
           - title: NetApp Element Configuration extension point
             url: vcp_concept_extension_point.html
-          - title: Accounts
+          - title: User accounts
             url: vcp_concept_accounts.html
           - title: Protection domains in the vCenter Plug-in
             url: vcp_concept_protection_domains.html
