@@ -4,9 +4,9 @@ entries:
       - title: Release Notes
         entries:
           - title: What's new in NetApp Element Plug-in for vCenter Server
-            url: rn_vcp_whatsnew.html
+            url: rn_whatsnew_vcp.html
           - title: Additional release information
-            url: rn_vcp_relatedrn.html
+            url: rn_relatedrn_vcp.html
       - title: Concepts
         entries:
           - title: NetApp Element Plug-in for vCenter Server product overview
@@ -31,7 +31,7 @@ entries:
             url: vcp_concept_vvols.html
       - title: Pre-deployment requirements
         entries:
-          - title: = Requirements for the Element Plug-in for vCenter Server
+          - title: Requirements for the Element Plug-in for vCenter Server
             url: reference_requirements_vcp.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:

@@ -1,5 +1,5 @@
 ---
-sidebar: docs_sidebar
+sidebar: sidebar
 permalink: concept_vcp_product_overview.html
 summary:
 keywords: netapp, vcp, element, vcenter plugin, plug-in
@@ -20,7 +20,7 @@ You can use the plug-in user interface to discover and configure clusters, and t
 
 == NetApp components related to the plug-in
 
-* *Registration utility*: A tool that allows you to manage the link:vcp_concept_vvols.html[QoSSIOC] service and plug-in registration with vCenter.
+* *Registration utility*: A tool that allows you to manage the link:vcp_concept_qossioc.html[QoSSIOC] service and plug-in registration with vCenter.
 
 * *Management services*: Microservices that include the QoSSIOC service for the vCenter Plug-in. Upgrades to the plug-in are released as part of a management services bundle.
 +

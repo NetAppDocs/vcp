@@ -1,0 +1,17 @@
+---
+sidebar: sidebar
+permalink: rn_relatedrn_vcp.html
+summary: Get links to release notes for products or components that are part of a NetApp HCI or SolidFire all-flash array environment.
+keywords: netapp, hci, element, vcp, vcenter plugin, storage, management services, compute firmware
+---
+
+= Additional release information
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, release notes, vcp, element, management services, firmware
+
+[.lead]
+include::_include/rn_relatedrn_vcp_links.adoc[]

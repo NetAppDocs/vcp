@@ -1,0 +1,46 @@
+---
+sidebar: sidebar
+permalink: rn_whatsnew_vcp.html
+summary: Learn what's new in this version of NetApp Element Plug-in for vCenter Server.
+keywords: netapp, vcp, vcenter, plugin, element, new, whats new
+---
+
+= What's new in NetApp Element Plug-in for vCenter Server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, new, whats new
+
+[.lead]
+The most recent NetApp Element Plug-in for vCenter Server, version 4.6, contains security improvements, bug fixes, and updated vSphere support.
+
+== vSphere 7.0 U1 support
+With version 4.6, the plug-in now supports components of vSphere 7.0 Update 1, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
+
+== All VMware vSphere versions supported by the plug-in
+The plug-in supports the following major versions of VMware software:
+
+* vSphere 7.0 and 7.0 Update 1, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+* vSphere 6.7 and 6.7 Update 1 and 3, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
++
+IMPORTANT: The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. It is compatible with the version 6.7 U2 vSphere Web Client for Flash/FLEX.
+
+* vSphere 6.5 and 6.5 Update 1 or later, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+
+== End of vSphere 6.0 support
+
+IMPORTANT: VMware vSphere 6.0 reached end of support status on March 12, 2020. Beginning with NetApp HCI 1.8 and Element 12, vSphere 6.0 is no longer supported. For details, see this https://mysupport.netapp.com/info/communications/ECMLP2863840.html[product communiqué].
+
+== NetApp Element support
+The plug-in supports the following major versions:
+
+* Element 12.x, including SolidFire Enterprise SDS
+* Element 11.x
+
+[discrete]
+== Find more information
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
