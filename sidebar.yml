@@ -51,6 +51,12 @@ entries:
             url: vcp_task_getstarted.html
       - title: Manage storage with the vCenter Plug-in
         entries:
+          - title: Manage clusters
+            url: vcp_task_clusters_manage.html
+          - title: Manage datastores
+            url: vcp_task_datastores_manage.html
+          - title: Manage volumes
+            url: vcp_task_volumes_manage.html
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
