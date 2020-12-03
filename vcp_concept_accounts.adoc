@@ -15,13 +15,13 @@ keywords: netapp, vcp, element, plugin, plug-in, account
 [.lead]
 User accounts control access to the storage resources on a NetApp Element software-based network. At least one user account is required before a volume can be created.
 
-When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container. The account contains the CHAP authentication required to access the volumes assigned to it. 
+When you create a volume, it is assigned to an account. If you have created a virtual volume, the account is the storage container. The account contains the CHAP authentication required to access the volumes assigned to it.
 
 An account can have up to two thousand volumes assigned to it, but a volume can belong to only one account.
 
 User accounts can be managed from NetApp Element Management extension point.
 
-For details, see SolidFire and Element 12.0 Documentation Center.  *FIX LINK to VCP TOPIC*
+For details, see the SolidFire and Element 12.2 Documentation Center.  *FIX LINK to VCP TOPIC*
 
 [discrete]
 == Find more information

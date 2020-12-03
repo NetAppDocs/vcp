@@ -18,12 +18,12 @@ The NetApp Element Configuration extension point enables you to add and manage c
 The following tabs are available from the NetApp Element Configuration extension point:
 
 * *Getting Started*: Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the About tab in the NetApp Element Configuration extension point.
-* *Clusters*: Manage the NetApp Element clusters controlled by the plug-in. You can also enable, disable, or configure cluster-specific features.
-* *QoSSIOC Settings*: Configure your credentials for the QoSSIOC service on the management node to communicate with vCenter.
+* *Clusters*: Manages the NetApp Element clusters controlled by the plug-in. You can also enable, disable, or configure cluster-specific features.
+* *QoSSIOC Settings*: Configures your credentials for the QoSSIOC service on the management node to communicate with vCenter.
 * *QoSSIOC Events*: Displays information about all detected QoSSIOC events.
 * *About*: Displays plug-in version information and provides a service bundle download option.
 
-For details, see SolidFire and Element 12.0 Documentation Center.  *FIX LINK to VCP TOPIC*
+For details, see SolidFire and Element 12.2 Documentation Center.  *FIX LINK to VCP TOPIC*
 
 [discrete]
 == Find more information
