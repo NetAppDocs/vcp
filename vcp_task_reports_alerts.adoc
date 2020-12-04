@@ -5,7 +5,7 @@ summary: Monitor alerts, which provide information, warnings, or errors that ind
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance
 ---
 
-= Monitor and respond to system alerts
+= Monitor system alerts
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -11,20 +11,18 @@ entries:
         entries:
           - title: NetApp Element Plug-in for vCenter Server product overview
             url: concept_vcp_product_overview.html
-          - title: Accounts
-            url: concept_vcp_accounts.html
-          - title: Data protection
-            url: concept_vcp_dataprotection.html
-          - title: Clusters
-            url: concept_vcp_clusters.html
-          - title: Nodes
-            url: concept_vcp_nodes.html
+          - title: Product overview
+            url: vcp_concept_product_overview.html
+          - title: NetApp Element Configuration extension point
+            url: vcp_concept_extension_point.html
+          - title: User accounts
+            url: vcp_concept_accounts.html
+          - title: Protection domains in the vCenter Plug-in
+            url: vcp_concept_protection_domains.html
+          - title: Linked mode in the vCenter Plug-in
+            url: vcp_concept_linkedmode.html
           - title: Licensing
-            url: concept_vcp_licensing.html
-          - title: Security
-            url: concept_vcp_security.html
-          - title: Performance
-            url: concept_vcp_performance.html
+            url: vcp_concept_licensing.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
           - title: Virtual volumes (vVols)
@@ -35,32 +33,31 @@ entries:
             url: reference_requirements_vcp.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:
-          - title: NetApp VCP installation and deployment overview
-            url: task_vcp_getstarted.html
-          - title: Configure QoSSIOC settings
-            url: vcp_task_configure_qossioc.html
-          - title: Install H-series hardware
-            url: task_vcp_installhw.html
-            # For 20.2 consider putting multiple access topics or URLs
-          - title: Configure LACP for optimal storage performance
-            url: task_vcp_LACP_configuration.html
-          - title: Validate your environment with Active IQ Config Advisor
-            url: task_vcp_validate_config_advisor.html
-          - title: Configure IPMI for each node
-            url: task_vcp_final_prep.html
-      - title: Manage the plug-in
+          - title: Install and configure the NetApp Element Plug-in for vCenter Server
+            url: vcp_task_getstarted.html
+      - title: Manage storage with the vCenter Plug-in
         entries:
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
             url: vcp_task_qos_policies.html
-      - title: Monitor system Performance
+      - title: Manage the cluster
         entries:
-          - title: Monitor system performance with Reporting options
+          - title: Manage the cluster overview
+            url: vcp_task_manage_cluster_overview.html
+          - title: Add and manage drives
+            url: vcp_task_add_manage_drive.html
+          - title: Add and manage nodes
+            url: vcp_task_add_manage_nodes.html
+          - title: Create and manage virtual networks
+            url: vcp_task_create_manage_vlans.html
+      - title: Monitor system performance
+        entries:
+          - title: Monitor system performance with Report options
             url: vcp_task_reports_intro.html
           - title: Monitor overall cluster health on the Overview page
             url: vcp_task_reports_overview.html
-          - title: Monitor to system alerts
+          - title: Monitor system alerts
             url: vcp_task_reports_alerts.html
             entries:
               - title: System alerts list
@@ -73,7 +70,7 @@ entries:
             url: vcp_task_reports_volume_performance.html
           - title: Monitor iSCSI sessions to determine connection status
             url: vcp_task_reports_isci.html
-          - title: Monitor QOSSIOC events to determine performance tiering
+          - title: Monitor VM performance with QOSSIOC events
             url: vcp_task_reports_qossioc.html
       - title: Protect data with the vCenter Plug-in
         entries:
@@ -95,5 +92,9 @@ entries:
         url: task_vcp_unregister.html
       - title: Remove the vCenter Plug-in
         url: task_vcp_remove.html
+      - title: Troubleshooting
+        entries:
+          - title: Troubleshoot the vCenter Plug-in
+            url: vcp_reference_troubleshoot_vcp.html
       - title: Legal notices
         url: reference_notices_vcp.html

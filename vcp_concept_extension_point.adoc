@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: vcp_concept_extension_point.html
+summary:
+keywords: netapp, vcp, element, plugin, plug-in, extension
+---
+
+= NetApp Element Configuration extension point
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+The NetApp Element Configuration extension point enables you to add and manage clusters, assign storage clusters to vCenter Servers for Linked Mode, and configure management node settings for QoSSIOC.
+
+The following tabs are available from the NetApp Element Configuration extension point:
+
+* *Getting Started*: Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the About tab in the NetApp Element Configuration extension point.
+* *Clusters*: Manages the NetApp Element clusters controlled by the plug-in. You can also enable, disable, or configure cluster-specific features.
+* *QoSSIOC Settings*: Configures your credentials for the QoSSIOC service on the management node to communicate with vCenter.
+* *QoSSIOC Events*: Displays information about all detected QoSSIOC events.
+* *About*: Displays plug-in version information and provides a service bundle download option.
+
+For details, see SolidFire and Element 12.2 Documentation Center.  *FIX LINK to VCP TOPIC*
+
+[discrete]
+== Find more information
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
