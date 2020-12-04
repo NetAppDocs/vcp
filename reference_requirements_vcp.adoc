@@ -16,22 +16,39 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 Before you use NetApp Element Plug-in for vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.​
 
 == VMware vSphere prerequisites
-VMware vSphere 7.0, 6.7, or 6.5, including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server. To learn more, see the https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[release notes].
+VMware vSphere 7.0, 6.7, or 6.5, including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server.
+
+=== VMware vSphere versions supported by the plug-in
+The plug-in supports the following major versions of VMware software:
+
+* vSphere 7.0 and 7.0 Update 1, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+* vSphere 6.7 and 6.7 Update 1 and 3, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
++
+IMPORTANT: The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client. It is compatible with the version 6.7 U2 vSphere Web Client for Flash/FLEX.
+
+* vSphere 6.5 and 6.5 Update 1 or later, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+
+=== End of vSphere 6.0 support
+
+IMPORTANT: VMware vSphere 6.0 reached end of support status on March 12, 2020. Beginning with NetApp HCI 1.8 and Element 12, vSphere 6.0 is no longer supported. For details, see this https://mysupport.netapp.com/info/communications/ECMLP2863840.html[product communiqué].
 
 == vSphere compatibility and best practices
 Consider the following capabilities and recommendations before using the plugin:
 
-* The plug-in supports vSphere 7.0. The plug-in is not compatible with vSphere 7.0 U1.
-* The plug-in is not compatible with version 6.7 U2 of the HTML5 vSphere Web Client.
-* The plug-in supports version 6.7 U2 vSphere Web Client for Flash/FLEX and the vSphere 6.7 U3 release for both Flash and HTML5 clients.
 * vCenter high availability (VCHA) is not supported.
 * Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
 * The vSphere HTML5 Web Client and Flash Web Client have separate databases that cannot be combined. Clusters added in one client will not be visible in the other. If you intend to use both clients, add your clusters in both.
+
+== NetApp Element support
+The plug-in supports the following major versions:
+
+* Element 12.x, including SolidFire Enterprise SDS
+* Element 11.x
 
 == Network port requirements
 You need to allow some TCP ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. For a comprehensive list of ports used in NetApp HCI and SolidFire systems, see this link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html[page].
 
 [discrete]
 == Find more information
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

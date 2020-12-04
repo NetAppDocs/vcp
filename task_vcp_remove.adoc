@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task_vcp_upgrades.html
+permalink: task_vcp_remove.html
 summary: Upgrade to the latest NetApp Element Plug-in for vCenter Server.
 keywords: netapp, vcp, vcenter, plugin, element, upgrade
 ---

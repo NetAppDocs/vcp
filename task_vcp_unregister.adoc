@@ -30,7 +30,7 @@ For vSphere 7.0, all files are removed automatically after you unregister the pl
 . To unregister the plug-in, follow the procedure for your installed version:
 
 * For vCenter Plug-in 3.0 or later, unregister the plug-in using the vCenter Plug-in registration utility:
-.. Enter the IP address for your management node in a browser, including the TCP port for registration: `https://<management node IP>:9443`.
+.. Enter the IP address for your management node in a browser, including the TCP port for registration: `https://<ManagementNodeIP>:9443`.
 .. Navigate to *Unregister Plug-in*.
 .. Enter the following:
 ... The IP address or FQDN server name of the vCenter service on which you have registered your plug-in.
@@ -57,7 +57,7 @@ Disconnect-VIServer * -Confirm:$false
 
 * For vCenter Plug-in 2.6.1 or earlier:
 .. Enter the URL for the registration utility in a browser or locate the utility in the program directory:
-** `https://<FDVA or management node IP>:8443`
+** `https://<FDVAorManagementNodeIP>:8443`
 ** `/opt/solidfire/vcp/bin/vcp-reg.sh`
 .. In the vCenter Plugin Register/Unregister window, select *Unregister*.
 
