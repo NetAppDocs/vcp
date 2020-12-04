@@ -1,0 +1,67 @@
+---
+sidebar: sidebar
+permalink: task_vcp_unregister.html
+summary: You can unregister the NetApp Element Plug-in for vCenter Server from vCenter.
+keywords: netapp, vcp, vcenter, plugin, element, unregister
+---
+
+= Unregister the vCenter Plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, unregister
+
+[.lead]
+You can unregister the NetApp Element Plug-in for vCenter Server from vCenter using one of these procedures.
+
+.What you'll need
+• vCenter Administrator role privileges to unregister a plug-in.
+• The IP address of the management node.
+• URL and credentials for the vCenter from which you are unregistering the plug-in.
+
+.About this task
+For vSphere 6.7 and earlier, unregistering the plug-in has the same effect as disabling it but does not remove all associated files and folders that are installed locally.  To remove all plug-in files, see instructions on link:task_vcp_remove.html[removing the plugin].
+
+For vSphere 7.0, all files are removed automatically after you unregister the plugin.
+
+.Steps
+. To unregister the plug-in, follow the procedure for your installed version:
+
+* For vCenter Plug-in 3.0 or later, unregister the plug-in using the vCenter Plug-in registration utility:
+.. Enter the IP address for your management node in a browser, including the TCP port for registration: `https://<management node IP>:9443`.
+.. Navigate to *Unregister Plug-in*.
+.. Enter the following:
+... The IP address or FQDN server name of the vCenter service on which you have registered your plug-in.
+... The vCenter Administrator user name.
+... The vCenter Administrator password.
+.. Select *Unregister*.
+* For vCenter Plug-in 2.7 to 2.7.1:
+** Use the vCenter Managed Object Browser (MOB) interface in your browser to manually unregister:
+.. Enter the MOB URL: `https://<vcenter>/mob`
+.. Select *Content > Extension Manager > UnregisterExtension*.
+.. Enter `com.solidfire`.
+.. Select *Invoke Method*.
+** Unregister using PowerCLI:
++
+----
+Connect-VIServer -Server $vcenter -User administrator@vsphere.local -Password xxxxXXx -Force -ErrorAction Stop -SaveCredentials
+$em = Get-View ExtensionManager
+$em.ExtensionList | ft -property Key
+$em.UnregisterExtension("com.solidfire")
+$em.UpdateViewData()
+$em.ExtensionList | ft -property Key
+Disconnect-VIServer * -Confirm:$false
+----
+
+* For vCenter Plug-in 2.6.1 or earlier:
+.. Enter the URL for the registration utility in a browser or locate the utility in the program directory:
+** `https://<FDVA or management node IP>:8443`
+** `/opt/solidfire/vcp/bin/vcp-reg.sh`
+.. In the vCenter Plugin Register/Unregister window, select *Unregister*.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
