@@ -43,6 +43,8 @@ entries:
             url: vcp_task_datastores_manage.html
           - title: Manage volumes
             url: vcp_task_volumes_manage.html
+          - title: Create and manage user accounts
+            url: vcp_task_create_manage_user_accounts.html
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
