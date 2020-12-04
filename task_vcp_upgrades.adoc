@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: task_vcp_upgrades.html
+summary: Upgrade to the latest NetApp Element Plug-in for vCenter Server.
+keywords: netapp, vcp, vcenter, plugin, element, upgrade
+---
+
+= Upgrade the plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, upgrade
+
+[.lead]
+You can upgrade the NetApp Element Plug-in for vCenter Server by following the steps described for your installation. NetApp Element Plug-in for vCenter Server 4.6 is available outside of Element and NetApp HCI releases as part of a management services bundle.
+
+.Steps
+To upgrade the plug-in, follow the instructions in the https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html[upgrades guide].
+
+[discrete]
+== Find more information
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[vCenter Plug-in 4.6 Release Notes^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes]
+*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
