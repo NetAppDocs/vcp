@@ -1,0 +1,83 @@
+---
+sidebar: sidebar
+permalink: vcp_task_create_manage_access_groups.html
+summary: You can create and manage volume access groups using the plug-in.
+keywords: netapp, storage, access groups, vcp, vcenter, element
+---
+
+= Create and manage volume access groups
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+A link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html[volume access group] is a collection of volumes that users can access using either iSCSI initiators or Fibre Channel initiators.
+
+.About this task
+You can create access groups by mapping iSCSI initiator IQNs or Fibre Channel WWPNs in a collection of volumes. Each IQN that you add to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN that you add to an access group enables Fibre Channel network access to the volumes in the access group.
+
+.Options
+* <<Create an access group>>
+* <<Edit an access group>>
+* <<Delete an access group>>
+
+== Create an account
+You can create volume access groups with one or more initiators. Mapping Fibre Channel (WWPN) or iSCSI (IQN) client initiators to the volumes in a volume access group enables secure data I/O between a network and a volume.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Access Groups* sub-tab.
+. Select *Create Access Group*.
+. Enter a name for the volume access group.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+. Select an unassigned IQN or WWPN from the *Select an Initiator* drop-down list and click *Add Initiator*.
++
+NOTE: Initiators may be added or deleted after the volume access group has been created.
+
+. Click *OK* to create the access group.
+
+== Edit an access group
+You can edit volume access group names or add or remove initiators from the NetApp Element Management extension point.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Access Groups* sub-tab.
+. Select the check box for the volume access group you want to edit.
+. Select *Actions*.
+. In the resulting menu, select *Edit*.
+. Change the following as required:
+.. Modify the access group name.
+.. Add or remove initiators.
++
+NOTE: If you are removing an initiator, click the trash icon to remove it. When you remove the initiator, it can no longer access the volumes in that volume access group. Normal account access to the volume is not disrupted.
+
+. Click *OK*.
+
+== Delete an access group
+You can delete volume access groups using the NetApp Element Management extension point. You do not need to delete initiator IDs or disassociate volumes from the volume access group prior to deleting the group. After you delete the access group, group access to the volumes is discontinued.
+
+.Steps
+. Select *NetApp Element Management > Management*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Access Groups* sub-tab.
+. Select the check box for the access group you want to delete.
+. Select *Actions*.
+. In the resulting menu, select *Delete*.
+. Confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

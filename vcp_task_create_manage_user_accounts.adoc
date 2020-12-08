@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: vcp_task_create_manage_user_accounts.html
 summary: You can create and manage user accounts using the plug-in.
-keywords: netapp, storage, accounts, create, manage, delete, vcp, vcenter, element
+keywords: netapp, storage, accounts, vcp, vcenter, element
 ---
 
 = Create and manage user accounts
@@ -45,8 +45,6 @@ TIP: Use descriptive naming best practices. This is especially important if mult
 NOTE: Initiator and target secrets must differ. If these fields are left blank, the system generates the authentication credentials.
 
 . Click *OK* to create the account.
-
-The account is created and available on the *Accounts* page.
 
 == Edit an account
 You can edit a user account to change the status or the CHAP secrets. Changing CHAP settings can cause lost connectivity between a host and its associated volumes.
