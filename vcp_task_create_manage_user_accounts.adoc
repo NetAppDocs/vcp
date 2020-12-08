@@ -55,12 +55,12 @@ If you are using persistent volumes with the management node, do not modify the 
 .Steps
 . Select *NetApp Element Management > Management*.
 +
-NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
 . Select the *Accounts* sub-tab.
 . Select the check box for the account you want to edit.
-. Click *Actions*.
-. In the resulting menu, click *Edit*.
+. Select *Actions*.
+. In the resulting menu, select *Edit*.
 . Change the following as required:
 .. Edit the access status of the account.
 +
@@ -68,8 +68,7 @@ IMPORTANT: Changing the access to *Locked* terminates all iSCSI connections to t
 
 .. Edit the initiator secret or target secret credentials used for node session authentication.
 +
-NOTE: If you do not change the credentials, they remain the same. If you make the
-credentials fields blank, the system generates new passwords.
+NOTE: If you do not change the credentials, they remain the same. If you make the credentials fields blank, the system generates new passwords.
 
 . Click *OK*.
 
@@ -78,7 +77,7 @@ You can delete user accounts using the NetApp Element Management extension point
 
 .What you'll need
 Delete and purge any volumes associated with the account or reassign the volumes to another account.
-+
+
 IMPORTANT: If you are using persistent volumes with the management node, do not delete the account associated with these volumes.
 
 .Steps
@@ -89,7 +88,7 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 . Select the *Accounts* sub-tab.
 . Select the check box for the account you want to delete.
 . Click *Actions*.
-. In the resulting menu, click *Delete*.
+. In the resulting menu, select *Delete*.
 . Confirm the action.
 
 [discrete]

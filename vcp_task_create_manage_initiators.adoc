@@ -55,8 +55,8 @@ A sample of the format is as follows:
 .. Select *Create Multiple Initiators*.
 .. Do one of the following:
 *** Click *Scan Hosts* to scan vSphere hosts for initiator values not defined in the NetApp Element cluster.
-*** Enter a list of IQNs or WWPNs in the text box, and click *Add Initiators*.
-.. (Optional) Under the *Alias* heading, click the field for each entry to add an alias.
+*** Enter a list of IQNs or WWPNs in the text box, and select *Add Initiators*.
+.. (Optional) Under the *Alias* heading, select the field for each entry to add an alias.
 .. (Optional) Remove an initiator from the list, as required.
 . Click *OK* to create the initiator.
 
