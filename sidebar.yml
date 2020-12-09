@@ -93,7 +93,7 @@ entries:
                 url: vcp_task_edit_vlan.html
               - title: Delete a virtual network
                 url: vcp_task_delete_vlan.html
-      - title: Monitor system Performance
+      - title: Monitor system performance
         entries:
           - title: Monitor system performance with Report options
             url: vcp_task_reports_intro.html
