@@ -1,0 +1,625 @@
+---
+sidebar: sidebar
+permalink: vcp_task_volumes_manage.html
+summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+keywords: netapp, volumes, vcp, vcenter, element,
+---
+
+
+= Manage volumes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+
+You can accomplish the following volume management tasks:
+
+* <<Create a volume>>
+* <<View volume details>>
+* <<Edit a volume>>
+* <<Clone a volume>>
+* <<Back up or restore volumes>>
+* <<Delete volumes>>
+* <<Purge volumes>>
+* <<Restore deleted volumes>>
+* <<Add volumes to an access group>>
+* <<Remove volumes from an access group>>
+* <<Apply a QoS policy to multiple volumes>>
+* <<Change the QoS policy association of a volume>>
+
+
+== Create a volume
+You can create a new volume and associate the volume with a given account (every volume must be associated with an account). This association gives the account access to the volume through the iSCSI initiators using the CHAP credentials. You can also specify QoS settings for a volume during creation.
+
+VMware requires 512e for disk resources. If 512e is not enabled, a VMFS cannot be created.
+
+.What you'll need
+
+* At least one cluster must be added and running.
+* A user account has been created.
+
+.Steps
+
+. Select *NetApp Element Management* > *Management*.
+. If two or more clusters are added, select the cluster you intend to use for the task in the navigation bar.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select *Create Volume*.
+. Enter a name for the volume.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+. Enter the total size of the volume you want to create.
++
+NOTE: The default volume size selection is in GB. You can create volumes using sizes measured in GB or GiB:
+1GB = 1 000 000 000 bytes
+1GiB = 1 073 741 824 bytes
+
++
+NOTE: By default, 512 byte emulation is set to ON for all the new volumes. VMware requires 512e for disk resources. If 512e is not enabled, a VMFS cannot be created.
+
+. Select a user account from the *Account* list.
+. In the *Quality of Service* area, do one of the following:
++
+* Under Policy, select an existing QoS policy, if available.
+* Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
++
+IMPORTANT: QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
+After you enable datastore QoSSIOC settings, any QoS settings at the volume level are overridden.
+Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
+
+. Select *OK*.
+
+
+== View volume details
+You can review general information for all active volumes on the cluster in the NetApp Element Management extension point. You can also see details for each active volume, including efficiency, performance, QoS, as well as associated snapshots.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Click the *Volumes* subtab.
++
+General information about active volumes is displayed.
+
+. Check a specific volume.
+. Select *Actions*.
+. Select *View details*.
+
+. Review the following information:
++
+* *Volume ID*: The system-generated ID for the volume.
+* *Volume Name*: The name assigned to the volume.
+* *Account*: The name of the account assigned to the volume.
+* *Access Groups*: The name of the volume access group to which the volume belongs.
+* *Access*: The type of access assigned to the volume when it was created.
++
+Possible values:
++
+** `Read/Write`: All reads and writes are accepted.
+** `Read Only`: All read activity allowed; no writes allowed.
+** `Locked`: Only Administrator access is allowed.
+** `ReplicationTarget`: Designated as a target volume in a replicated volume pair.
+* *Volume Paired*: Indicates whether or not the volume is part of a volume pairing.
+* *Size (GB)*: The total size in GB of the volume.
+* *Snapshots*: The number of snapshots created for the volume.
+* *QoS Policy*: The name of the user-defined QoS policy.
+* *512e*: Identifies if 512e is enabled on a volume. The value can be either Yes or No.
+
+. Review details for a specific volume as listed in these sections:
++
+* <<General Details section>>
+* <<Efficiency section>>
+* <<Performance section>>
+* <<Quality of Service section>>
+* <<Snapshots section>>
+
+
+=== General Details section
+* *Name*: The name assigned to the volume.
+* *Volume ID*: The system-generated ID for the volume.
+* *IQN*: The iSCSI Qualified Name of the volume.
+* *Account ID*: The unique account ID of the associated account.
+* *Account*: The name of the account assigned to the volume.
+* *Access Groups*: The name of the volume access group to which the volume belongs.
+* *Size*: The total size in bytes of the volume.
+* *Volume Paired*:
+Indicates whether or not the volume is part of a volume pairing.
+* *SCSI EUI Device ID*: Globally unique SCSI device identifier for the volume in EUI-64 based 16-byte format.
+* *SCSI NAA Device ID*: The globally unique SCSI device identifier for the protocol endpoint in NAA IEEE Registered Extended Format.
+
+=== Efficiency section
+
+* *Compression*: The compression efficiency score for the volume.
+* *Deduplication*: The deduplication efficiency score for the volume.
+* *Thin Provisioning*: The thin provisioning efficiency score for the volume.
+* *Last Updated*: The date and time of the last efficiency score.
+
+=== Performance section
+
+* *Account ID*: The unique account ID of the associated account.
+* *Actual IOPS*:
+Current actual IOPS to the volume in the last 500 milliseconds.
+* *Async Delay*: The length of time since the volume was last synced with the remote cluster.
+* *Average IOP Size*: Average size in bytes of recent I/O to the volume in the last 500 milliseconds.
+* *Burst IOPS Size*: The total number of IOP credits available to the user. When volumes are not using up to the Max IOPS, credits are accrued.
+* *Client Queue Depth*: The number of outstanding read and write operations to the volume.
+* *Last Updated*: The date and time of the last performance update.
+* *Latency USec*: The average time, in microseconds, to complete operations to the volume in the last 500 milliseconds. A "0" (zero) value means there is no I/O to the volume.
+* *Non-zero Blocks*: Total number of 4KiB blocks with data after the last garbage collection operation has completed.
+* *Performance Utilization*: The percentage of cluster IOPS being consumed. For example, a 250K IOP cluster running at 100K IOPS would show 40% consumption.
+* *Read Bytes*: The total cumulative bytes read from the volume since the creation of the volume.
+* *Read Latency USec*: The average time, in microseconds, to complete read operations to the volume in the last 500 milliseconds.
+* *Read Operations*: The total read operations to the volume since the creation of the volume.
+* *Thin Provisioning*: The thin provisioning efficiency score for the volume.
+* *Throttle*: A floating value between 0 and 1 that represents how much the system is throttling clients below their maxIOPS because of re-replication of data, transient errors and snapshots taken.
+* *Total Latency USec*: The time, in microseconds, to complete read and write operations to a volume.
+* *Unaligned Reads*: For 512e volumes, the number of read operations that were not on a 4k sector boundary. High numbers of unaligned reads may indicate improper partition alignment.
+* *Unaligned Writes*: For 512e volumes, the number of write operations that were not on a 4k sector boundary. High numbers of unaligned writes may indicate improper partition alignment.
+* *Used Capacity*: Percentage of used capacity.
+* *Volume ID*: The system-generated ID for the volume.
+* *Vol Access Groups*: The volume access group IDs that are associated with the volume.
+* *Volume Utilization*: A percentage value that describes how much the client is using the volume.
+Possible values:
++
+** 0: Client is not using the volume.
+** 100: Client is using their max.
+** >100: Client is using their burst.
+* *Write Bytes*: The total cumulative bytes written to the volume since the creation of the volume.
+* *Write Latency USec*: The average time, in microseconds, to complete write operations to a volume in the last 500 milliseconds.
+* *Write Operations*: The total cumulative write operations to the volume since the creation of the volume.
+* *Zero Blocks*: Total number of 4KiB blocks without data after the last round of garbage collection operation has completed.
+
+=== Quality of Service section
+
+* *Policy*: The name of the QoS policy assigned to the volume.
+* *I/O Size*: The size of the IOPS in KB.
+* *Min IOPS*: The minimum number of sustained inputs and outputs per second (IOPS) that the cluster provides to a volume. The Min IOPS configured for a volume is the guaranteed level of performance for a volume. Performance does not drop below this level.
+* *Max IOPS*:  maximum number of sustained IOPS that the cluster provides to a volume. When cluster IOPS levels are critically high, this level of IOPS performance is not exceeded.
+* *Burst IOPS*: The maximum number of IOPS allowed in a short burst scenario. If a volume has been running below the Max IOPS, burst credits are accumulated. When performance levels become very high and are pushed to maximum levels, short bursts of IOPS are allowed on the volume.
+* *Max Bandwidth*: The maximum bandwidth permitted by the system to process larger block sizes.
+
+=== Snapshots section
+
+* *Snapshot ID*: System generated ID for the snapshot.
+* *Snapshot Name*: User-defined name for the snapshot.
+* *Create Date*: The date and time at which the snapshot was created.
+* *Expiration Date*:  day and time the snapshot will be deleted.
+* *Size*: User-defined size of the snapshot in GB.
+
+== Edit a volume
+
+You can change volume attributes such as QoS values, volume size, and the unit of measurement in which byte values are calculated. You can also change access levels and which account can access the volume. You can also modify account access for replication usage or to restrict access to the volume.
+
+If you are using persistent volumes with the management node, do not modify the names of the persistent volumes.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Click the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Edit*.
+. *Optional*: In the *Volume Size* field, enter a different volume size in GB or GiB.
++
+NOTE: You can increase, but not decrease, the size of the volume. If you are adjusting volume size for replication, you should first increase the size of the volume assigned as the replication target. Then you can resize the source volume. The target volume can be greater or equal in size to the source volume, but it cannot be smaller.
+
+. *Optional*: Select a different user account.
+. *Optional*: Select a different access level of one of the following:
++
+** Read/Write
+** Read Only
+** Locked
+** Replication Target
+. In the *Quality of Service* area, do one of the following:
++
+* Under Policy, select an existing QoS policy, if available.
+* Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
++
+TIP: *Best Practice*: When you change IOPS values, use increments in tens or hundreds. Input values require valid whole numbers.
+Configure volumes with an extremely high burst value. This allows the system to process occasional large block sequential workloads more quickly, while still constraining the sustained IOPS for a volume.
+
++
+IMPORTANT: QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
+After you enable datastore QoSSIOC settings, any QoS settings at the volume level are overridden.
+Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
+
+. Select *OK*.
+
+
+== Clone a volume
+
+You can create a clone of a volume to make a point-in-time copy of the data. When you clone a volume, the system creates a snapshot of the volume and then creates a copy of the data referenced by the snapshot. This is an asynchronous process, and the amount of time the process requires depends on the size of the volume you are cloning and the current cluster load.
+
+
+.What you'll need
+* At least one cluster must be added and running.
+* At least one volume must be created.
+* At least one user account must be created.
+* Available unprovisioned space must be equal to or more than the source volume size.
+
+.About this task
+The cluster supports up to two running clone requests per volume at a time and up to 8 active volume clone operations at a time. Requests beyond these limits are queued for later processing.
+
+NOTE: Cloned volumes do not inherit volume access group membership from the source volume.
+
+Operating systems differ in how they treat cloned volumes. ESXi will treat a cloned volume as a volume copy or snapshot volume. The volume will be an available device to use to create a new datastore. For more information on mounting clone volumes and handling snapshot LUNs, see VMware documentation about mounting a VMFS datastore copy and managing duplicate VMFS datastores.
+
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Check the volume you want to clone.
+. Select *Actions*.
+. Select *Clone*.
+. Enter a volume name for the newly cloned volume.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment.
+
+. Select a size in GB or GIB for the cloned volume.
++
+The default volume size selection is in GB. You can create volumes using sizes measured in GB or GiB:
++
+* 1GB = 1 000 000 000 bytes
+* 1GiB = 1 073 741 824 bytes
++
+Increasing the volume size of a clone results in a new volume with additional free space at the end of the volume. Depending on how you use the volume, you may need to extend partitions or create new partitions in the free space to make use of it.
+
+. Select an account to associate with the newly cloned volume.
+. Select the one of the following access types for the newly cloned volume:
++
+* Read/Write
+* Read Only
+* Locked
+
+. Adjust 512e settings, if required.
++
+NOTE: By default, 512 byte emulation is enabled for all new volumes. VMware requires 512e for disk resources. If 512e is not enabled, a VMFS cannot be created and volume details are grayed out.
+
+. Select *OK*.
++
+NOTE: The time to complete a cloning operation is affected by volume size and current cluster load. Refresh the page if the cloned volume does not appear in the volume list.
+
+
+== Back up or restore volumes
+You can configure the system to back up and restore the contents of a volume to and from an object store container that is external to NetApp Element software-based storage.
+
+You can also back up and restore data to and from remote NetApp Element software-based systems. You can run a maximum of two backup or restore processes at a time on a volume.
+
+=== Back up volumes
+You can back up NetApp Element volumes to Element storage, as well as secondary object stores that are compatible with Amazon S3 or OpenStack Swift.
+
+==== Back up a volume to an Amazon S3 object store
+
+You can back up NetApp Element volumes to external object stores that are compatible with Amazon S3.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Back Up to*.
+. Under *Back up volume to*, select *Amazon S3*.
+. Select an option under with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. In the *Host name* field, enter a host name to use to access the object store.
+. In the *Access key ID* field, enter an access key ID for the account.
+. In the *Secret access key* field, enter the secret access key for the account.
+. In the *Amazon S3 bucket* field, enter the S3 bucket in which to store the backup.
+. *Optional*: In the *Prefix* field, enter a prefix for the backup volume name.
+. *Optional*: In the *Nametag* field, enter a nametag to append to the prefix.
+. Select *OK*.
+
+
+==== Back up a volume to an OpenStack Swift object store
+
+You can back up NetApp Element volumes to external object stores that are compatible with OpenStack Swift.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Back Up to*.
+. Under *Back up volume to*, select *OpenStack Swift*.
+. Select an option under with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. In the *URL* field, enter a URL to use to access the object store.
+. In the *User name* field, enter a user name for the account.
+. In the *Authentication key* field, enter the authentication key for the account.
+. In the *Container* field, enter the container in which to store the backup.
+. *Optional*: In the *Prefix* field, enter a prefix for the backup volume name.
+. *Optional*: In the *Nametag* field, enter a nametag to append to the prefix.
+. Select *OK*.
+
+==== Back up a volume to a cluster running Element software
+You can back up volumes residing on a cluster running NetApp Element software to a remote Element cluster.
+
+When backing up or restoring from one cluster to another, the system generates a key to be used as authentication between the clusters.
+
+This bulk volume write key enables the source cluster to authenticate with the destination cluster, providing security when writing to the destination volume. As part of the backup or restore process, you need to generate a bulk volume write key from the destination volume before starting the operation.
+
+This is a two-part procedure:
+
+* Restore the volume from Element
+* Back up the volume to Element
+
+.Steps to restore the volume from Element
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Restore from*.
+. Under *Restore from*, select *NetApp Element*.
+. Select an option under with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. Click *Generate Key* to generate a bulk volume write key for the destination volume.
+. Copy the bulk volume write key to your clipboard to apply to later steps on the source cluster.
+
+.Steps to back up the volume to Element
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Back Up to*.
+. Under *Back up volume to*, select *NetApp Element*.
+. Select the same option as the destination cluster with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. In the *Remote cluster MVIP* field, enter the management virtual IP address of the destination volume's cluster.
+. In the *Remote cluster user name* field, enter the cluster administrator user name for the destination cluster.
+. In the *Remote cluster user password* field, enter the cluster administrator password for the destination cluster.
+. In the *Bulk volume write key* field, paste the key you generated on the destination cluster.
+. Select *OK*.
+
+=== Restore volumes
+
+When you restore a volume from a backup on an object store such as OpenStack Swift or Amazon S3, you need manifest information from the original backup process. If you are restoring a NetApp Element volume that was backed up on a NetApp Element-based storage system, the manifest information is not required. You can find the required manifest information for restoring from Swift and S3 in the Event Log on the Reporting tab.
+
+
+==== Restore a volume from backup on an Amazon S3 object store
+You can restore a volume from a backup on an Amazon S3 object store using the plug-in.
+
+. Select *NetApp Element Management > Reporting*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Event Log* subtab.
+. Select the backup event that created the backup you need to restore.
+. Select *Details* for the event.
+. Select *View Details*.
+. Copy the manifest information to your clipboard.
+. Select *Management > Volumes*.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Restore from*.
+. Under *Restore from*, select *Amazon S3*.
+. Select an option with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. In the *Host name* field, enter a host name to use to access the object store.
+. In the *Access key ID* field, enter an access key ID for the account.
+. In the *Secret access key* field, enter the secret access key for the account.
+. In the *Amazon S3 bucket* field, enter the S3 bucket where the backup is stored.
+. Paste the manifest information into the *Manifest* field.
+. Select *OK*.
+
+==== Restore a volume from backup on an OpenStack Swift object store
+
+You can restore a volume from a backup on an OpenStack Swift object store using the plug-in.
+
+. Select *NetApp Element Management > Reporting*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Event Log* subtab.
+. Select the backup event that created the backup you need to restore.
+. Select *Details* for the event.
+. Select *View Details*.
+. Copy the manifest information to your clipboard.
+. Select *Management > Volumes*.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Restore from*.
+. Under *Restore from*, select *OpenStack Swift*.
+. Select an option with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: A compressed format compatible with other systems.
+. In the *URL* field, enter a URL to use to access the object store.
+. In the *User name* field, enter a user name for the account.
+. In the *Authentication key* field, enter the authentication key for the account.
+. In the *Container* field, enter the name of the container in which the backup is stored.
+. Paste the manifest information into the *Manifest* field.
+. Select *OK*.
+
+==== Restore a volume from backup on a cluster running Element software
+
+You can restore a volume from a backup on a cluster running NetApp Element software. When backing up or restoring from one cluster to another, the system generates a key to be used as authentication between the clusters. This bulk volume write key allows the source cluster to authenticate with the destination cluster, providing security when writing to the destination volume. As part of the backup or restore process, you need to generate a bulk volume write key from the destination volume before starting the operation.
+
+.Steps to restore the volume from Element
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Restore from*.
+. Under *Restore from*, select *NetApp Element*.
+. Select an option under with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. Click *Generate Key* to generate a bulk volume write key for the destination volume.
+. Copy the bulk volume write key to your clipboard to apply to later steps on the source cluster.
+
+.Steps to back up the volume to Element
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. From the *Active* view, check the volume.
+. Select *Actions*.
+. Select *Back Up to*.
+. Under *Back up volume to*, select *NetApp Element*.
+. Select the option that matches the backup with the following data format:
++
+* Native: A compressed format readable only by NetApp Element software-based storage systems.
+* Uncompressed: An uncompressed format compatible with other systems.
+. In the *Remote cluster MVIP* field, enter the management virtual IP address of the destination volume's cluster.
+. In the *Remote cluster user name* field, enter the cluster administrator user name for the destination cluster.
+. In the *Remote cluster user password* field, enter the cluster administrator password for the destination cluster.
+. In the *Bulk volume write key* field, paste the key you generated on the destination cluster.
+. Select *OK*.
+
+
+
+
+
+== Delete volumes
+You can delete one or more volumes from a NetApp Element cluster using the NetApp Element Management extension point.
+
+The system does not immediately purge a deleted volume. A deleted volume can be restored for approximately eight hours.
+
+You can restore a volume before the system purges it or manually purge the volume from the Deleted view in *Management* > *Volumes*. When you restore a volume, it comes back online and iSCSI connections are restored.
+
+IMPORTANT: Persistent volumes that are associated with management services are created and assigned to a new account during installation or upgrade. If you are using persistent volumes, do not modify or delete the volumes or their associated account.
+
+IMPORTANT: If a volume used to create a snapshot is deleted, its associated snapshots are listed in the Inactive view on the Protection > Snapshots page. When the deleted source volumes are purged, the snapshots in Inactive view are also removed from the system.
+
+.Steps
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Delete one or more volumes:
+.. From the *Active* view, check the volume you want to delete.
+.. Select *Actions*.
+.. Select *Delete*.
++
+NOTE: The plug-in does not allow a volume with a datastore to be deleted.
+
+. Confirm the action.
++
+The volume moves from the Active view to the Deleted view in the Volumes page.
+
+== Purge volumes
+
+You can manually purge volumes after you have deleted them.
+
+The system automatically purges deleted volumes eight hours after deletion. However, if you want to purge a volume before the scheduled purge time, you can perform a manual purge using the following steps.
+
+IMPORTANT: When a volume is purged, it is immediately and permanently removed from the system. All data in the volume is lost.
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Select the view filter and select *Deleted* from the list.
+. Select one or more volumes you want to purge.
+. Confirm the action.
+
+== Restore deleted volumes
+
+You can restore a volume in the NetApp Element system if it has been deleted but not yet purged.
+
+The system automatically purges a volume approximately eight hours after it has been deleted. If the system has purged the volume, you cannot restore it.
+
+NOTE: If a volume is deleted and then restored, ESXi will not detect the restored volume (and datastore if it exists). Remove the static target from the ESXi iSCSI adapter and rescan the adapter.
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Select the view filter and select *Deleted* from the list.
+. Select one or more volumes you want to restore.
+. Select *Restore*.
+. Select the view filter and select *Active* from the list.
+. Verify that the volume or volumes and all connections are restored.
+
+== Add volumes to an access group
+
+You can add volumes to a volume access group. Each volume can belong to more than one volume access group; you can see the groups that each volume belongs to from the Active volumes view.
+
+.What you'll need
+
+* At least one cluster must be added and running.
+* At least one access group exists.
+* At least one active volume exists.
+
+.Steps
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Check each volume that you want to add to an access group.
+. Select *Actions*.
+. Select *Add to Access Group*.
+. Confirm the details and select a volume access group from the list.
+. Select *OK*.
+
+== Remove volumes from an access group
+
+You can remove volumes from an access group.
+
+When you remove a volume from an access group, the group no longer has access to that volume.
+
+IMPORTANT: Removing a volume from an access group can disrupt host access to the volume.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Check each volume that you want to remove from an access group.
+. Select *Actions*.
+. Select *Remove from Access Group*.
+. Confirm the details and select the volume access group that you no longer want to have access to each selected volume.
+. Select *OK*.
+
+
+== Apply a QoS policy to multiple volumes
+
+You can apply an existing QoS policy to multiple volumes. Use this process when you want to bulk apply a policy to one or more volumes.
+
+.What you'll need
+
+The QoS policy you want to bulk apply must exist.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Check each volume to which you want to apply a QoS policy.
+. Select *Actions*.
+. Select *Apply QoS Policy*.
+. Select the QoS policy to apply to the selected volumes.
+. Select *OK*.
+
+== Change the QoS policy association of a volume
+
+You can remove a QoS policy association from a volume or select a different QoS policy or custom QoS using the NetApp Element Management extension point.
+
+.What you'll need
+The volume you want to modify must be associated with a QoS policy.
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster in the navigation bar.
+. Select the *Volumes* subtab.
+. Check each volume that contains a QoS policy you want to modify.
+. Select *Actions*.
+. Select *Edit
+. Under *Quality of Service*, select a new QoS policy or custom settings to apply to the selected volumes.
++
+NOTE: You can also select *Reset Default QoS* to restore default IOPS values.
+
+. Select *OK*.
+
+[discrete]
+== Find more information
+
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
