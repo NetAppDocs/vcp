@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: vcp_task_create_vlan.html
-summary: You can create a new virtual network in the cluster configuration using the plug-in.
-keywords: netapp, VLANs, create, vcp, vcenter, element
+permalink: vcp_task_create_manage_vlans.html
+summary: You can create and manage virtual networks in the cluster configuration using the plug-in.
+keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 ---
 
-= Create a virtual network
+= Create and manage virtual networks
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,15 @@ keywords: netapp, VLANs, create, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can add a new virtual network to a cluster configuration to enable a multi-tenant environment connection to a cluster running NetApp Element software.
+You can add a new virtual network to a cluster configuration to enable a multi-tenant environment connection to a cluster running NetApp Element software, and manage the virtual network using the vCenter Plug-in.
+
+* <<Create a virtual network>>
+* <<View virtual network details>>
+* <<Edit a virtual network>>
+* <<Delete a virtual network>>
+
+== Create a virtual network
+You can add a new virtual network to a cluster configuration.
 
 .What you'll need
 
@@ -70,7 +78,49 @@ NOTE: The total number of IP addresses must match the number of nodes in the sto
 .. Click outside the entry to accept the values.
 . Click *OK* to create the VLAN.
 
-[discrete]
-== Find more information
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
+== View virtual network details
+You can view network information for VLANs on the Network page of the Cluster tab from the NetApp Element Management extension point.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+. Select the *Active* view.
+. View the details of the nodes in the storage cluster.
++
+You can view information such as the ID and name of each VLAN, the tag associated with each VLAN, the SVIP assigned to each VLAN, and the IP range used for each VLAN.
+
+== Edit a virtual network
+You can change VLAN attributes, such as VLAN name, netmask, and size of the IP address blocks.
+
+.About this task
+The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can only be modified for VRF VLANs. If any iSCSI, remote replication, or other network sessions exist, the modification might fail.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Network* sub-tab.
+. Select the check box for the VLAN you want to edit.
+. Click *Actions*.
+. In the resulting menu, click *Edit*.
+. In the resulting menu, enter the new attributes for the VLAN.
+. Click *Create Block* to add a non-continuous block of IP addresses for the virtual network.
+. Click *OK*.
+
+== Delete a virtual network
+You can permanently delete a VLAN object and its block of IPs. Address blocks that were assigned to the VLAN are disassociated with the virtual network and can be reassigned to another virtual network.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Network* sub-tab.
+. Select the check box for the VLAN you want to delete.
+. Click *Actions*.
+. In the resulting menu, click *Delete*.
+. Confirm the action.

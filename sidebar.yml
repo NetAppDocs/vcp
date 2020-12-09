@@ -4,11 +4,13 @@ entries:
       - title: Release Notes
         entries:
           - title: What's new in NetApp Element Plug-in for vCenter Server
-            url: rn_vcp_whatsnew.html
+            url: rn_whatsnew_vcp.html
           - title: Additional release information
-            url: rn_vcp_relatedrn.html
+            url: rn_relatedrn_vcp.html
       - title: Concepts
         entries:
+          - title: NetApp Element Plug-in for vCenter Server product overview
+            url: concept_vcp_product_overview.html
           - title: Product overview
             url: vcp_concept_product_overview.html
           - title: NetApp Element Configuration extension point
@@ -25,26 +27,10 @@ entries:
             url: vcp_concept_qossioc.html
           - title: Virtual volumes (vVols)
             url: vcp_concept_vvols.html
-      - title: Requirements and pre-deployment tasks
+      - title: Pre-deployment requirements
         entries:
-          - title: Network port requirements
-            url: vcp_concept_prereqs_network_ports.html
-          - title: Network and switch requirements
-            url: vcp_concept_prereqs_network_portsnetwork_switch.html
-          - title: Network cable requirements
-            url: vcp_concept_prereqs_network_cables.html
-          - title: IP address requirements
-            url: vcp_concept_prereqs_vcp_ip_address.html
-          - title: Network configuration
-            url: vcp_concept_prereqs_network_configuration.html
-          - title: DNS and timekeeping requirements
-            url: vcp_concept_prereqs_timekeeping.html
-          - title: Environmental requirements
-            url: vcp_concept_prereqs_environmental.html
-          - title: Protection Domains
-            url: vcp_concept_prereqs_protection_domains.html
-          - title: Witness Node resource requirements for two-node storage clusters
-            url: vcp_concept_prereqs_witness_nodes.html
+          - title: Requirements for the Element Plug-in for vCenter Server
+            url: reference_requirements_vcp.html
       - title: Get started with NetApp Element Plug-in for vCenter Server
         entries:
           - title: Install and configure the NetApp Element Plug-in for vCenter Server
@@ -57,6 +43,12 @@ entries:
             url: vcp_task_datastores_manage.html
           - title: Manage volumes
             url: vcp_task_volumes_manage.html
+          - title: Create and manage user accounts
+            url: vcp_task_create_manage_user_accounts.html
+          - title: Create and manage access groups
+            url: vcp_task_create_manage_access_groups.html
+          - title: Create and manage initiators
+            url: vcp_task_create_manage_initiators.html
           - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
@@ -93,8 +85,8 @@ entries:
                 url: vcp_task_edit_vlan.html
               - title: Delete a virtual network
                 url: vcp_task_delete_vlan.html
-      - title: Monitor system performance
-        entries:
+       - title: Monitor system performance
+         entries:
           - title: Monitor system performance with Report options
             url: vcp_task_reports_intro.html
           - title: Monitor overall cluster health on the Overview page
@@ -130,6 +122,10 @@ entries:
         entries:
           - title: Set up and manage virtual volumes with the vCenter Plug-in
             url: vcp_task_configure_manage_vvols.html
+      - title: Unregister the vCenter Plug-in
+        url: task_vcp_unregister.html
+      - title: Remove the vCenter Plug-in
+        url: task_vcp_remove.html
       - title: Troubleshooting
         entries:
           - title: Troubleshoot the vCenter Plug-in
