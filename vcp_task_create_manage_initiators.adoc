@@ -34,7 +34,7 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 . Select the *Initiators* sub-tab.
 . Select *Create Initiator*.
 . To create a single initiator:
-.. Select Create a Single Initiator.
+.. Select *Create a Single Initiator*.
 .. Enter the IQN or WWPN for the initiator in the *IQN/WWPN* field.
 +
 The accepted format of an initiator IQN is `iqn.yyyy-mm` where y and m are digits followed by text that must only contain digits, lower-case alphabetic characters, a period (`.`), colon (`:`), or dash (`-`).
