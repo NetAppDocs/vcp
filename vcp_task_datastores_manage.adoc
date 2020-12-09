@@ -1,0 +1,276 @@
+---
+sidebar: sidebar
+permalink: vcp_task_datastores_manage.html
+summary: You can add a manage datastores that are created on Element volumes using the plug-in.
+keywords: netapp, datastore, vcp, vcenter, element
+---
+
+= Manage datastores
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using the NetApp Element Plug-in for vCenter Server, you can manage datastores that are created on Element volumes. You can create, extend, clone, share, or delete datastores. You can also use VAAI UNMAP to allow a cluster to reclaim freed block space from thinly provisioned VMFS datastores.
+
+TIP: Monitor datastore operations for completion using task monitoring in vSphere.
+
+.What you'll need
+* To create and manage datastores, you must first create at least one user account in *Management* > *Accounts*.
+* To use QoSSIOC service with datastores, you must first configure settings on the QoSSIOC Settings page from the NetApp Element Configuration extension point.
+
+
+
+
+You can accomplish the following datastore management tasks:
+
+* <<Create a datastore>>
+* <<View the datastore list>>
+* <<Extend a datastore>>
+* <<Clone a datastore>>
+* <<Share a datastore>>
+* <<Perform VAAI UNMAP>>
+* <<Delete a datastore>>
+
+== Create a datastore
+
+See link:vcp_task_getstarted.html#Configure-datastores[Configure datastores].
+
+
+
+
+== View the datastore list
+You can view available datastores on the Datastores page from the NetApp Element Management extension point.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select the cluster you want to use in the navigation bar.
+. Review the list of datastores on NetApp Element and ESXi.
++
+NOTE: Datastores spanning multiple volumes (mixed datastores) are not listed. Datastore views show only datastores that are available on ESXi hosts from the selected NetApp Element cluster.
+
+. Review the following information:
++
+* *Name*: The name assigned to the datastore.
+* *Host Name(s)*: The address of each associated host device.
+* *Status*: The possible values `Accessible` or `Inaccessible` indicate whether or not the datastore is currently connected to vSphere.
+* *Type*: The VMware file system datastore type.
+* *Volume Name*: The name assigned to the associated volume.
+* *Volume NAA*: Globally unique SCSI device identifier for the associated volume in NAA IEEE Registered Extended format.
+* *Total Capacity (GB)*: Total formatted capacity of the datastore.
+* *Free Capacity (GB)*: Space that is available for the datastore.
+* *QoSSIOC Automation*: Indicates whether or not QoSSIOC automation is enabled. Possible values:
++
+** `Enabled`: QoSSIOC is enabled.
+** `Disabled`: QoSSIOC is not enabled.
+** `Max Exceeded`: Volume Max QoS has exceeded the limit value specified.
+
+== Extend a datastore
+
+You can extend a datastore to increase volume size using the NetApp Element Management extension point. Extending the datastore also extends the VMFS volume related to that datastore.
+
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select that the cluster in the navigation bar.
+. Check the datastore.
+. Select *Actions*.
+. Select *Extend*.
+. In the New Datastore Size field, enter the required size for the new datastore and select GB or GiB.
++
+NOTE: Extending the datastore will consume the entire volume's size. The new datastore size cannot exceed the unprovisioned space available on the selected cluster or the maximum volume size the cluster allows.
+
+. Select *OK*.
+. Refresh the page.
+
+== Clone a datastore
+
+Using the NetApp Element Plug-in for vCenter Server, you can clone datastores, which includes mounting the new datastore to the desired ESXi server or cluster. You can name the datastore clone and configure its QoSSIOC, volume, host, and authorization type settings.
+
+If virtual machines exist on the source datastore, virtual machines on the clone datastore will be brought into the inventory with new names.
+
+Volume size for the clone datastore matches the size of the volume backing the source datastore. By default, 512 byte emulation is set to ON for all the new volumes.
+
+.What you'll need
+* At least one cluster must be added and running.
++
+NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
+
+* Available unprovisioned space must be equal to or more than the source volume size.
+* At least one host must be connected to vCenter Server.
+* At least one user account must be created.
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select that the cluster in the navigation bar.
+. Check the datastore you want to clone.
+. Select *Actions*.
+. Select *Clone*.
++
+NOTE: If you attempt to clone a datastore that contains virtual machines with attached disks not located on the selected datastore, copies of the virtual machines on the cloned datastore will not be added to the virtual machine inventory.
+
+. Enter a datastore name.
++
+TIP: Use a unique name for each datastore in a data center. For multiple cluster or vCenter Server environments, use descriptive naming best practices.
+
+. Select *Next*.
+. Select one or more required hosts for the datastore.
++
+NOTE: You need at least one connected host before you can create a new datastore. If your host has multiple initiators, select an initiator or the host to select all initiators. If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
+
+. Select *Next*.
+. In the *Configure Volume* pane, do the following:
+.. Enter a name for the new NetApp Element volume that backs the clone datastore.
+.. Select a user account from the account list.
++
+NOTE: You need at least one existing user account before you can create a volume.
+
+.. In the *Quality of Service* area, do one of the following:
++
+** Under Policy, select an existing QoS policy, if available.
+** Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
++
+QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
++
+Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
+
+. Select *Next*.
+. Configure authorization type for host access by selecting one of the following options:
++
+** Use Volume Access Group: Use the volume access group authorization type to explicitly limit which initiators can see volumes.
+** Use CHAP: Use CHAP for secure secret-based access with no limits on initiators.
+
+. Select *Next*.
+. If you selected Use *Volume Access Group*, configure the volume access groups for the selected hosts.
++
+The volume access groups listed in Required by Selected Initiators are already associated with one or more of the host initiators you selected in an earlier step.
+
++
+.. Select additional volume access groups or create new ones to associate with available initiators:
++
+** Available: Other volume access group options in the cluster.
+** Create New Access Group: Enter the name of the new access group and click *Add*.
+
+.. Select *Next*.
+.. In the *Configure Hosts' Access* pane, associate available host initiators (IQN or WWPN) with the volume access groups you selected in the previous pane.
++
+If a host initiator is already associated with a volume access group, the field is read-only for that initiator. If a host initiator does not have a volume access group association, select an option from the drop-down list next to the initiator.
+.. Select *Next*.
+. If you want to enable QoSSIOC automation, check the *Enable QoS & SIOC* box and then configure the QoSSIOC settings.
++
+IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
+
++
+If the QoSSIOC service is not available, you must first configure settings on the QoSSIOC Settings page from the NetApp Element Configuration extension point.
+
+.. Select *Enable QoS & SIOC*.
+.. Configure the *Burst Factor*.
++
+The burst factor is a multiple of the IOPS limit (SIOC) setting for the VMDK. If you change the default, make sure to use a burst factor value that will not exceed the maximum burst limit for a NetApp Element volume when the burst factor value is multiplied by the IOPS limit for any VMDK.
+
+.. *Optional*: Select *Override Default QoS* and configure the settings.
++
+If the Override Default QoS setting is disabled for the datastore, the Shares and Limit IOPS values are automatically set based on the default SIOC settings of each VM.
++
+TIP: Do not customize the SIOC share limit without also customizing the SIOC IOPS limit.
+
++
+TIP: By default, the maximum SIOC disk shares are set to ~Unlimited~. In a large VM environment such as VDI, this can lead to overcommitting maximum IOPS on the cluster. When you enable QoSSIOC, always check the Override Default QoS and set the Limit IOPS option to something reasonable.
+
+. Select *Next*.
+. Confirm the selections and select *Finish*.
+. Refresh the page.
+
+== Share a datastore
+
+You can share a datastore with one or more hosts using the NetApp Element Management extension point.
+
+Datastores can be shared only among hosts within the same data center.
+
+.What you'll need
+
+* At least one cluster must be added and running.
++
+NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
+
+* There must be more than one host under the selected data center.
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. Check the datastore.
+. Select *Actions*.
+. Select *Share*.
+. Configure authorization type for host access by selecting one of the following options:
++
+** Use Volume Access Group: Use the volume access group authorization type to explicitly limit which initiators can see volumes.
+** Use CHAP: Use CHAP for secure secret-based access with no limits on initiators.
+
+. Select *Next*.
+. Select one or more required hosts for the datastore.
++
+NOTE: You need at least one connected host before you can create a new datastore. If your host has multiple initiators, select an initiator or all initiators by selecting the host. If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
+
+. Select *Next*.
+. If you selected Use *Volume Access Group*, configure the volume access groups for the selected hosts.
++
+The volume access groups listed in *Required by Selected Initiators* are already associated with one or more of the host initiators you selected in an earlier step.
+
++
+.. Select additional volume access groups or create new ones to associate with available initiators:
++
+** Available: Other volume access group options in the cluster.
+** Create New Access Group: Enter the name of the new access group and click *Add*.
+
+.. Select *Next*.
+.. In the *Configure Hosts' Access* pane, associate available host initiators (IQN or WWPN) with the volume access groups you selected in the previous pane.
++
+If a host initiator is already associated with a volume access group, the field is read-only for that initiator. If a host initiator does not have a volume access group association, select an option from the drop-down list next to the initiator.
+
+. Confirm the selections and select *Finish*.
+. Refresh the page.
+
+
+== Perform VAAI UNMAP
+
+If you want a cluster to reclaim freed block space from thinly provisioned VMFS5 datastores, use the VAAI UNMAP feature.
+
+.What you'll need
+* Ensure that the datastore you are using for the task is VMFS5 or earlier. VAAI UNMAP is unavailable for VMFS6 because ESXi performs the task automatically
+* Ensure that the ESXi host system settings are enabled for VAAI UNMAP:
++
+`esxcli system settings advanced list -o/VMFS3/EnableBlockDelete`
++
+The integer value must be set to 1 to enable.
+* If the ESXi host system settings are not enabled for VAAI UNMAP, set the integer value to 1 with this command:
++
+
+`esxcli system settings advanced set -i 1 -o /VMFS3/EnableBlockDelete`
+
+.Steps
+. Select *NetApp Element Management > Management*.
+. If two or more clusters are added, select that the cluster in the navigation bar.
+. Check the datastore.
+. Select *Actions*.
+. Select *VAAI Unmap*.
+. Select a host by name or IP address.
+. Enter the host user name and password.
+. Confirm the selections and select *OK*.
+
+== Delete a datastore
+You can delete a datastore using the NetApp Element Management extension point. This operation permanently deletes all the files associated with the VMs on the datastore that you want to delete. The plug-in does not delete datastores that contain registered VMs.
+
+. Select *NetApp Element Management > Management*.
+. Check the datastore.
+. Select *Actions*.
+. Select *Delete*.
+. *Optional*: If you want to delete the NetApp Element volume that is associated with the datastore, select the *Delete associated volume* check box.
++
+NOTE: You can also choose to retain the volume and later associate it with another datastore.
+
+. Select *Yes*.
+
+
+
+[discrete]
+== Find more information
+
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
