@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept_vcp_product_overview.html
-summary:
+summary: High-level information about the plug-in, including components and important URLs.
 keywords: netapp, vcp, element, vcenter plugin, plug-in
 ---
 
@@ -24,7 +24,7 @@ You can use the plug-in user interface to discover and configure clusters, and t
 
 * *Management services*: Microservices that include the QoSSIOC service for the vCenter Plug-in. Upgrades to the plug-in are released as part of a management services bundle.
 +
-TIP: Learn more about link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[management services releases].
+TIP: Learn more about link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[management services releases^].
 
 * *Management node (mNode)*: A virtual machine that runs in parallel with one or more Element software-based storage clusters. As of the Element 11.3 release, management services are hosted on the management node, allowing for quicker updates of select software services outside of major releases.
 
@@ -41,13 +41,13 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 |Register the vCenter Plug-in package in the vSphere Web Client.
 
 |`https://[management node IP address]:442`
-|From the management node per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html[Learn more.]
+|From the management node per-node UI, access network and cluster settings and utilize system tests and utilities. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html[Learn more.^]
 
 |`https://[management node IP address]`
-|Access NetApp Hybrid Cloud Control to upgrade your management services, or expand, monitor, and manage your installation. link:task_hci_getstarted.html[Learn more.]
+|Access NetApp Hybrid Cloud Control to upgrade your management services, or expand, monitor, and manage your installation. https://docs.netapp.com/us-en/hci/docs/task_hci_getstarted.html[Learn more.^]
 
 |`https://[management node IP address]/mnode`
-|Manually update management services or manage assets using the REST API UI from the management node. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html[Learn more.]
+|Manually update management services or manage assets using the REST API UI from the management node. https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html[Learn more.^]
 
 |`https://[storage cluster MVIP address]`
 |Access the NetApp Element software UI.
@@ -55,5 +55,6 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 
 [discrete]
 == Find more information
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

@@ -32,5 +32,6 @@ TIP: https://activeiq.solidfire.com[SolidFire Active IQ^] has a QoS recommendati
 
 [discrete]
 == Find more information
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

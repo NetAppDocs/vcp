@@ -11,18 +11,16 @@ entries:
         entries:
           - title: NetApp Element Plug-in for vCenter Server product overview
             url: concept_vcp_product_overview.html
-          - title: Product overview
-            url: vcp_concept_product_overview.html
           - title: NetApp Element Configuration extension point
-            url: vcp_concept_extension_point.html
+            url: vcp_concept_config_extension_point.html
+          - title: NetApp Element Management extension point
+            url: vcp_concept_management_extension_point.html
           - title: User accounts
             url: vcp_concept_accounts.html
-          - title: Protection domains in the vCenter Plug-in
+          - title: Protection domains
             url: vcp_concept_protection_domains.html
-          - title: Linked mode in the vCenter Plug-in
+          - title: Linked mode and the vCenter Plug-in
             url: vcp_concept_linkedmode.html
-          - title: Licensing
-            url: vcp_concept_licensing.html
           - title: QoSSIOC
             url: vcp_concept_qossioc.html
           - title: Virtual volumes (vVols)

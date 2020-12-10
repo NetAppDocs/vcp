@@ -36,9 +36,10 @@ To make vSphere aware of the vVol feature on the NetApp Element cluster, the vSp
 
 The VASA provider runs as part of the cluster master in Element software. The cluster master is a highly available service that fails over to any node in the cluster as needed. If the cluster master fails over, the VASA provider moves with it, ensuring high availability for the VASA provider. All provisioning and storage management tasks use the VASA provider, which handles any changes needed on the Element cluster.
 
-NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39[NetApp Software Downloads] site. The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
+NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39[NetApp Software Downloads^] site. The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
 
 [discrete]
 == Find more information
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
