@@ -26,7 +26,7 @@ For Linked Mode, the NetApp Element Plug-in for vCenter Server registers all vCe
 Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:
 
 === Setup tasks
-* link:vcp_task_configure_qossioc.html[Configure QoSSIOC settings^]
+* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure QoSSIOC settings]
 * <<Enabling QoSSIOC automation on datastores>>
 
 === Management tasks

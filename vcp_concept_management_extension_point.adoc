@@ -17,7 +17,7 @@ The NetApp Element Management extension point enables you to add and manage clus
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
-image::vcp_management_extension_point.png[management extension point]
+image::media/vcp_management_extension_point.png[management extension point]
 
 The cluster navigation bar allows you to quickly switch between clusters that have been added to the plug-in:
 * *Cluster*: If two or more clusters are added, ensure that the cluster you intend to use for management tasks is selected in the navigation bar. Select other added clusters from the drop-down list.

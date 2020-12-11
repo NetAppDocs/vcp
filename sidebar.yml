@@ -26,13 +26,11 @@ entries:
           - title: Virtual volumes (vVols)
             url: vcp_concept_vvols.html
       - title: Pre-deployment requirements
-        entries:
-          - title: Requirements for the Element Plug-in for vCenter Server
-            url: reference_requirements_vcp.html
-      - title: Get started with NetApp Element Plug-in for vCenter Server
-        entries:
-          - title: Install and configure the NetApp Element Plug-in for vCenter Server
-            url: vcp_task_getstarted.html
+        url: reference_requirements_vcp.html
+      - title: Install and configure the NetApp Element Plug-in for vCenter Server
+        url: vcp_task_getstarted.html
+      - title: Upgrade the plug-in
+        url: task_vcp_upgrades.html
       - title: Manage storage with the vCenter Plug-in
         entries:
           - title: Manage clusters
