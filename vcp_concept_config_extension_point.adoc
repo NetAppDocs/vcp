@@ -17,7 +17,7 @@ The NetApp Element Configuration extension point enables you to add and manage c
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
-image::media/vcp_config_extension_point.png[configuration extension point]
+image::vcp_config_extension_point.png[configuration extension point]
 
 The following tabs are available from the NetApp Element Configuration extension point:
 

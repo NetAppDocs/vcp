@@ -27,7 +27,7 @@ Read and complete each step to install and begin using the plug-in:
 * <<Add storage clusters for use with the plug-in>>
 * <<Configure QoSSIOC settings using the plug-in>>
 * <<Configure user accounts>>
-* <<Configure datastores>>
+* <<Create datastores and volumes>>
 
 == Prepare for installation
 
@@ -66,7 +66,7 @@ For Linked Mode environments, the plug-in must be registered with each vCenter S
 +
 The registration UI displays the Manage QoSSIOC Service Credentials page for the plug-in.
 +
-image::media/vcp_registration_ui_qossioc.png[registration utility UI QoSSIOC page]
+image::vcp_registration_ui_qossioc.png[registration utility UI QoSSIOC page]
 
 . *Optional*: Change the password for the QoSSIOC service before registering the vCenter Plug-in:
 .. For the Old Password, enter the current password of the QoSSIOC service. If you have not yet assigned a password, type the default password:
@@ -78,7 +78,7 @@ NOTE: After you submit changes, the QoSSIOC service automatically restarts.
 
 . Select *vCenter Plug-in Registration*.
 +
-image::media/vcp_registration_ui.png[registration utility UI]
+image::vcp_registration_ui.png[registration utility UI]
 
 . Enter the following information:
 
@@ -219,8 +219,8 @@ NOTE: After you have completed the registration procedure, you can remove `allow
 == Access the plug-in and verify successful installation
 
 After successful installation or upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
-+
-image::media/vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere]
+
+image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere]
 
 NOTE: If the vCenter Plug-in icons are not visible, see link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
 
@@ -263,7 +263,7 @@ When the process completes, the cluster appears in the list of available cluster
 
 == Configure QoSSIOC settings using the plug-in
 
-You can set up automatic quality of service based on Storage I/O Control link:vcp_concept_qossioc[(QoSSIOC)] for individual volumes and datastores controlled by the plug-in. To do so, you configure QoSSIOC and vCenter credentials that will enable the QoSSIOC service to communicate with vCenter.
+You can set up automatic quality of service based on Storage I/O Control link:vcp_concept_qossioc.html[(QoSSIOC)] for individual volumes and datastores controlled by the plug-in. To do so, you configure QoSSIOC and vCenter credentials that will enable the QoSSIOC service to communicate with vCenter.
 
 .About this task
 After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.

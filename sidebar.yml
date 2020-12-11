@@ -1,5 +1,6 @@
 entries:
-  - title: NetApp Element Plug-in for vCenter Server Documentation
+  - title: NetApp Element Plug-in for vCenter Server documentation
+    url: /index.html
     entries:
       - title: Release Notes
         entries:
