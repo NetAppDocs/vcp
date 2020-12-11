@@ -10,10 +10,10 @@ keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
-You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. link:vcp_task_configure_qossioc.html[QoSSIOC] is automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC^]) settings of all VMs on a standard datastore.
+You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. link:vcp_concept_qossioc.html[QoSSIOC] is automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC^]) settings of all VMs on a standard datastore.
 
 The QoSSIOC service on the management node communicates with vCenter and monitors VM activity on datastores. QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. QoSSIOC is an optional feature and is not required for the plug-in to manage storage clusters.
 
@@ -30,7 +30,7 @@ Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing th
 * <<Enabling QoSSIOC automation on datastores>>
 
 === Management tasks
-* link:vcp_task_reports_qossioc.html#qossioc-event-data[Monitor VM performance tiering with QoSSIOC events^]
+* link:vcp_task_reports_qossioc.html[Monitor VM performance tiering with QoSSIOC events^]
 * <<Edit QoSSIOC settings>>
 * <<Change the QoSSIOC service password>>
 * <<Disable QoSSIOC automation for a datastore>>
@@ -40,7 +40,7 @@ Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing th
 You can enable QoSSIOC automation and customize virtual machine disk (VMDK) performance levels for datastores after you enable the QoSSIOC service for the plug-in.
 
 .What you'll need
-You have <<Configure QoSSIOC settings,configured the QoSSIOC service settings>> on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
+You have link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configured the QoSSIOC service settings] on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
 
 .About this task
 QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols). QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration

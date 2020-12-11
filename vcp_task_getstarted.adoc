@@ -10,7 +10,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 You can install the most recent version of the NetApp Element Plug-in for vCenter Server (VCP) directly to your vCenter and access the plug-in with the vSphere Web Client.
