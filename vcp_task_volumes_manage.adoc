@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_volumes_manage.html
-summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 keywords: netapp, volumes, vcp, vcenter, element,
 ---
 
@@ -11,12 +11,12 @@ keywords: netapp, volumes, vcp, vcenter, element,
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 
-You can accomplish the following volume management tasks:
+.Options
 
 * <<Create a volume>>
 * <<View volume details>>
@@ -26,10 +26,6 @@ You can accomplish the following volume management tasks:
 * <<Delete volumes>>
 * <<Purge volumes>>
 * <<Restore deleted volumes>>
-* <<Add volumes to an access group>>
-* <<Remove volumes from an access group>>
-* <<Apply a QoS policy to multiple volumes>>
-* <<Change the QoS policy association of a volume>>
 
 
 == Create a volume
@@ -542,82 +538,6 @@ NOTE: If a volume is deleted and then restored, ESXi will not detect the restore
 . Select *Restore*.
 . Select the view filter and select *Active* from the list.
 . Verify that the volume or volumes and all connections are restored.
-
-== Add volumes to an access group
-
-You can add volumes to a volume access group. Each volume can belong to more than one volume access group; you can see the groups that each volume belongs to from the Active volumes view.
-
-.What you'll need
-
-* At least one cluster must be added and running.
-* At least one access group exists.
-* At least one active volume exists.
-
-.Steps
-
-. Select *NetApp Element Management > Management*.
-. If two or more clusters are added, select the cluster in the navigation bar.
-. Select the *Volumes* subtab.
-. Check each volume that you want to add to an access group.
-. Select *Actions*.
-. Select *Add to Access Group*.
-. Confirm the details and select a volume access group from the list.
-. Select *OK*.
-
-== Remove volumes from an access group
-
-You can remove volumes from an access group.
-
-When you remove a volume from an access group, the group no longer has access to that volume.
-
-IMPORTANT: Removing a volume from an access group can disrupt host access to the volume.
-
-. Select *NetApp Element Management > Management*.
-. If two or more clusters are added, select the cluster in the navigation bar.
-. Select the *Volumes* subtab.
-. Check each volume that you want to remove from an access group.
-. Select *Actions*.
-. Select *Remove from Access Group*.
-. Confirm the details and select the volume access group that you no longer want to have access to each selected volume.
-. Select *OK*.
-
-
-== Apply a QoS policy to multiple volumes
-
-You can apply an existing QoS policy to multiple volumes. Use this process when you want to bulk apply a policy to one or more volumes.
-
-.What you'll need
-
-The QoS policy you want to bulk apply must exist.
-
-. Select *NetApp Element Management > Management*.
-. If two or more clusters are added, select the cluster in the navigation bar.
-. Select the *Volumes* subtab.
-. Check each volume to which you want to apply a QoS policy.
-. Select *Actions*.
-. Select *Apply QoS Policy*.
-. Select the QoS policy to apply to the selected volumes.
-. Select *OK*.
-
-== Change the QoS policy association of a volume
-
-You can remove a QoS policy association from a volume or select a different QoS policy or custom QoS using the NetApp Element Management extension point.
-
-.What you'll need
-The volume you want to modify must be associated with a QoS policy.
-
-.Steps
-. Select *NetApp Element Management > Management*.
-. If two or more clusters are added, select the cluster in the navigation bar.
-. Select the *Volumes* subtab.
-. Check each volume that contains a QoS policy you want to modify.
-. Select *Actions*.
-. Select *Edit
-. Under *Quality of Service*, select a new QoS policy or custom settings to apply to the selected volumes.
-+
-NOTE: You can also select *Reset Default QoS* to restore default IOPS values.
-
-. Select *OK*.
 
 [discrete]
 == Find more information

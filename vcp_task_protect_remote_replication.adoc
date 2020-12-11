@@ -17,7 +17,7 @@ For clusters running NetApp Element software, real-time replication enables the 
 
 You can replicate volume data synchronously or asynchronously from either cluster in a cluster pair for failover and failback scenarios. You must first pair two NetApp Element clusters and then pair volumes on each cluster to take advantage of real-time remote replication.
 
-.What you'll need 
+.What you'll need
 * Ensure that you have added at least one cluster to the plug-in.
 * Ensure that all node IP addresses on both management and storage networks for paired clusters are routed to each other.
 * Ensure that the MTU of all paired nodes are the same and be supported end-to-end between clusters.
@@ -25,13 +25,13 @@ You can replicate volume data synchronously or asynchronously from either cluste
 
 NOTE: WAN Accelerator appliances have not been qualified by NetApp for use when replicating data. These appliances can interfere with compression and deduplication if deployed between two clusters that are replicating data. Be sure to fully qualify the effects of any WAN Accelerator appliance before you deploy it in a production environment.
 
-Performing remote replication involves these tasks:
+.Steps
 
-* <<Pair clusters>>
-* <<Pair volumes>>
-* <<Validate volume replication>>
-* <<Delete a volume relationship after replication>>
-* <<Manage volume relationships>>
+. <<Pair clusters>>
+. <<Pair volumes>>
+. <<Validate volume replication>>
+. <<Delete a volume relationship after replication>>
+. <<Manage volume relationships>>
 
 
 ==	Pair clusters
@@ -39,7 +39,7 @@ You must pair two clusters as a first step to using real-time replication functi
 
 You can pair a source and target cluster using the MVIP of the target cluster if there is Cluster Admin access to both clusters. If Cluster Admin access is only available on one cluster in a cluster pair, a pairing key can be used on the target cluster to complete the cluster pairing.
 
-.Before you begin
+.What you'll need
 * You need Cluster Admin privileges to one or both clusters being paired.
 * Ensure there is less than 2000 ms of round-trip latency between clusters.
 * Ensure that the difference between NetApp Element software versions on the clusters is no greater than one major version.
@@ -67,8 +67,8 @@ If the MVIP is not known, or access to the cluster is not available, you can pai
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Cluster Pairs* sub-tab.
-. Click *Create Cluster Pairing*.
+. Select the *Cluster Pairs* sub-tab.
+. Select *Create Cluster Pairing*.
 . Select one of the following:
 * *Registered Cluster*: If the remote cluster of the pairing is controlled by the same instance of the NetApp Element Plug-in for vCenter Server, select this.
 * *Credentialed Cluster*: If the remote cluster has known credentials that are outside of the NetApp Element Plug-in for vCenter Server configuration, select this.
@@ -77,9 +77,9 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 .. Enter the remote cluster MVIP address.
 .. Enter a cluster administrator user name.
 .. Enter a cluster administrator password.
-.. Click *Start Pairing*.
+.. Select *Start Pairing*.
 . After the task completes and you see the Cluster Pairs page, verify that the cluster pair is connected.
-. *Optional*: On the remote cluster, select *NetApp Element Management* > *Protection* > *Cluster Pairs* or use the Element web UI to verify that the cluster pair is connected.
+. (Optional) On the remote cluster, select *NetApp Element Management* > *Protection* > *Cluster Pairs* or use the Element web UI to verify that the cluster pair is connected.
 
 === Pair clusters with a pairing key
 If you have Cluster Admin access to a local cluster but not the remote cluster, you can pair the clusters using a pairing key. A pairing key is generated on a local cluster and then sent securely to a Cluster Admin at a remote site to establish a connection and complete the cluster pairing for real-time replication.
@@ -94,15 +94,15 @@ https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/home.html[Managing s
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Cluster Pairs* sub-tab.
-. Click *Create Cluster Pairing*.
+. Select the *Cluster Pairs* sub-tab.
+. Select *Create Cluster Pairing*.
 . Select *Inaccessible Cluster*.
-. Click *Generate Key*.
+. Select *Generate Key*.
 +
 NOTE: This action generates a text key for pairing and creates an unconfigured cluster pair on the local cluster. If you do not complete the procedure, you will need to manually delete the cluster pair.
 
 . Copy the cluster pairing key to your clipboard.
-. Click *Close*.
+. Select *Close*.
 . Make the pairing key accessible to the Cluster Admin at the remote cluster site.
 +
 NOTE: The cluster pairing key contains a version of the MVIP, user name, password, and database information to permit volume connections for remote replication. This key should be treated in a secure manner and not stored in a way that would allow accidental or unsecured access to the user name or password.
@@ -115,14 +115,14 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 +
 NOTE: You can alternatively complete the pairing using the Element UI.
 
-. Click the *Cluster Pairs* sub-tab.
-. Click *Complete Cluster Pairing*.
+. Select the *Cluster Pairs* sub-tab.
+. Select *Complete Cluster Pairing*.
 +
 NOTE: Wait for the loading spinner to disappear before proceeding to the next step. If an unexpected error occurs during the pairing process, check for and manually delete any unconfigured cluster pairs on the local and remote cluster and perform the pairing again.
 
-. Paste the pairing key from the local cluster in the Cluster Pairing Key field.
-. Click *Pair Cluster*.
-. After the task completes and you see the Cluster Pair page, verify that the cluster pair is connected.
+. Paste the pairing key from the local cluster in the *Cluster Pairing Key* field.
+. Select *Pair Cluster*.
+. After the task completes and you see the *Cluster Pair* page, verify that the cluster pair is connected.
 . To verify that the cluster pair is connected, on the remote cluster select *NetApp Element Management* > *Protection* or use the Element UI.
 
 
@@ -132,7 +132,7 @@ After the cluster pairing has completed, you might want to verify the cluster pa
 .Steps
 . On the local cluster, select *Data Protection* > *Cluster Pairs*.
 . Verify that the cluster pair is connected.
-. Navigate back to the local cluster and the Cluster Pairs window and verify that the cluster pair is connected.
+. Navigate back to the local cluster and the *Cluster Pairs* window and verify that the cluster pair is connected.
 
 ==	Pair volumes
 After you have established a connection between clusters in a cluster pair, you can pair a volume on one cluster with a volume on the other cluster in the pair.
@@ -143,9 +143,11 @@ You can pair the volume using one of the following methods:
 * <<Pair volumes using a pairing key>>: Use a pairing key if cluster credentials are available only on the source cluster.
 * <<Create target volumes and pair them with local volumes>>: If you know the credentials for both clusters, create a replication target volume on the remote cluster to pair with the source cluster.
 
-After a volume pairing relationship is established, you must identify which volume is the replication target.
+After a volume pairing relationship is established, you must identify which volume is the replication target:
 
-.Before you begin
+* <<Assign a replication source and target to paired volumes>>
+
+.What you'll need
 * You should have established a connection between clusters in a cluster pair.
 * You need to have Cluster admin privileges to one or both clusters being paired.
 
@@ -163,10 +165,10 @@ You can pair a local volume with another volume on a remote cluster. Use this me
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check the volume that you want to pair.
-. Click *Actions*.
-. Click *Volume Pairing*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume that you want to pair.
+. Select *Actions*.
+. Select *Volume Pairing*.
 . Select one of the following:
 * *Volume Creation*: To create a replication target volume on the remote cluster, select this. This method can be used only on remote clusters that are controlled by a NetApp Element Plug-in for vCenter Server.
 * *Volume Selection*: If the remote cluster for the target volume is controlled by a NetApp Element Plug-in for vCenter Server, select this.
@@ -192,7 +194,7 @@ NOTE: Volume size cannot be adjusted during this process.
 +
 NOTE: This action populates the available volumes on the cluster to be selected in the next step.
 
-.. *Optional*: Click the *Set remote volume to Replication Target* option if you want to set the remote volume as the target in the volume pairing. The local volume, if set to read/write, becomes the source in the pair.
+.. (Optional) Select the *Set remote volume to Replication Target* option if you want to set the remote volume as the target in the volume pairing. The local volume, if set to read/write, becomes the source in the pair.
 +
 IMPORTANT: If you assign an existing volume as the replication target, the data on that volume will be overwritten. As a best practice, you should use a new volume as the replication target.
 +
@@ -203,13 +205,13 @@ NOTE: You can also assign replication source and target later in the pairing pro
 .. Select a paired cluster from the drop-down list.
 .. If the cluster is not registered with the plug-in, enter a cluster administrator user ID and a cluster administrator password.
 .. Enter a volume ID.
-.. Click the *Set remote volume to Replication Target* option if you want to set the remote volume as the target in the volume pairing. The local volume, if set to read/write, becomes the source in the pair.
+.. Select the *Set remote volume to Replication Target* option if you want to set the remote volume as the target in the volume pairing. The local volume, if set to read/write, becomes the source in the pair.
 +
 IMPORTANT: If you assign an existing volume as the replication target, the data on that volume will be overwritten. As a best practice, you should use a new volume as the replication target.
 +
 NOTE: You can also assign replication source and target later in the pairing process from *Volumes* > *Actions* > *Edit*. You must assign a source and target to complete the pairing.
 
-. Click *Pair*.
+. Select *Pair*.
 +
 NOTE: After you confirm the pairing, the two clusters begin the process of connecting the volumes. During the pairing process, you can see progress messages in the Volume Status column on the Volume Pairs page.
 +
@@ -239,22 +241,22 @@ NOTE: The volume pairing key contains an encrypted version of the volume informa
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check the volume that you want to pair.
-. Click *Actions*.
-. Click *Volume Pairing*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume that you want to pair.
+. Select *Actions*.
+. Select *Volume Pairing*.
 . Select *Inaccessible Cluster*.
 . Select a Replication Mode:
 +
 * *Real-time (Synchronous)*: Writes are acknowledged to the client after they are committed on both of the source and target clusters.
 * *Real-time (Asynchronous)*: Writes are acknowledged to the client after they are committed on the source cluster.
 * *Snapshots Only*: Only snapshots created on the source cluster are replicated. Active writes from the source volume are not replicated.
-. Click *Generate Key*.
+. Select *Generate Key*.
 +
 NOTE: This action generates a text key for pairing and creates an unconfigured volume pair on the local cluster. If you don't do this, you will need to manually delete the volume pair.
 
 . Copy the pairing key to your clipboard.
-. Click *Close*.
+. Select *Close*.
 . Make the pairing key accessible to the Cluster Admin at the remote cluster site.
 +
 NOTE: The volume pairing key should be treated in a secure manner and not stored in a way that would allow accidental or unsecured access.
@@ -265,13 +267,13 @@ IMPORTANT: Do not modify any of the characters in the pairing key. The key becom
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check the volume you want to pair.
-. Click *Actions*.
-. Click *Volume Pairing*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume you want to pair.
+. Select *Actions*.
+. Select *Volume Pairing*.
 . Select *Complete Cluster Pairing*.
 . Paste the pairing key from the other cluster into the *Pairing Key* box.
-. Click *Complete Pairing*.
+. Select *Complete Pairing*.
 +
 NOTE: After you confirm the pairing, the two clusters begin the process of connecting the volumes. During the pairing process, you can see progress messages in the Volume Status column of the Volume Pairs page. If an unexpected error occurs during the pairing process, check for and manually delete any unconfigured cluster pairs on the local and remote cluster and perform the pairing again.
 +
@@ -286,7 +288,7 @@ NOTE: Volumes that are paired using a pairing key appear after the pairing proce
 
 
 
-=== Create target volumes and pairing them with local volumes
+=== Create target volumes and pair them with local volumes
 You can pair two or more local volumes with associated target volumes on a remote cluster. This process creates a replication target volume on the remote cluster for each local source volume you select. Use this method if there is Cluster Admin access to both clusters on which volumes are to be paired and remote cluster is controlled by the plug-in.
 
 This method uses the volume ID of each volume on the remote cluster to initiate one or more connections.
@@ -302,10 +304,10 @@ This method uses the volume ID of each volume on the remote cluster to initiate 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check two or more volumes that you want to pair.
-. Click *Actions*.
-. Click *Volume Pairing*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select two or more volumes that you want to pair.
+. Select *Actions*.
+. Select *Volume Pairing*.
 . Select a *Replication Mode*:
 +
 * *Real-time (Synchronous)*: Writes are acknowledged to the client after they are committed on both of the source and target clusters.
@@ -314,11 +316,11 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 
 . Select a paired cluster from the drop-down list.
 . Select an account on the target cluster for the replication target volume.
-. *Optional*: Type a prefix or suffix for the new volume names on the target cluster.
+. (Optional) Type a prefix or suffix for the new volume names on the target cluster.
 +
 NOTE: A sample volume name with the modified name appears.
 
-. Click *Create Pairs*.
+. Select *Create Pairs*.
 +
 NOTE: After you confirm the pairing, the two clusters begin the process of connecting the volumes. During the pairing process, you can see progress messages in the Volume Status column on the Volume Pairs page. After the process completes, new target volumes are created and connected on the remote cluster.
 
@@ -349,26 +351,26 @@ A replication source volume has read/write account access. A replication target 
 .Steps
 . From the *NetApp Element Management* extension point in vCenter Server, select the cluster that contains the paired volume that you want to use as the replication source.
 . Select *NetApp Element Management* > *Management*.
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check the volume that you want to edit.
-. Click *Actions*.
-. Click *Edit*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume that you want to edit.
+. Select *Actions*.
+. Select *Edit*.
 . From the Access drop-down list, select *Read/Write*.
 +
 IMPORTANT: If you are reversing source and target assignment, this action will cause the volume pair to display PausedMisconfigured until a new replication target is assigned. Changing access pauses volume replication and causes the transmission of data to cease. Be sure that you have coordinated these changes at both sites.
 
-. Click *OK*.
+. Select *OK*.
 . From the *NetApp Element Management* extension point, select the cluster containing the paired volume that you want to use as the replication target.
 . Select *NetApp Element Management* > *Management*.
-. Click the *Volumes* sub-tab.
-. From the *Active* view, check the volume you want to edit.
-. Click *Actions*.
+. Select the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume you want to edit.
+. Select *Actions*.
 . Select *Edit*.
 . In the *Access* drop-down list, select *Replication Target*.
 +
 IMPORTANT: If you assign an existing volume as the replication target, the data on that volume will be overwritten. As a best practice, you should use a new volume as the replication target.
 
-. Click *OK*.
+. Select *OK*.
 
 
 ==	Validate volume replication
@@ -379,13 +381,13 @@ After a volume is replicated, you should ensure that the source and target volum
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volume Pairs* sub-tab.
+. Select the *Volume Pairs* sub-tab.
 . Verify that the volume status is Active.
 
 ==	Delete a volume relationship after replication
 After replication completes and you no longer need the volume pairing relationship, you can delete the volume relationship.
 
-See <<Delete volume pairs>>.
+See <<Delete a volume pair>>.
 
 
 ==	Manage volume relationships
@@ -404,15 +406,15 @@ You can edit volume pair properties to manually pause replication.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volume Pairs* sub-tab.
-. Check the volume pair you want to edit.
-. Click *Actions*.
+. Select the *Volume Pairs* sub-tab.
+. Select the check box for the volume pair you want to edit.
+. Select *Actions*.
 . Select *Edit*.
 . Manually pause or start the replication process.
 +
 IMPORTANT: Pausing or resuming volume replication manually will cause the transmission of data to cease or resume. Be sure that you have coordinated these changes at both sites.
 
-. Click *Save Changes*.
+. Select *Save Changes*.
 
 ===	Change the mode of replication
 You can edit volume pair properties to make changes to the replication mode of the volume pair relationship.
@@ -422,9 +424,9 @@ You can edit volume pair properties to make changes to the replication mode of t
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volume Pairs* sub-tab.
-. Check the volume pair you want to edit.
-. Click *Actions*.
+. Select the *Volume Pairs* sub-tab.
+. Select the check box for the volume pair you want to edit.
+. Select *Actions*.
 . Select *Edit*.
 . Select a new replication mode:
 +
@@ -434,7 +436,7 @@ IMPORTANT: Changing the mode of replication causes the mode to change immediatel
 * *Real-time (Synchronous)*: Writes are acknowledged to the client after they are committed on both the source and target clusters.
 * *Real-time (Asynchronous)*: Writes are acknowledged to the client after they are committed on the source cluster.
 * *Snapshots Only*: Only snapshots created on the source cluster are replicated. Active writes from the source volume are not replicated.
-. Click *Save Changes*.
+. Select *Save Changes*.
 
 ===	Delete a volume pair
 You can delete a volume pair if you want to remove a pair association between two volumes.
@@ -449,16 +451,16 @@ For volumes not controlled by the vCenter Plug-in, you can alternatively delete 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the *Volume Pairs* sub-tab.
-. Check the one or more volume pairs you want to delete.
-. Click *Actions*.
+. Select the *Volume Pairs* sub-tab.
+. Select one or more volume pairs you want to delete.
+. Select *Actions*.
 . Select *Delete*.
 . Confirm the details of each volume pair.
 +
 NOTE: For clusters that are not managed by the plug-in, this action deletes only the volume pair end on the local cluster. You need to manually delete the volume pair end from the remote cluster to fully remove the pairing relationship.
 
-. (Optional for clusters managed by plug-in) Check *Change Replication Target Access to* and select a new access mode for the replication target volume. This new access mode will be applied after the volume pairing relationship has been removed.
-. Click *Yes*.
+. (Optional for clusters managed by plug-in) Select the check box for *Change Replication Target Access to* and select a new access mode for the replication target volume. This new access mode will be applied after the volume pairing relationship has been removed.
+. Select *Yes*.
 
 ===	Delete a cluster pair
 You can delete a cluster pairing relationship between two clusters using vCenter on the local and remote sites. To completely remove a cluster pairing relationship, you must remove cluster pair ends from both the local and remote clusters.
@@ -469,9 +471,9 @@ For clusters not controlled by the vCenter Plug-in, you can alternatively delete
 
 .Steps
 . Select *NetApp Element Management* > *Protection*.
-. Click the *Cluster Pairs* sub-tab.
-. Check the cluster pair you want to delete.
-. Click *Actions*.
+. Select the *Cluster Pairs* sub-tab.
+. Select the check box for the cluster pair you want to delete.
+. Select *Actions*.
 . Select *Delete*.
 . Confirm action.
 +
@@ -520,5 +522,5 @@ These messages can display on both source and target ends of the pairing unless 
 
 [discrete]
 == Find more information
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-*	https://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center^]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
