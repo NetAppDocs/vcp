@@ -13,7 +13,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 :imagesdir: media/
 
 [.lead]
-The system reports error codes with each alert on the Reporting > Alerts pages of the NetApp Element Plug-in for vCenter Server. Error codes help you determine what component of the system experienced the alert and why the alert was generated.
+The system reports error codes with each alert on the *Reporting > Alerts* pages of the NetApp Element Management extension point. Error codes help you determine what component of the system experienced the alert and why the alert was generated.
 
 The following list outlines the different types of system alerts.
 
@@ -50,9 +50,9 @@ NOTE: The warning status can only occur on a Triple Helix system.
 +
 *To resolve*: Add more provisioned capacity.
 * *blockServiceUnhealthy*: A block service has been detected as unhealthy:
-** *Severity* = Warning: No action is taken. This warning period will expire in cTimeUntilBSIsKilledMSec=330000 milliseconds.
-** *Severity = Error: The system is automatically decommissioning data and re-replicating its data to other healthy drives.
-** *Severity = Critical: There are failed block services on several nodes greater than or equal to the replication count (2 for double helix). Data is unavailable and bin syncing will not finish.
+** Severity = Warning: No action is taken. This warning period will expire in cTimeUntilBSIsKilledMSec=330000 milliseconds.
+** Severity = Error: The system is automatically decommissioning data and re-replicating its data to other healthy drives.
+** Severity = Critical: There are failed block services on several nodes greater than or equal to the replication count (2 for double helix). Data is unavailable and bin syncing will not finish.
 
 +
 *To resolve*: Check for network connectivity issues and hardware errors. There will be other faults if specific hardware components have failed. The fault will clear when the block service is accessible or when the service has been decommissioned.
@@ -214,7 +214,7 @@ You can attempt to recover a drive that does not successfully enable security ev
 |===
 
 +
-*To resolve*: To resolve this fault, update the SSL certificate before it expires. Use the UpdateIdpConfiguration API method with refreshCertificateExpirationTime=true to provide the updated SSL certificate.
+*To resolve*: To resolve this fault, update the SSL certificate before it expires. Use the `UpdateIdpConfiguration` API method with `refreshCertificateExpirationTime=true` to provide the updated SSL certificate.
 * *inconsistentBondModes*: The bond modes on the VLAN device are missing. This fault will display the expected bond mode and the bond mode currently in use.
 * *inconsistentInterfaceConfiguration*: The interface configuration is inconsistent.
 +
@@ -249,20 +249,20 @@ This fault displays the node or nodes in question along with the associated MTU 
 
 ** Client certificate has expired.
 +
-*To resolve*: To resolve this fault, create a new CSR using GetClientCertificateSigningRequest, have it signed ensuring the new expiration date is at least 30 days out, and use ModifyKeyServerKmip to replace the expired KMIP client certificate with the new certificate.
+*To resolve*: To resolve this fault, create a new CSR using `GetClientCertificateSigningRequest`, have it signed ensuring the new expiration date is at least 30 days out, and use `ModifyKeyServerKmip` to replace the expired KMIP client certificate with the new certificate.
 
 ** Root Certification Authority (CA) certificate error.
 +
-*To resolve*: To resolve this fault, check that the correct certificate was provided, and, if needed, reacquire the certificate from the root CA. Use ModifyKeyServerKmip to install the correct KMIP client certificate.
+*To resolve*: To resolve this fault, check that the correct certificate was provided, and, if needed, reacquire the certificate from the root CA. Use `ModifyKeyServerKmip` to install the correct KMIP client certificate.
 
 ** Client certificate error.
 +
-*To resolve*: To resolve this fault, check that the correct KMIP client certificate is installed. The root CA of the client certificate should be installed on the EKS. Use ModifyKeyServerKmip to install the correct KMIP client certificate.
+*To resolve*: To resolve this fault, check that the correct KMIP client certificate is installed. The root CA of the client certificate should be installed on the EKS. Use `ModifyKeyServerKmip` to install the correct KMIP client certificate.
 
 * *kmipServerFault*:
 ** Connection failure
 +
-*To resolve*: To resolve this fault, check that the External Key Server is alive and reachable via the network. Use TestKeyServerKimp and TestKeyProviderKmip to test your connection.
+*To resolve*: To resolve this fault, check that the External Key Server is alive and reachable via the network. Use `TestKeyServerKimp` and `TestKeyProviderKmip` to test your connection.
 
 ** Authentication failure
 +
@@ -291,7 +291,7 @@ NOTE: See the Details heading for more detailed information on the fault.
 
 +
 *To resolve*: Contact NetApp Support for assistance.
-* *metadataClusterFull*: There is not enough free metadata storage space to support a single node loss. See the GetClusterFullThreshold API method for details on cluster fullness levels. This cluster fault indicates one of the following conditions:
+* *metadataClusterFull*: There is not enough free metadata storage space to support a single node loss. See the `GetClusterFullThreshold` API method for details on cluster fullness levels. This cluster fault indicates one of the following conditions:
 ** stage3Low (Warning): User-defined threshold was crossed. Adjust Cluster Full settings or add more nodes.
 ** stage4Critical (Error): There is not enough space to recover from a 1-node failure. Creation of volumes, snapshots, and clones is not allowed.
 ** stage5CompletelyConsumed (Critical)1; No writes or new iSCSI connections are allowed. Current iSCSI connections will be maintained. Writes will fail until more capacity is added to the cluster. Purge or delete data or add more nodes.
@@ -310,7 +310,10 @@ NOTE: See the Details heading for more detailed information on the fault.
 +
 *To resolve*: Contact NetApp Support for assistance.
 * *noAvailableVirtualNetworkIPAddresses*: There are no available virtual network addresses in the block of IP addresses.
-** virtualNetworkID # TAG(###) has no available storage IP addresses. Additional nodes cannot be added to the cluster.
++
+----
+ virtualNetworkID # TAG(###) has no available storage IP addresses. Additional nodes cannot be added to the cluster.
+----
 
 +
 *To resolve*: Add more IP addresses to the block of virtual network addresses.

@@ -13,7 +13,7 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-Using the vCenter Plug-in, you can add storage nodes when a cluster is created or when more storage is needed.
+Using the vCenter Plug-in, you can add https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes[storage nodes] when a cluster is created or when more storage is needed. Storage nodes running Element software can be added using the NetApp Element Management extension point. NetApp HCI compute nodes must be added and managed outside of the plug-in in vSphere.
 
 * <<Add a node to a cluster>>
 * <<View node details>>

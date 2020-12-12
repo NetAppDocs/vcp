@@ -49,10 +49,10 @@ Registration shows as successful, but the plug-in icons are not visible from the
 ** HTML5 installations: `/var/log/vmware/vsphere-ui/logs/vsphere_client_virgo.log`
 . If a failure message indicates that the ZIP download failed, download the ZIP again.
 +
-NOTE: Note: You might need to correct an unreachable or bad URL. Update the plug-in registration or unregister and register the plug-in again with a corrected URL. Failure to download the ZIP can also occur if you specified an HTTP URL without changing the `allowHTTP` setting.
+NOTE: You might need to correct an unreachable or bad URL. Update the plug-in registration or unregister and register the plug-in again with a corrected URL. Failure to download the ZIP can also occur if you specified an HTTP URL without changing the `allowHTTP` setting.
 
 * Verify networking ports. Ensure the management node is reachable from vCenter bidirectionally on the required ports.
-* Check the vCenter’s MOB extension record (`https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList["com.solidfire"].server`) that contains the download location URL for the plug-in ZIP:
+* Check the vCenter’s MOB extension record (https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList["com.solidfire"].server)that contains the download location URL for the plug-in ZIP:
 . Paste the URL into a browser.
 . Verify that the plug-in ZIP can be downloaded.
 +
@@ -165,14 +165,11 @@ Manually delete the unconfigured cluster pair the process created on the local c
 QoSSIOC status for the plug-in displays a warning icon and error message.
 
 .Corrective Action
-* Unable to reach IP address
-The IP address is invalid or no responses are received. Verify that the address is correct and that the management node is online and available.
+* `Unable to reach IP address`: The IP address is invalid or no responses are received. Verify that the address is correct and that the management node is online and available.
 
-* Unable to communicate
-The IP address can be reached but calls to the address fail. This might indicate that the QoSSIOC service is not running at the specified address or a firewall might be blocking traffic.
+* `Unable to communicate`: The IP address can be reached but calls to the address fail. This might indicate that the QoSSIOC service is not running at the specified address or a firewall might be blocking traffic.
 
-* Unable to connect to the SIOC service
-Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes) to verify that the SIOC service started successfully. SIOC service startup can take 50 seconds or more. If the service did not start successfully, try again.
+* `Unable to connect to the SIOC service`: Open `sioc.log` in `/opt/solidfire/sioc/data/logs/` on the management node (`/var/log` or `/var/log/solidfire/` on older management nodes) to verify that the SIOC service started successfully. SIOC service startup can take 50 seconds or more. If the service did not start successfully, try again.
 
 == QoSSIOC service shown as available but is unavailable
 

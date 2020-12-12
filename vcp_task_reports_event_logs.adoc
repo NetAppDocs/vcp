@@ -21,7 +21,8 @@ You can review event logs for operations performed on the selected cluster along
 . From the vCenter Plug-in, select *NetApp Element Management*.
 . Select *Reporting* > *Event Log*.
 . To review details, select an event and click *Details*.
-. Review the following event information:
+. Review the event information that includes the following:
+* *Event Type*: The type of event being logged; for example, API events or clone events.
 * *Service ID*: The ID of the service that reported the event (if applicable). The value is zero  if the fault is not associated with a service.
 * *Node* or *Drive ID*: The ID of the node or drive that reported the event (if applicable).
 
@@ -64,13 +65,13 @@ The following list describes the types of events that might appear in the event 
 There are three types of slice reassignment events, which include information about the service where a volume is assigned:
 * flipping: changing the primary service to a new primary service
 +
-`sliceID oldPrimaryServiceID->newPrimaryServiceID
+`sliceID oldPrimaryServiceID->newPrimaryServiceID`
 * moving: changing the secondary service to a new secondary service
 +
-`sliceID {oldSecondaryServiceID(s)}->{newSecondaryServiceID(s)}
+`sliceID {oldSecondaryServiceID(s)}->{newSecondaryServiceID(s)}`
 * pruning: removing a volume from a set of services
 +
-`sliceID {oldSecondaryServiceID(s)}
+`sliceID {oldSecondaryServiceID(s)}`
 
 * *snmpTrapEvent*: Events related to SNMP traps.
 * *statEvent*: Events related to system statistics.

@@ -60,8 +60,8 @@ NOTE: By default, 512 byte emulation is set to ON for all the new volumes. VMwar
 . Select a user account from the *Account* list.
 . In the *Quality of Service* area, do one of the following:
 +
-* Under Policy, select an existing QoS policy, if available.
-* Under Custom Settings, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
+* Under *Policy*, select an existing QoS policy, if available.
+* Under *Custom Settings*, set customized minimum, maximum, and burst values for IOPS or use the default QoS values.
 +
 IMPORTANT: QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
 After you enable datastore QoSSIOC settings, any QoS settings at the volume level are overridden.

@@ -73,12 +73,10 @@ entries:
                 url: vcp_reference_reports_alert_errors.html
           - title: Monitor event logs for troubleshooting
             url: vcp_task_reports_event_logs.html
-          - title: Monitor the status of running tasks
-            url: vcp_task_reports_running_tasks.html
           - title: Monitor volume performance
             url: vcp_task_reports_volume_performance.html
           - title: Monitor iSCSI sessions to determine connection status
-            url: vcp_task_reports_isci.html
+            url: vcp_task_reports_iscsi.html
           - title: Monitor VM performance with QOSSIOC events
             url: vcp_task_reports_qossioc.html
       - title: Protect data with the vCenter Plug-in
@@ -93,17 +91,13 @@ entries:
             url: vcp_task_protect_snapshots_schedules.html
           - title: Perform remote replication between clusters
             url: vcp_task_protect_remote_replication.html
-      - title: Manage virtual volumes with the vCenter Plug-in
-        entries:
-          - title: Set up and manage virtual volumes with the vCenter Plug-in
-            url: vcp_task_configure_manage_vvols.html
-      - title: Unregister the vCenter Plug-in
+      - title: Set up and manage virtual volumes with the vCenter Plug-in
+        url: vcp_task_configure_manage_vvols.html
+      - title: Unregister the plug-in
         url: task_vcp_unregister.html
-      - title: Remove the vCenter Plug-in
+      - title: Remove the plug-in
         url: task_vcp_remove.html
-      - title: Troubleshooting
-        entries:
-          - title: Troubleshoot the vCenter Plug-in
-            url: vcp_reference_troubleshoot_vcp.html
+      - title: Troubleshoot the plug-in
+        url: vcp_reference_troubleshoot_vcp.html
       - title: Legal notices
         url: reference_notices_vcp.html

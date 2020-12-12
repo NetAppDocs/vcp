@@ -18,7 +18,7 @@ NetApp Element Plug-in for vCenter Server (VCP) provides a plug-in to the VMware
 
 == Discover what's new
 
-* link:rn_vcp_whatsnew_vcp.html[What's new in NetApp Element Plug-in for vCenter Server]
+* link:rn_whatsnew_vcp.html[What's new in NetApp Element Plug-in for vCenter Server]
 * http://docs.netapp.com/sfe-122/index.jsp[What's new in NetApp Element software^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[What's new in management services for Element software and NetApp HCI^]
 
@@ -29,4 +29,4 @@ NetApp Element Plug-in for vCenter Server (VCP) provides a plug-in to the VMware
 
 [discrete]
 == Find more information
-https://www.netapp.com/support-and-training/documentation/[NetApp Product Documentation]
+https://www.netapp.com/support-and-training/documentation/[NetApp Product Documentation^]
