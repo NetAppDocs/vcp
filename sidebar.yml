@@ -1,6 +1,8 @@
 entries:
   - title: NetApp Element Plug-in for vCenter Server documentation
     url: /index.html
+  - title: NetApp Element Plug-in for vCenter Server product overview
+    url: concept_vcp_product_overview.html
     entries:
       - title: Release Notes
         entries:
@@ -10,8 +12,6 @@ entries:
             url: rn_relatedrn_vcp.html
       - title: Concepts
         entries:
-          - title: NetApp Element Plug-in for vCenter Server product overview
-            url: concept_vcp_product_overview.html
           - title: NetApp Element Configuration extension point
             url: vcp_concept_config_extension_point.html
           - title: NetApp Element Management extension point
@@ -50,9 +50,9 @@ entries:
             url: vcp_task_qossioc.html
           - title: Create and manage volume QoS policies
             url: vcp_task_qos_policies.html
-      - title: Manage the cluster
+      - title: Manage cluster hardware and virtual networks
         entries:
-          - title: Manage the cluster overview
+          - title: Manage cluster hardware and virtual networks overview
             url: vcp_task_manage_cluster_overview.html
           - title: Add and manage drives
             url: vcp_task_add_manage_drive.html

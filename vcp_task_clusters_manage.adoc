@@ -13,21 +13,24 @@ keywords: netapp, cluster, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can edit a cluster running Element software, enable and configure SSH,  set protection domain monitoring, and shut down a cluster.
+You can edit a cluster running Element software, manage SSH configuration,  set protection domain monitoring, and shut down a cluster.
 
 .What you'll need
 
-* At least one cluster must be available and its IP or FQDN address known.
+* At least one cluster must be link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[added].
++
+NOTE: You must add at least one cluster to use NetApp Element Management extension point functions.
+
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules enable open network communication between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
-
-NOTE: You must add at least one cluster to use NetApp Element Management extension point functions.
 
 .Options
 
 * <<View cluster details>>
 * <<Edit a cluster profile>>
 * <<Remove a cluster profile>>
+* <<Enable Encryption at Rest>>
+* <<Disable Encryption at Rest>>
 * <<Enable SSH>>
 * <<Change the SSH time limit>>
 * <<Disable SSH>>
@@ -98,6 +101,28 @@ If you set up a Linked Mode group and want to reassign a cluster to another vCen
 . Select *Remove*.
 . Confirm the action.
 
+== Enable Encryption at Rest
+You can manually enable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Select the cluster on which you want to enable encryption at rest.
+. Select *Actions*.
+. In the resulting menu, click *Enable EAR*.
+. Confirm the action.
+
+== Disable encryption at rest
+You can manually disable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Select the check box for the cluster.
+. Click *Actions*.
+. In the resulting menu, click *Disable EAR*.
+. Confirm the action.
+
 == Enable SSH
 
 You can manually enable a Secure Shell (SSH) session using the NetApp Element Configuration extension point. Enabling SSH allows NetApp technical support engineers access to storage nodes for troubleshooting for the duration you determine.
@@ -146,23 +171,12 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 . Select *Yes*.
 
 == Set protection domain monitoring
-You can manually enable protection domain monitoring using the NetApp Element Configuration extension point. You can select a protection domain threshold based on node or chassis domains.
+You can manually enable link:vcp_concept_protection_domains.html[protection domain monitoring] using the NetApp Element Configuration extension point. You can select a protection domain threshold based on node or chassis domains.
 
 .What you'll need
 
 * The selected cluster must be monitored by Element 11.0 or later to use protection domain monitoring; otherwise, protection domain functions are not available.
 * Your cluster must have more than two nodes to use the protection domains feature. Compatibility with two-node clusters is not available.
-
-.About this task
-
-A protection domain is a node or a set of nodes grouped together such that any node or all nodes in a domain might fail without causing the cluster to lose data availability. The protection domains feature allows you to monitor a cluster's resource capacity to ensure the cluster is still capable of healing from a failure event.
-
-You can select monitoring at either a node or chassis domain level:
-
-* *Node level* defines each protection domain per individual node, with each node potentially located across chassis.
-* *Chassis level* defines each protection domain by nodes that share a chassis.
-
-A chassis domain requires more potential capacity resources than a node domain to be resilient to failure. When a protection domain threshold is exceeded, a cluster no longer has sufficient capacity to heal from failure while also maintaining undisrupted data availability.
 
 .Steps
 . Select *NetApp Element Configuration > Clusters*.
@@ -176,10 +190,12 @@ A chassis domain requires more potential capacity resources than a node domain t
 
 . Select *OK*.
 
+After you have set monitoring preferences, you can monitor protection domains from the link:vcp_task_reports_overview.html#reporting-overview-page-data[Reporting] tab of the NetApp Element Management extension point.
+
 == Shut down a cluster
 You can manually shut down all active nodes in a storage cluster using the NetApp Element Configuration extension point.
 
-If you want to restart rather than shut down the cluster, you can select all nodes from the Cluster page in the NetApp Element Management extension point and perform a restart.
+If you want to link:vcp_task_add_manage_nodes.html#restart-a-node[restart] rather than shut down the cluster, you can select all nodes from the Cluster page in the NetApp Element Management extension point and perform a restart.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
@@ -208,5 +224,5 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 [discrete]
 == Find more information
-
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

@@ -541,5 +541,5 @@ NOTE: If a volume is deleted and then restored, ESXi will not detect the restore
 
 [discrete]
 == Find more information
-
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
