@@ -1,5 +1,6 @@
 # vcp
-NetApp VCP Documentation
+
+= NetApp VCP Documentation
 
 Welcome to the open-source documentation for NetApp Element Plug-in for vCenter Server (VCP).
 

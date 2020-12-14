@@ -1,0 +1,142 @@
+---
+sidebar: sidebar
+permalink: vcp_task_add_manage_nodes.html
+summary: You can create and manage nodes in the cluster configuration using the plug-in.
+keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
+---
+
+= Add and manage nodes
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Using the vCenter Plug-in, you can add https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes[storage nodes] when a cluster is created or when more storage is needed. Storage nodes running Element software can be added using the NetApp Element Management extension point. NetApp HCI compute nodes must be added and managed outside of the plug-in in vSphere.
+
+* <<Add a node to a cluster>>
+* <<View node details>>
+* <<Restart a node>>
+* <<Shut down a node>>
+* <<Remove a node from a cluster>>
+
+== Add a node to a cluster
+
+You can add storage nodes to your cluster using the vCenter Plug-in.
+
+.What you'll need
+
+* The node you are adding has been set up, powered on, and configured.
+* Both the major or minor version numbers of the software on each node in a cluster must match for the software to be compatible. For example, Element 9.0 is not compatible with version 9.1.
+
+NOTE: If the node you are adding has a different major or minor version of NetApp Element software than the version running on the cluster, the cluster asynchronously updates the node to the version of NetApp Element software running on the cluster master. After the node is updated, it automatically adds itself to the cluster. During this asynchronous process, the node will be in a `pendingActive` state.
+
+.About this task
+Nodes require initial configuration when they are first powered on. When the node has been set up and configured, it registers itself on the cluster identified when the node was configured and appears in the list of pending nodes on the *Cluster > Nodes* page of the NetApp Element Management extension point.
+
+You can add nodes of smaller or larger capacities to an existing cluster.
+
+The procedure is the same for adding Fibre Channel nodes or storage nodes that are running NetApp Element software.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Nodes* sub-tab.
+. Select *Pending* from the drop-down list to view the list of nodes.
+. To add one or more nodes, perform the following steps:
+.. Select the check box for each node you want to add.
+.. Click *Add Node*.
+. Review the details of the nodes you are intending to add and confirm the action.
++
+When the action is complete, the node appears in the list of active nodes for the cluster.
+
+== View node details
+
+You can view a list of the nodes in the cluster on the Nodes page of the Cluster tab from the NetApp Element Management extension point. You must select Active view to see the list of active nodes. You can change the view by selecting `Pending`, `PendingActive`, and `All` options using the drop-down filter.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+. Select the *Active* view.
+. View the details of the nodes in the storage cluster.
++
+You can view information such as node IDs, the name and state of each node, configured IOPS, node type, the number of active drives in each node, and networking information about each node.
+
+== Restart a node
+
+You can restart one or more active nodes in a cluster using the NetApp Element Management extension point.
+
+.What you'll need
+You have stopped I/O and disconnected all iSCSI sessions if you are restarting more than one node simultaneously.
+
+.About this task
+To restart the cluster, you can select all cluster nodes and perform a restart.
+
+IMPORTANT: This method restarts all networking services on a node, causing temporary loss of networking connectivity.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+.. From the *Active* view, select the check box for each node you want to restart.
+.. Click *Actions*.
+.. Select *Restart*.
+. Confirm the action.
+
+== Shut down a node
+
+You can shut down one or more active nodes in a cluster using the NetApp Element Management extension point. To shut down the cluster, you can select all cluster nodes and perform a simultaneous shutdown.
+
+.What you'll need
+You have stopped I/O and disconnected all iSCSI sessions if you are restarting more than one node simultaneously.
+
+.About this task
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+.. From the *Active* view, select the check box for each node you want to shut down.
+.. Click *Actions*.
+.. Select *Shutdown*.
+. Confirm the action.
+
+NOTE: If a node has been down longer than 5.5 minutes under any type of shutdown condition, the NetApp Element software determines that the node is not coming back to join the cluster. Double Helix data protection begins the task of writing single replicated blocks to another node to replicate the data. Depending on the length of time a node is shut down, its drives might need to be added back to the cluster after the node is brought back online.
+
+== Remove a node from a cluster
+
+You can remove nodes from a cluster without service interruption when their storage is no longer needed or they require maintenance.
+
+.What you'll need
+You have removed all the drives in the node from the cluster. You cannot remove a node until the `RemoveDrives` process has completed and all data has been migrated away from the node.
+
+.About this task
+At least two Fibre Channel nodes are required for Fibre Channel connectivity in a NetApp Element cluster. If only one Fibre Channel node is connected, the system triggers alerts in the Event Log until you add another Fibre Channel node to the cluster, even though all Fibre Channel network traffic continues to operate with only one Fibre Channel node.
+
+.Steps
+. Select *NetApp Element Management > Cluster*.
++
+NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Select the *Nodes* sub-tab.
+. To remove one or more nodes, perform the following steps:
+.. From the *Active* view, select the check box for each node you want to remove.
+.. Click *Actions*.
+.. Select *Remove*.
+. Confirm the action.
++
+Any nodes removed from a cluster appear in the list of Pending nodes.

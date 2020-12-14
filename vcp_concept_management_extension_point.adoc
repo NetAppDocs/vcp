@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: vcp_concept_management_extension_point.html
+summary:
+keywords: netapp, vcp, element, plugin, plug-in, management, extension point
+---
+
+= NetApp Element Management extension point
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The NetApp Element Management extension point enables you to add and manage clusters, assign storage clusters to vCenter Servers for Linked Mode, and configure management node settings for QoSSIOC.
+
+NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
+
+image::vcp_management_extension_point.png[management extension point]
+
+The cluster navigation bar allows you to quickly switch between clusters that have been added to the plug-in:
+
+* *Cluster*: If two or more clusters are added, ensure that the cluster you intend to use for management tasks is selected in the navigation bar. Select other added clusters from the drop-down list.
+* *MVIP*: The management virtual IP address of the selected cluster.
+* *SVIP*: The storage virtual IP address of the selected cluster.
+* *vCenter*: The vCenter Server which the selected cluster can access. The cluster is assigned access to a vCenter Server when the cluster is added to the plug-in.
+
+The following tabs are available from the NetApp Element Management extension point:
+
+* *Getting Started*: Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the *About* tab in the NetApp Element Management extension point.
+* *Reporting*: Displays information about cluster components and provides a cluster performance overview. You can also find information about events, alerts, iSCSI sessions, running tasks, and volume performance from the tab.
+* *Management*: Create and manage datastores, volumes, user accounts, access groups, and initiators. You can also perform backup operations, clones, and snapshots. QoS policies are available to be created and managed using NetApp Element software 10 or later.
+* *Protection*: Manage individual and group snapshots. You can also create schedules for snapshot creation, pair clusters for real-time replication, and manage volume pairs.
+* *Cluster*: Add and manage drives and nodes. You can also create and manage VLANs.
+* *VVols*: Manage virtual volumes and their associated storage containers, protocol endpoints, and bindings.
+
+[discrete]
+== Find more information
+* link:vcp_concept_config_extension_point[NetApp Element Configuration extension point]
+* link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar
+permalink: task_vcp_remove.html
+summary: Upgrade to the latest NetApp Element Plug-in for vCenter Server.
+keywords: netapp, vcp, vcenter, plugin, element, upgrade
+---
+
+= Remove the vCenter Plug-in
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, upgrade
+
+[.lead]
+For vCenter Plug-in 2.5 or later used with vSphere 6.7 or earlier, you must complete the following process to remove all files associated with the plug-in manually from vCenter Server. For vSphere 7.0, all files will be removed automatically after you unregister the plugin.
+
+.What you'll need
+* vCenter Plug-in 2.5 or later
+* vSphere 6.7 or earlier
+* You have link:task_vcp_unregister.html[unregistered] the existing plug-in and have SSH, RDP, or other appropriate
+connectivity to vCSA or vCenter Server.
+
+.Steps
+. Log in as an administrator to the server that is running vCenter Server and open a command prompt.
+. Stop vCenter Server services:
+* Windows:
+** (For Flash clients) Run the following command:
++
+----
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --stop vsphere-client
+----
+** (For HTML5 clients) Run the following commands:
++
+----
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --stop vsphere-client
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --stop vsphere-ui
+----
+* vCenter Server Appliance (vCSA)
+** (For Flash clients) Run the following command:
++
+----
+service-control --stop vsphere-client
+----
+** (For HTML5 clients) Run the following commands:
++
+----
+service-control --stop vsphere-client
+service-control --stop vsphere-ui
+----
+. Remove SolidFire folders and files from the following locations:
+* (For Windows) Use Windows Explorer and search for `SolidFire` in `C:\ProgramData\VMware` and `C:\Program Files\VMware`.
++
+NOTE: The ProgramData folder is hidden. You must enter the complete file path to access the folder.
+
+* (For vCSA) Run the following command:
++
+----
+find / -name "*solidfire*" -exec rm -rf {} \;
+----
+. Start vCenter Server services:
+* Windows:
+** (For Flash clients) Run the following command:
++
+----
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --start vsphere-client
+----
+** (For HTML5 clients) Run the following commands:
++
+----
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --start vsphere-client
+C:\Program Files\VMware\vCenter Server\vmon>.\vmon-cli --start vsphere-ui
+----
+* vCSA:
+** (For Flash clients) Run the following command:
++
+----
+service-control --start vsphere-client
+----
+** (For HTML5 clients) Run the following commands:
++
+----
+service-control --start vsphere-client
+service-control --start vsphere-ui
+----
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
