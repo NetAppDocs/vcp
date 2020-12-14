@@ -1,0 +1,228 @@
+---
+sidebar: sidebar
+permalink: vcp_task_clusters_manage.html
+summary: You can add a node to the storage cluster using the plug-in.
+keywords: netapp, cluster, vcp, vcenter, element
+---
+
+= Manage clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can edit a cluster running Element software, manage SSH configuration,  set protection domain monitoring, and shut down a cluster.
+
+.What you'll need
+
+* At least one cluster must be link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[added].
++
+NOTE: You must add at least one cluster to use NetApp Element Management extension point functions.
+
+* Current full Cluster Admin user credentials for the cluster.
+* Firewall rules enable open network communication between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
+
+.Options
+
+* <<View cluster details>>
+* <<Edit a cluster profile>>
+* <<Remove a cluster profile>>
+* <<Enable Encryption at Rest>>
+* <<Disable Encryption at Rest>>
+* <<Enable SSH>>
+* <<Change the SSH time limit>>
+* <<Disable SSH>>
+* <<Set protection domain monitoring>>
+* <<Shut down a cluster>>
+* <<Expand your NetApp HCI infrastructure>>
+
+== View cluster details
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster you want to edit.
+. Select *Actions*.
+. Select *Details*.
+. Review the following information for all clusters:
++
+* *Cluster Name*: The name for the cluster.
+* *vCenter IP Address*: The IP address or FQDN of the vCenter Server to which the cluster is assigned.
+* *Unique ID*: Unique ID for the cluster.
+* *Management Virtual IP*: The management virtual IP address (MVIP).
+* *Storage Virtual*: The storage virtual IP address (SVIP).
+* *Status*: The status of the cluster.
+* *VVols*: The status of the VVols functionality on the cluster.
+. Review additional details for an individual cluster:
++
+* *MVIP Node ID*: The node that holds the master MVIP address.
+* *SVIP Node ID*: The node holding the master SVIP address.
+* *Element Version*: The version of NetApp Element software that the cluster is running.
+* *VASA 2 Status*: The status of the VASA Provider on Element cluster.
+* *VASA Provider URL*: The URL of the VASA Provider enabled on the Element cluster, when applicable.
+* *Encryption At Rest Status*: Possible values:
++
+** Enabling: Encryption at Rest is being enabled.
+** Enabled: Encryption at Rest is enabled.
+** Disabling: Encryption at Rest is being disabled.
+** Disabled: Encryption at Rest is disabled.
+* *Ensemble Nodes*: IPs of the nodes that are part of the database ensemble.
+* *Paired With*: The names of additional clusters that are paired with the local cluster.
+* *SSH Status*: The status of the secure shell. If enabled, the time remaining is displayed.
+
+
+== Edit a cluster profile
+You can change the cluster User ID and password from the NetApp Element Configuration extension point.
+
+NOTE: This procedure describes how to change the cluster admin user name and password used by the plug-in. You cannot change the cluster admin credentials from the plug-in. For instructions on changing credentials for a cluster administrator account, see the https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/GUID-E54EF120-2F00-4F43-B7CA-CCCBAAD1B5B6.html[NetApp SolidFire and Element Documentation Center - Managing cluster administrator user accounts^].
+
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Edit*.
+. Change any of the following:
++
+* User ID: The cluster administrator name.
+* Password: The cluster administrator password.
++
+NOTE: You cannot change the IP address or FQDN of a cluster after a cluster is added. You also cannot change the assigned Linked Mode vCenter Server for an added cluster. To change the cluster address or associated vCenter Server, you must remove the cluster and add it again.
+
+. Select *OK*.
+
+== Remove a cluster profile
+You can remove the profile of a cluster that you no longer want to manage from the vCenter Plug-in using the NetApp Element Configuration extension point.
+
+If you set up a Linked Mode group and want to reassign a cluster to another vCenter Server, you can remove the cluster profile and add it again with a different linked vCenter Server IP.
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster you want to remove.
+. Select *Actions*.
+. Select *Remove*.
+. Confirm the action.
+
+== Enable Encryption at Rest
+You can manually enable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Select the cluster on which you want to enable encryption at rest.
+. Select *Actions*.
+. In the resulting menu, click *Enable EAR*.
+. Confirm the action.
+
+== Disable Encryption at Rest
+You can manually disable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Select the check box for the cluster.
+. Click *Actions*.
+. In the resulting menu, click *Disable EAR*.
+. Confirm the action.
+
+== Enable SSH
+
+You can manually enable a Secure Shell (SSH) session using the NetApp Element Configuration extension point. Enabling SSH allows NetApp technical support engineers access to storage nodes for troubleshooting for the duration you determine.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Enable SSH*.
+. Enter a duration for the SSH session to be enabled in hours up to a maximum of 720.
++
+NOTE: To continue, you need to enter a value.
+
+. Select *Yes*.
+
+
+== Change the SSH time limit
+
+You can enter a new duration for an SSH session.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Change SSH*.
++
+The dialog box displays the remaining time for the SSH session.
+
+. Enter a new duration for the SSH session in hours up to a maximum of 720.
++
+NOTE: To continue, you need to enter a value.
+
+. Select *Yes*.
+
+== Disable SSH
+You can manually disable Secure Shell (SSH) access to nodes in the storage cluster using the NetApp Element Configuration extension point.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Disable SSH*.
+. Select *Yes*.
+
+== Set protection domain monitoring
+You can manually enable link:vcp_concept_protection_domains.html[protection domain monitoring] using the NetApp Element Configuration extension point. You can select a protection domain threshold based on node or chassis domains.
+
+.What you'll need
+
+* The selected cluster must be monitored by Element 11.0 or later to use protection domain monitoring; otherwise, protection domain functions are not available.
+* Your cluster must have more than two nodes to use the protection domains feature. Compatibility with two-node clusters is not available.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Set Protection Domain Monitoring*.
+. Select a failure threshold:
++
+* *Node*: The threshold beyond which a cluster can no longer provide uninterrupted data during hardware failures at the node level. The node threshold is the system default.
+* *Chassis*: The threshold beyond which a cluster can no longer provide uninterrupted data during hardware failures at the chassis level.
+
+. Select *OK*.
+
+After you have set monitoring preferences, you can monitor protection domains from the link:vcp_task_reports_overview.html#reporting-overview-page-data[Reporting] tab of the NetApp Element Management extension point.
+
+== Shut down a cluster
+You can manually shut down all active nodes in a storage cluster using the NetApp Element Configuration extension point.
+
+If you want to link:vcp_task_add_manage_nodes.html#restart-a-node[restart] rather than shut down the cluster, you can select all nodes from the Cluster page in the NetApp Element Management extension point and perform a restart.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.What you'll need
+You have stopped I/O and disconnected all iSCSI sessions.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Shutdown*.
+. Confirm the action.
+
+
+== Expand your NetApp HCI infrastructure
+You can manually expand your NetApp HCI infrastructure by adding nodes using NetApp HCI. A link to a NetApp HCI UI for scaling your system is provided from the NetApp Element extension point. Additional links are provided within the NetApp Element Management extension point from the Getting Started and Cluster pages.
+
+NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
+
+.Steps
+. Select *NetApp Element Configuration > Clusters*.
+. Check the cluster.
+. Select *Actions*.
+. Select *Expand your NetApp HCI*.
+
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

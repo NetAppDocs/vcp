@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: vcp_task_reports_iscsi.html
+summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
+---
+
+= Monitor iSCSI sessions to determine connection status
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
+
+
+.Steps
+
+. From the vCenter Plug-in, select *NetApp Element Management*.
+. Select *Reporting* > *iSCSI Sessions*.
+
+== iSCSI session data
+
+* *Node*: The node hosting the primary metadata partition for the volume.
+* *Account*: The name of the account that owns the volume. If value is blank, a dash (-) will be displayed.
+* *Volume*: The volume name identified on the node.
+* *Volume ID*: ID of the volume associated with the Target IQN.
+* *Initiator ID*: A system-generated ID for the initiator.
+* *Initiator Alias*: An optional name for the initiator that makes finding the initiator easier in a long list.
+* *Initiator IP*: The IP address of the endpoint that initiates the session.
+* *Initiator IQN*: The IQN of the endpoint that initiates the session.
+* *Target IP*: The IP address of the node hosting the volume.
+* *Target IQN*: The IQN of the volume.
+* *Created On*: Date the session was established.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

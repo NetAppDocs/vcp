@@ -1,0 +1,48 @@
+---
+sidebar: sidebar
+permalink: vcp_task_reports_qossioc.html
+summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster, performance
+---
+
+= Monitor VM performance tiering with QoSSIOC events
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can view events related to QoSSIOC when a VM with a QoS-enabled datastore is reconfigured or issued a power or guest event.
+
+You can view QoSSIOC events from the NetApp Element Configuration extension point in the NetApp Element Plug-in for vCenter Server.
+
+QoSSIOC events are displayed from locally added clusters. In a Linked Mode environment, log into the vSphere Web Client that has the cluster added locally to view QoSSIOC events for that cluster.
+
+.What you'll need
+
+* At least one cluster must be added and running.
+* The QoSSIOC service must be configured and verified running using the QoSSIOC Settings page for the plug-in.
+* At least one datastore must have QoSSIOC automation enabled.
+
+
+.Steps
+
+. From the vCenter Plug-in, select *NetApp Element Configuration*.
+. Select *QoSSIOC Events*.
+
+== QoSSIOC event data
+
+* *Date*: The date and time of the QoSSIOC event.
+* *Datastore Name*: The user-defined datastore name.
+* *Cluster IP*: The IP address of the cluster containing the datastore from which the event originated.
+* *Volume ID*: The system-generated ID for the associated volume.
+* *Min IOPs*: The current minimum IOPS QoS setting of the volume.
+* *Max IOPs*: The current maximum IOPS QoS setting of the volume.
+* *Burst IOPs*: The current maximum burst QoS setting of the volume.
+* *Burst Time*: The length of time a burst is allowed.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

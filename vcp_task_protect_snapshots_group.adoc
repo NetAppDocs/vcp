@@ -1,0 +1,145 @@
+---
+sidebar: sidebar
+permalink: vcp_task_protect_snapshots_group.html
+summary: Create a group snapshot of a set of volumes to preserve a point-in-time copy of the metadata for each volume.
+keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup, amazon, s3, openstack, swift
+---
+
+= Create and manage group snapshots in vCenter Server
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can create a group snapshot of a related set of volumes to preserve a point-in-time copy of the metadata for each volume. You can use the group snapshot as a backup or rollback to restore the state of the group of volumes to a desired point in time.
+
+.Options
+
+* <<Create a group snapshot>>
+* <<View group snapshot details>>
+* <<Clone volumes from a group snapshot>>
+* <<Roll back volumes to a group snapshot>>
+* <<Delete a group snapshot>>
+
+
+== Create a group snapshot
+You can create a snapshot of a group of volumes immediately or create a schedule to automate future snapshots of the group of volumes. A single group snapshot can consistently snapshot up to 32 volumes at one time.
+
+You can later change replication settings or the retention period for a group snapshot. The retention period you specify begins when you enter the new interval. When you set a retention period, you can select a period that begins at the current time (retention is not calculated from the snapshot creation time). You can specify intervals in minutes, hours, and days.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Management*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Click the *Volumes* sub-tab.
+. From the *Active* view, select the check box for the volume to use for the snapshot.
+. Click *Actions*.
+. In the resulting menu, select *Create Group Snapshot*.
+. (Optional) In the Create Group Snapshot dialog box, enter a name for the snapshot.
++
+TIP: Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment. If you do not enter a name, the system creates a group snapshot default name using the date and time that the snapshot was created.
+
+. (Optional) Select the *Include snapshot in replication when paired* check box to ensure that the snapshot is replicated when the parent volume is paired.
+
+. Select one of the following as the retention period for the snapshot:
++
+* *Keep forever*: Retains the snapshot on the system indefinitely.
+* *Set retention period*: Determine a length of time (days, hours, or minutes) for the system to retain the snapshot.
++
+NOTE: When you set a retention period, you select a period that begins at the current time. (Retention is not calculated from the snapshot creation time.)
+
+. To take a single, immediate snapshot, select *Take group snapshot now*.
+. To schedule the snapshot to run at a future time, complete the following steps:
+.. Select *Create snapshot schedule*.
+.. Enter a schedule name.
+.. Select a schedule type and configure the schedule details.
+.. (Optional) Select the check box for *Recurrent Schedule* to repeat the scheduled snapshot periodically.
+. Click *OK*.
+
+== View group snapshot details
+You might want to verify that the snapshot was added.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Click the *Group Snapshots* sub-tab.
+. Verify the snapshot details:
++
+* *Create date*: The date and time when the group snapshot was created.
+* *Status*: Displays the status of the snapshot on the remote cluster running NetApp Element software:
+** *Preparing*: The snapshot is being prepared for use and is not yet writable.
+** *Done*: This snapshot has finished preparation and is now usable.
+** *Active*: The snapshot is the active branch.
+* *Number of volumes*: Number of volumes in the group snapshot.
+
+== Clone volumes from a group snapshot
+You can clone a group of volumes from a point-in-time group snapshot. After you create the volumes, you can use them like any other volume in the system.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Click the *Group Snapshots* sub-tab.
+. Select the check box for the group snapshot to use for the volume clones.
+. Click *Actions*.
+. In the resulting menu, select *Clone Volumes from Group Snapshot*.
+. (Optional) Enter a new volume name prefix, which will be applied to all volumes created from the group snapshot.
+. (Optional) Select a different account to which the clone will belong. If you do not select an account, the system assigns the new volumes to the current volume account.
+. Select a different access method for the volumes in the clone. If you do not select a method, the system uses the current volume access:
++
+* *Read Only*: Only read operations are allowed.
+* *Read/Write*: All read and write operations are accepted.
+* *Locked*: Only administrator access is allowed.
+* *Replication Target*: Designated as a target volume in a replicated volume pair.
+. Click *OK*.
++
+NOTE: Volume size and current cluster load affect the time needed to complete a cloning operation.
+
+
+== Roll back volumes to a group snapshot
+You can roll back a group of active volumes to a group snapshot. This restores all the associated volumes in a group snapshot to their state at the time the group snapshot was created. This procedure also restores volume sizes to the size recorded in the original snapshot. If the system has purged a volume, all snapshots of that volume were also deleted at the time of the purge; the system does not restore any deleted volume snapshots.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Click the *Group Snapshots* sub-tab.
+. Select the check box for the group snapshot to use for the volume rollback.
+. Click *Actions*.
+. In the resulting menu, select *Rollback Volumes to Group Snapshot*.
+. (Optional) To save the current state of the volumes before rolling back to the snapshot:
++
+.. In the *Rollback to Snapshot* dialog box, select *Save volumes' current state as a group snapshot*.
+.. Enter a name for the new snapshot.
+. Click *OK*.
+
+== Delete a group snapshot
+You can delete a group snapshot from the system. When you delete the group snapshot, you can choose whether all snapshots associated with the group are deleted or retained as individual snapshots.
+
+If you delete a volume or snapshot that is a member of a group snapshot, you can no longer roll back to the group snapshot. However, you can roll back each volume individually.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Select the check box for the group snapshot you want to delete.
+. Click *Actions*.
+. In the resulting menu, select *Delete*.
+. Select one of the following options:
++
+* *Delete group snapshot and members*: Deletes the group snapshot and all member snapshots.
+* *Retain members*: Deletes the group snapshot but keeps all member snapshots.
+. Confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]

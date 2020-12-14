@@ -1,0 +1,138 @@
+---
+sidebar: sidebar
+permalink: vcp_task_protect_snapshots_schedules.html
+summary: Create a snapshot schedule using the plug-in.
+keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, schedule
+---
+
+= Create snapshot schedules
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can schedule a snapshot of a volume to occur automatically at specified date and time intervals. You can schedule either single volume snapshots or group snapshots to run automatically.
+
+When you create snapshot schedules, you can store the resulting snapshots on a remote NetApp Element storage system if the volume is being replicated.
+
+NOTE: Schedules are created using UTC+0 time. You may need to adjust the actual time a snapshot will run based on your time zone.
+
+* <<Create a snapshot schedule>>
+* <<View snapshot schedule details>>
+* <<Edit a snapshot schedule>>
+* <<Copy a snapshot schedule>>
+* <<Delete a snapshot schedule>>
+
+== Create a snapshot schedule
+You can schedule a snapshot of a volume or volumes to occur automatically at specified intervals.
+
+When you configure a snapshot schedule, you can choose from time intervals based on days of the week or days of the month. You can also specify the days, hours, and minutes before the next snapshot occurs.
+
+If you schedule a snapshot to run at a time period that is not divisible by 5 minutes, the snapshot will run at the next time period that is divisible by 5 minutes. For example, if you schedule a snapshot to run at 12:42:00 UTC, it will run at 12:45:00 UTC. You cannot schedule a snapshot to run at intervals of less than 5 minutes.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+
+. Select the *Schedules* sub-tab.
+. Select *Create Schedule*.
+. In the *Volume IDs CSV* field, enter a single volume ID or a comma-separated list of volume IDs to include in the snapshot schedule operation.
+. Enter a schedule name.
+. Select a schedule type and configure the details.
+. (Optional) To repeat the schedule indefinitely, check *Recurring Schedule*.
+. (Optional) In the New Snapshot Name field, enter a name for the new snapshot.
++
+NOTE: If you do not enter a name, the system creates a default snapshot name using the date and time the snapshot was created.
+
+. (Optional) Check *Include snapshot in replication when paired* to ensure that the snapshot is replicated when the parent volume is paired.
+. Select one of the following as the retention period for the snapshot:
++
+* *Keep forever*: Retains the snapshot on the system indefinitely.
+* *Set retention period*: Determine a length of time (days, hours, or minutes) for the system to retain the snapshot.
++
+NOTE: When you set a retention period, you select a period that begins at the current time. (Retention is not calculated from the snapshot creation time.)
+
+. Select *OK*.
+
+== View snapshot schedule details
+You might want to verify snapshot schedule details.
+
+.Steps
+. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster that you intend to view is selected in the navigation bar.
+
+. Select the *Schedules* page.
+. Verify the schedule details.
+
+== Edit a snapshot schedule
+You can modify existing snapshot schedules. After modification, the next time the schedule runs it uses the updated attributes. Any snapshots created by the original schedule remain on the storage system.
+
+.Steps
+. Select *NetApp Element Management > Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Schedules* sub-tab.
+. Select the check box for the snapshot schedule you want to edit.
+. Click *Actions*.
+. In the resulting menu, select *Edit*.
+. In the *Volume IDs CSV* field, modify the single volume ID or comma-separated list of volume IDs currently included in the snapshot operation.
+. (Optional) To pause an active schedule or resume a paused schedule, select the *Manually Pause Schedule* check box.
+. (Optional) Enter a different name for the schedule in the *New Schedule Name* field.
+. (Optional) Change the current schedule type to one of the following:
+.. *Days of Week*: Select one of more days of the week and a time of day to create a snapshot.
+.. *Days of Month*: Select one of more days of the month and a time of day to create a snapshot.
+.. *Time Interval*: Select an interval for the schedule to run based on number of days, hours and minutes between snapshots.
+. (Optional) Select *Recurrent Schedule* to repeat the snapshot schedule indefinitely.
+. (Optional) Enter or modify the name for the snapshots defined by the schedule in the *New Snapshot Name* field.
++
+NOTE: If you leave the field blank, the system uses the time and date of the snapshot's creation as the name.
+
+. (Optional) Select the *Include snapshots in replication when paired* check box to ensure that the snapshots are captured in replication when the parent volume is paired.
+. (Optional) Select one of the following as the retention period for the snapshot:
+
+* *Keep forever*: Retains the snapshot on the system indefinitely.
+* *Set retention period*: Determine a length of time (days, hours, or minutes) for the system to retain the snapshot.
++
+NOTE: When you set a retention period, you select a period that begins at the current time (retention is not calculated from the snapshot creation time).
+
+. Click *OK*.
+
+== Copy a snapshot schedule
+You can make a copy of a snapshot schedule and assign it to new volumes or use it for other purposes.
+
+.Steps
+. Select *NetApp Element Management > Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Schedules* sub-tab.
+. Select the check box for the snapshot schedule you want to copy.
+. Click *Actions*.
+. In the resulting menu, click *Copy*.
+The Copy Schedule dialog box appears, populated with the current attributes of the schedule.
+. (Optional) Enter a name and update attributes for the copy of the schedule.
+. Click *OK*.
+
+== Delete a snapshot schedule
+You can delete a snapshot schedule. After you delete the schedule, it does not run any future scheduled snapshots. Any snapshots that were created by the schedule remain on the storage system.
+
+.Steps
+. Select *NetApp Element Management > Protection*.
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
+. Click the *Schedules* sub-tab.
+. Select the check box for the snapshot schedule you want to delete.
+. Click *Actions*.
+. In the resulting menu, click *Delete*.
+. Confirm the action.
+
+[discrete]
+== Find more information
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
