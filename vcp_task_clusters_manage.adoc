@@ -113,7 +113,7 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 . In the resulting menu, click *Enable EAR*.
 . Confirm the action.
 
-== Disable encryption at rest
+== Disable Encryption at Rest
 You can manually disable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
 
 .Steps

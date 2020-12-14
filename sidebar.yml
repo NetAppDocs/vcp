@@ -1,9 +1,9 @@
 entries:
   - title: NetApp Element Plug-in for vCenter Server documentation
     url: /index.html
-  - title: NetApp Element Plug-in for vCenter Server product overview
-    url: concept_vcp_product_overview.html
     entries:
+      - title: NetApp Element Plug-in for vCenter Server product overview
+        url: concept_vcp_product_overview.html
       - title: Release Notes
         entries:
           - title: What's new in NetApp Element Plug-in for vCenter Server
