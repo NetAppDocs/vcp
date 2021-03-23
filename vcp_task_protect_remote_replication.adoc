@@ -84,10 +84,7 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 === Pair clusters with a pairing key
 If you have Cluster Admin access to a local cluster but not the remote cluster, you can pair the clusters using a pairing key. A pairing key is generated on a local cluster and then sent securely to a Cluster Admin at a remote site to establish a connection and complete the cluster pairing for real-time replication.
 
-This procedure describes cluster pairing between two clusters using vCenter on the local and remote sites. For clusters not controlled by the vCenter Plug-in, you can alternatively start or complete cluster pairing using the Element web UI.
-
-For instructions on performing cluster pairing from the Element web UI, see
-https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/home.html[Managing storage with NetApp Element software^]
+This procedure describes cluster pairing between two clusters using vCenter on the local and remote sites. For clusters not controlled by the vCenter Plug-in, you can alternatively https://docs.netapp.com/us-en/element-software/storage/task_replication_pair_cluster_using_pairing_key.html[start or complete cluster pairing] using the Element web UI.
 
 .Steps
 . From the vCenter that contains the local cluster, select *NetApp Element Management* > *Protection*.
@@ -231,7 +228,7 @@ You can pair a local volume with another volume on a remote cluster using a pair
 .About this task
 This procedure describes volume pairing between two volumes using vCenter on the local and remote sites. For volumes not controlled by the vCenter Plug-in, you can alternately start or complete volume pairing using the Element web UI.
 
-For instructions on starting or completing volume pairing from the Element web UI, see https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/home.html[Managing storage with NetApp Element software^]
+For instructions on starting or completing volume pairing from the Element web UI, see https://docs.netapp.com/us-en/element-software/storage/task_replication_pair_volumes_using_a_pairing_key.html[NetApp Element software documentation^].
 
 NOTE: The volume pairing key contains an encrypted version of the volume information and may contain sensitive information. Share this key only in a secure manner.
 
@@ -444,7 +441,7 @@ You can delete a volume pair if you want to remove a pair association between tw
 .About this task
 This procedure describes deleting a volume pairing relationship between two volumes using vCenter on the local and remote sites.
 
-For volumes not controlled by the vCenter Plug-in, you can alternatively delete a volume pair end using the Element web UI. For instructions on deleting a volume pair end from the Element web UI, see link:https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/home.html[Managing storage with Element software].
+For volumes not controlled by the vCenter Plug-in, you can alternatively link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_volume_relationship_after_replication.html[delete a volume pair end] using the Element web UI.
 
 .Steps
 . Select *NetApp Element Management* > *Protection*.
@@ -467,7 +464,7 @@ You can delete a cluster pairing relationship between two clusters using vCenter
 
 You can use the vCenter Plug-in to delete a cluster pair end.
 
-For clusters not controlled by the vCenter Plug-in, you can alternatively delete a cluster pair end using the Element web UI. For instructions on deleting a cluster pair end using the Element web UI, see link:https://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-ug/home.html[Managing storage with Element software].
+For clusters not controlled by the vCenter Plug-in, you can alternatively link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_cluster_pair.html[delete a cluster pair end] using the Element web UI.
 
 .Steps
 . Select *NetApp Element Management* > *Protection*.
@@ -523,4 +520,4 @@ These messages can display on both source and target ends of the pairing unless 
 [discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element software documentation^]

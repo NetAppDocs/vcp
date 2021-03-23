@@ -240,7 +240,7 @@ NOTE: You must add at least one cluster to use NetApp Element Management extensi
 .About this task
 This procedure describes how to add a cluster profile so that the cluster can be managed by the plug-in. You cannot modify cluster administrator credentials using the plug-in.
 
-For instructions on changing credentials for a cluster administrator account, see the https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[_NetApp Element software user documentation_].
+See https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html[managing cluster administrator user accounts^] for instructions on changing credentials for a cluster administrator account.
 
 IMPORTANT: The vSphere HTML5 web client and Flash web client have separate databases that cannot be combined. Clusters added in one client will not be visible in the other. If you intend to use both clients, add your clusters in both.
 
@@ -300,4 +300,4 @@ You can create link:vcp_task_datastores_manage.html#create-a-datastore[datastore
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element software documentation^]
