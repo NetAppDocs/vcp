@@ -338,7 +338,7 @@ You can also use this procedure to redirect data from a source volume to a remot
 You have access to the clusters containing the source and target volumes.
 
 .About this task
-This procedure describes assigning source and replication volumes between two clusters using vCenter on the local and remote sites. For volumes not controlled by the vCenter Plug-in, you can alternately assign a source or replication volume using the Element web UI. For detailed instructions on deleting a cluster pair end from the Element web UI, see the user guide for NetApp Element software.
+This procedure describes assigning source and replication volumes between two clusters using vCenter on the local and remote sites. For volumes not controlled by the vCenter Plug-in, you can alternately https://docs.netapp.com/us-en/element-software/storage/task_replication_assign_replication_source_and_target_to_paired_volumes.html[assign a source or replication volume] using the Element web UI.
 
 A replication source volume has read/write account access. A replication target volume can only be accessed by the replication source as read/write.
 
