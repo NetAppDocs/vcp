@@ -40,4 +40,4 @@ The following tabs are available from the NetApp Element Management extension po
 * link:vcp_concept_config_extension_point[NetApp Element Configuration extension point]
 * link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element Documentation Center (Documentation Center Versions)^]
+*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element software documentation^]
