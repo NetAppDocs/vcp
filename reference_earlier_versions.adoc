@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: reference_earlier_versions.html
+keywords: documentation, earlier, previous, versions
+summary: Documentation is available for releases earlier than version 4.6 of the NetApp Element Plug-in for vCenter Server.
+---
+
+= Earlier versions of NetApp HCI documentation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+:keywords: hci, earlier, documentation, versions
+
+[.lead]
+Documentation is available for releases earlier than version 4.6 of the NetApp Element Plug-in for vCenter Server.
+
+[cols=4*,options="header"]
+|===
+| Version | VCP Release notes | Management services release notes | User guide
+
+| 4.5 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396[PDF] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.14.60_Release_Notes[2.14 KB] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2872843[PDF]
+
+| 4.4 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569[PDF] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.11.34_Release_Notes[2.11 KB] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2870280[PDF]
+
+| 4.3 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119[PDF] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.0.725_Release_Notes[KB] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2860023[PDF]
+NOTE: This publication describes updated management node upgrade procedures for Element software 11.3/NetApp HCI 1.6.
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2860878[PDF]
+NOTE: This publication describes updated management node upgrade procedures for Element software 11.5/NetApp HCI 1.7
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2863783[PDF]
+NOTE: This publication describes updated management node upgrade procedures for Element software 11.7/NetApp HCI 1.7P1
+
+|===
+
+* http://docs.netapp.com/us-en/hci18/docs/index.html[NetApp HCI 1.8P1^]
