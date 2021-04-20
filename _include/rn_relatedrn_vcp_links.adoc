@@ -29,10 +29,10 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 
 == Compute firmware
 * https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html[Compute Firmware Bundle 2.76 Release Notes (latest)^]
-* link:rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes^]
-* link:rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes^]
+* https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html[Compute Firmware Bundle 2.27 Release Notes^]
+* https://docs.netapp.com/us-en/hci/docs/rn_firmware_12.2.109.html[Compute Firmware Bundle 12.2.109 Release Notes^]
 
 == Storage firmware
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.76.html[Storage Firmware Bundle 2.76 Release Notes (latest)^]
-* link:rn_storage_firmware_2.27.html[Storage firmware Bundle 2.27 Release Notes^]
-* link:rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes^]
+* https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html[Storage firmware Bundle 2.27 Release Notes^]
+* https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html[H610S BMC 3.84.07 Release Notes^]
