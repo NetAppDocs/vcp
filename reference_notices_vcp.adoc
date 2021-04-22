@@ -40,6 +40,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses.
 
+* link:media/mgmt_svcs_2.18.91_notice.pdf[Notice for Management Services 2.18.91 (VCP 4.7.10)^]
 * link:media/mgmt_svcs_2.17.56_notice.pdf[Notice for Management Services 2.17.56 (VCP 4.6.32)^]
 * link:media/mgmt_svcs_2.17_notice.pdf[Notice for Management Services 2.17.52 (VCP 4.6.29)^]
 * link:media/mgmt_svcs_2.16_notice.pdf[Notice for Management Services 2.16 (VCP 4.6.29)^]
