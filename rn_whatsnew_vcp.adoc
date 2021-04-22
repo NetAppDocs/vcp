@@ -14,13 +14,18 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 :keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 [.lead]
-The most recent NetApp Element Plug-in for vCenter Server, version 4.6, contains security improvements, bug fixes, and updated vSphere support.
+NetApp Element Plug-in for vCenter Server 4.7 contains important security improvements that further develop improvements made in the https://security.netapp.com/advisory/ntap-20210315-0001/[recent management services 2.17.56 patch] release.
 
-== vSphere 7.0 U1 support
+NetApp Element Plug-in for vCenter Server 4.7 is available with the 2.18 release of management services.
+
+== NetApp Element Plug-in for vCenter Server 4.6
 With version 4.6, the plug-in now supports components of vSphere 7.0 Update 1, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
+
+NetApp Element Plug-in for vCenter Server 4.6 is available with the 2.16 release of management services.
 
 [discrete]
 == Find more information
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes^]
+* link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes KB^]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element software documentation^]

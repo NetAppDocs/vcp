@@ -99,5 +99,7 @@ entries:
         url: task_vcp_remove.html
       - title: Troubleshoot the plug-in
         url: vcp_reference_troubleshoot_vcp.html
+      - title: Earlier versions of NetApp Element Plug-in documentation
+        url: reference_earlier_versions.html
       - title: Legal notices
         url: reference_notices_vcp.html
