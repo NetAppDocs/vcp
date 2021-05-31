@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Create and manage volume snapshots in vCenter Server</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Create and manage volume snapshots in vCenter Server" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/vcp/vcp_task_protect_snapshots_volume.html" />
+	<meta property="og:description" content="You can ensure copies of your data are created and stored where you need them." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="You can ensure copies of your data are created and stored where you need them.">
+  <meta name="keywords" content=" netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup, amazon, s3, openstack, swift">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/vcp/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/vcp/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/vcp/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/na-pagenav.css' type='text/css'>
+
+  
+
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/vcp/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/vcp/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/vcp/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/vcp/js/na-utility.js'></script>
+  <script src='/us-en/vcp/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/vcp/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/vcp/js/toc.js'></script>
+  <script src='/us-en/vcp/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/vcp/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/vcp/">VCP</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Create and manage volume snapshots in vCenter Server
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <ul id="mysidebar" class="nav"><li class="subfolders "><a href="index.html">
+        <div class="na-navbar-padding"> NetApp Element Plug-in for vCenter Server documentation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vcp_product_overview.html">
+        NetApp Element Plug-in for vCenter Server product overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Release Notes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="rn_whatsnew_vcp.html">
+        What's new in NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="rn_relatedrn_vcp.html">
+        Additional release information
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_concept_config_extension_point.html">
+        NetApp Element Configuration extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_management_extension_point.html">
+        NetApp Element Management extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_accounts.html">
+        User accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_protection_domains.html">
+        Protection domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_linkedmode.html">
+        Linked mode and the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_vvols.html">
+        Virtual volumes (vVols)
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_requirements_vcp.html">
+        Pre-deployment requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_getstarted.html">
+        Install and configure the NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_upgrades.html">
+        Upgrade the plug-in
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage storage with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_clusters_manage.html">
+        Manage clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_datastores_manage.html">
+        Manage datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_volumes_manage.html">
+        Manage volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_user_accounts.html">
+        Create and manage user accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_access_groups.html">
+        Create and manage access groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_initiators.html">
+        Create and manage initiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_qossioc.html">
+        Set up and manage QoSSIOC for Element volumes and VMware datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_qos_policies.html">
+        Create and manage volume QoS policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage cluster hardware and virtual networks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_manage_cluster_overview.html">
+        Manage cluster hardware and virtual networks overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_drive.html">
+        Add and manage drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_nodes.html">
+        Add and manage nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_vlans.html">
+        Create and manage virtual networks
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Monitor system performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_intro.html">
+        Monitor system performance with Report options
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_overview.html">
+        Monitor overall cluster health on the Overview page
+      </a></li><li class="subfolders "><a href="vcp_task_reports_alerts.html">
+        <div class="na-navbar-padding"> Monitor system alerts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_reference_reports_alert_errors.html">
+        System alerts list
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_event_logs.html">
+        Monitor event logs for troubleshooting
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_volume_performance.html">
+        Monitor volume performance
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_iscsi.html">
+        Monitor iSCSI sessions to determine connection status
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_qossioc.html">
+        Monitor VM performance with QOSSIOC events
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Protect data with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_overview.html">
+        Protect data with the vCenter Plug-in overview
+      </a></li><li class="  active "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_volume.html">
+        Create and manage volume snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_group.html">
+        Create and manage group snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_schedules.html">
+        Create snapshot schedules
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_remote_replication.html">
+        Perform remote replication between clusters
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_configure_manage_vvols.html">
+        Set up and manage virtual volumes with the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_unregister.html">
+        Unregister the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_remove.html">
+        Remove the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_reference_troubleshoot_vcp.html">
+        Troubleshoot the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_earlier_versions.html">
+        Earlier versions of NetApp Element Plug-in documentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_notices_vcp.html">
+        Legal notices
+      </a></li></ul></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Create and manage volume snapshots in vCenter Server</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-03-23 17:36:55 +0000">03/23/2021</time>
+    
+  
+
+<span>Contributors
+  <a target="_blank" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/amgrissino">
+    <img  class="avatar avatar-small"
+          alt="amgrissino"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/36450105?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Creating a <a href="https://docs.netapp.com/us-en/hci/docs/concept_hci_dataprotection.html#volume-snapshots-for-data-protection">volume snapshot</a> creates a point-in-time copy of a volume. The process takes only a small amount of system resources and space, which makes snapshot creation faster than cloning.</p>
+</div>
+<div class="paragraph">
+<p>You can use snapshots to roll a volume back to the state it was in at the time the snapshot was created. However, because snapshots are simply replicas of volume metadata, you cannot mount or write to them.</p>
+</div>
+<div class="ulist">
+<div class="title">Options</div>
+<ul>
+<li>
+<p><a href="#create-a-volume-snapshot">Create a volume snapshot</a></p>
+</li>
+<li>
+<p><a href="#view-volume-snapshot-details">View volume snapshot details</a></p>
+</li>
+<li>
+<p><a href="#clone-a-volume-from-a-snapshot">Clone a volume from a snapshot</a></p>
+</li>
+<li>
+<p><a href="#roll-back-a-volume-to-a-snapshot">Roll back a volume to a snapshot</a></p>
+</li>
+<li>
+<p><a href="#back-up-a-volume-snapshot-to-an-external-object-store">Back up a volume snapshot to an external object store</a></p>
+</li>
+<li>
+<p><a href="#delete-a-volume-snapshot">Delete a volume snapshot</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create-a-volume-snapshot">Create a volume snapshot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can create a snapshot of an active volume to preserve the volume image at any point in time.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Management</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Volumes</strong> sub-tab.</p>
+</li>
+<li>
+<p>From the <strong>Active</strong> view, select the check box for the volume to use for the snapshot.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Create Snapshot</strong>.</p>
+</li>
+<li>
+<p>(Optional): In the Create Snapshot dialog box, enter a name for the snapshot.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use descriptive naming best practices. This is especially important if multiple clusters or vCenter Servers are used in your environment. If you do not enter a name, the system creates a snapshot default name using the date and time that the snapshot was created.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>(Optional) Select the <strong>Include snapshot in replication when paired</strong> check box to ensure that the snapshot is replicated when the parent volume is paired.</p>
+</li>
+<li>
+<p>Select one of the following as the retention period for the snapshot:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Keep forever</strong>: Retains the snapshot on the system indefinitely.</p>
+</li>
+<li>
+<p><strong>Set retention period</strong>: Determine a length of time (days, hours, or minutes) for the system to retain the snapshot.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When you set a retention period, you select a period that begins at the current time. (Retention is not calculated from the snapshot creation time.)
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To take a single, immediate snapshot, select <strong>Take snapshot now</strong>.</p>
+</li>
+<li>
+<p>To schedule the snapshot to run at a future time, complete the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>Create snapshot schedule</strong>.</p>
+</li>
+<li>
+<p>Enter a schedule name.</p>
+</li>
+<li>
+<p>Select a schedule type and configure the schedule details.</p>
+</li>
+<li>
+<p>(Optional) Select the check box for <strong>Recurrent Schedule</strong> to repeat the scheduled snapshot periodically.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="view-volume-snapshot-details">View volume snapshot details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You might want to verify that the snapshot was added.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Snapshots</strong> sub-tab.</p>
+</li>
+<li>
+<p>(Optional) Select one of the following filters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Individual</strong>: Volume snapshots that are not members of a group snapshot.</p>
+</li>
+<li>
+<p><strong>Members</strong>: Volume snapshots that are members of a group snapshot.</p>
+</li>
+<li>
+<p><strong>Inactive</strong>: Volume snapshots that were created from volumes that have been deleted but not yet purged.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>View the snapshot details.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="clone-a-volume-from-a-snapshot">Clone a volume from a snapshot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can create a new volume from a snapshot of a volume. When you do this, the system uses the snapshot information to clone a new volume using the data contained on the volume at the time the snapshot was created. This process also stores information about other snapshots of the volume in the new created volume.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Snapshots</strong> sub-tab.</p>
+</li>
+<li>
+<p>Select one of two views:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Individual</strong>: Lists volume snapshots that are not members of a group snapshot.</p>
+</li>
+<li>
+<p><strong>Members</strong>: Lists volume snapshots that are members of a group snapshot.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select the check box for the volume snapshot to clone as a volume.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Clone Volume from Snapshot</strong>.</p>
+</li>
+<li>
+<p>Enter a volume name, the total size and select either GB or GiB for the new volume.</p>
+</li>
+<li>
+<p>Select an access type for the volume:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Read Only</strong>: Only read operations are allowed.</p>
+</li>
+<li>
+<p><strong>Read/Write</strong>: Both read and write operations are allowed.</p>
+</li>
+<li>
+<p><strong>Locked</strong>: No read or write operations are allowed.</p>
+</li>
+<li>
+<p><strong>Replication Target</strong>: Designated as a target volume in a replicated volume pair.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select a user account to associate with the new volume.</p>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Validate the new volume:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select <strong>NetApp Element Management</strong> &gt; <strong>Management</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>Volumes</strong> sub-tab.</p>
+</li>
+<li>
+<p>From the <strong>Active</strong> view, confirm that the new volume is listed.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Refresh the page if needed.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="roll-back-a-volume-to-a-snapshot">Roll back a volume to a snapshot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can roll back a volume to a snapshot at any time. This undoes any changes made to the volume since the snapshot was created.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Snapshots</strong> sub-tab.</p>
+</li>
+<li>
+<p>Select one of two views:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Individual</strong>: Lists volume snapshots that are not members of a group snapshot.</p>
+</li>
+<li>
+<p><strong>Members</strong>: Lists volume snapshots that are members of a group snapshot.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select the check box for the volume snapshot to use for the volume rollback.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Rollback Volume to Snapshot</strong>.</p>
+</li>
+<li>
+<p>(Optional) To save the current state of the volume before rolling back to the snapshot:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In the Rollback to Snapshot dialog box, select <strong>Save volume&#8217;s current state as a snapshot</strong>.</p>
+</li>
+<li>
+<p>Enter a name for the new snapshot.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="back-up-a-volume-snapshot-to-an-external-object-store">Back up a volume snapshot to an external object store</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use the integrated backup feature to back up a volume snapshot. You can back up snapshots from a cluster running NetApp Element software to an external object store or to another Element-based cluster.</p>
+</div>
+<div class="paragraph">
+<p>When you back up a snapshot to an external object store, you must have a connection to the object store that allows read/write operations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#back-up-a-volume-snapshot-to-an-amazon-s3-object-store">Back up a volume snapshot to an Amazon S3 object store</a></p>
+</li>
+<li>
+<p><a href="#back-up-a-volume-snapshot-to-an-openstack-swift-object-store">Back up a volume snapshot to an OpenStack Swift object store</a></p>
+</li>
+<li>
+<p><a href="#back-up-a-volume-snapshot-to-a-cluster-running-element-software">Back up a volume snapshot to a cluster running Element software</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="back-up-a-volume-snapshot-to-an-amazon-s3-object-store">Back up a volume snapshot to an Amazon S3 object store</h3>
+<div class="paragraph">
+<p>You can back up NetApp Element snapshots to external object stores that are compatible with Amazon S3.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Snapshots</strong> sub-tab.</p>
+</li>
+<li>
+<p>Select the check box for the volume snapshot you want to back up.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Backup to</strong>.</p>
+</li>
+<li>
+<p>In the dialog under <strong>Back up volume to</strong>, select <strong>Amazon S3</strong>.</p>
+</li>
+<li>
+<p>Select an option under <strong>with the following data format</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native</strong>: A compressed format readable only by NetApp Element software-based storage systems.</p>
+</li>
+<li>
+<p><strong>Uncompressed</strong>: An uncompressed format compatible with other systems.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter the details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Host name</strong>: Enter a host name to use to access the object store.</p>
+</li>
+<li>
+<p><strong>Access key ID</strong>: Enter an access key ID for the account.</p>
+</li>
+<li>
+<p><strong>Secret access key</strong>: Enter the secret access key for the account.</p>
+</li>
+<li>
+<p><strong>Amazon S3 Bucket</strong>: Enter the S3 bucket in which to store the backup.</p>
+</li>
+<li>
+<p><strong>Prefix</strong>: (Optional) Enter a prefix for the backup name.</p>
+</li>
+<li>
+<p><strong>Nametag</strong>: (Optional) Enter a nametag to append to the prefix.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="back-up-a-volume-snapshot-to-an-openstack-swift-object-store">Back up a volume snapshot to an OpenStack Swift object store</h3>
+<div class="paragraph">
+<p>You can back up NetApp Element snapshots to secondary object stores that are compatible with OpenStack Swift.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>Snapshots</strong> sub-tab.</p>
+</li>
+<li>
+<p>Select the check box for the volume snapshot you want to back up.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Backup to</strong>.</p>
+</li>
+<li>
+<p>In the dialog under <strong>Back up volume to</strong>, select <strong>OpenStack Swift</strong>.</p>
+</li>
+<li>
+<p>Select an option under <strong>with the following data format</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native</strong>: A compressed format readable only by NetApp Element software-based storage systems.</p>
+</li>
+<li>
+<p><strong>Uncompressed</strong>: An uncompressed format compatible with other systems.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter the details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>URL</strong>: Enter a URL to use to access the object store.</p>
+</li>
+<li>
+<p><strong>User name</strong>: Enter user name for the account.</p>
+</li>
+<li>
+<p><strong>Authentication key</strong>: Enter the authentication key for the account.</p>
+</li>
+<li>
+<p><strong>Container</strong>: Enter the container in which to store the backup.</p>
+</li>
+<li>
+<p><strong>Prefix</strong>: (Optional) Enter a prefix for the backup volume name.</p>
+</li>
+<li>
+<p><strong>Nametag</strong>: (Optional) Enter a name tag to append to the prefix.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="back-up-a-volume-snapshot-to-a-cluster-running-element-software">Back up a volume snapshot to a cluster running Element software</h3>
+<div class="paragraph">
+<p>You can back up a volume snapshot that resides on a cluster running NetApp Element software to a remote Element cluster.</p>
+</div>
+<div class="paragraph">
+<div class="title">What you&#8217;ll need</div>
+<p>You must create a volume on the destination cluster of equal or greater size to the snapshot you are using for the backup.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>When you back up or restore from one cluster to another, the system generates a key to be used as authentication between the clusters. This bulk volume write key enables the source cluster to authenticate with the destination cluster, providing security when writing to the destination volume. As part of the backup or restore process, you need to generate a bulk volume write key from the destination volume before starting the operation.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Management</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the <strong>volumes</strong> sub-tab.</p>
+</li>
+<li>
+<p>Select the check box for the destination volume.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Restore from</strong>.</p>
+</li>
+<li>
+<p>In the dialog under <strong>Restore from</strong>, select <strong>NetApp Element</strong>.</p>
+</li>
+<li>
+<p>Select an option under <strong>with the following data format</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Native</strong>: A compressed format readable only by NetApp Element software-based storage systems.</p>
+</li>
+<li>
+<p><strong>Uncompressed</strong>: An uncompressed format compatible with other systems.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select <strong>Generate Key</strong> to generate a bulk volume write key for the destination volume.</p>
+</li>
+<li>
+<p>Copy the bulk volume write key to your clipboard to apply to later steps on the source cluster.</p>
+</li>
+<li>
+<p>From the vCenter that contains the source cluster, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select the check box for the snapshot you are using for the backup.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Backup to</strong>.</p>
+</li>
+<li>
+<p>In the dialog box under <strong>Back up volume to</strong>, select <strong>NetApp Element</strong>.</p>
+</li>
+<li>
+<p>Select the same option as the destination cluster under <strong>with the following data format</strong>.</p>
+</li>
+<li>
+<p>Enter the details:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Remote cluster MVIP</strong>: Enter the management virtual IP address of the destination volume&#8217;s cluster.</p>
+</li>
+<li>
+<p><strong>Remote cluster user password</strong>: Enter the remote cluster user name.</p>
+</li>
+<li>
+<p><strong>Remote user password</strong>: Enter the remote cluster password.</p>
+</li>
+<li>
+<p><strong>Bulk volume write key</strong>: Paste the key you generated on the destination cluster earlier.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="delete-a-volume-snapshot">Delete a volume snapshot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can delete a volume snapshot from a cluster running NetApp Element software using the NetApp Element Management extension point. When you delete a snapshot, the system immediately removes it.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>You can delete snapshots that are being replicated from the source cluster. If a snapshot is syncing to the target cluster when you delete it, the sync replication completes and the snapshot is deleted from the source cluster. The snapshot is not deleted from the target cluster.</p>
+</div>
+<div class="paragraph">
+<p>You can also delete snapshots that have been replicated to the target from the target cluster. The deleted snapshot is kept in a list of deleted snapshots on the target until the system detects that you have deleted the snapshot on the source cluster. After the target has detected that you have deleted the source snapshot, the target stops replication of the snapshot.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>From the vCenter Plug-in, select <strong>NetApp Element Management</strong> &gt; <strong>Protection</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>From the <strong>Snapshots</strong> sub-tab, select one of the following views:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Individual</strong>: A list of volume snapshots that are not part of a group snapshot.</p>
+</li>
+<li>
+<p><strong>Inactive</strong>: A list of volume snapshots that were created from volumes that have been deleted but not yet purged.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select the check box for the volume snapshot you want to delete.</p>
+</li>
+<li>
+<p>Select <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Delete</strong>.</p>
+</li>
+<li>
+<p>Confirm the action.</p>
+</li>
+</ol>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/index.html" target="_blank" rel="noopener">NetApp HCI Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html" target="_blank" rel="noopener">NetApp SolidFire and Element software documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_task_protect_snapshots_volume.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[Create and manage volume snapshots in vCenter Server](https://docs.netapp.com/us-en/vcp/vcp_task_protect_snapshots_volume.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/vcp/js/www-ntap.js'></script>
+  </body>
+
+  
+</html>

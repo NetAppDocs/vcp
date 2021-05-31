@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>System alerts list</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="System alerts list" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/vcp/vcp_reference_reports_alert_errors.html" />
+	<meta property="og:description" content="Here is a list of system alerts, which are information, warnings, or errors that indicate how well the cluster is running by using the Reporting pages of the..." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="Here is a list of system alerts, which are information, warnings, or errors that indicate how well the cluster is running by using the Reporting pages of the...">
+  <meta name="keywords" content=" netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/vcp/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/vcp/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/vcp/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/na-pagenav.css' type='text/css'>
+
+  
+
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/vcp/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/vcp/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/vcp/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/vcp/js/na-utility.js'></script>
+  <script src='/us-en/vcp/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/vcp/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/vcp/js/toc.js'></script>
+  <script src='/us-en/vcp/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/vcp/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/vcp/">VCP</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          System alerts list
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <ul id="mysidebar" class="nav"><li class="subfolders "><a href="index.html">
+        <div class="na-navbar-padding"> NetApp Element Plug-in for vCenter Server documentation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vcp_product_overview.html">
+        NetApp Element Plug-in for vCenter Server product overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Release Notes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="rn_whatsnew_vcp.html">
+        What's new in NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="rn_relatedrn_vcp.html">
+        Additional release information
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_concept_config_extension_point.html">
+        NetApp Element Configuration extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_management_extension_point.html">
+        NetApp Element Management extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_accounts.html">
+        User accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_protection_domains.html">
+        Protection domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_linkedmode.html">
+        Linked mode and the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_vvols.html">
+        Virtual volumes (vVols)
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_requirements_vcp.html">
+        Pre-deployment requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_getstarted.html">
+        Install and configure the NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_upgrades.html">
+        Upgrade the plug-in
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage storage with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_clusters_manage.html">
+        Manage clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_datastores_manage.html">
+        Manage datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_volumes_manage.html">
+        Manage volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_user_accounts.html">
+        Create and manage user accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_access_groups.html">
+        Create and manage access groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_initiators.html">
+        Create and manage initiators
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_qossioc.html">
+        Set up and manage QoSSIOC for Element volumes and VMware datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_qos_policies.html">
+        Create and manage volume QoS policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage cluster hardware and virtual networks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_manage_cluster_overview.html">
+        Manage cluster hardware and virtual networks overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_drive.html">
+        Add and manage drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_nodes.html">
+        Add and manage nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_vlans.html">
+        Create and manage virtual networks
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Monitor system performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_intro.html">
+        Monitor system performance with Report options
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_overview.html">
+        Monitor overall cluster health on the Overview page
+      </a></li><li class="subfolders "><a href="vcp_task_reports_alerts.html">
+        <div class="na-navbar-padding"> Monitor system alerts</div>
+      </a>
+      <ul><li class="  active "><a class="na-navbar-padding" href="vcp_reference_reports_alert_errors.html">
+        System alerts list
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_event_logs.html">
+        Monitor event logs for troubleshooting
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_volume_performance.html">
+        Monitor volume performance
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_iscsi.html">
+        Monitor iSCSI sessions to determine connection status
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_qossioc.html">
+        Monitor VM performance with QOSSIOC events
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Protect data with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_overview.html">
+        Protect data with the vCenter Plug-in overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_volume.html">
+        Create and manage volume snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_group.html">
+        Create and manage group snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_schedules.html">
+        Create snapshot schedules
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_remote_replication.html">
+        Perform remote replication between clusters
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_configure_manage_vvols.html">
+        Set up and manage virtual volumes with the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_unregister.html">
+        Unregister the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_remove.html">
+        Remove the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_reference_troubleshoot_vcp.html">
+        Troubleshoot the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_earlier_versions.html">
+        Earlier versions of NetApp Element Plug-in documentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_notices_vcp.html">
+        Legal notices
+      </a></li></ul></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">System alerts list</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-03-23 17:36:55 +0000">03/23/2021</time>
+    
+  
+
+<span>Contributors
+  <a target="_blank" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/amgrissino">
+    <img  class="avatar avatar-small"
+          alt="amgrissino"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/36450105?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+
+</p>
+
+
+<div class="paragraph lead">
+<p>The system reports error codes with each alert on the <strong>Reporting &gt; Alerts</strong> pages of the NetApp Element Management extension point. Error codes help you determine what component of the system experienced the alert and why the alert was generated.</p>
+</div>
+<div class="paragraph">
+<p>The following list outlines the different types of system alerts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>authenticationServiceFault</strong>: The Authentication Service on one or more cluster nodes is not functioning as expected.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>availableVirtualNetworkIPAddressesLow</strong>: The number of virtual network addresses in the block of IP addresses is low.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more IP addresses to the block of virtual network addresses.</p>
+</div>
+</li>
+<li>
+<p><strong>blockClusterFull</strong>: There is not enough free block storage space to support a single node loss. See the GetClusterFullThreshold API method for details on cluster fullness levels. This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>stage3Low (Warning): User-defined threshold was crossed. Adjust Cluster Full settings or add more nodes.</p>
+</li>
+<li>
+<p>stage4Critical (Error): There is not enough space to recover from a 1-node failure. Creation of volumes, snapshots, and clones is not allowed.</p>
+</li>
+<li>
+<p>stage5CompletelyConsumed (Critical)1; No writes or new iSCSI connections are allowed. Current iSCSI connections will be maintained. Writes will fail until more capacity is added to the cluster.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Purge or delete volumes or add another storage node to the storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>blocksDegraded</strong>:  Block data is no longer fully replicated due to a failure.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only two complete copies of the block data are accessible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only a single complete copy of the block data is accessible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No complete copies of the block data are accessible.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The warning status can only occur on a Triple Helix system.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Restore any offline nodes or block services, or contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>blockServiceTooFull</strong>: A block service is using too much space.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more provisioned capacity.</p>
+</div>
+</li>
+<li>
+<p><strong>blockServiceUnhealthy</strong>: A block service has been detected as unhealthy:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Severity = Warning: No action is taken. This warning period will expire in cTimeUntilBSIsKilledMSec=330000 milliseconds.</p>
+</li>
+<li>
+<p>Severity = Error: The system is automatically decommissioning data and re-replicating its data to other healthy drives.</p>
+</li>
+<li>
+<p>Severity = Critical: There are failed block services on several nodes greater than or equal to the replication count (2 for double helix). Data is unavailable and bin syncing will not finish.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check for network connectivity issues and hardware errors. There will be other faults if specific hardware components have failed. The fault will clear when the block service is accessible or when the service has been decommissioned.</p>
+</div>
+</li>
+<li>
+<p><strong>clockSkewExceedsFaultThreshold</strong>: Time skew between the Cluster master and the node which is presenting a token exceeds the recommended threshold. Storage cluster cannot correct the time skew between the nodes automatically.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Use NTP servers that are internal to your network, rather than the installation defaults. If you are using an internal NTP server, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>clusterCannotSync</strong>: There is an out-of-space condition and data on the offline block storage drives cannot be synced to drives that are still active.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more storage.</p>
+</div>
+</li>
+<li>
+<p><strong>clusterFull</strong>: There is no more free storage space in the storage cluster.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more storage.</p>
+</div>
+</li>
+<li>
+<p><strong>clusterIOPSAreOverProvisioned</strong>: Cluster IOPS are over provisioned. The sum of all minimum QoS IOPS is greater than the expected IOPS of the cluster. Minimum QoS cannot be maintained for all volumes simultaneously.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Lower the minimum QoS IOPS settings for volumes.</p>
+</div>
+</li>
+<li>
+<p><strong>disableDriveSecurityFailed</strong>: The cluster is not configured to enable drive security (Encryption at Rest), but at least one drive has drive security enabled, meaning that disabling drive security on those drives failed. This fault is logged with “Warning” severity.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check the fault details for the reason why drive security could not be disabled. Possible reasons are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The encryption key could not be acquired, investigate the problem with access to the key or the external key server.</p>
+</li>
+<li>
+<p>The disable operation failed on the drive, determine whether the wrong key could possibly have been acquired.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If neither of these are the reason for the fault, the drive might need to be replaced.<br>
+You can attempt to recover a drive that does not successfully disable security even when the correct authentication key is provided. To perform this operation, remove the drive(s) from the system by moving it to Available, perform a secure erase on the drive and move it back to Active.</p>
+</div>
+</li>
+<li>
+<p><strong>disconnectedClusterPair</strong>: A cluster pair is disconnected or configured incorrectly.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity between the clusters.</p>
+</div>
+</li>
+<li>
+<p><strong>disconnectedRemoteNode</strong>: A remote node is either disconnected or configured incorrectly.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity between the nodes.</p>
+</div>
+</li>
+<li>
+<p><strong>disconnectedSnapMirrorEndpoint</strong>: A remote SnapMirror endpoint is disconnected or configured incorrectly.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity between the cluster and the remote SnapMirrorEndpoint.</p>
+</div>
+</li>
+<li>
+<p><strong>driveAvailable</strong>: One or more drives are available in the cluster. In general, all clusters should have all drives added and none in the available state. If this fault appears unexpectedly, contact NetApp Support.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add any available drives to the storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>driveFailed</strong>: The cluster returns this fault when one or more drives have failed, indicating one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The drive manager cannot access the drive.</p>
+</li>
+<li>
+<p>The slice or block service has failed too many times, presumably because of drive read or write failures, and cannot restart.</p>
+</li>
+<li>
+<p>The drive is missing.</p>
+</li>
+<li>
+<p>The master service for the node is inaccessible (all drives in the node are considered missing/failed).</p>
+</li>
+<li>
+<p>The drive is locked and the authentication key for the drive cannot be acquired.</p>
+</li>
+<li>
+<p>The drive is locked and the unlock operation fails.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check network connectivity for the node.</p>
+</li>
+<li>
+<p>Replace the drive.</p>
+</li>
+<li>
+<p>Ensure that the authentication key is available.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>driveHealthFault</strong>: A drive has failed the SMART health check and as a result, the drive’s functions are diminished. There is a Critical severity level for this fault:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Drive with serial: &lt;serial number&gt; in slot: &lt;node slot&gt;&lt;drive slot&gt; has failed the SMART overall health check.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Replace the drive.</p>
+</div>
+</li>
+<li>
+<p><strong>driveWearFault</strong>: A drive&#8217;s remaining life has dropped below thresholds, but it is still functioning. There are two possible severity levels for this fault: Critical and Warning:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Drive with serial: &lt;serial number&gt; in slot: &lt;node slot&gt;&lt;drive slot&gt; has critical wear levels.</p>
+</li>
+<li>
+<p>Drive with serial: &lt;serial number&gt; in slot: &lt;node slot&gt;&lt;drive slot&gt; has low wear reserves.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, replace the drive soon.</p>
+</div>
+</li>
+<li>
+<p><strong>duplicateClusterMasterCandidates</strong>: More than one storage cluster master candidate has been detected.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>enableDriveSecurityFailed</strong>: The cluster is configured to require drive security (Encryption at Rest), but drive security could not be enabled on at least one drive. This fault is logged with “Warning” severity.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check the fault details for the reason why drive security could not be enabled. Possible reasons are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The encryption key could not be acquired, investigate the problem with access to the key or the external key server.</p>
+</li>
+<li>
+<p>The enable operation failed on the drive, determine whether the wrong key could possibly have been acquired.</p>
+<div class="paragraph">
+<p>If neither of these are the reason for the fault, the drive might need to be replaced.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can attempt to recover a drive that does not successfully enable security even when the correct authentication key is provided. To perform this operation, remove the drive(s) from the system by moving it to Available, perform a secure erase on the drive and move it back to Active.</p>
+</div>
+</li>
+<li>
+<p><strong>ensembleDegraded</strong>: Network connectivity or power has been lost to one or more of the ensemble nodes.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, restore network connectivity or power.</p>
+</div>
+</li>
+<li>
+<p><strong>exception</strong>: A fault reported that is other than a routine fault. These faults are not automatically cleared from the fault queue.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong> Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>failedSpaceTooFull</strong>: A block service is not responding to data write requests. This causes the slice service to run out of space to store failed writes.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, restore block services functionality to allow writes to continue normally and failed space to be flushed from the slice service.</p>
+</div>
+</li>
+<li>
+<p><strong>fanSensor</strong>: A fan sensor has failed or is missing.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, replace any failed hardware.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelAccessDegraded</strong>: A Fibre Channel node is not responding to other nodes in the storage cluster over its storage IP for a period of time. In this state, the node will then be considered unresponsive and generate a cluster fault.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelAccessUnavailable</strong>: All Fibre Channel nodes are unresponsive. The node IDs are displayed.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelActiveIxL</strong>: The IxL Nexus count is approaching the supported limit of 8000 active sessions per Fibre Channel node.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Best practice limit is 5500.</p>
+</li>
+<li>
+<p>Warning limit is 7500.</p>
+</li>
+<li>
+<p>Maximum limit (not enforced) is 8192.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: TReduce the IxL Nexus count below the best practice limit of 5500.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelConfig</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>There is an unexpected Fibre Channel port on a PCI slot.</p>
+</li>
+<li>
+<p>There is an unexpected Fibre Channel HBA model.</p>
+</li>
+<li>
+<p>There is a problem with the firmware of a Fibre Channel HBA.</p>
+</li>
+<li>
+<p>A Fibre Channel port is not online.</p>
+</li>
+<li>
+<p>There is a persistent issue configuring Fibre Channel passthrough.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelIOPS</strong>: The total IOPS count is approaching the IOPS limit for Fibre Channel nodes in the cluster. The limits are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FC0025: 450K IOPS limit at 4K block size per Fibre Channel node.</p>
+</li>
+<li>
+<p>FCN001: 625K OPS limit at 4K block size per Fibre Channel node.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, balance the load across all available Fibre Channel nodes.</p>
+</div>
+</li>
+<li>
+<p><strong>fibreChannelStaticIxL</strong>: The IxL Nexus count is approaching the supported limit of 16000 static sessions per Fibre Channel node.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Best practice limit is 11000.</p>
+</li>
+<li>
+<p>Warning limit is 15000.</p>
+</li>
+<li>
+<p>Maximum limit (enforced) is 16384.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, reduce the IxL Nexus count below the best practice limit of 11000.</p>
+</div>
+</li>
+<li>
+<p><strong>fileSystemCapacityLow</strong>: There is insufficient space on one of the filesystems.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more capacity to the filesystem.</p>
+</div>
+</li>
+<li>
+<p><strong>fipsDrivesMismatch</strong>: A non-FIPS drive has been physically inserted into a FIPS capable storage node or a FIPS drive has been physically inserted into a non-FIPS storage node. A single fault is generated per node and lists all drives affected.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, remove or replace the mismatched drive or drives in question.</p>
+</div>
+</li>
+<li>
+<p><strong>fipsDrivesOutOfCompliance</strong>: The system has detected that Encryption at Rest was disabled after the FIPS Drives feature was enabled. This fault is also generated when the FIPS Drives feature is enabled and a non-FIPS drive or node is present in the storage cluster.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Enable Encryption at Rest or remove the non-FIPS hardware from the storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>fipsSelfTestFailure</strong>: The FIPS subsystem has detected a failure during the self test.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>hardwareConfigMismatch</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The configuration does not match the node definition.</p>
+</li>
+<li>
+<p>There is an incorrect drive size for this type of node.</p>
+</li>
+<li>
+<p>An unsupported drive has been detected. A possible reason is that the installed Element version does not recognize this drive. Recommend updating the Element software on this node.</p>
+</li>
+<li>
+<p>There is a drive firmware mismatch.</p>
+</li>
+<li>
+<p>The drive encryption capable state does not match the node.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>idPCertificateExpiration</strong>: The cluster’s service provider SSL certificate for use with a third-party identity provider (IdP) is nearing expiration or has already expired. This fault uses the following severities based on urgency:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 30 days.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 7 days.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 3 days or has already expired.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, update the SSL certificate before it expires. Use the <code>UpdateIdpConfiguration</code> API method with <code>refreshCertificateExpirationTime=true</code> to provide the updated SSL certificate.</p>
+</div>
+</li>
+<li>
+<p><strong>inconsistentBondModes</strong>: The bond modes on the VLAN device are missing. This fault will display the expected bond mode and the bond mode currently in use.</p>
+</li>
+<li>
+<p><strong>inconsistentInterfaceConfiguration</strong>: The interface configuration is inconsistent.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, ensure the node interfaces in the storage cluster are consistently configured.</p>
+</div>
+</li>
+<li>
+<p><strong>inconsistentMtus</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bond1G mismatch: Inconsistent MTUs have been detected on Bond1G interfaces.</p>
+</li>
+<li>
+<p>Bond10G mismatch: Inconsistent MTUs have been detected on Bond10G interfaces.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This fault displays the node or nodes in question along with the associated MTU value.</p>
+</div>
+</li>
+<li>
+<p><strong>inconsistentRoutingRules</strong>: The routing rules for this interface are inconsistent.</p>
+</li>
+<li>
+<p><strong>inconsistentSubnetMasks</strong>: The network mask on the VLAN device does not match the internally recorded network mask for the VLAN. This fault displays the expected network mask and the network mask currently in use.</p>
+</li>
+<li>
+<p><strong>incorrectBondPortCount</strong>: The number of bond ports is incorrect.</p>
+</li>
+<li>
+<p><strong>invalidConfiguredFibreChannelNodeCount</strong>: One of the two expected Fibre Channel node connections is degraded. This fault appears when only one Fibre Channel node is connected.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check the cluster network connectivity and network cabling, and check for failed services. If there are no network or service problems, contact NetApp Support for a Fibre Channel node replacement.</p>
+</div>
+</li>
+<li>
+<p><strong>irqBalanceFailed</strong>: An exception occurred while attempting to balance interrupts.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>kmipCertificateFault</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Root Certification Authority (CA) certificate is nearing expiration.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, acquire a new certificate from the root CA with expiration date at least 30 days out and use ModifyKeyServerKmip to provide the updated root CA certificate.</p>
+</div>
+</li>
+<li>
+<p>Client certificate is nearing expiration.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, create a new CSR using GetClientCertificateSigningRequest, have it signed ensuring the new expiration date is at least 30 days out, and use ModifyKeyServerKmip to replace the expiring KMIP client certificate with the new certificate.</p>
+</div>
+</li>
+<li>
+<p>Root Certification Authority (CA) certificate has expired.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, acquire a new certificate from the root CA with expiration date at least 30 days out and use ModifyKeyServerKmip to provide the updated root CA certificate.</p>
+</div>
+</li>
+<li>
+<p>Client certificate has expired.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, create a new CSR using <code>GetClientCertificateSigningRequest</code>, have it signed ensuring the new expiration date is at least 30 days out, and use <code>ModifyKeyServerKmip</code> to replace the expired KMIP client certificate with the new certificate.</p>
+</div>
+</li>
+<li>
+<p>Root Certification Authority (CA) certificate error.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, check that the correct certificate was provided, and, if needed, reacquire the certificate from the root CA. Use <code>ModifyKeyServerKmip</code> to install the correct KMIP client certificate.</p>
+</div>
+</li>
+<li>
+<p>Client certificate error.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, check that the correct KMIP client certificate is installed. The root CA of the client certificate should be installed on the EKS. Use <code>ModifyKeyServerKmip</code> to install the correct KMIP client certificate.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>kmipServerFault</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Connection failure</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, check that the External Key Server is alive and reachable via the network. Use <code>TestKeyServerKimp</code> and <code>TestKeyProviderKmip</code> to test your connection.</p>
+</div>
+</li>
+<li>
+<p>Authentication failure</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, check that the correct root CA and KMIP client certificates are being used, and that the private key and the KMIP client certificate match.</p>
+</div>
+</li>
+<li>
+<p>Server error</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: To resolve this fault, check the details for the error. Troubleshooting on the External Key Server might be necessary based on the error returned.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>memoryEccThreshold</strong>: A large number of correctable or uncorrectable ECC errors have been detected. When a severity of type Error is returned, this is likely due to a DIMM failure.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>memoryUsageThreshold</strong>: Memory usage is above normal. This fault uses the following severities based on urgency:</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See the Details heading for more detailed information on the fault.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System memory is low.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System memory is very low.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System memory is completely consumed.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>metadataClusterFull</strong>: There is not enough free metadata storage space to support a single node loss. See the <code>GetClusterFullThreshold</code> API method for details on cluster fullness levels. This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>stage3Low (Warning): User-defined threshold was crossed. Adjust Cluster Full settings or add more nodes.</p>
+</li>
+<li>
+<p>stage4Critical (Error): There is not enough space to recover from a 1-node failure. Creation of volumes, snapshots, and clones is not allowed.</p>
+</li>
+<li>
+<p>stage5CompletelyConsumed (Critical)1; No writes or new iSCSI connections are allowed. Current iSCSI connections will be maintained. Writes will fail until more capacity is added to the cluster. Purge or delete data or add more nodes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Purge or delete volumes or add another storage node to the storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>mtuCheckFailure</strong>: A network device is not configured for the proper MTU size.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Ensure that all network interfaces and switch ports are configured for jumbo frames (MTUs up to 9000 bytes in size).</p>
+</div>
+</li>
+<li>
+<p><strong>networkConfig</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>An expected interface is not present.</p>
+</li>
+<li>
+<p>A duplicate interface is present.</p>
+</li>
+<li>
+<p>A configured interface is down.</p>
+</li>
+<li>
+<p>A network restart is required.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>noAvailableVirtualNetworkIPAddresses</strong>: There are no available virtual network addresses in the block of IP addresses.</p>
+<div class="listingblock">
+<div class="content">
+<pre> virtualNetworkID # TAG(###) has no available storage IP addresses. Additional nodes cannot be added to the cluster.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more IP addresses to the block of virtual network addresses.</p>
+</div>
+</li>
+<li>
+<p><strong>nodeHardwareFault (Network interface &lt;name&gt; is down or cable is unplugged)</strong>: A network interface is either down or the cable is unplugged.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check network connectivity for the node or nodes.</p>
+</div>
+</li>
+<li>
+<p><strong>nodeHardwareFault (Drive encryption capable state mismatches node&#8217;s encryption capable state for the drive in slot &lt;node slot&gt;&lt;drive slot&gt;)</strong>: A drive does not match encryption capabilities with the storage node it is installed in.</p>
+</li>
+<li>
+<p><strong>nodeHardwareFault (Incorrect &lt;drive type&gt; drive size &lt;actual size&gt; for the drive in slot &lt;node slot&gt;&lt;drive slot&gt; for this node type - expected &lt;expected size&gt;)</strong>: A storage node contains a drive that is the incorrect size for this node.</p>
+</li>
+<li>
+<p><strong>nodeHardwareFault (Unsupported drive detected in slot &lt;node slot&gt;&lt;drive slot&gt;; drive statistics and health information will be unavailable)</strong>: A storage node contains a drive it does not support.</p>
+</li>
+<li>
+<p><strong>nodeHardwareFault (The drive in slot &lt;node slot&gt;&lt;drive slot&gt; should be using firmware version &lt;expected version&gt;, but is using unsupported version &lt;actual version&gt;)</strong>: A storage node contains a drive running an unsupported firmware version.</p>
+</li>
+<li>
+<p><strong>nodeMaintenanceMode</strong>: A node has been placed in maintenance mode. This fault uses the following severities based on urgency:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates that the node is still in maintenance mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates that maintenance mode has failed to disable, most likely due to failed or active standbys.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Disable maintenance mode once maintenance completes. If the Error level fault persists, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>nodeOffline</strong>: Element software cannot communicate with the specified node. Check network connectivity.</p>
+</li>
+<li>
+<p><strong>notUsingLACPBondMode</strong>: LACP bonding mode is not configured.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Use LACP bonding when deploying storage nodes; clients might experience performance issues if LACP is not enabled and properly configured.</p>
+</div>
+</li>
+<li>
+<p><strong>ntpServerUnreachable</strong>: The storage cluster cannot communicate with the specified NTP server or servers.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check the configuration for the NTP server, network, and firewall.</p>
+</div>
+</li>
+<li>
+<p><strong>ntpTimeNotInSync</strong>: The difference between storage cluster time and the specified NTP server time is too large. The storage cluster cannot correct the difference automatically.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Use NTP servers that are internal to your network, rather than the installation defaults. If you are using internal NTP servers and the issue persists, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>nvramDeviceStatus</strong>: An NVRAM device has an error, is failing, or has failed. This fault has the following severities:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A warning has been detected by the hardware. This condition may be transitory, such as a temperature warning.<br>
+<br>
+* nvmLifetimeError<br>
+* nvmLifetimeStatus<br>
+* energySourceLifetimeStatus<br>
+* energySourceTemperatureStatus<br>
+* warningThresholdExceeded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Error or Critical status has been detected by the hardware. The cluster master attempts to remove the slice drive from operation (this generates a drive removal event). If secondary slice services are not available the drive will not be removed. Errors returned in addition to the Warning level errors:<br>
+* NVRAM device mount point doesn&#8217;t exist.<br>
+* NVRAM device partition doesn&#8217;t exist.<br>
+* NVRAM device partition exists, but not mounted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Error or Critical status has been detected by the hardware. The cluster master attempts to remove the slice drive from operation (this generates a drive removal event). If secondary slice services are not available the drive will not be removed.<br>
+* persistenceLost<br>
+* armStatusSaveNArmed<br>
+* csaveStatusError</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Replace any failed hardware in the node. If this does not resolve the issue, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>powerSupplyError</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A power supply is not present.</p>
+</li>
+<li>
+<p>A power supply has failed.</p>
+</li>
+<li>
+<p>A power supply input is missing or out of range.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Verify that redundant power is supplied to all nodes. Contact NetApp Support for assistance.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>provisionedSpaceTooFull</strong>: The overall provisioned capacity of the cluster is too full.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more provisioned space, or delete and purge volumes.</p>
+</div>
+</li>
+<li>
+<p><strong>remoteRepAsyncDelayExceeded</strong>: The configured asynchronous delay for replication has been exceeded. Check network connectivity between clusters.</p>
+</li>
+<li>
+<p><strong>remoteRepClusterFull</strong>: The volumes have paused remote replication because the target storage cluster is too full.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Free up some space on the target storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>remoteRepSnapshotClusterFull</strong>: The volumes have paused remote replication of snapshots because the target storage cluster is too full.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Free up some space on the target storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>remoteRepSnapshotsExceededLimit</strong>: The volumes have paused remote replication of snapshots because the target storage cluster volume has exceeded its snapshot limit.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Increase the snapshot limit on the target storage cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>scheduleActionError</strong>: One or more of the scheduled activities ran, but failed. The fault clears if the scheduled activity runs again and succeeds, if the scheduled activity is deleted, or if the activity is paused and resumed.</p>
+</li>
+<li>
+<p><strong>sensorReadingFailed</strong>: The Baseboard Management Controller (BMC) self-test failed or a sensor could not communicate with the BMC.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>serviceNotRunning</strong>: A required service is not running.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>sliceServiceTooFull</strong>: A slice service has too little provisioned capacity assigned to it.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more provisioned capacity.</p>
+</div>
+</li>
+<li>
+<p><strong>sliceServiceUnhealthy</strong>: The system has detected that a slice service is unhealthy and is automatically decommissioning it.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Severity = Warning: No action is taken. This warning period will expire in 6 minutes.</p>
+</li>
+<li>
+<p>Severity = Error: The system is automatically decommissioning data and re-replicating its data to other healthy drives.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check for network connectivity issues and hardware errors. There will be other faults if specific hardware components have failed. The fault will clear when the slice service is accessible or when the service has been decommissioned.</p>
+</div>
+</li>
+<li>
+<p><strong>sshEnabled</strong>: The SSH service is enabled on one or more nodes in the storage cluster.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Disable the SSH service on the appropriate node or nodes or contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>sslCertificateExpiration</strong>: The SSL certificate associated with this node is nearing expiration or has expired. This fault uses the following severities based on urgency:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 30 days.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 7 days.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Certificate expires within 3 days or has already expired.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Renew the SSL certificate. If needed, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>strandedCapacity</strong>: A single node accounts for more than half of the storage cluster capacity.<br>
+In order to maintain data redundancy, the system reduces the capacity of the largest node so that some of its block capacity is stranded (not used).</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Add more drives to existing storage nodes or add storage nodes to the cluster.</p>
+</div>
+</li>
+<li>
+<p><strong>tempSensor</strong>: A temperature sensor is reporting higher than normal temperatures. This fault can be triggered in conjunction with powerSupplyError or fanSensor faults.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Check for airflow obstructions near the storage cluster. If needed, contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>upgrade</strong>: An upgrade has been in progress for more than 24 hours.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Resume the upgrade or contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>unresponsiveService</strong>: A service has become unresponsive.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>virtualNetworkConfig</strong>: This cluster fault indicates one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>An interface is not present.</p>
+</li>
+<li>
+<p>There is an incorrect namespace on an interface.</p>
+</li>
+<li>
+<p>There is an incorrect netmask.</p>
+</li>
+<li>
+<p>There is an incorrect IP address.</p>
+</li>
+<li>
+<p>An interface is not up and running.</p>
+</li>
+<li>
+<p>There is a superfluous interface on a node.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+<li>
+<p><strong>volumesDegraded</strong>: Secondary volumes have not finished replicating and synchronizing. The message is cleared when the synchronizing is complete.</p>
+</li>
+<li>
+<p><strong>volumesOffline</strong>: One or more volumes in the storage cluster are offline. The volumeDegraded fault will also be present.</p>
+<div class="paragraph">
+<p><strong>To resolve</strong>: Contact NetApp Support for assistance.</p>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/index.html" target="_blank" rel="noopener">NetApp HCI Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html" target="_blank" rel="noopener">NetApp SolidFire and Element software documentation</a></p>
+</li>
+</ul>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_reference_reports_alert_errors.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[System alerts list](https://docs.netapp.com/us-en/vcp/vcp_reference_reports_alert_errors.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/vcp/js/www-ntap.js'></script>
+  </body>
+
+  
+</html>

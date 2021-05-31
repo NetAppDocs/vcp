@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Set up and manage QoSSIOC for Element volumes and VMware datastores</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Set up and manage QoSSIOC for Element volumes and VMware datastores" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html" />
+	<meta property="og:description" content="You can set up and modify volume QoS and datastore SIOC (QoSSIOC) for provisioned storage in your cluster." />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="You can set up and modify volume QoS and datastore SIOC (QoSSIOC) for provisioned storage in your cluster.">
+  <meta name="keywords" content=" netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/vcp/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/vcp/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/vcp/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/vcp/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/vcp/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/na-pagenav.css' type='text/css'>
+
+  
+
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/vcp/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/vcp/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/vcp/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/vcp/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/vcp/js/na-utility.js'></script>
+  <script src='/us-en/vcp/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/vcp/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/vcp/js/toc.js'></script>
+  <script src='/us-en/vcp/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/vcp/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/vcp/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/vcp/">VCP</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Set up and manage QoSSIOC for Element volumes and VMware datastores
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <ul id="mysidebar" class="nav"><li class="subfolders "><a href="index.html">
+        <div class="na-navbar-padding"> NetApp Element Plug-in for vCenter Server documentation</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="concept_vcp_product_overview.html">
+        NetApp Element Plug-in for vCenter Server product overview
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Release Notes</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="rn_whatsnew_vcp.html">
+        What's new in NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="rn_relatedrn_vcp.html">
+        Additional release information
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Concepts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_concept_config_extension_point.html">
+        NetApp Element Configuration extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_management_extension_point.html">
+        NetApp Element Management extension point
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_accounts.html">
+        User accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_protection_domains.html">
+        Protection domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_linkedmode.html">
+        Linked mode and the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_concept_vvols.html">
+        Virtual volumes (vVols)
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="reference_requirements_vcp.html">
+        Pre-deployment requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_getstarted.html">
+        Install and configure the NetApp Element Plug-in for vCenter Server
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_upgrades.html">
+        Upgrade the plug-in
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage storage with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_clusters_manage.html">
+        Manage clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_datastores_manage.html">
+        Manage datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_volumes_manage.html">
+        Manage volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_user_accounts.html">
+        Create and manage user accounts
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_access_groups.html">
+        Create and manage access groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_initiators.html">
+        Create and manage initiators
+      </a></li><li class="  active "><a class="na-navbar-padding" href="vcp_task_qossioc.html">
+        Set up and manage QoSSIOC for Element volumes and VMware datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_qos_policies.html">
+        Create and manage volume QoS policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage cluster hardware and virtual networks</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_manage_cluster_overview.html">
+        Manage cluster hardware and virtual networks overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_drive.html">
+        Add and manage drives
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_add_manage_nodes.html">
+        Add and manage nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_create_manage_vlans.html">
+        Create and manage virtual networks
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Monitor system performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_intro.html">
+        Monitor system performance with Report options
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_overview.html">
+        Monitor overall cluster health on the Overview page
+      </a></li><li class="subfolders "><a href="vcp_task_reports_alerts.html">
+        <div class="na-navbar-padding"> Monitor system alerts</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_reference_reports_alert_errors.html">
+        System alerts list
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_event_logs.html">
+        Monitor event logs for troubleshooting
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_volume_performance.html">
+        Monitor volume performance
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_iscsi.html">
+        Monitor iSCSI sessions to determine connection status
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_reports_qossioc.html">
+        Monitor VM performance with QOSSIOC events
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Protect data with the vCenter Plug-in</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_overview.html">
+        Protect data with the vCenter Plug-in overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_volume.html">
+        Create and manage volume snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_group.html">
+        Create and manage group snapshots
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_snapshots_schedules.html">
+        Create snapshot schedules
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_task_protect_remote_replication.html">
+        Perform remote replication between clusters
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="vcp_task_configure_manage_vvols.html">
+        Set up and manage virtual volumes with the vCenter Plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_unregister.html">
+        Unregister the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="task_vcp_remove.html">
+        Remove the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="vcp_reference_troubleshoot_vcp.html">
+        Troubleshoot the plug-in
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_earlier_versions.html">
+        Earlier versions of NetApp Element Plug-in documentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="reference_notices_vcp.html">
+        Legal notices
+      </a></li></ul></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Set up and manage QoSSIOC for Element volumes and VMware datastores</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-03-23 17:36:55 +0000">03/23/2021</time>
+    
+  
+
+<span>Contributors
+  <a target="_blank" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>You can set up QoSSIOC automation for individual volumes and datastores controlled by the plug-in. <a href="vcp_concept_qossioc.html">QoSSIOC</a> is automatic quality of service (<a href="https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html" target="_blank" rel="noopener">QoS</a>) based on Storage I/O Control (<a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html" target="_blank" rel="noopener">SIOC</a>) settings of all VMs on a standard datastore.</p>
+</div>
+<div class="paragraph">
+<p>The QoSSIOC service on the management node communicates with vCenter and monitors VM activity on datastores. QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. QoSSIOC is an optional feature and is not required for the plug-in to manage storage clusters.</p>
+</div>
+<div class="paragraph">
+<p>QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cannot enable virtual volumes (VVols) functionality or make VVols available to vSphere using the QoSSIOC Settings page. See Element Plug-in for vCenter Server documentation about configuring VVols functionality for more information.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For Linked Mode, the NetApp Element Plug-in for vCenter Server registers all vCenter Servers using the QoSSIOC settings you provide on a single vCenter Server.</p>
+</div>
+<div class="paragraph">
+<p>Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="setup-tasks">Setup tasks</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in">Configure QoSSIOC settings</a></p>
+</li>
+<li>
+<p><a href="#enabling-qossioc-automation-on-datastores">Enabling QoSSIOC automation on datastores</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="management-tasks">Management tasks</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="vcp_task_reports_qossioc.html" target="_blank" rel="noopener">Monitor VM performance tiering with QoSSIOC events</a></p>
+</li>
+<li>
+<p><a href="#edit-qossioc-settings">Edit QoSSIOC settings</a></p>
+</li>
+<li>
+<p><a href="#change-the-qossioc-service-password">Change the QoSSIOC service password</a></p>
+</li>
+<li>
+<p><a href="#disable-qossioc-automation-for-a-datastore">Disable QoSSIOC automation for a datastore</a></p>
+</li>
+<li>
+<p><a href="#clear-qossioc-settings">Clear QoSSIOC settings</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enabling-qossioc-automation-on-datastores">Enabling QoSSIOC automation on datastores</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can enable QoSSIOC automation and customize virtual machine disk (VMDK) performance levels for datastores after you enable the QoSSIOC service for the plug-in.</p>
+</div>
+<div class="paragraph">
+<div class="title">What you&#8217;ll need</div>
+<p>You have <a href="vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in">configured the QoSSIOC service settings</a> on the QoSSIOC Settings page and the <strong>QoSSIOC Status</strong> field displays <code>UP</code>.</p>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols). QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration<br>
+activity.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for any volume QoS settings regardless of policy.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>NetApp Element Management &gt; Management</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Click the status button in the <strong>QoSSIOC Automation</strong> column for the selected datastore.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Ensure that the datastore does not have QoSSIOC integration enabled on another vCenter to prevent unexpected changes in QoS.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Select <strong>Enable QoS &amp; SIOC</strong>.</p>
+</li>
+<li>
+<p>Configure the <strong>Burst Factor</strong>.</p>
+<div class="paragraph">
+<p>The burst factor is a multiple of the IOPS limit (SIOC) setting for the VMDK. If you change the default, make sure to use a burst factor value that will not exceed the maximum burst limit for a NetApp Element software-based volume when the burst factor value is multiplied by the IOPS limit for any VMDK.</p>
+</div>
+</li>
+<li>
+<p>(Optional) Select <strong>Override Default QoS</strong> and configure the settings.</p>
+<div class="paragraph">
+<p>If the Override Default QoS setting is disabled for the datastore, the Shares and Limit IOPS values are automatically set based on the default SIOC settings of each VM.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Do not customize the SIOC share limit without also customizing the SIOC IOPS limit.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+By default, the maximum SIOC disk shares are set to Unlimited. In a large VM environment such as VDI, this can lead to overcommitting maximum IOPS on the cluster. When you enable QoSSIOC, always check the Override Default QoS and set the Limit IOPS option to something reasonable.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+<div class="paragraph">
+<p>When you enable the QoSSIOC Automation for a datastore, the button changes from <code>Disabled</code> to <code>Enabled</code>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="edit-qossioc-settings">Edit QoSSIOC settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can change the QoSSIOC and vCenter credentials of an active Element management node.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>NetApp Element Configuration &gt; QoSSIOC Settings</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Edit</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Edit QoSSIOC Settings</strong> dialog box, change any of the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>QoSSIOC User ID</strong>: The user ID for the QoSSIOC service. The QoSSIOC service default user ID is <code>admin</code>. For NetApp HCI, the user ID is the same one entered during installation using the NetApp Deployment Engine.</p>
+</li>
+<li>
+<p><strong>QoSSIOC Password</strong>: The password for the Element QoSSIOC service. The QoSSIOC service default password is <code>solidfire</code>. If you have not created a custom password, you can create one from the registration utility UI (<code>https://[management node IP]:9443</code>).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)" target="_blank" rel="noopener">KB</a> article.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>vCenter User ID</strong>: The user name for the vCenter admin with full Administrator role privileges.</p>
+</li>
+<li>
+<p><strong>vCenter Password</strong>: The password for the vCenter admin with full Administrator role privileges.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>OK</strong>.<br>
+The QoSSIOC Status field displays <code>UP</code> when the plug-in can successfully communicate with the service.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See this <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)" target="_blank" rel="noopener">KB</a> to troubleshoot if the status is any of the following:<br>
+* <code>Down</code>: QoSSIOC is not enabled.<br>
+* <code>Not Configured</code>: QoSSIOC settings have not been configured.<br>
+* <code>Network Down</code>: vCenter cannot communicate with the QoSSIOC service on the network. The<br>
+mNode and SIOC service might still be running.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="change-the-qossioc-service-password">Change the QoSSIOC service password</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can change the password for the QoSSIOC service on the management node using the registration utility UI.</p>
+</div>
+<div class="ulist">
+<div class="title">What you&#8217;ll need</div>
+<ul>
+<li>
+<p>Your management node is powered on.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">About this task</div>
+<p>This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <a href="#edit-qossioc-settings">QoSSIOC Settings</a> page of the NetApp Element Configuration extension point.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>NetApp Element Configuration &gt; QoSSIOC Settings</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Clear</strong>.</p>
+</li>
+<li>
+<p>Confirm the action.</p>
+<div class="paragraph">
+<p>The <strong>QoSSIOC Status</strong> field displays <code>Not Configured</code> after the process is complete.</p>
+</div>
+</li>
+<li>
+<p>Enter the IP address for your management node in a browser, including the TCP port for registration: <code>https://[management node IP]:9443</code>.</p>
+<div class="paragraph">
+<p>The registration utility UI displays the <strong>Manage QoSSIOC Service Credentials</strong> page for the plug-in.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/vcp_registration_ui_qossioc.png" alt="VCP registration utility menu">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the following information:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Old Password</strong>: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of <code>solidfire</code>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)" target="_blank" rel="noopener">KB</a> article.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>New Password</strong>: The new password for the QoSSIOC service.</p>
+</li>
+<li>
+<p><strong>Confirm Password</strong>: Enter the new password again.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <strong>Submit Changes</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The QoSSIOC service automatically restarts after you submit changes.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In your vSphere Web Client, select <strong>NetApp Element Configuration &gt; QoSSIOC Settings</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Configure</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Configure QoSSIOC Settings</strong> dialog box, enter the new password in the <strong>QoSSIOC Password</strong> field.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+<div class="paragraph">
+<p>The <strong>QoSSIOC Status</strong> field displays <code>UP</code> when the plug-in can successfully communicate with the service.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disable-qossioc-automation-for-a-datastore">Disable QoSSIOC automation for a datastore</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can disable QoSSIOC integration for a datastore.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>NetApp Element Management &gt; Management</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Click the button in the <strong>QoSSIOC Automation</strong> column for the selected datastore.</p>
+</li>
+<li>
+<p>Clear the <strong>Enable QoS &amp; SIOC</strong> check box to disable the integration.</p>
+<div class="paragraph">
+<p>Clearing the Enable QoS &amp; SIOC check box automatically disables the Override Default QoS option.</p>
+</div>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="clear-qossioc-settings">Clear QoSSIOC settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can clear the QoSSIOC configuration details for the Element storage management node (mNode). You must clear the settings for the configured management node before configuring the credentials for a new management node or changing the QoSSIOC service password. Clearing the QoSSIOC settings removes active QoSSIOC from the vCenter, cluster, and datastores.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Select <strong>NetApp Element Configuration &gt; QoSSIOC Settings</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Actions</strong>.</p>
+</li>
+<li>
+<p>In the resulting menu, select <strong>Clear</strong>.</p>
+</li>
+<li>
+<p>Confirm the action.</p>
+<div class="paragraph">
+<p>The <strong>QoSSIOC Status</strong> field displays <code>Not Configured</code> after the process is complete.</p>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="find-more-information" class="discrete">Find more information</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/index.html" target="_blank" rel="noopener">NetApp HCI Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html" target="_blank" rel="noopener">NetApp SolidFire and Element software documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_task_qossioc.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[Set up and manage QoSSIOC for Element volumes and VMware datastores](https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/vcp/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/vcp/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/vcp/js/www-ntap.js'></script>
+  </body>
+
+  
+</html>
