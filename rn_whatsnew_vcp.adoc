@@ -21,6 +21,11 @@ NetApp Element Plug-in for vCenter Server 4.7 contains important security improv
 
 NetApp Element Plug-in for vCenter Server 4.7 is available with the 2.18 release of management services.
 
+== NetApp Element Plug-in for vCenter Server 4.6
+With version 4.6, the plug-in now supports components of vSphere 7.0 Update 1, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
+
+NetApp Element Plug-in for vCenter Server 4.6 is available with the 2.16 release of management services.
+
 [discrete]
 == Find more information
 * link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
