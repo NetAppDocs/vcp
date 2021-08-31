@@ -17,7 +17,7 @@ You can use the NetApp Element Plug-in for vCenter Server to manage cluster reso
 
 You can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
 
-Use the following procedure to set up storage cluster management in a vSphere Linked Mode environment.
+To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure.
 
 .Steps
 .	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
@@ -26,13 +26,14 @@ Use the following procedure to set up storage cluster management in a vSphere Li
 Logging in initiates installation of the plug-in on the web client.
 . Log in to the web client of the destination vCenter that you want to manage the storage cluster.
 .	Add the storage cluster to the Element Plug-in inventory.
-+
-For example, if you have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2 and you want vCenter1 to manage cluster1 and vCenter2 to manage cluster2, you perform the following steps:
-+
-.. Log in to the vCenter1 web client.
-.. Add cluster1 to the VCP inventory to manage cluster1 from the vCenter1 web client.
-.. Log in to the vCenter2 web client.
-.. Add cluster2 to the VCP inventory to manage cluster2 from the vCenter2 web client.
+
+.Example
+You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2. To set up the storage cluster management, after registering the plug-in with each vCenter Server, you perform the following steps:
+
+. Log in to the vCenter1 web client.
+. To manage cluster1 from the vCenter1 web client, add cluster1 to the Element Plug-in inventory.
+. Log in to the vCenter2 web client.
+. To manage cluster2 from the vCenter2 web client, add cluster2 to the Element Plug-in inventory.
 
 [discrete]
 == Find more information
