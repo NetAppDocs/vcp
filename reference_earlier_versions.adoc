@@ -14,11 +14,15 @@ summary: Documentation is available for releases earlier than version 4.6 of the
 :keywords: documentation, earlier, previous, versions
 
 [.lead]
-Documentation is also available for releases earlier than version 4.6 of the NetApp Element Plug-in for vCenter Server.
+Documentation is also available for releases earlier than version 4.7 of the NetApp Element Plug-in for vCenter Server.
 
 [cols=4*,options="header"]
 |===
 | Version | Plug-in release notes | Management services release notes | User guide
+
+| 4.7 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[PDF^] |  |
+
+| 4.6 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631[PDF^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_Hybrid_Cloud_Control_and_Management_Services_2.17.56_Release_Notes[2.17.56 KB^] |
 
 | 4.5 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396[PDF^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.14.60_Release_Notes[2.14.60 KB^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2872843[PDF^]
 
