@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: legal-notices.html
+keywords:
+summary:
+---
+= Legal notices
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: media/
+= Legal notices
+:icons: font
+:imagesdir: ./media/
+
+// Include the common notices
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[]
+
+// Include the open source notice intro
+include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
+
+// Add required link(s)
+* link:media/mgmt_svcs_2.18_notice.pdf[Notice for Management Services 2.18.91 (VCP 4.7.10)^]
+* link:media/mgmt_svcs_2.17.56_notice.pdf[Notice for Management Services 2.17.56 (VCP 4.6.32)^]
+* link:media/mgmt_svcs_2.17_notice.pdf[Notice for Management Services 2.17.52 (VCP 4.6.29)^]
+* link:media/mgmt_svcs_2.16_notice.pdf[Notice for Management Services 2.16 (VCP 4.6.29)^]
+* link:media/mgmt_svcs_2.14_notice.pdf[Notice for Management Services 2.14 (VCP 4.5.42)^]
+* link:media/mgmt_svcs_2.13_notice.pdf[Notice for Management Services 2.13 (VCP 4.5.42)^]
+* link:media/mgmt_svcs_2.11_notice.pdf[Notice for Management Services 2.11 (VCP 4.4.72)^]
