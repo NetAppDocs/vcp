@@ -9,6 +9,7 @@ NOTE: You will be prompted to log in using your NetApp Support Site credentials.
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226[NetApp HCI 1.7P1 Release Notes^]
 
 == NetApp Element software
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2878089[NetApp Element Software 12.3.1 Release Notes] _NEW_
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876498[NetApp Element Software 12.3 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789[NetApp Element Software 12.2 Release Notes^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022[NetApp Element Software 12.0 Release Notes^]
