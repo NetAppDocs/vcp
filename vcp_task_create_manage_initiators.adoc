@@ -107,4 +107,4 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 [discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html[NetApp SolidFire and Element software documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
