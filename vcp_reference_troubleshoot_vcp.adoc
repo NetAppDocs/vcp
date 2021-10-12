@@ -17,6 +17,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 You need to be aware of some of the common issues with the NetApp Element Plug-in for vCenter Server and the steps to resolve them.
 
 * <<Plug-in registration successful but icons do not appear in web client>>
+* <<Errors after VCP 4.8 upgrade with VMware vCenter Server 6.7U1>>
 * <<Error registering plug-in using Registration UI>>
 * <<Error updating plug-in using Registration UI>>
 * <<Error message that NetApp extension cannot be upgraded>>
@@ -61,6 +62,25 @@ NOTE: You might need to correct an unreachable or bad URL. Update the plug-in re
 . If the plug-in cannot be downloaded, compare the `serverThumbprint` in the MOB record with the certificate SHA-1 for the ZIP URL that is displayed in the browser:
 .. If the registration record in the MOB has an incorrect or stale URL or SHA-1, unregister the plug-in and register the plug-in again.
 .. If the problem persists and the ZIP is unreachable, inspect the ZIP URL to determine if there is an issue with the management node address used. In some cases, it might be necessary to customize a URL using the registration utility for the plug-in so that the ZIP file can be downloaded.
+
+== Errors after VCP 4.8 upgrade with VMware vCenter Server 6.7U1
+
+.Description
+
+After you upgrade to VCP 4.8 with VMware vCenter Server 6.7U1, you might encounter the following issues:
+
+* The clusters are not listed in the *Clusters* section.
+* A server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration.
+
+.Corrective Action
+
+Restore the cluster and QoSSIOC settings:
+
+. Log out of vCenter and then log back in.
+. In your current vSphere Client view, select the refresh icon.
+. Check if the clusters and QoSSIOC settings are restored.
++
+If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters^].
 
 == Error registering plug-in using Registration UI
 
