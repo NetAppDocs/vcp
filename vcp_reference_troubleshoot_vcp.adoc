@@ -77,7 +77,7 @@ After you upgrade to VCP 4.8 or later with VMware vCenter Server 6.7U1, you migh
 Restore the cluster and QoSSIOC settings:
 
 . Log out of vCenter.
-. After logging out, wait two to three minutes and then log back in.
+. After logging out, wait three to five minutes and then log back in.
 . In your current vSphere Client view, select the refresh icon.
 . Disable cache and refresh the browser, for example, by using Ctrl+F5.
 . Check if the clusters and QoSSIOC settings are restored.
