@@ -216,9 +216,7 @@ You can attempt to recover a drive that does not successfully enable security ev
 +
 *To resolve*: To resolve this fault, update the SSL certificate before it expires. Use the `UpdateIdpConfiguration` API method with `refreshCertificateExpirationTime=true` to provide the updated SSL certificate.
 * *inconsistentBondModes*: The bond modes on the VLAN device are missing. This fault will display the expected bond mode and the bond mode currently in use.
-* *inconsistentInterfaceConfiguration*: The interface configuration is inconsistent.
-+
-*To resolve*: To resolve this fault, ensure the node interfaces in the storage cluster are consistently configured.
+
 * *inconsistentMtus*: This cluster fault indicates one of the following conditions:
 ** Bond1G mismatch: Inconsistent MTUs have been detected on Bond1G interfaces.
 ** Bond10G mismatch: Inconsistent MTUs have been detected on Bond10G interfaces.
