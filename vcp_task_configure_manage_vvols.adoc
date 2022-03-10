@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: vcp_task_configure_manage_vvols.html
 summary: You can set up virtual volumes for provisioned storage in your cluster.
-keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, element
+keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, element, vasa provider
 ---
 
 = Configure and manage virtual volumes
