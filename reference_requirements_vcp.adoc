@@ -16,6 +16,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 Before you use NetApp Element Plug-in for vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.​
 
 == VMware vSphere prerequisites
+
 VMware vSphere 7.0 or 6.7, including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server.
 
 === VMware vSphere versions supported by the plug-in
