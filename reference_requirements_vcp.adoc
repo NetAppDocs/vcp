@@ -27,7 +27,7 @@ The plug-in supports the following major versions of VMware software:
 +
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). It is compatible with the version 6.7 U2 vSphere Web Client for Flash/FLEX.
 
-IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6 and later.
+IMPORTANT: The plug-in is not compatible with VMware vCenter Server 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
 
 === End of vSphere 6.0 support
 
