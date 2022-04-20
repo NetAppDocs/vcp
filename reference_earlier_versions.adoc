@@ -22,7 +22,7 @@ NOTE: This link:index.html[documentation link] for version 4.9 of the NetApp Ele
 |===
 | Version | Plug-in release notes | Management services release notes | User guide
 
-| 4.8 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904[2.20.xx^] | link:index.html[Link]
+| 4.8 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296[2.19.48^] | link:index.html[Link]
 
 | 4.7 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748[2.18.91^] | link:index.html[Link]
 
