@@ -22,6 +22,9 @@ VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI a
 The plug-in supports the following major versions of VMware software:
 
 * vSphere 7.0 and 7.0 Update 1, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
++
+IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, all versions of the NetApp Element Plug-in for vCenter Server fail to deploy. To resolve this issue, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
+
 * vSphere 6.7 and 6.7 Update 1 and 3, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 +
 IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of the HTML5 vSphere Web Client and other 6.7 U2 builds released prior to update 2a (build 13643870). It is compatible with the version 6.7 U2 vSphere Web Client for Flash/FLEX.
