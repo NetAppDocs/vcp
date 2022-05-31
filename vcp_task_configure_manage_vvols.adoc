@@ -19,7 +19,7 @@ You can enable VMware vSphere link:vcp_concept_vvols.html[Virtual Volumes (VVols
 * You are using a NetApp Element 10 or later cluster that is connected to an ESXi 6.5 or later environment with VVols compatibility.
 * You are using vCenter 6.5 or later.
 
-=== Setup tasks
+== Setup tasks
 You must perform initial configuration steps to use virtual volumes (VVols) in the NetApp Element Plug-in for vCenter Server.
 
 .Steps
@@ -27,7 +27,7 @@ You must perform initial configuration steps to use virtual volumes (VVols) in t
 . <<Register the VASA provider with vCenter>>
 . <<Create a storage container and associated VVol datastore>>
 
-=== Management tasks
+== Management tasks
 * <<Monitor virtual volume resources>>
 * <<Create a VVol datastore for a storage container>>
 * <<Delete a storage container>>
