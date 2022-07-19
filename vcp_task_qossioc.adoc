@@ -103,6 +103,7 @@ mNode and SIOC service might still be running.
 NOTE: After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.
 
 == Change the QoSSIOC service password
+
 You can change the password for the QoSSIOC service on the management node using the registration utility UI.
 
 .What you'll need
@@ -123,7 +124,7 @@ The *QoSSIOC Status* field displays `Not Configured` after the process is comple
 +
 The registration utility UI displays the *Manage QoSSIOC Service Credentials* page for the plug-in.
 +
-image::vcp_registration_ui_qossioc.png[VCP registration utility menu]
+image::vcp_registration_ui_qossioc.png[NetApp Element Plug-in for vCenter Server registration utility menu]
 
 . Enter the following information:
 .. *Old Password*: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of `solidfire`.
