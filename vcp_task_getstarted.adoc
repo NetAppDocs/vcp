@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 ---
 
 = Install and configure the NetApp Element Plug-in for vCenter Server
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -288,7 +289,7 @@ After you have configured valid QoSSIOC settings for the management node, these 
 . Click *OK*.
 The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
 +
-NOTE: See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] to troubleshoot if the status is any of the following:
+NOTE: See this {url-peak}[KB^] to troubleshoot if the status is any of the following:
 * `Down`: QoSSIOC is not enabled.
 * `Not Configured`: QoSSIOC settings have not been configured.
 * `Network Down`: vCenter cannot communicate with the QoSSIOC service on the network. The mNode and SIOC service might still be running.
