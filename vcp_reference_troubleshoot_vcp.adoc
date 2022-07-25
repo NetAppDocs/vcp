@@ -63,6 +63,7 @@ NOTE: You might need to correct an unreachable or bad URL. Update the plug-in re
 .. If the registration record in the MOB has an incorrect or stale URL or SHA-1, unregister the plug-in and register the plug-in again.
 .. If the problem persists and the ZIP is unreachable, inspect the ZIP URL to determine if there is an issue with the management node address used. In some cases, it might be necessary to customize a URL using the registration utility for the plug-in so that the ZIP file can be downloaded.
 
+[[error_vcp48_67u1]]
 == Errors after NetApp Element Plug-in for vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1
 
 .Description
