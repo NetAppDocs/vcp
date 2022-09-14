@@ -21,20 +21,34 @@ sidebar:
               url: rn_relatedrn_vcp.html
         - title: Concepts
           entries:
-            - title: NetApp Element Configuration extension point
-              url: vcp_concept_config_extension_point.html
-            - title: NetApp Element Management extension point
-              url: vcp_concept_management_extension_point.html
-            - title: User accounts
-              url: vcp_concept_accounts.html
-            - title: Protection domains
-              url: vcp_concept_protection_domains.html
-            - title: Linked mode and the vCenter Plug-in
-              url: vcp_concept_linkedmode.html
-            - title: QoSSIOC
-              url: vcp_concept_qossioc.html
-            - title: Virtual volumes (vVols)
-              url: vcp_concept_vvols.html
+            - title: NetApp Element Plug-in for vCenter Server 5.0 or later
+              entries:
+                - title: NetApp Element Remote Plugin extension point
+                  url: vcp_concept_remote_plugin_extension_point.html
+                - title: User accounts
+                  url: vcp_concept_accounts.html
+                - title: Protection domains
+                  url: vcp_concept_protection_domains.html
+                - title: QoSSIOC
+                  url: vcp_concept_qossioc.html
+                - title: Virtual volumes (vVols)
+                  url: vcp_concept_vvols.html
+            - title: NetApp Element Plug-in for vCenter Server 4.10 or earlier
+              entries:
+                - title: NetApp Element Configuration extension point
+                  url: vcp_concept_config_extension_point.html
+                - title: NetApp Element Management extension point
+                  url: vcp_concept_management_extension_point.html
+                - title: User accounts
+                  url: vcp_concept_accounts.html
+                - title: Protection domains
+                  url: vcp_concept_protection_domains.html
+                - title: Linked mode and the vCenter Plug-in
+                  url: vcp_concept_linkedmode.html
+                - title: QoSSIOC
+                  url: vcp_concept_qossioc.html
+                - title: Virtual volumes (vVols)
+                  url: vcp_concept_vvols.html
         - title: Pre-deployment requirements
           url: reference_requirements_vcp.html
         - title: Install and configure the NetApp Element Plug-in for vCenter Server
