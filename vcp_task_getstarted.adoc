@@ -58,7 +58,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, the plug-in must be registered with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.10 or earlier.
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
 
 .Steps
 
@@ -93,7 +93,7 @@ NOTE: The user name and password credentials you enter must be for a user with v
 * The vCenter Administrator password.
 * (For in-house servers/dark sites) A custom URL for the plug-in ZIP.
 +
-NOTE: Most installations use the default path. To customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings, select *Custom URL*. For additional steps if you intend to customize a URL, see * <<Modify vCenter properties for a dark site HTTP server, Modify vCenter properites for a dark site HTTP server>>.
+NOTE: Most installations use the default path. To customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings, select *Custom URL*. For additional steps if you intend to customize a URL, see <<Modify vCenter properties for a dark site HTTP server, Modify vCenter properites for a dark site HTTP server>>.
 
 . Select *Register*.
 . (Optional) Verify registration status:
@@ -261,7 +261,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.10 or earlier.
+* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
 ====
 
 . Select *OK*.
@@ -287,13 +287,17 @@ After you have configured valid QoSSIOC settings for the management node, these 
 * *vCenter User ID*: The user name for the vCenter admin with full Administrator role privileges.
 * *vCenter Password*: The password for the vCenter admin with full Administrator role privileges.
 . Click *OK*.
++
 The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
 +
-NOTE: See this {url-peak}[KB^] to troubleshoot if the status is any of the following:
+[NOTE]
+====
+See this {url-peak}[KB^] to troubleshoot if the status is any of the following:
+
 * `Down`: QoSSIOC is not enabled.
 * `Not Configured`: QoSSIOC settings have not been configured.
 * `Network Down`: vCenter cannot communicate with the QoSSIOC service on the network. The mNode and SIOC service might still be running.
-
+====
 +
 After the QoSSIOC service is enabled, you can configure QoSSIOC performance on individual datastores.
 

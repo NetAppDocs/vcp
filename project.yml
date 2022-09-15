@@ -33,7 +33,7 @@ sidebar:
                   url: vcp_concept_qossioc.html
                 - title: Virtual volumes (vVols)
                   url: vcp_concept_vvols.html
-            - title: NetApp Element Plug-in for vCenter Server 4.10 or earlier
+            - title: NetApp Element Plug-in for vCenter Server 4.9 or earlier
               entries:
                 - title: NetApp Element Configuration extension point
                   url: vcp_concept_config_extension_point.html

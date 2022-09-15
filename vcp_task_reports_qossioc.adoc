@@ -19,7 +19,7 @@ You can view QoSSIOC events from the NetApp Element Configuration extension poin
 
 QoSSIOC events are displayed from locally added clusters. In a Linked Mode environment, log into the vSphere Web Client that has the cluster added locally to view QoSSIOC events for that cluster.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.10 or earlier.
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
 
 .What you'll need
 
