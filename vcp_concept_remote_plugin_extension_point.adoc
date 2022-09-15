@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: vcp_concept_remote_plugin_extension_point.html
 summary:
-keywords: netapp, vcp, element, plugin, plug-in, management, extension point
+keywords: netapp, vcp, element, plugin, plug-in, management, extension point, remote
 ---
 
 = NetApp Element Remote Plugin extension point
@@ -13,7 +13,7 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Element Remote Plugin extension point enables you to configure and manage clusters, nodes, and drives and view cluster information.
+Beginning with NetApp Element Plug-in for vCenter Server 5.0, you can access the remote Element Plug-in by using the NetApp Element Remote Plugin extension point, which enables you to configure and manage clusters, nodes, and drives and view cluster information.
 
 The following tabs are available from the NetApp Element Management Remote Plugin extension point:
 
@@ -24,17 +24,17 @@ The following tabs are available from the NetApp Element Management Remote Plugi
 
 == Getting Started
 
-Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the *About* tab in the NetApp Element Management extension point.
+Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the *About* tab.
 
 == Configuration
 
-The Configuration tab allows you to add and manage clusters, and configure management node settings for QoSSIOC.
+The *Configuration* tab allows you to add and manage clusters, and configure management node settings for QoSSIOC.
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
 image::vcp_config_tab.png[Configuration tab]
 
-The following tabs are available from the Configuration tab:
+The following tabs are available from the *Configuration* tab:
 
 * *Clusters*: Manages the NetApp Element clusters controlled by the plug-in. You can also enable, disable, or configure cluster-specific features.
 * *QoSSIOC Settings*: Configures your credentials for the QoSSIOC service on the management node to communicate with vCenter.
@@ -42,7 +42,7 @@ The following tabs are available from the Configuration tab:
 
 == Management
 
-The Management tab allows you to view cluster information,  manage datastores, volumes, user accounts, access groups, and initiators, manage individual group shapshots, and add and manage drives and nodes.
+The *Management* tab allows you to view cluster information, manage datastores, volumes, user accounts, access groups, and initiators, manage individual group shapshots, and add and manage drives and nodes.
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
@@ -55,7 +55,7 @@ The cluster navigation bar allows you to quickly switch between clusters that ha
 * *SVIP*: The storage virtual IP address of the selected cluster.
 * *vCenter*: The vCenter Server which the selected cluster can access. The cluster is assigned access to a vCenter Server when the cluster is added to the plug-in.
 
-The following tabs are available from the Managemetn tab:
+The following tabs are available from the *Management* tab:
 
 * *Reporting*: Displays information about cluster components and provides a cluster performance overview. You can also find information about events, alerts, iSCSI sessions, running tasks, and volume performance from the tab.
 * *Management*: Create and manage datastores, volumes, user accounts, access groups, and initiators. You can also perform backup operations, clones, and snapshots. QoS policies are available to be created and managed using NetApp Element software 10 or later.
