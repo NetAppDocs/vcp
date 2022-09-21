@@ -33,7 +33,11 @@ When you configure a snapshot schedule, you can choose from time intervals based
 If you schedule a snapshot to run at a time period that is not divisible by 5 minutes, the snapshot will run at the next time period that is divisible by 5 minutes. For example, if you schedule a snapshot to run at 12:42:00 UTC, it will run at 12:45:00 UTC. You cannot schedule a snapshot to run at intervals of less than 5 minutes.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -61,7 +65,11 @@ NOTE: When you set a retention period, you select a period that begins at the cu
 You might want to verify snapshot schedule details.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to view is selected in the navigation bar.
 
@@ -72,7 +80,11 @@ NOTE: If two or more clusters are added, ensure that the cluster that you intend
 You can modify existing snapshot schedules. After modification, the next time the schedule runs it uses the updated attributes. Any snapshots created by the original schedule remain on the storage system.
 
 .Steps
-. Select *NetApp Element Management > Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -106,7 +118,11 @@ NOTE: When you set a retention period, you select a period that begins at the cu
 You can make a copy of a snapshot schedule and assign it to new volumes or use it for other purposes.
 
 .Steps
-. Select *NetApp Element Management > Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -122,7 +138,11 @@ The Copy Schedule dialog box appears, populated with the current attributes of t
 You can delete a snapshot schedule. After you delete the schedule, it does not run any future scheduled snapshots. Any snapshots that were created by the schedule remain on the storage system.
 
 .Steps
-. Select *NetApp Element Management > Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 

@@ -43,7 +43,11 @@ The following criteria should be considered for this configuration:
 When a virtual network is added, an interface for each node is created and each requires a virtual network IP address. The number of IP addresses you specify when creating a new virtual network must be equal to or greater than the number of nodes in the cluster. Virtual network addresses are bulk provisioned by and assigned to individual nodes automatically. You do not need to manually assign virtual network addresses to the nodes in the cluster.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -79,10 +83,14 @@ NOTE: The total number of IP addresses must match the number of nodes in the sto
 . Click *OK* to create the VLAN.
 
 == View virtual network details
-You can view network information for VLANs on the Network page of the Cluster tab from the NetApp Element Management extension point.
+You can view network information for VLANs on the Network page of the Cluster tab from the vCenter Plug-in extension point.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -99,7 +107,11 @@ You can change VLAN attributes, such as VLAN name, netmask, and size of the IP a
 The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can only be modified for VRF VLANs. If any iSCSI, remote replication, or other network sessions exist, the modification might fail.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -115,7 +127,11 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 You can permanently delete a VLAN object and its block of IPs. Address blocks that were assigned to the VLAN are disassociated with the virtual network and can be reassigned to another virtual network.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 

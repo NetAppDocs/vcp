@@ -60,3 +60,4 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
 * link:vcp_concept_config_extension_point.html[NetApp Element Configuration extension point]
 * link:vcp_concept_management_extension_point.html[NetApp Element Configuration extension point]
+* link:vcp_concept_remote_plugin_extension_point.html[NetApp Element Remote Plugin extension point]

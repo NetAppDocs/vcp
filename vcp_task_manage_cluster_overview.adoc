@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_manage_cluster_overview.html
-summary: You can manage your storage cluster using the NetApp Element Management extension point of the plug-in.
+summary: You can manage your storage cluster using the vCenter Plug-in extension points.
 keywords: netapp, VLANs, drives, nodes, cluster, manage create, delete, view vcp, vcenter, element
 ---
 
@@ -13,7 +13,7 @@ keywords: netapp, VLANs, drives, nodes, cluster, manage create, delete, view vcp
 :imagesdir: ../media/
 
 [.lead]
-From the Cluster tab in the NetApp Element Management extension point, you can view and change cluster-wide settings and perform cluster-specific tasks for drives, nodes, and VLANs.
+From the Cluster tab in the vCenter Plug-in extension point, you can view and change cluster-wide settings and perform cluster-specific tasks for drives, nodes, and VLANs.
 
 .Options
 * link:vcp_task_add_manage_drive.html[Add and manage drives]

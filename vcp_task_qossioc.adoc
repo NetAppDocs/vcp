@@ -49,7 +49,11 @@ activity.
 IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for any volume QoS settings regardless of policy.
 
 .Steps
-. Select *NetApp Element Management > Management*.
+. From the vCenter Plug-in, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -79,8 +83,11 @@ When you enable the QoSSIOC Automation for a datastore, the button changes from 
 You can change the QoSSIOC and vCenter credentials of an active Element management node.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
+. Open the *QoSSIOC Settings* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. Select *Actions*.
 . In the resulting menu, select *Edit*.
 . In the *Edit QoSSIOC Settings* dialog box, change any of the following:
 * *QoSSIOC User ID*: The user ID for the QoSSIOC service. The QoSSIOC service default user ID is `admin`. For NetApp HCI, the user ID is the same one entered during installation using the NetApp Deployment Engine.
@@ -90,7 +97,7 @@ NOTE: For NetApp HCI deployments, the default password is randomly generated dur
 
 * *vCenter User ID*: The user name for the vCenter admin with full Administrator role privileges.
 * *vCenter Password*: The password for the vCenter admin with full Administrator role privileges.
-. Click *OK*.
+. Select *OK*.
 The QoSSIOC Status field displays `UP` when the plug-in can successfully communicate with the service.
 +
 NOTE: See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] to troubleshoot if the status is any of the following:
@@ -110,11 +117,14 @@ You can change the password for the QoSSIOC service on the management node using
 * Your management node is powered on.
 
 .About this task
-This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <<Edit QoSSIOC settings, QoSSIOC Settings>> page of the NetApp Element Configuration extension point.
+This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <<Edit QoSSIOC settings, QoSSIOC Settings>> page.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
+. In your vSphere Web Client, open the *QoSSIOC Settings* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. Select *Actions*.
 . In the resulting menu, select *Clear*.
 . Confirm the action.
 +
@@ -133,15 +143,15 @@ NOTE: For NetApp HCI deployments, the default password is randomly generated dur
 
 .. *New Password*: The new password for the QoSSIOC service.
 .. *Confirm Password*: Enter the new password again.
-. Click *Submit Changes*.
+. Select *Submit Changes*.
 +
 NOTE: The QoSSIOC service automatically restarts after you submit changes.
 
-. In your vSphere Web Client, select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
+. In your vSphere Web Client, select *NetApp Element Configuration > QoSSIOC Settings* or *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. Select *Actions*.
 . In the resulting menu, select *Configure*.
 . In the *Configure QoSSIOC Settings* dialog box, enter the new password in the *QoSSIOC Password* field.
-. Click *OK*.
+. Select *OK*.
 +
 The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
 
@@ -149,22 +159,29 @@ The *QoSSIOC Status* field displays `UP` when the plug-in can successfully commu
 You can disable QoSSIOC integration for a datastore.
 
 .Steps
-. Select *NetApp Element Management > Management*.
+. From the vCenter Plug-in, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
-. Click the button in the *QoSSIOC Automation* column for the selected datastore.
+. Select the button in the *QoSSIOC Automation* column for the selected datastore.
 . Clear the *Enable QoS & SIOC* check box to disable the integration.
 +
 Clearing the Enable QoS & SIOC check box automatically disables the Override Default QoS option.
-. Click *OK*.
+. Select *OK*.
 
 == Clear QoSSIOC settings
 You can clear the QoSSIOC configuration details for the Element storage management node (mNode). You must clear the settings for the configured management node before configuring the credentials for a new management node or changing the QoSSIOC service password. Clearing the QoSSIOC settings removes active QoSSIOC from the vCenter, cluster, and datastores.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
+. In your vSphere Web Client, open the *QoSSIOC Settings* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. Select *Actions*.
 . In the resulting menu, select *Clear*.
 . Confirm the action.
 +

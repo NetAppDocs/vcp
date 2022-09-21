@@ -71,7 +71,7 @@ NOTE: You might need to correct an unreachable or bad URL. Update the plug-in re
 After you upgrade to NetApp Element Plug-in for vCenter Server 4.8 or later with VMware vCenter Server 6.7U1, you might encounter the following issues:
 
 * The clusters are not listed in the *Clusters* section.
-* A server error appears in the *Clusters and QoSSIOC Settings* section of the NetApp Element Configuration.
+* A server error appears in the *Clusters* and *QoSSIOC Settings* sections.
 
 .Corrective Action
 
@@ -83,7 +83,7 @@ Restore the cluster and QoSSIOC settings:
 . Disable cache and refresh the browser, for example, by using Ctrl+F5.
 . Check if the clusters and QoSSIOC settings are restored.
 +
-If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters^].
+If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters].
 
 == Error registering plug-in using Registration UI
 
@@ -199,8 +199,11 @@ QoSSIOC status for the plug-in displays a warning icon and error message.
 .Description
 QoSSIOC service settings displays as UP, but QoSSIOC is unavailable.
 
-.Corrective Action
-From the *QoSSIOC Settings* tab in the NetApp Element Configuration extension point, click the refresh button. Update the IP address or user authentication information as needed.
+.Corrective Action for Element Plug-in for vCenter Server 4.10 or earlier
+From the *QoSSIOC Settings* tab in the NetApp Element Configuration extension point, select the refresh button. Update the IP address or user authentication information as needed.
+
+.Corrective Action for Element Plug-in for vCenter Server 5.0 or later
+From the *QoSSIOC Settings* tab in the NetApp Element Remote Plugin extension point > *Configuration* tab, select the refresh button. Update the IP address or user authentication information as needed.
 
 == QoSSIOC is enabled for datastore but unavailable
 

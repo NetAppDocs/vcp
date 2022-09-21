@@ -13,9 +13,9 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Element Management extension point enables you to view cluster information,  manage datastores, volumes, user accounts, access groups, and initiators, manage individual group shapshots, and add and manage drives and nodes.
+The NetApp Element Management extension point enables you to view cluster information, manage datastores, volumes, user accounts, access groups, and initiators, manage individual group snapshots, and add and manage drives and nodes.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 

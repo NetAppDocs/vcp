@@ -21,7 +21,10 @@ After you resolve the issue, the system polls itself and identifies the issue as
 
 .Steps
 
-. From the vCenter Plug-in, select *NetApp Element Management*.
+. From the vCenter Plug-in, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
 . Select *Reporting* > *Alerts*.
 . Monitor the following cluster alert information:
 * *ID*: Unique ID for a cluster alert.

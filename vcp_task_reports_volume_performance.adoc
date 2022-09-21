@@ -13,12 +13,15 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 :imagesdir: ../media/
 
 [.lead]
-You can view performance information for all volumes in the selected cluster from Reporting tab of the NetApp Element Management extension point.
+You can view performance information for all volumes in the selected cluster from Reporting tab of the plug-in extension point.
 
 .Steps
 
-. From the vCenter Plug-in, select *NetApp Element Management*.
-. Select *Reporting* > *Volume Performance*.
+. From the vCenter Plug-in, open the *Reporting* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+. Select *Volume Performance*.
 . To change how often the data refreshes on the page, click *Refresh every list* and choose a value.
 +
 The default refresh interval is 10 seconds if the cluster has less than 1000 volumes; otherwise, the default is 60 seconds. If you choose a value of Never, automatic page refreshing is disabled.

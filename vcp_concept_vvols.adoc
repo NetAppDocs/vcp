@@ -23,12 +23,12 @@ VMware ESXi hosts use logical I/O proxies known as protocol endpoints to communi
 
 Protocol endpoints in a NetApp Element cluster function as SCSI administrative logical units. Each protocol endpoint is created automatically by the cluster. For every node in a cluster, a corresponding protocol endpoint is created. For example, a four-node cluster will have four protocol endpoints.
 
-iSCSI is the only supported protocol for NetApp Element software. Fibre Channel protocol is not supported. Protocol endpoints cannot be deleted or modified by a user, are not associated with an account, and cannot be added to a volume access group. On the *VVols > Protocol Endpoints* page of the NetApp Element Management extension point, you can review protocol endpoint information.
+iSCSI is the only supported protocol for NetApp Element software. Fibre Channel protocol is not supported. Protocol endpoints cannot be deleted or modified by a user, are not associated with an account, and cannot be added to a volume access group. On the *NetApp Element Management > VVols > Protocol Endpoints* or **NetApp Element Remote Plugin > Management > VVols > Protocol Endpoints* page, you can review protocol endpoint information.
 
 == Storage containers
 Storage containers are logical constructs that map to NetApp Element accounts and are used for reporting and resource allocation. They pool raw storage capacity or aggregate storage capabilities that the storage system can provide to virtual volumes. A VVol datastore that is created in vSphere is mapped to an individual storage container. A single storage container has all available resources from the NetApp Element cluster by default. If more granular governance for multi-tenancy is required, multiple storage containers can be created.
 
-Storage containers function like traditional accounts and can contain both virtual volumes and traditional volumes. A maximum of four storage containers per cluster is supported. A minimum of one storage container is required to use VVols functionality. On the *VVols > Storage Containers* page of the NetApp Element Management extension point, you can create, delete, and view details about storage containers. You can discover storage containers in vCenter during VVols creation.
+Storage containers function like traditional accounts and can contain both virtual volumes and traditional volumes. A maximum of four storage containers per cluster is supported. A minimum of one storage container is required to use VVols functionality. On the *NetApp Element Management > VVols > Storage Containers* or **NetApp Element Remote Plugin > Management > VVols > Storage Containers* page, you can create, delete, and view details about storage containers. You can discover storage containers in vCenter during VVols creation.
 
 == VASA provider
 

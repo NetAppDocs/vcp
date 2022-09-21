@@ -63,7 +63,10 @@ The Cluster Admin user name and password is used to authenticate cluster access 
 If the MVIP is not known, or access to the cluster is not available, you can pair the cluster by generating a pairing key and use the key to pair the two clusters. For instructions, see <<Pair clusters with a pairing key>>.
 
 .Steps
-. From the vCenter that contains the local cluster, select *NetApp Element Management* > *Protection*.
+. In your vSphere Web Client, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Protection*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -79,7 +82,10 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 .. Enter a cluster administrator password.
 .. Select *Start Pairing*.
 . After the task completes and you see the Cluster Pairs page, verify that the cluster pair is connected.
-. (Optional) On the remote cluster, select *NetApp Element Management* > *Protection* > *Cluster Pairs* or use the Element web UI to verify that the cluster pair is connected.
+. (Optional) On the remote cluster, verify that the cluster pair is connected by using the Element UI or the plug-in extension points:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection > Cluster Pairs*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection > Cluster Pairs*.
 
 === Pair clusters with a pairing key
 If you have Cluster Admin access to a local cluster but not the remote cluster, you can pair the clusters using a pairing key. A pairing key is generated on a local cluster and then sent securely to a Cluster Admin at a remote site to establish a connection and complete the cluster pairing for real-time replication.
@@ -87,7 +93,11 @@ If you have Cluster Admin access to a local cluster but not the remote cluster, 
 This procedure describes cluster pairing between two clusters using vCenter on the local and remote sites. For clusters not controlled by the vCenter Plug-in, you can alternatively https://docs.netapp.com/us-en/element-software/storage/task_replication_pair_cluster_using_pairing_key.html[start or complete cluster pairing] using the Element web UI.
 
 .Steps
-. From the vCenter that contains the local cluster, select *NetApp Element Management* > *Protection*.
+[[open_protection_tab]]
+. From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -106,7 +116,7 @@ NOTE: The cluster pairing key contains a version of the MVIP, user name, passwor
 +
 IMPORTANT: Do not modify any of the characters in the pairing key. The key becomes invalid if it is modified.
 
-. From the vCenter that contains the remote cluster, select *NetApp Element Management* > *Protection*.
+. From the vCenter that contains the remote cluster, <<open_protection_tab,open the *Protection* tab>>.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 +
@@ -120,7 +130,7 @@ NOTE: Wait for the loading spinner to disappear before proceeding to the next st
 . Paste the pairing key from the local cluster in the *Cluster Pairing Key* field.
 . Select *Pair Cluster*.
 . After the task completes and you see the *Cluster Pair* page, verify that the cluster pair is connected.
-. To verify that the cluster pair is connected, on the remote cluster select *NetApp Element Management* > *Protection* or use the Element UI.
+. To verify that the cluster pair is connected, on the remote cluster <<open_protection_tab,open the *Protection* tab>> or use the Element UI.
 
 
 === Validate the cluster pair connections
@@ -158,7 +168,11 @@ You can pair a local volume with another volume on a remote cluster. Use this me
 * If you intend for the local volume to be the source, ensure that the access mode of the volume is set to Read/Write.
 
 .Steps
-. From the vCenter that contains the local cluster, select *NetApp Element Management* > *Management*.
+. From the vCenter that contains the local cluster, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -234,7 +248,11 @@ NOTE: The volume pairing key contains an encrypted version of the volume informa
 
 
 .Steps
-. From the vCenter that contains the local cluster, select *NetApp Element Management* > *Management*.
+[[open_management]]
+. From the vCenter that contains the local cluster, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -260,7 +278,7 @@ NOTE: The volume pairing key should be treated in a secure manner and not stored
 +
 IMPORTANT: Do not modify any of the characters in the pairing key. The key becomes invalid if it is modified.
 
-. From the vCenter that contains the remote cluster, select *NetApp Element Management* > *Management*.
+. From the vCenter that contains the remote cluster, <<open_management,open the *Management* tab>>.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -281,10 +299,6 @@ IMPORTANT: If you have not yet assigned a volume to be the replication target, t
 +
 NOTE: Volumes that are paired using a pairing key appear after the pairing process has been completed at the remote location.
 
-
-
-
-
 === Create target volumes and pair them with local volumes
 You can pair two or more local volumes with associated target volumes on a remote cluster. This process creates a replication target volume on the remote cluster for each local source volume you select. Use this method if there is Cluster Admin access to both clusters on which volumes are to be paired and remote cluster is controlled by the plug-in.
 
@@ -297,7 +311,11 @@ This method uses the volume ID of each volume on the remote cluster to initiate 
 * Ensure that the access mode of each local volume is set to Read/Write.
 
 .Steps
-. From the vCenter that contains the local cluster, select *NetApp Element Management* > *Management*.
+. From the vCenter that contains the local cluster, open the *Management* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -324,15 +342,10 @@ NOTE: After you confirm the pairing, the two clusters begin the process of conne
 . Select *Protection* > *Volume Pairs* on either cluster.
 . Verify the status of the volume pairing.
 
-
-
-
-
 === Assign a replication source and target to paired volumes
 If you did not assign a volume to be the replication target during volume pairing, configuration is not complete. You can use this procedure to assign a source volume and its replication target volume. A replication source or target can be either volume in a volume pair.
 
 You can also use this procedure to redirect data from a source volume to a remote target volume should the source volume become unavailable.
-
 
 .Before you begin
 You have access to the clusters containing the source and target volumes.
@@ -344,10 +357,12 @@ A replication source volume has read/write account access. A replication target 
 
 *Best Practices*: The target volume should contain no data and have the exact characteristics of the source volume, such as size, 512e setting, and QoS configuration. The target volume may be greater or equal in size to the source volume, but it cannot be smaller.
 
-
 .Steps
-. From the *NetApp Element Management* extension point in vCenter Server, select the cluster that contains the paired volume that you want to use as the replication source.
-. Select *NetApp Element Management* > *Management*.
+. Select the cluster that contains the paired volume that you want to use as the replication source from the plug-in extension point:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0 From the *NetApp Remote Plugin > Management*.
+. From the extension point for your Element Plug-in for vCenter Server version, select the *Management* tab.
 . Select the *Volumes* sub-tab.
 . From the *Active* view, select the check box for the volume that you want to edit.
 . Select *Actions*.
@@ -357,8 +372,11 @@ A replication source volume has read/write account access. A replication target 
 IMPORTANT: If you are reversing source and target assignment, this action will cause the volume pair to display PausedMisconfigured until a new replication target is assigned. Changing access pauses volume replication and causes the transmission of data to cease. Be sure that you have coordinated these changes at both sites.
 
 . Select *OK*.
-. From the *NetApp Element Management* extension point, select the cluster containing the paired volume that you want to use as the replication target.
-. Select *NetApp Element Management* > *Management*.
+. Select the cluster containing the paired volume that you want to use as the replication target:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0 From the *NetApp Remote Plugin > Management*.
+. From the extension point for your Element Plug-in for vCenter Server version, select the *Management* tab.
 . Select the *Volumes* sub-tab.
 . From the *Active* view, select the check box for the volume you want to edit.
 . Select *Actions*.
@@ -369,12 +387,15 @@ IMPORTANT: If you assign an existing volume as the replication target, the data 
 
 . Select *OK*.
 
-
 ==	Validate volume replication
 After a volume is replicated, you should ensure that the source and target volumes are active. When in Active state, volumes are paired, data is being sent from the source to the target volume, and the data is in sync.
 
 .Steps
-. From either cluster in the pairing, select *NetApp Element Management* > *Protection*.
+From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -385,7 +406,6 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 After replication completes and you no longer need the volume pairing relationship, you can delete the volume relationship.
 
 See <<Delete a volume pair>>.
-
 
 ==	Manage volume relationships
 You can manage volume relationships in many ways, such as pausing replication, reversing volume pairing, changing the mode of replication, deleting a volume pair, or deleting a cluster pair.
@@ -399,7 +419,11 @@ You can manage volume relationships in many ways, such as pausing replication, r
 You can edit volume pair properties to manually pause replication.
 
 .Steps
-. Select *NetApp Element Management* > *Protection*.
+. From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -417,7 +441,11 @@ IMPORTANT: Pausing or resuming volume replication manually will cause the transm
 You can edit volume pair properties to make changes to the replication mode of the volume pair relationship.
 
 .Steps
-. Select *NetApp Element Management* > *Protection*.
+. From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -444,7 +472,11 @@ This procedure describes deleting a volume pairing relationship between two volu
 For volumes not controlled by the vCenter Plug-in, you can alternatively link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_volume_relationship_after_replication.html[delete a volume pair end] using the Element web UI.
 
 .Steps
-. Select *NetApp Element Management* > *Protection*.
+. From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -467,7 +499,10 @@ You can use the vCenter Plug-in to delete a cluster pair end.
 For clusters not controlled by the vCenter Plug-in, you can alternatively link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_cluster_pair.html[delete a cluster pair end] using the Element web UI.
 
 .Steps
-. Select *NetApp Element Management* > *Protection*.
+. From the vCenter that contains the local cluster, open the *Protection* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
 . Select the *Cluster Pairs* sub-tab.
 . Select the check box for the cluster pair you want to delete.
 . Select *Actions*.
@@ -479,7 +514,7 @@ NOTE: This action deletes only the cluster pair end on the local cluster. You ne
 . Repeat the steps from the remote cluster in the cluster pairing.
 
 ==	Volume pairing messages and warnings
-You can view the information for volumes that have been paired or are in the process of being paired on the Volume Pairs page of the Protection tab from the NetApp Element Management configuration point.
+You can view the information for volumes that have been paired or are in the process of being paired on the Volume Pairs page of the Protection tab from the NetApp Element Management extension point for Element Plug-in for vCenter Server 4.10 and earlier and, beginning with Element Plug-in for vCenter Server 5.0, from the NetApp Element Remote Plugin extension point.
 
 The system displays pairing and progress messages in the Volume Status column.
 
@@ -487,7 +522,7 @@ The system displays pairing and progress messages in the Volume Status column.
 * <<Volume pairing warnings>>
 
 ===	Volume pairing messages
-You can view messages during the initial pairing process on the Volume Pairs page of the Protection tab from the NetApp Element Management configuration point. These messages are displayed in the Volume Status column and can display on both source and target ends of the pairing.
+You can view messages during the initial pairing process on the Volume Pairs page of the Protection tab from the plug-in extension point. These messages are displayed in the Volume Status column and can display on both source and target ends of the pairing.
 
 * *PausedDisconnected*: Source replication or sync RPCs timed out. Connection to the remote cluster has been lost. Check network connections to the cluster.
 * *ResumingConnected**: The remote replication sync is now active. Beginning the sync process and waiting for data.
@@ -500,7 +535,7 @@ You can view messages during the initial pairing process on the Volume Pairs pag
 *This process is driven by the target volume and might not display on the source volume.
 
 ===	Volume pairing warnings
-You can view warning messages after you pair volumes on the Volume Pairs page of the Protection tab from the NetApp Element Management configuration point. These messages are displayed in the Volume Status column and can display on both source and target ends of the pairing.
+You can view warning messages after you pair volumes on the Volume Pairs page of the Protection tab from the plug-in extension point. These messages are displayed in the Volume Status column and can display on both source and target ends of the pairing.
 
 These messages can display on both source and target ends of the pairing unless otherwise indicated.
 
@@ -514,8 +549,6 @@ These messages can display on both source and target ends of the pairing unless 
 * *PausedVolumeSizeMismatch*: Target volume is smaller than the source volume.
 * *PausedXCopy*: A SCSI XCOPY command is being issued to a source volume. The command must complete before replication can resume. The message displays on the source end of the pair only.
 * *StoppedMisconfigured*: A permanent configuration error has been detected. The remote volume has been purged or unpaired. No corrective action is possible; a new pairing must be established.
-
-
 
 [discrete]
 == Find more information

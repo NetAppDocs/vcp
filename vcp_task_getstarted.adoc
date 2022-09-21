@@ -50,7 +50,10 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 * You have deployed a management node OVA running Element software 11.3 or later.
 * Your management node is powered on with its IP address or DHCP address configured.
 * You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
-* Your firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.
+* Your firewall rules allow the following open link:reference_requirements_vcp.html[network communication]:
+** Between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete.
+** Beginning with Element Plug-in for vCenter Server 5.0, between the vCenter and the remote plug-in on TCP port 8333.
+** If you have enabled virtual volumes functionality on the cluster, TCP port 8444 is open for VASA provider access.
 
 .About this task
 
@@ -58,7 +61,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, the plug-in must be registered with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
+NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
 
 .Steps
 
@@ -221,27 +224,32 @@ NOTE: After you have completed the registration procedure, you can remove `allow
 
 == Access the plug-in and verify successful installation
 
-After successful installation or upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
+After successful installation or upgrade, the extension points appear in the Shortcuts tab of the vSphere Web Client in the side panel. The extension points differ depending on your Element Plug-in for vCenter Server version.
 
-image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere]
+For Element Plug-in for vCenter Server 4.10 and earlier, the NetApp Element Configuration and Management extension points appear.
 
-NOTE: If the vCenter Plug-in icons are not visible, see link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
+image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 4.10 and earlier]
+
+Beginning with Element Plug-in for vCenter Server 5.0, the NetApp Element Remote Plugin extension point appears.
+
+image::vcp_remote_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 5.0 and later]
+
+NOTE: If the vCenter Plug-in icons are not visible, see the link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
 
 == Add storage clusters for use with the plug-in
-You can add a cluster running Element software using the NetApp Element Configuration extension point so that it can be managed by the plug-in.
-
-After a connection has been established to the cluster, the cluster can then be managed using the NetApp Element Management extension point.
+Using the vCenter Plug-in extension points, you can add a cluster running Element software and after a connection has been established to the cluster, you can manage the cluster.
 
 .What you'll need
 
 * At least one cluster must be available and its IP or FQDN address known.
 * Current full Cluster Admin user credentials for the cluster.
-* Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
+* Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443, and 8443.
+* Beginning with Element Plug-in for vCenter Server 5.0, firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the remote plug-in on TCP port 8333.
 
-NOTE: You must add at least one cluster to use NetApp Element Management extension point functions.
+NOTE: You must add at least one cluster to use the vCenter Plug-in extension point functions.
 
 .About this task
-This procedure describes how to add a cluster profile so that the cluster can be managed by the plug-in. You cannot modify cluster administrator credentials using the plug-in.
+This procedure describes how to add a cluster profile so that the cluster can be managed by the vCenter Plug-in. You cannot modify cluster administrator credentials using the plug-in.
 
 See https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html[managing cluster administrator user accounts^] for instructions on changing credentials for a cluster administrator account.
 
@@ -249,7 +257,10 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 
 .Steps
 
-. Select *NetApp Element Configuration* > *Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
 . Select *Add Cluster*.
 . Enter the following information:
 +
@@ -261,7 +272,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters running Element Plug-in for vCenter 4.9 or earlier.
+* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
 ====
 
 . Select *OK*.
@@ -276,8 +287,11 @@ You can set up automatic quality of service based on Storage I/O Control link:vc
 After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
-. Click *Actions*.
+. In your vSphere Web Client, open the *QoSSIOC Settings* tab:
++
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. Select *Actions*.
 . In the resulting menu, select *Configure*.
 . In the *Configure QoSSIOC Settings* dialog box, enter the following information:
 * *mNode IP Address/FQDN*: The IP address of the management node for the cluster that contains the QoSSIOC service.
@@ -286,7 +300,7 @@ After you have configured valid QoSSIOC settings for the management node, these 
 * *QoSSIOC Password*: The password for the Element QoSSIOC service. The QoSSIOC service default password is `solidfire`. If you have not created a custom password, you can create one from the registration utility UI (`https://[management node IP]:9443`).
 * *vCenter User ID*: The user name for the vCenter admin with full Administrator role privileges.
 * *vCenter Password*: The password for the vCenter admin with full Administrator role privileges.
-. Click *OK*.
+. Select *OK*.
 +
 The *QoSSIOC Status* field displays `UP` when the plug-in can successfully communicate with the service.
 +

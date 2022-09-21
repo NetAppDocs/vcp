@@ -15,7 +15,7 @@ keywords: netapp, vcp, element, plugin, plug-in, linked mode
 [.lead]
 You can use the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using vCenter Linked Mode.
 
-NOTE: Beginning with Element Plug-in for vCenter Server 5.0, vCenter Linked Mode is not supported. If your vCenter Server is version 5.0 or later, see the link:vcp_concept_remote_plugin_extension_point.html[NetApp Element Remote Plugin] documentation.
+NOTE: Using vCenter Linked Mode is not supported for NetApp Element Plug-in for vCenter Server 5.0. If your vCenter Server is version 5.0, see the link:vcp_concept_remote_plugin_extension_point.html[NetApp Element Remote Plugin] documentation.
 
 You can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
 

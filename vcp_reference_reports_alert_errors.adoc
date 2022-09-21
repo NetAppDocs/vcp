@@ -13,7 +13,11 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 :imagesdir: media/
 
 [.lead]
-The system reports error codes with each alert on the *Reporting > Alerts* pages of the NetApp Element Management extension point. Error codes help you determine what component of the system experienced the alert and why the alert was generated.
+The system reports error codes with each alert that help you determine what component of the system experienced the alert and why the alert was generated.
+
+For Element Plug-in for vCenter Server 4.10 and earlier, you can view the errors codes from the *NetApp Element Management > Reporting > Alerts* page.
+
+Beginning with Element Plug-in for vCenter Server 5.0, you can view the errors codes from the *NetApp Remote Plugin > Management > Reporting > Alerts* page.
 
 The following list outlines the different types of system alerts.
 
@@ -450,8 +454,6 @@ In order to maintain data redundancy, the system reduces the capacity of the lar
 * *volumesOffline*: One or more volumes in the storage cluster are offline. The volumeDegraded fault will also be present.
 +
 *To resolve*: Contact NetApp Support for assistance.
-
-
 
 [discrete]
 == Find more information
