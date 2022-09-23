@@ -113,17 +113,15 @@ sidebar:
       url: /legal-notices.html
 homepage:
   tiles:
-    - title: Discover what's new
+    - title: Get started
       links:
-        - title: What's new in NetApp Element Plug-in for vCenter Server
+        - title: Product overview
+          url: /concept_vcp_product_overview.html
+        - title: What's new
           url: /rn_whatsnew_vcp.html
-        - title: What's new in NetApp Element software
-          url: http://docs.netapp.com/sfe-122/index.jsp
-        - title: What's new in management services for Element software and NetApp HCI
-          url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
-    - title: Get started with NetApp Element Plug-in for vCenter Server
-      links:
-        - title: NetApp Element Plug-in for vCenter Server installation and deployment
+        - title: Release notes
+          url: /rn_relatedrn.html
+        - title: Install and deployment the plug-in
           url: /vcp_task_getstarted.html
         - title: Understand concepts related to the plug-in
           url: /concept_vcp_product_overview.html
