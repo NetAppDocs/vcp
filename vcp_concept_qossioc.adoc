@@ -30,7 +30,6 @@ TIP: It is possible to set a reservation value through vSphere API. If a reserva
 
 TIP: https://activeiq.solidfire.com[SolidFire Active IQ^] has a QoS recommendations page that provides advice on optimal configuration and set up of QoS settings.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

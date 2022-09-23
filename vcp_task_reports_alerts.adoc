@@ -44,7 +44,6 @@ After you resolve the issue, the system polls itself and identifies the issue as
 * *Resolution Date*: This heading is visible only in the Resolved filter view. The date and time the fault was resolved.
 . To validate that the issue was resolved, look for it in the Resolved view.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

@@ -15,7 +15,6 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 [.lead]
 You can review event logs for operations performed on the selected cluster along with cluster faults that might occur. Most errors are resolved automatically by the system. Other faults might require manual intervention.
 
-
 .Steps
 
 . From the vCenter Plug-in, select *NetApp Element Management*.
@@ -80,7 +79,6 @@ There are three types of slice reassignment events, which include information ab
 * *ureEvent*: Events related to Unrecoverable Read Errors that occur while reading from the storage device.
 * *vasaProviderEvent*: Events related to a VASA (vSphere APIs for Storage Awareness) Provider.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

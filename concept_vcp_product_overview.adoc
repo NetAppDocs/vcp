@@ -11,7 +11,6 @@ keywords: netapp, vcp, element, vcenter plugin, plug-in
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, vcp, element, vcenter plugin, plug-in
 
 [.lead]
 The NetApp Element Plug-in for vCenter Server is a web-based tool integrated with the VMware vSphere Web Client user interface (UI). The plug-in is an extension and alternative scalable, user-friendly interface for VMware vSphere that can manage and monitor storage clusters running *NetApp Element software* software.
@@ -53,7 +52,6 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 |Access the NetApp Element software UI.
 |===
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

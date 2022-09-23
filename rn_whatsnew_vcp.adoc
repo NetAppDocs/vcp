@@ -11,7 +11,6 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 [.lead]
 NetApp Element Plug-in for vCenter Server 4.9 restores support for vSphere 6.5, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
@@ -35,7 +34,6 @@ With version 4.6, the plug-in now supports components of vSphere 7.0 Update 1, i
 
 NetApp Element Plug-in for vCenter Server 4.6 is available with the 2.16 release of management services.
 
-[discrete]
 == Find more information
 * link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes KB^]

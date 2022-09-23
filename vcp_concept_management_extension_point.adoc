@@ -37,7 +37,6 @@ The following tabs are available from the NetApp Element Management extension po
 * *Cluster*: Add and manage drives and nodes. You can also create and manage VLANs.
 * *VVols*: Manage virtual volumes and their associated storage containers, protocol endpoints, and bindings.
 
-[discrete]
 == Find more information
 * link:vcp_concept_config_extension_point[NetApp Element Configuration extension point]
 * link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]

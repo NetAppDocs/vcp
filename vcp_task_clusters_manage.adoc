@@ -222,8 +222,6 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 . Select *Actions*.
 . Select *Expand your NetApp HCI*.
 
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
