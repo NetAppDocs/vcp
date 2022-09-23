@@ -41,7 +41,6 @@ a second NetApp Element VASA provider is added, this renders all VVOL datastores
 
 NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39[NetApp Software Downloads^] site. The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

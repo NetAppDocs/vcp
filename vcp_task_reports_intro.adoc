@@ -24,11 +24,6 @@ Using the vCenter Plug-in, you can monitor cluster components and performance in
 * link:vcp_task_reports_iscsi.html[Monitor iSCSI sessions to determine connection status]
 * link:vcp_task_reports_qossioc.html[Monitor VM performance tiering with QoSSIOC events]
 
-
-
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

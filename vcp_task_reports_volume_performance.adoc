@@ -47,7 +47,6 @@ Possible values:
 * *Queue Depth*: The number of outstanding read and write operations to the volume.
 * *Average IO Size*: Average size in bytes of recent I/O to the volume in the last 500 milliseconds.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

@@ -303,7 +303,6 @@ To enable access to volumes, you'll need to create at least one link:vcp_task_cr
 == Create datastores and volumes
 You can create link:vcp_task_datastores_manage.html#create-a-datastore[datastores and Element volumes] to start allocating storage.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

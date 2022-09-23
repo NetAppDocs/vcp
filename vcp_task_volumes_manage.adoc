@@ -3,9 +3,8 @@ sidebar: sidebar
 permalink: vcp_task_volumes_manage.html
 summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 keywords: netapp, volumes, vcp, vcenter, element,
+
 ---
-
-
 = Manage volumes
 :hardbreaks:
 :nofooter:
@@ -544,7 +543,6 @@ NOTE: If a volume is deleted and then restored, ESXi will not detect the restore
 . Select the view filter and select *Active* from the list.
 . Verify that the volume or volumes and all connections are restored.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

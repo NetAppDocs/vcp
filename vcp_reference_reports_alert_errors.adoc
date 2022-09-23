@@ -451,9 +451,6 @@ In order to maintain data redundancy, the system reduces the capacity of the lar
 +
 *To resolve*: Contact NetApp Support for assistance.
 
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

@@ -1,15 +1,9 @@
 ---
-sidebar: sidebar
 permalink: legal-notices.html
+sidebar: sidebar
 keywords:
 summary:
 ---
-= Legal notices
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: media/
 = Legal notices
 :icons: font
 :imagesdir: ./media/

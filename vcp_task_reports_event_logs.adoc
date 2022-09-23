@@ -80,7 +80,6 @@ There are three types of slice reassignment events, which include information ab
 * *ureEvent*: Events related to Unrecoverable Read Errors that occur while reading from the storage device.
 * *vasaProviderEvent*: Events related to a VASA (vSphere APIs for Storage Awareness) Provider.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

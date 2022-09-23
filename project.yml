@@ -16,99 +16,99 @@ sidebar:
         - title: Release Notes
           entries:
             - title: What's new in NetApp Element Plug-in for vCenter Server
-              url: rn_whatsnew_vcp.html
+              url: /rn_whatsnew_vcp.html
             - title: Additional release information
-              url: rn_relatedrn_vcp.html
+              url: /rn_relatedrn_vcp.html
         - title: Concepts
           entries:
             - title: NetApp Element Configuration extension point
-              url: vcp_concept_config_extension_point.html
+              url: /vcp_concept_config_extension_point.html
             - title: NetApp Element Management extension point
-              url: vcp_concept_management_extension_point.html
+              url: /vcp_concept_management_extension_point.html
             - title: User accounts
-              url: vcp_concept_accounts.html
+              url: /vcp_concept_accounts.html
             - title: Protection domains
-              url: vcp_concept_protection_domains.html
+              url: /vcp_concept_protection_domains.html
             - title: Linked mode and the vCenter Plug-in
-              url: vcp_concept_linkedmode.html
+              url: /vcp_concept_linkedmode.html
             - title: QoSSIOC
-              url: vcp_concept_qossioc.html
+              url: /vcp_concept_qossioc.html
             - title: Virtual volumes (vVols)
-              url: vcp_concept_vvols.html
+              url: v/cp_concept_vvols.html
         - title: Pre-deployment requirements
-          url: reference_requirements_vcp.html
+          url: /reference_requirements_vcp.html
         - title: Install and configure the NetApp Element Plug-in for vCenter Server
-          url: vcp_task_getstarted.html
+          url: /vcp_task_getstarted.html
         - title: Upgrade the plug-in
-          url: task_vcp_upgrades.html
+          url: /task_vcp_upgrades.html
         - title: Manage storage with the vCenter Plug-in
           entries:
             - title: Manage clusters
-              url: vcp_task_clusters_manage.html
+              url: /vcp_task_clusters_manage.html
             - title: Manage datastores
-              url: vcp_task_datastores_manage.html
+              url: /vcp_task_datastores_manage.html
             - title: Manage volumes
-              url: vcp_task_volumes_manage.html
+              url: /vcp_task_volumes_manage.html
             - title: Create and manage user accounts
-              url: vcp_task_create_manage_user_accounts.html
+              url: /vcp_task_create_manage_user_accounts.html
             - title: Create and manage access groups
-              url: vcp_task_create_manage_access_groups.html
+              url: /vcp_task_create_manage_access_groups.html
             - title: Create and manage initiators
-              url: vcp_task_create_manage_initiators.html
+              url: /vcp_task_create_manage_initiators.html
             - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
-              url: vcp_task_qossioc.html
+              url: /vcp_task_qossioc.html
             - title: Create and manage volume QoS policies
-              url: vcp_task_qos_policies.html
+              url: /vcp_task_qos_policies.html
         - title: Manage cluster hardware and virtual networks
           entries:
             - title: Manage cluster hardware and virtual networks overview
-              url: vcp_task_manage_cluster_overview.html
+              url: /vcp_task_manage_cluster_overview.html
             - title: Add and manage drives
-              url: vcp_task_add_manage_drive.html
+              url: /vcp_task_add_manage_drive.html
             - title: Add and manage nodes
-              url: vcp_task_add_manage_nodes.html
+              url: /vcp_task_add_manage_nodes.html
             - title: Create and manage virtual networks
-              url: vcp_task_create_manage_vlans.html
+              url: /vcp_task_create_manage_vlans.html
         - title: Monitor system performance
           entries:
             - title: Monitor system performance with Report options
-              url: vcp_task_reports_intro.html
+              url: /vcp_task_reports_intro.html
             - title: Monitor overall cluster health on the Overview page
-              url: vcp_task_reports_overview.html
+              url: /vcp_task_reports_overview.html
             - title: Monitor system alerts
-              url: vcp_task_reports_alerts.html
+              url: /vcp_task_reports_alerts.html
               entries:
                 - title: System alerts list
-                  url: vcp_reference_reports_alert_errors.html
+                  url: /vcp_reference_reports_alert_errors.html
             - title: Monitor event logs for troubleshooting
-              url: vcp_task_reports_event_logs.html
+              url: /vcp_task_reports_event_logs.html
             - title: Monitor volume performance
-              url: vcp_task_reports_volume_performance.html
+              url: /vcp_task_reports_volume_performance.html
             - title: Monitor iSCSI sessions to determine connection status
-              url: vcp_task_reports_iscsi.html
+              url: /vcp_task_reports_iscsi.html
             - title: Monitor VM performance with QOSSIOC events
-              url: vcp_task_reports_qossioc.html
+              url: /vcp_task_reports_qossioc.html
         - title: Protect data with the vCenter Plug-in
           entries:
             - title: Protect data with the vCenter Plug-in overview
-              url: vcp_task_protect_overview.html
+              url: /vcp_task_protect_overview.html
             - title: Create and manage volume snapshots
-              url: vcp_task_protect_snapshots_volume.html
+              url: /vcp_task_protect_snapshots_volume.html
             - title: Create and manage group snapshots
-              url: vcp_task_protect_snapshots_group.html
+              url: /vcp_task_protect_snapshots_group.html
             - title: Create snapshot schedules
-              url: vcp_task_protect_snapshots_schedules.html
+              url: /vcp_task_protect_snapshots_schedules.html
             - title: Perform remote replication between clusters
-              url: vcp_task_protect_remote_replication.html
+              url: /vcp_task_protect_remote_replication.html
         - title: Set up and manage virtual volumes with the vCenter Plug-in
-          url: vcp_task_configure_manage_vvols.html
+          url: /vcp_task_configure_manage_vvols.html
         - title: Unregister the plug-in
-          url: task_vcp_unregister.html
+          url: /task_vcp_unregister.html
         - title: Remove the plug-in
-          url: task_vcp_remove.html
+          url: /task_vcp_remove.html
         - title: Troubleshoot the plug-in
-          url: vcp_reference_troubleshoot_vcp.html
+          url: /vcp_reference_troubleshoot_vcp.html
         - title: Earlier versions of NetApp Element Plug-in documentation
-          url: reference_earlier_versions.html
+          url: //reference_earlier_versions.html
         - title: Legal notices
-          url: legal-notices.html
+          url: /legal-notices.html

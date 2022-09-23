@@ -19,7 +19,6 @@ When you create a volume, it is assigned to an account. If you have created a vi
 
 An account can have up to 2000 volumes assigned to it, but a volume can belong to only one account.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

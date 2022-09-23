@@ -29,7 +29,6 @@ The following tabs are available from the NetApp Element Configuration extension
 * *QoSSIOC Events*: Displays information about all detected QoSSIOC events.
 * *About*: Displays plug-in version information and provides a service bundle download option.
 
-[discrete]
 == Find more information
 * link:vcp_concept_management_extension_point[NetApp Element Management extension point]
 * link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]

@@ -53,7 +53,6 @@ The plug-in supports the following major versions:
 == Network port requirements
 You need to allow some TCP ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. For a comprehensive list of ports used in NetApp HCI and SolidFire systems, see this link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html[page].
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

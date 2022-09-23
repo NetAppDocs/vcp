@@ -35,7 +35,6 @@ You can view information about iSCSI sessions that are connected to the selected
 * *Target IQN*: The IQN of the volume.
 * *Created On*: Date the session was established.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

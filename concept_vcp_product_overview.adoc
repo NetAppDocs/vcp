@@ -53,7 +53,6 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 |Access the NetApp Element software UI.
 |===
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

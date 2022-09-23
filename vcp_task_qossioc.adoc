@@ -170,7 +170,6 @@ You can clear the QoSSIOC configuration details for the Element storage manageme
 +
 The *QoSSIOC Status* field displays `Not Configured` after the process is complete.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

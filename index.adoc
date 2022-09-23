@@ -28,6 +28,5 @@ You can use this documentation to learn about and use the plug-in. This document
 * link:vcp_task_getstarted.html[NetApp Element Plug-in for vCenter Server installation and deployment overview]
 * link:concept_vcp_product_overview.html[Understand concepts related to the plug-in]
 
-[discrete]
 == Find more information
 https://www.netapp.com/support-and-training/documentation/[NetApp Product Documentation^]

@@ -365,9 +365,6 @@ NOTE: You can also choose to retain the volume and later associate it with anoth
 
 . Select *Yes*.
 
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
