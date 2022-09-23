@@ -127,6 +127,8 @@ homepage:
           url: /concept_vcp_product_overview.html
     - title: Product documentation
       links:
+        - title: Earlier versions of NetApp Element Plug-in Documentation
+          url: /reference_earlier_versions.html
         - title: SolidFire and Element Resources
           url: https://www.netapp.com/data-storage/solidfire/documentation
         - title: NetApp HCI
@@ -135,9 +137,3 @@ homepage:
           url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
         - title: NetApp Product Documentation
           url: https://www.netapp.com/support-and-training/documentation/
-    - title: Troubleshoot
-      links:
-        - title: Troubleshoot
-          url: /vcp_reference_troubleshoot_vcp.html
-        - title: Contact technical support
-          url: https://mysupport.netapp.com/site/global/dashboard
