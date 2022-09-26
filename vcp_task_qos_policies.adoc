@@ -31,8 +31,8 @@ NOTE: QoSSIOC automation and QoS policies should not be used together. If you ar
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -55,8 +55,8 @@ The QoS policy you want to bulk apply has been <<Create a QoS policy,created>>.
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -77,8 +77,8 @@ The volume you want to modify is <<Apply a QoS policy to volumes,associated>> wi
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -100,8 +100,8 @@ You can change the name of an existing QoS policy or edit the values associated 
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -126,8 +126,8 @@ You can delete a QoS policy if it is no longer needed. When you delete a QoS pol
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.

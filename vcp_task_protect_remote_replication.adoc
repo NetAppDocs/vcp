@@ -65,8 +65,8 @@ If the MVIP is not known, or access to the cluster is not available, you can pai
 .Steps
 . In your vSphere Web Client, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Protection*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -84,8 +84,8 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 . After the task completes and you see the Cluster Pairs page, verify that the cluster pair is connected.
 . (Optional) On the remote cluster, verify that the cluster pair is connected by using the Element UI or the plug-in extension points:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection > Cluster Pairs*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection > Cluster Pairs*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection > Cluster Pairs*.
 
 === Pair clusters with a pairing key
 If you have Cluster Admin access to a local cluster but not the remote cluster, you can pair the clusters using a pairing key. A pairing key is generated on a local cluster and then sent securely to a Cluster Admin at a remote site to establish a connection and complete the cluster pairing for real-time replication.
@@ -96,8 +96,8 @@ This procedure describes cluster pairing between two clusters using vCenter on t
 [[open_protection_tab]]
 . From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -116,7 +116,7 @@ NOTE: The cluster pairing key contains a version of the MVIP, user name, passwor
 +
 IMPORTANT: Do not modify any of the characters in the pairing key. The key becomes invalid if it is modified.
 
-. From the vCenter that contains the remote cluster, <<open_protection_tab,open the *Protection* tab>>.
+. From the vCenter that contains the remote cluster, <<open_protection_tab,open the Protection tab>>.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 +
@@ -130,7 +130,7 @@ NOTE: Wait for the loading spinner to disappear before proceeding to the next st
 . Paste the pairing key from the local cluster in the *Cluster Pairing Key* field.
 . Select *Pair Cluster*.
 . After the task completes and you see the *Cluster Pair* page, verify that the cluster pair is connected.
-. To verify that the cluster pair is connected, on the remote cluster <<open_protection_tab,open the *Protection* tab>> or use the Element UI.
+. To verify that the cluster pair is connected, on the remote cluster <<open_protection_tab,open the Protection tab>> or use the Element UI.
 
 
 === Validate the cluster pair connections
@@ -170,8 +170,8 @@ You can pair a local volume with another volume on a remote cluster. Use this me
 .Steps
 . From the vCenter that contains the local cluster, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -251,8 +251,8 @@ NOTE: The volume pairing key contains an encrypted version of the volume informa
 [[open_management]]
 . From the vCenter that contains the local cluster, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -278,7 +278,7 @@ NOTE: The volume pairing key should be treated in a secure manner and not stored
 +
 IMPORTANT: Do not modify any of the characters in the pairing key. The key becomes invalid if it is modified.
 
-. From the vCenter that contains the remote cluster, <<open_management,open the *Management* tab>>.
+. From the vCenter that contains the remote cluster, <<open_management,open the Management tab>>.
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -313,8 +313,8 @@ This method uses the volume ID of each volume on the remote cluster to initiate 
 .Steps
 . From the vCenter that contains the local cluster, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -360,8 +360,8 @@ A replication source volume has read/write account access. A replication target 
 .Steps
 . Select the cluster that contains the paired volume that you want to use as the replication source from the plug-in extension point:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0 From the *NetApp Remote Plugin > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management*.
 . From the extension point for your Element Plug-in for vCenter Server version, select the *Management* tab.
 . Select the *Volumes* sub-tab.
 . From the *Active* view, select the check box for the volume that you want to edit.
@@ -374,9 +374,8 @@ IMPORTANT: If you are reversing source and target assignment, this action will c
 . Select *OK*.
 . Select the cluster containing the paired volume that you want to use as the replication target:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management*.
-* Beginning with Element Plug-in for vCenter Server 5.0 From the *NetApp Remote Plugin > Management*.
-. From the extension point for your Element Plug-in for vCenter Server version, select the *Management* tab.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management > Management*.
+* Beginning with Element Plug-in for vCenter Server 5.0 From the *NetApp Remote Plugin > Management > Management*.
 . Select the *Volumes* sub-tab.
 . From the *Active* view, select the check box for the volume you want to edit.
 . Select *Actions*.
@@ -393,8 +392,8 @@ After a volume is replicated, you should ensure that the source and target volum
 .Steps
 From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -421,8 +420,8 @@ You can edit volume pair properties to manually pause replication.
 .Steps
 . From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -443,8 +442,8 @@ You can edit volume pair properties to make changes to the replication mode of t
 .Steps
 . From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -474,8 +473,8 @@ For volumes not controlled by the vCenter Plug-in, you can alternatively link:ht
 .Steps
 . From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -501,8 +500,8 @@ For clusters not controlled by the vCenter Plug-in, you can alternatively link:h
 .Steps
 . From the vCenter that contains the local cluster, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 . Select the *Cluster Pairs* sub-tab.
 . Select the check box for the cluster pair you want to delete.
 . Select *Actions*.
@@ -514,7 +513,7 @@ NOTE: This action deletes only the cluster pair end on the local cluster. You ne
 . Repeat the steps from the remote cluster in the cluster pairing.
 
 ==	Volume pairing messages and warnings
-You can view the information for volumes that have been paired or are in the process of being paired on the Volume Pairs page of the Protection tab from the NetApp Element Management extension point for Element Plug-in for vCenter Server 4.10 and earlier and, beginning with Element Plug-in for vCenter Server 5.0, from the NetApp Element Remote Plugin extension point.
+You can view the information for volumes that have been paired or are in the process of being paired on the Volume Pairs page of the Protection tab from the plug-in extension point. Beginning with Element Plug-in for vCenter Server 5.0, select the Management tab from the NetApp Element Remote Plugin extension point. For Element Plug-in for vCenter Server 4.10 and earlier, select the NetApp Element Management extension point.
 
 The system displays pairing and progress messages in the Volume Status column.
 

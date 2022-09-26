@@ -35,8 +35,8 @@ If you schedule a snapshot to run at a time period that is not divisible by 5 mi
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -67,8 +67,8 @@ You might want to verify snapshot schedule details.
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to view is selected in the navigation bar.
@@ -82,8 +82,8 @@ You can modify existing snapshot schedules. After modification, the next time th
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -120,8 +120,8 @@ You can make a copy of a snapshot schedule and assign it to new volumes or use i
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -140,8 +140,8 @@ You can delete a snapshot schedule. After you delete the schedule, it does not r
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.

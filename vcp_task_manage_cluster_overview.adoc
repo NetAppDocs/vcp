@@ -13,7 +13,7 @@ keywords: netapp, VLANs, drives, nodes, cluster, manage create, delete, view vcp
 :imagesdir: ../media/
 
 [.lead]
-From the Cluster tab in the vCenter Plug-in extension point, you can view and change cluster-wide settings and perform cluster-specific tasks for drives, nodes, and VLANs.
+From the Cluster tab in the plug-in extension point, you can view and change cluster-wide settings and perform cluster-specific tasks for drives, nodes, and VLANs.
 
 .Options
 * link:vcp_task_add_manage_drive.html[Add and manage drives]

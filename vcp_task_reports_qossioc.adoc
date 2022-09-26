@@ -15,7 +15,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster,
 [.lead]
 You can view events related to QoSSIOC when a VM with a QoS-enabled datastore is reconfigured or issued a power or guest event.
 
-You can view QoSSIOC events from the vCenter Plug-in extension point in NetApp Element Plug-in for vCenter Server.
+You can view QoSSIOC events from the plug-in extension point in NetApp Element Plug-in for vCenter Server.
 
 QoSSIOC events are displayed from locally added clusters. In a Linked Mode environment, log into the vSphere Web Client that has the cluster added locally to view QoSSIOC events for that cluster.
 
@@ -32,8 +32,8 @@ NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster reso
 
 . In your vSphere Web Client, open the *QoSSIOC Events* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Events*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Events*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Events*.
 
 == QoSSIOC event data
 

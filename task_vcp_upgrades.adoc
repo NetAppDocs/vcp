@@ -14,7 +14,7 @@ keywords: netapp, vcp, vcenter, plugin, element, upgrade
 :keywords: netapp, vcp, vcenter, plugin, element, upgrade
 
 [.lead]
-You can upgrade the NetApp Element Plug-in for vCenter Server by following the steps described for your installation. NetApp Element Plug-in for vCenter Server 4.9 is available outside of Element and NetApp HCI releases as part of a management services bundle.
+You can upgrade the NetApp Element Plug-in for vCenter Server by following the steps described for your installation. NetApp Element Plug-in for vCenter Server 5.0 is available outside of Element and NetApp HCI releases as part of a management services bundle.
 
 .Steps
 To upgrade the plug-in, follow the instructions in the upgrade documentation for your product:

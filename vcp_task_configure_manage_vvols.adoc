@@ -13,7 +13,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 :imagesdir: ../media/
 
 [.lead]
-You can enable VMware vSphere link:vcp_concept_vvols.html[Virtual Volumes (VVols)] functionality and set up a virtual volumes configuration on a NetApp Element storage cluster. The Element Plug-in for vCenter Server monitors performance and gives you options to manage virtual volumes, link:vcp_concept_vvols.html#storage-containers[storage containers], link:vcp_concept_vvols.html#protocol-endpoints[protocol endpoints], and hosts from the vCenter Plug-in extension point.
+You can enable VMware vSphere link:vcp_concept_vvols.html[Virtual Volumes (VVols)] functionality and set up a virtual volumes configuration on a NetApp Element storage cluster. The Element Plug-in for vCenter Server monitors performance and gives you options to manage virtual volumes, link:vcp_concept_vvols.html#storage-containers[storage containers], link:vcp_concept_vvols.html#protocol-endpoints[protocol endpoints], and hosts from the plug-in extension point.
 
 .What you'll need
 * You are using a NetApp Element 10 or later cluster that is connected to an ESXi 6.5 or later environment with VVols compatibility.
@@ -34,13 +34,13 @@ You must perform initial configuration steps to use virtual volumes (VVols) in t
 
 == Enable virtual volumes functionality on the NetApp Element cluster
 
-You must manually enable vSphere Virtual Volumes (VVols) functionality using the vCenter Plug-in extension point. The Element system comes with VVols functionality disabled by default, and it is not automatically enabled as part of a new installation or upgrade. Enabling the VVols feature is a one-time configuration task.
+You must manually enable vSphere Virtual Volumes (VVols) functionality using the plug-in extension point. The Element system comes with VVols functionality disabled by default, and it is not automatically enabled as part of a new installation or upgrade. Enabling the VVols feature is a one-time configuration task.
 
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select a cluster from the list that you want to enable.
 . Select *Actions*.
 . In the resulting menu, select *Enable VVols*.
@@ -96,17 +96,17 @@ NOTE: Refresh the storage provider, if necessary, to show the current status of 
 
 == Create a storage container and associated VVol datastore
 
-You can create storage containers from the VVols tab in the vCenter Plug-in extension point. You must create at least one storage container to begin provisioning VVol-backed virtual machines.
+You can create storage containers from the VVols tab in the plug-in extension point. You must create at least one storage container to begin provisioning VVol-backed virtual machines.
 
 .Before you begin
 * You have enabled VVols functionality for the cluster.
 * You have registered the NetApp Element VASA Provider for virtual volumes with vCenter.
 
 .Steps
-. In your vSphere Web Client, open the *Clusters* tab:
+. In your vSphere Web Client, open the *VVols* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -135,7 +135,7 @@ NOTE: If you are using vCenter Linked Mode, only hosts available to the vCenter 
 . Verify that the associated datastore has also been created on the selected host in vCenter.
 
 == Monitor virtual volume resources
-You can review virtual volume component performance and settings from the vCenter Plug-in:
+You can review virtual volume component performance and settings from the plug-in:
 
 ** <<Monitoring VVols>>
 ** <<Monitoring storage containers>>
@@ -149,10 +149,10 @@ You can review general data for all active virtual volumes on the cluster or det
 * You have powered on VMs so virtual volume details are available to view.
 
 .Steps
-. In your vSphere Web Client, open the *Clusters* tab:
+. In your vSphere Web Client, open the *VVols* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -163,13 +163,13 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 . In the resulting menu, select *Details*.
 
 === Monitoring storage containers
-You can review general data for all active storage containers on the cluster or detailed data for each storage container. The vCenter Plug-in tracks storage container efficiency, performance, and associated virtual volumes.
+You can review general data for all active storage containers on the cluster or detailed data for each storage container. The plug-in tracks storage container efficiency, performance, and associated virtual volumes.
 
 .Steps
-. In your vSphere Web Client, open the *Clusters* tab:
+. In your vSphere Web Client, open the *VVols* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -183,10 +183,10 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 You can review general data for all protocol endpoints on the cluster.
 
 .Steps
-. In your vSphere Web Client, open the *Clusters* tab:
+. In your vSphere Web Client, open the *VVols* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -217,16 +217,16 @@ NOTE: You do not need to manually create protocol endpoint (PE) LUNs. They are a
 . Review the configurations and select *Finish* to create the VVol datastore.
 
 == Delete a storage container
-You can delete storage containers from the vCenter Plug-in extension point.
+You can delete storage containers from the plug-in extension point.
 
 .What you'll need
 * All volumes have been removed from the storage container.
 
 .Steps
-. In your vSphere Web Client, open the *Clusters* tab:
+. In your vSphere Web Client, open the *VVols* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -240,5 +240,5 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 
 [discrete]
 == Find more information
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

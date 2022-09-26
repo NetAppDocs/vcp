@@ -51,8 +51,8 @@ IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will ov
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -85,8 +85,8 @@ You can change the QoSSIOC and vCenter credentials of an active Element manageme
 .Steps
 . Open the *QoSSIOC Settings* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 . Select *Actions*.
 . In the resulting menu, select *Edit*.
 . In the *Edit QoSSIOC Settings* dialog box, change any of the following:
@@ -120,10 +120,11 @@ You can change the password for the QoSSIOC service on the management node using
 This process describes how to change the QoSSIOC password only. If you want to change the QoSSIOC user name, you can do so from the <<Edit QoSSIOC settings, QoSSIOC Settings>> page.
 
 .Steps
+[[open_qossioc]]
 . In your vSphere Web Client, open the *QoSSIOC Settings* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 . Select *Actions*.
 . In the resulting menu, select *Clear*.
 . Confirm the action.
@@ -147,7 +148,7 @@ NOTE: For NetApp HCI deployments, the default password is randomly generated dur
 +
 NOTE: The QoSSIOC service automatically restarts after you submit changes.
 
-. In your vSphere Web Client, select *NetApp Element Configuration > QoSSIOC Settings* or *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+. In your vSphere Web Client, <<open_qossioc,open the QoSSIOC Settings tab>>.
 . Select *Actions*.
 . In the resulting menu, select *Configure*.
 . In the *Configure QoSSIOC Settings* dialog box, enter the new password in the *QoSSIOC Password* field.
@@ -161,8 +162,8 @@ You can disable QoSSIOC integration for a datastore.
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -179,8 +180,8 @@ You can clear the QoSSIOC configuration details for the Element storage manageme
 .Steps
 . In your vSphere Web Client, open the *QoSSIOC Settings* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 . Select *Actions*.
 . In the resulting menu, select *Clear*.
 . Confirm the action.

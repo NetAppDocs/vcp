@@ -45,8 +45,8 @@ When a virtual network is added, an interface for each node is created and each 
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -83,13 +83,13 @@ NOTE: The total number of IP addresses must match the number of nodes in the sto
 . Click *OK* to create the VLAN.
 
 == View virtual network details
-You can view network information for VLANs on the Network page of the Cluster tab from the vCenter Plug-in extension point.
+You can view network information for VLANs on the Network page of the Cluster tab from the plug-in extension point.
 
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -109,8 +109,8 @@ The VLAN Tag and SVIP cannot be modified for a VLAN. The gateway attribute can o
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -129,8 +129,8 @@ You can permanently delete a VLAN object and its block of IPs. Address blocks th
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.

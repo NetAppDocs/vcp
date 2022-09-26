@@ -18,8 +18,8 @@ You can view high-level cluster information for the selected cluster, including 
 .Steps
 . From the vCenter Plug-in, open the *Reporting* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
 . Monitor the data on the *Overview* page.
 
 == Reporting Overview page data

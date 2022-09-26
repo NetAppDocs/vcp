@@ -17,7 +17,7 @@ Using the NetApp Element Plug-in for vCenter Server, you can manage datastores t
 
 .What you'll need
 * To create and manage datastores, you must first create at least one user account.
-* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the vCenter Plug-in extension point.
+* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from plug-in extension point.
 * Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
 
 .Options
@@ -34,7 +34,7 @@ TIP: Monitor datastore operations for completion using task monitoring in vSpher
 
 == Create a datastore
 
-You can create a datastore from the vCenter Plug-in extension.
+You can create a datastore from the plug-in extension.
 
 .What you'll need
 * At least one host must be connected to the vCenter Server.
@@ -43,14 +43,14 @@ You can create a datastore from the vCenter Plug-in extension.
 NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
 
 * At least one user account must be created.
-* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the vCenter Plug-in extension point.
+* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
 
 .Steps
 
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -130,12 +130,12 @@ TIP: By default, the maximum SIOC disk shares are set to `Unlimited`. In a large
 . To view the progress of the task, use Task Monitoring in vSphere. If the datastore does not appear in the list, refresh the view.
 
 == View the datastore list
-You can view available datastores on the Datastores page from the vCenter Plug-in extension point.
+You can view available datastores on the Datastores page from the plug-in extension point.
 
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.
@@ -162,13 +162,13 @@ NOTE: Datastores spanning multiple volumes (mixed datastores) are not listed. Da
 
 == Extend a datastore
 
-You can extend a datastore to increase volume size using the vCenter Plug-in extension point. Extending the datastore also extends the VMFS volume related to that datastore.
+You can extend a datastore to increase volume size using the plug-in extension point. Extending the datastore also extends the VMFS volume related to that datastore.
 
 .Steps
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.
@@ -185,7 +185,7 @@ NOTE: Extending the datastore will consume the entire volume's size. The new dat
 
 == Clone a datastore
 
-You can clone datastores using the vCenter Plug-in, which includes mounting the new datastore to the desired ESXi server or cluster. You can name the datastore clone and configure its QoSSIOC, volume, host, and authorization type settings.
+You can clone datastores using the plug-in, which includes mounting the new datastore to the desired ESXi server or cluster. You can name the datastore clone and configure its QoSSIOC, volume, host, and authorization type settings.
 
 If virtual machines exist on the source datastore, virtual machines on the clone datastore will be brought into the inventory with new names.
 
@@ -203,8 +203,8 @@ NOTE: If you are using vCenter Linked Mode, be sure that you have added your clu
 .Steps
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.
@@ -267,7 +267,7 @@ If a host initiator is already associated with a volume access group, the field 
 IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
 
 +
-If the QoSSIOC service is not available, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the vCenter Plug-in extension point.
+If the QoSSIOC service is not available, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
 
 .. Select *Enable QoS & SIOC*.
 .. Configure the *Burst Factor*.
@@ -288,7 +288,7 @@ TIP: By default, the maximum SIOC disk shares are set to `Unlimited`. In a large
 
 == Share a datastore
 
-You can share a datastore with one or more hosts using the vCenter Plug-in extension point.
+You can share a datastore with one or more hosts using the plug-in extension point.
 
 Datastores can be shared only among hosts within the same data center.
 
@@ -303,8 +303,8 @@ NOTE: If you are using vCenter Linked Mode, be sure that you have added your clu
 .Steps
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.
@@ -361,8 +361,8 @@ The integer value must be set to 1 to enable.
 .Steps
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.
@@ -375,12 +375,12 @@ NOTE: If two or more clusters are added, select the cluster you want to use in t
 . Confirm the selections and select *OK*.
 
 == Delete a datastore
-You can delete a datastore using the vCenter Plug-in extension point. This operation permanently deletes all the files associated with the VMs on the datastore that you want to delete. The vCenter Plug-in does not delete datastores that contain registered VMs.
+You can delete a datastore using the plug-in extension point. This operation permanently deletes all the files associated with the VMs on the datastore that you want to delete. The vCenter Plug-in does not delete datastores that contain registered VMs.
 
 . In your vSphere Web Client, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, select the cluster you want to use in the navigation bar.

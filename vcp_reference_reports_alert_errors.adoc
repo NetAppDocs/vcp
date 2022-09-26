@@ -13,11 +13,10 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 :imagesdir: media/
 
 [.lead]
-The system reports error codes with each alert that help you determine what component of the system experienced the alert and why the alert was generated.
+The system reports error codes with each alert that help you determine what component of the system experienced the alert and why the alert was generated. You can view the error codes using the plug-in extension point:
 
-For Element Plug-in for vCenter Server 4.10 and earlier, you can view the errors codes from the *NetApp Element Management > Reporting > Alerts* page.
-
-Beginning with Element Plug-in for vCenter Server 5.0, you can view the errors codes from the *NetApp Remote Plugin > Management > Reporting > Alerts* page.
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Remote Plugin > Management > Reporting > Alerts*.
+* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting > Alerts*.
 
 The following list outlines the different types of system alerts.
 
