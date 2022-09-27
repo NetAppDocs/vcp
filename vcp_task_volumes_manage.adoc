@@ -258,7 +258,7 @@ Operating systems differ in how they treat cloned volumes. ESXi will treat a clo
 +
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
 * For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Check the volume you want to clone.
 . Select *Actions*.

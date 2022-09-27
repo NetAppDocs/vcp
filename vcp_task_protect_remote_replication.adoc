@@ -390,7 +390,7 @@ IMPORTANT: If you assign an existing volume as the replication target, the data 
 After a volume is replicated, you should ensure that the source and target volumes are active. When in Active state, volumes are paired, data is being sent from the source to the target volume, and the data is in sync.
 
 .Steps
-From the vCenter that contains the local cluster, open the *Protection* tab:
+. From the vCenter that contains the local cluster, open the *Protection* tab:
 +
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
 * For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.

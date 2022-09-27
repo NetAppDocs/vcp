@@ -31,8 +31,8 @@ Drives are not displayed in the Available list when the following conditions exi
 
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
-
-+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
++
+* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
 * For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +

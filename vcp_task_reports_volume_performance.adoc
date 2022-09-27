@@ -21,7 +21,7 @@ You can view performance information for all volumes in the selected cluster fro
 +
 * Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
 * For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+
 . Select *Volume Performance*.
 . To change how often the data refreshes on the page, click *Refresh every list* and choose a value.
 +
