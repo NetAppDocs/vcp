@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_intro.html
-summary: View information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+summary: View information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performance
 ---
 
@@ -13,7 +13,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performa
 :imagesdir: ../media/
 
 [.lead]
-You can view information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+You can view information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for VMware vCenter Server.
 
 Using the vCenter Plug-in, you can monitor cluster components and performance in the following ways:
 

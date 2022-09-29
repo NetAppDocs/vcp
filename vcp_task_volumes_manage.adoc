@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_volumes_manage.html
-summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+summary: Using the NetApp Element Plug-in for VMware vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 keywords: netapp, volumes, vcp, vcenter, element,
 ---
 
@@ -13,7 +13,7 @@ keywords: netapp, volumes, vcp, vcenter, element,
 :imagesdir: ./media/
 
 [.lead]
-Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+Using the NetApp Element Plug-in for VMware vCenter Serverr, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 
 .Options
 

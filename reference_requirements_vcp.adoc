@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_requirements_vcp.html
-summary: Before you begin using the NetApp Element Plug-in for vCenter Server, you need to understand prerequisites for product installation and use.
+summary: Before you begin using the NetApp Element Plug-in for VMware vCenter Server, you need to understand prerequisites for product installation and use.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
 
-= Requirements for the Element Plug-in for vCenter Server
+= Requirements for the NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,17 +13,17 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :imagesdir: ../media/
 
 [.lead]
-Before you use NetApp Element Plug-in for vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.
+Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.
 
 == VMware vSphere prerequisites
-VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server.
+VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the Element vCenter Plug-in.
 
 === VMware vSphere versions supported by the plug-in
 The plug-in supports the following major versions of VMware software:
 
 * vSphere 7.0 and 7.0 Update 1, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 +
-IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, all versions of the NetApp Element Plug-in for vCenter Server fail to deploy. To resolve this issue, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
+IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, all versions of the Element vCenter Plug-in fail to deploy. To resolve this issue, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
 
 * vSphere 6.7 and 6.7 Update 1 and 3, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 +

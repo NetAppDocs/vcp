@@ -8,13 +8,13 @@ settings:
     harmony_enabled: true
 sidebar:
   entries:
-    - title: NetApp Element Plug-in for vCenter Server documentation
+    - title: NetApp Element Plug-in for VMware vCenter Server documentation
       url: /index.html
-    - title: NetApp Element Plug-in for vCenter Server product overview
+    - title: NetApp Element Plug-in for VMware vCenter Server product overview
       url: /concept_vcp_product_overview.html
     - title: Release Notes
       entries:
-        - title: What's new in NetApp Element Plug-in for vCenter Server
+        - title: What's new in NetApp Element Plug-in for VMware vCenter Server
           url: /rn_whatsnew_vcp.html
         - title: Additional release information
           url: /rn_relatedrn_vcp.html
@@ -36,7 +36,7 @@ sidebar:
           url: /vcp_concept_vvols.html
     - title: Pre-deployment requirements
       url: reference_requirements_vcp.html
-    - title: Install and configure the NetApp Element Plug-in for vCenter Server
+    - title: Install and configure the NetApp Element Plug-in for VMware vCenter Server
       url: /vcp_task_getstarted.html
     - title: Upgrade the plug-in
       url: /task_vcp_upgrades.html
@@ -121,13 +121,13 @@ homepage:
           url: /rn_whatsnew_vcp.html
         - title: Release notes
           url: /rn_relatedrn.html
-        - title: Install and deployment the plug-in
+        - title: Install and deploy the plug-in
           url: /vcp_task_getstarted.html
         - title: Understand concepts related to the plug-in
           url: /concept_vcp_product_overview.html
     - title: Product documentation
       links:
-        - title: Earlier versions of NetApp Element Plug-in Documentation
+        - title: Earlier versions of NetApp Element Plug-in documentation
           url: /reference_earlier_versions.html
         - title: SolidFire and Element Resources
           url: https://www.netapp.com/data-storage/solidfire/documentation

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_event_logs.html
-summary: Review event logs in the NetApp Element Plug-in for vCenter Server that list operations performed on the cluster along with any cluster faults that indicate errors.
+summary: Review event logs in the NetApp Element Plug-in for VMware vCenter Server that list operations performed on the cluster along with any cluster faults that indicate errors.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance
 ---
 
