@@ -117,18 +117,22 @@ homepage:
       links:
         - title: Product overview
           url: /concept_vcp_product_overview.html
-        - title: What's new
-          url: /rn_whatsnew_vcp.html
-        - title: Release notes
-          url: /rn_relatedrn.html
         - title: Install and deploy the plug-in
           url: /vcp_task_getstarted.html
         - title: Understand concepts related to the plug-in
           url: /concept_vcp_product_overview.html
-    - title: Product documentation
+    - title: Learn
+      links:    
+        - title: What's new
+          url: /rn_whatsnew_vcp.html
+        - title: Release notes
+          url: /rn_relatedrn.html 
+    - title: Earlier versions
       links:
-        - title: Earlier versions of NetApp Element Plug-in documentation
+        - title: NetApp Element Plug-in documentation 4.5 and earlier
           url: /reference_earlier_versions.html
+    - title: More resources
+      links:
         - title: SolidFire and Element Resources
           url: https://www.netapp.com/data-storage/solidfire/documentation
         - title: NetApp HCI
