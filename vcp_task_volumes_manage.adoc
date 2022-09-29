@@ -42,8 +42,8 @@ VMware requires 512e for disk resources. If 512e is not enabled, a VMFS cannot b
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster you intend to use for the task in the navigation bar.
 . Select the *Volumes* sub-tab.
 . From the *Active* view, select *Create Volume*.
@@ -79,8 +79,8 @@ You can review general information for all active volumes on the cluster in the 
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Click the *Volumes* subtab.
 +
@@ -200,8 +200,8 @@ If you are using persistent volumes with the management node, do not modify the 
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Click the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -256,8 +256,8 @@ Operating systems differ in how they treat cloned volumes. ESXi will treat a clo
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Check the volume you want to clone.
@@ -306,8 +306,8 @@ You can back up NetApp Element volumes to external object stores that are compat
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -333,8 +333,8 @@ You can back up NetApp Element volumes to external object stores that are compat
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -369,8 +369,8 @@ This is a two-part procedure:
 
 . From the vCenter and cluster where you want to place the volume backup, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -387,8 +387,8 @@ This is a two-part procedure:
 .Back up a volume
 . From the vCenter and cluster that contains the source volume to be used for the backup, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -415,8 +415,8 @@ You can restore a volume from a backup on an Amazon S3 object store using the pl
 
 . From the vCenter Plug-in, open the *Reporting* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Reporting*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Event Log* subtab.
 . Select the backup event that created the backup you need to restore.
@@ -445,8 +445,8 @@ You can restore a volume from a backup on an OpenStack Swift object store using 
 
 . From the vCenter Plug-in, open the *Reporting* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Reporting*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Reporting*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Event Log* subtab.
 . Select the backup event that created the backup you need to restore.
@@ -481,8 +481,8 @@ This is a two-part procedure:
 .Select the volume to use for the restore
 . From the vCenter and cluster where you want to restore the volume, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -499,8 +499,8 @@ This is a two-part procedure:
 .Restore the volume
 . From the vCenter and cluster that contains the source volume to be used for the restore, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . From the *Active* view, check the volume.
@@ -532,8 +532,8 @@ IMPORTANT: If a volume used to create a snapshot is deleted, its associated snap
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . Delete one or more volumes:
@@ -558,8 +558,8 @@ IMPORTANT: When a volume is purged, it is immediately and permanently removed fr
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . Select the view filter and select *Deleted* from the list.
@@ -578,8 +578,8 @@ NOTE: If a volume is deleted and then restored, ESXi will not detect the restore
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Volumes* subtab.
 . Select the view filter and select *Deleted* from the list.

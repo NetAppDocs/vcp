@@ -34,8 +34,8 @@ You can create a snapshot of an active volume to preserve the volume image at an
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -72,8 +72,8 @@ You might want to verify that the snapshot was added.
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -93,8 +93,8 @@ You can create a new volume from a snapshot of a volume. When you do this, the s
 .Steps
 . From the vCenter Plug-in, rom the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -119,8 +119,8 @@ NOTE: If two or more clusters are added, ensure that the cluster that you intend
 . Validate the new volume:
 .. Open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 .. Select the *Volumes* sub-tab.
 .. From the *Active* view, confirm that the new volume is listed.
 +
@@ -132,8 +132,8 @@ You can roll back a volume to a snapshot at any time. This undoes any changes ma
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -167,8 +167,8 @@ You can back up NetApp Element snapshots to external object stores that are comp
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -199,8 +199,8 @@ You can back up NetApp Element snapshots to secondary object stores that are com
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
@@ -238,8 +238,8 @@ When you back up or restore from one cluster to another, the system generates a 
 .Steps
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -257,8 +257,8 @@ NOTE: If two or more clusters are added, ensure that the cluster that you intend
 . Copy the bulk volume write key to your clipboard to apply to later steps on the source cluster.
 . From the vCenter that contains the source cluster, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -287,8 +287,8 @@ You can also delete snapshots that have been replicated to the target from the t
 .Steps
 . From the vCenter Plug-in, open the *Protection* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Protection*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.

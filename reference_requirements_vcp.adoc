@@ -43,7 +43,7 @@ Consider the following capabilities and recommendations before using the plugin:
 * vCenter high availability (VCHA) is not supported.
 * Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
 * The vSphere HTML5 Web Client and Flash Web Client have separate databases that cannot be combined. Clusters added in one client will not be visible in the other. If you intend to use both clients, add your clusters in both.
-* vCenter Linked Mode is not supported for Element Plug-in for vCenter Server 5.0.
+* vCenter Linked Mode is not supported for Element vCenter plug-in 5.0.
 
 == NetApp Element support
 The plug-in supports the following major versions:

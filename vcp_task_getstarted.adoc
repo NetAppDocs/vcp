@@ -52,7 +52,7 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 * You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
 * Your firewall rules allow the following open link:reference_requirements_vcp.html[network communication]:
 ** Between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete.
-** Beginning with Element Plug-in for vCenter Server 5.0, between the vCenter and the remote plug-in on TCP port 8333.
+** Beginning with Element vCenter plug-in 5.0, between the vCenter and the remote plug-in on TCP port 8333.
 ** If you have enabled virtual volumes functionality on the cluster, TCP port 8444 is open for VASA provider access.
 
 .About this task
@@ -226,11 +226,11 @@ NOTE: After you have completed the registration procedure, you can remove `allow
 
 After successful installation or upgrade, the plug-in extension points appear in the Shortcuts tab of the vSphere Web Client in the side panel. The extension points differ depending on your vCenter Server version.
 
-Beginning with Element Plug-in for vCenter Server 5.0, the NetApp Element Remote Plugin extension point appears.
+Beginning with Element vCenter plug-in 5.0, the NetApp Element Remote Plugin extension point appears.
 
 image::vcp_remote_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 5.0 and later]
 
-For Element Plug-in for vCenter Server 4.10 and earlier, the NetApp Element Configuration and Management extension points appear.
+For Element vCenter plug-in 4.10 and earlier, the NetApp Element Configuration and Management extension points appear.
 
 image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 4.10 and earlier]
 
@@ -244,7 +244,7 @@ Using the vCenter Plug-in extension points, you can add a cluster running Elemen
 * At least one cluster must be available and its IP or FQDN address known.
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
-* Beginning with Element Plug-in for vCenter Server 5.0, firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the remote plug-in on TCP port 8333.
+* Beginning with Element vCenter plug-in 5.0, firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the remote plug-in on TCP port 8333.
 
 NOTE: You must add at least one cluster to use the plug-in extension point functions.
 
@@ -259,8 +259,8 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select *Add Cluster*.
 . Enter the following information:
 +
@@ -289,8 +289,8 @@ After you have configured valid QoSSIOC settings for the management node, these 
 .Steps
 . In your vSphere Web Client, open the *QoSSIOC Settings* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Settings*.
 . Select *Actions*.
 . In the resulting menu, select *Configure*.
 . In the *Configure QoSSIOC Settings* dialog box, enter the following information:

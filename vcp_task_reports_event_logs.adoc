@@ -20,8 +20,8 @@ You can review event logs for operations performed on the selected cluster along
 
 . From the vCenter Plug-in, open the *Management* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
 . Select *Reporting* > *Event Log*.
 . To review details, select an event and click *Details*.
 . Review the event information that includes the following:

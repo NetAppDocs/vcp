@@ -13,7 +13,7 @@ keywords: netapp, cluster, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can edit a cluster running Element software, manage SSH configuration, set protection domain monitoring, and shut down a cluster from the plug-in extension point. Beginning with Element Plug-in for vCenter Server 5.0, you can use the NetApp Element Remote Plugin extension point. For Element Plug-in for vCenter Server 4.10 and earlier, you can use the NetApp Element Configuration extension point.
+You can edit a cluster running Element software, manage SSH configuration, set protection domain monitoring, and shut down a cluster from the plug-in extension point. Beginning with Element vCenter plug-in 5.0, you can use the NetApp Element Remote Plugin extension point. For Element vCenter plug-in 4.10 and earlier, you can use the NetApp Element Configuration extension point.
 
 .What you'll need
 
@@ -24,7 +24,7 @@ NOTE: You must add at least one cluster to use the plug-in extension point funct
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules allow the following open network communication:
 ** Between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
-** Beginning with Element Plug-in for vCenter Server 5.0, between the vCenter and the remote plug-in on TCP port 8333.
+** Beginning with Element vCenter plug-in 5.0, between the vCenter and the remote plug-in on TCP port 8333.
 
 .Options
 
@@ -46,8 +46,8 @@ You can view cluster details from the vCenter Plug-in extension point.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 
 . Check the cluster you want to edit.
 . Select *Actions*.
@@ -87,8 +87,8 @@ NOTE: This procedure describes how to change the cluster admin user name and pas
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 
 . Check the cluster.
 . Select *Actions*.
@@ -112,8 +112,8 @@ NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster reso
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 
 . Check the cluster you want to remove.
 . Select *Actions*.
@@ -128,8 +128,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 
 . Select the cluster on which you want to enable encryption at rest.
 . Select *Actions*.
@@ -142,8 +142,8 @@ You can manually disable encryption at rest (EAR) functionality using the plug-i
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select the check box for the cluster.
 . Select *Actions*.
 . In the resulting menu, select *Disable EAR*.
@@ -158,8 +158,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Enable SSH*.
@@ -178,8 +178,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Change SSH*.
@@ -201,8 +201,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Disable SSH*.
@@ -219,8 +219,8 @@ You can manually enable link:vcp_concept_protection_domains.html[protection doma
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Set Protection Domain Monitoring*.
@@ -246,8 +246,8 @@ You have stopped I/O and disconnected all iSCSI sessions.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Shutdown*.
@@ -262,8 +262,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Expand your NetApp HCI*.
@@ -273,8 +273,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 ====
 Additional links are provided from Getting Started and Cluster pages:
 
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management".
-* For Element Plug-in for vCenter Server 4.10 and earlier, select the NetApp Element Management extension point.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management".
+* For Element vCenter plug-in 4.10 and earlier, select the NetApp Element Management extension point.
 ====
 
 [discrete]

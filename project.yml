@@ -21,11 +21,11 @@ sidebar:
               url: /rn_relatedrn_vcp.html
         - title: Concepts
           entries:
-            - title: NetApp Element Plug-in for vCenter Server 5.0 or later
+            - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
               entries:
                 - title: NetApp Element Remote Plugin extension point
                   url: /vcp_concept_remote_plugin_extension_point.html
-            - title: NetApp Element Plug-in for vCenter Server 4.10 or earlier
+            - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
               entries:
                 - title: NetApp Element Configuration extension point
                   url: /vcp_concept_config_extension_point.html

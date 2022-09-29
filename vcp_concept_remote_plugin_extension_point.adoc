@@ -13,7 +13,7 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point, re
 :imagesdir: ./media/
 
 [.lead]
-Beginning with NetApp Element Plug-in for vCenter Server 5.0, you can access the remote Element Plug-in by using the NetApp Element Remote Plugin extension point, which enables you to configure and manage clusters, nodes, and drives and view cluster information.
+Beginning with NetApp Element vCenter plug-in 5.0, you can access the remote Element Plug-in by using the NetApp Element Remote Plugin extension point, which enables you to configure and manage clusters, nodes, and drives and view cluster information.
 
 The following tabs are available from the NetApp Element Remote Plugin extension point:
 

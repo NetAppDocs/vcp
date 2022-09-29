@@ -39,8 +39,8 @@ You must manually enable vSphere Virtual Volumes (VVols) functionality using the
 .Steps
 . In your vSphere Web Client, open the *Clusters* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select a cluster from the list that you want to enable.
 . Select *Actions*.
 . In the resulting menu, select *Enable VVols*.
@@ -105,8 +105,8 @@ You can create storage containers from the VVols tab in the plug-in extension po
 .Steps
 . In your vSphere Web Client, open the *VVols* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -151,8 +151,8 @@ You can review general data for all active virtual volumes on the cluster or det
 .Steps
 . In your vSphere Web Client, open the *VVols* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -168,8 +168,8 @@ You can review general data for all active storage containers on the cluster or 
 .Steps
 . In your vSphere Web Client, open the *VVols* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -185,8 +185,8 @@ You can review general data for all protocol endpoints on the cluster.
 .Steps
 . In your vSphere Web Client, open the *VVols* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -225,8 +225,8 @@ You can delete storage containers from the plug-in extension point.
 .Steps
 . In your vSphere Web Client, open the *VVols* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > VVols*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > VVols*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > VVols*.
 
 +
 NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.

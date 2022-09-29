@@ -32,8 +32,8 @@ NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster reso
 
 . In your vSphere Web Client, open the *QoSSIOC Events* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Events*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Events*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > QoSSIOC Events*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > QoSSIOC Events*.
 
 == QoSSIOC event data
 

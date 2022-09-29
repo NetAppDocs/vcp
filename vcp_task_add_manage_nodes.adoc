@@ -42,8 +42,8 @@ The procedure is the same for adding FC nodes or storage nodes that are running 
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -64,8 +64,8 @@ You can view a list of the nodes in the cluster on the Nodes page of the Cluster
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -93,8 +93,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -119,8 +119,8 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
@@ -146,8 +146,8 @@ At least two FC nodes are required for FC connectivity in a NetApp Element clust
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
-* Beginning with Element Plug-in for vCenter Server 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
-* For Element Plug-in for vCenter Server 4.10 and earlier, select *NetApp Element Management > Cluster*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
 
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
