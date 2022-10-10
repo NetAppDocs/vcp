@@ -5,7 +5,7 @@ summary: You can install and configure your Element Plug-in for vCenter Server t
 keywords: netapp, hci, vcp, vcenter, element, install, setup
 ---
 
-= Install and configure the NetApp Element Plug-in for vCenter Server
+= Install and configure the NetApp Element Plug-in for VMware vCenter Server
 :url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 :imagesdir: ./media/
 
 [.lead]
-You can install the most recent version of the NetApp Element Plug-in for vCenter Server directly to your vCenter and access the plug-in with the vSphere Web Client.
+You can install the most recent version of the NetApp Element Plug-in for VMware vCenter Server directly to your vCenter and access the plug-in with the vSphere Web Client.
 
 After installation is complete, you can use the quality of service based on storage I/O control (QoSSIOC) service as well as other services of the vCenter Plug-in.
 
@@ -58,7 +58,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, the plug-in must be registered with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+NOTE: Using the Element vCenter plug-in to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
 
 .Steps
 
@@ -261,7 +261,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+* Using the Element vCenter plug-in to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
 ====
 
 . Select *OK*.

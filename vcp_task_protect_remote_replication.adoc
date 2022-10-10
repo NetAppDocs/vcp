@@ -70,8 +70,8 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 . Select the *Cluster Pairs* sub-tab.
 . Select *Create Cluster Pairing*.
 . Select one of the following:
-* *Registered Cluster*: If the remote cluster of the pairing is controlled by the same instance of the NetApp Element Plug-in for vCenter Server, select this.
-* *Credentialed Cluster*: If the remote cluster has known credentials that are outside of the NetApp Element Plug-in for vCenter Server configuration, select this.
+* *Registered Cluster*: If the remote cluster of the pairing is controlled by the same instance of the Element vCenter plug-in, select this.
+* *Credentialed Cluster*: If the remote cluster has known credentials that are outside of the Element vCenter plug-in configuration, select this.
 . If you selected *Registered Cluster*, select a cluster from the list of available clusters and click *Pair*.
 . If you selected *Credentialed Cluster*, do the following:
 .. Enter the remote cluster MVIP address.
@@ -167,9 +167,9 @@ NOTE: If two or more clusters are added, ensure that the cluster you intend to u
 . Select *Actions*.
 . Select *Volume Pairing*.
 . Select one of the following:
-* *Volume Creation*: To create a replication target volume on the remote cluster, select this. This method can be used only on remote clusters that are controlled by a NetApp Element Plug-in for vCenter Server.
-* *Volume Selection*: If the remote cluster for the target volume is controlled by a NetApp Element Plug-in for vCenter Server, select this.
-* *Volume ID*: If the remote cluster for the target volume has known credentials that are outside of the NetApp Element Plug-in for vCenter Server configuration, select this.
+* *Volume Creation*: To create a replication target volume on the remote cluster, select this. This method can be used only on remote clusters that are controlled by a Element vCenter plug-in.
+* *Volume Selection*: If the remote cluster for the target volume is controlled by a Element vCenter plug-in, select this.
+* *Volume ID*: If the remote cluster for the target volume has known credentials that are outside of the Element vCenter plug-in configuration, select this.
 . Select a Replication Mode:
 +
 * *Real-time (Synchronous)*: Writes are acknowledged to the client after they are committed on both of the source and target clusters.

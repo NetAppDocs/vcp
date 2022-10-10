@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_volume_performance.html
-summary: You can view performance information for all volumes in the selected cluster from the Volume Performance page on the Reporting tab of the NetApp Element Plug-in for vCenter Server.
+summary: You can view performance information for all volumes in the selected cluster from the Volume Performance page on the Reporting tab of the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance
 ---
 
