@@ -145,10 +145,6 @@ homepage:
           url: /reference_earlier_versions.html
     - title: More resources
       links:
-        - title: SolidFire and Element Software Documentation
-          url: https://docs.netapp.com/us-en/element-software/index.html
-        - title: NetApp HCI Documentation
-          url: https://docs.netapp.com/us-en/hci/index.html
         - title: SolidFire and Element Resources
           url: https://www.netapp.com/data-storage/solidfire/documentation
         - title: NetApp HCI documentation resources
