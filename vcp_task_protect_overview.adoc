@@ -23,5 +23,5 @@ You can ensure that copies of your data are created and stored where you need th
 * link:vcp_task_protect_remote_replication.html[Perform remote replication between clusters]
 
 == Find more information
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

@@ -44,7 +44,6 @@ NOTE: Using the Element vCenter plug-in to manage cluster resources from other v
 * *Burst IOPs*: The current maximum burst QoS setting of the volume.
 * *Burst Time*: The length of time a burst is allowed.
 
-
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
