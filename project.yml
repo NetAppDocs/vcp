@@ -145,7 +145,7 @@ homepage:
           url: /reference_earlier_versions.html
     - title: More resources
       links:
-        - title: SolidFire and Element Resources
+        - title: SolidFire and Element documentation resources
           url: https://www.netapp.com/data-storage/solidfire/documentation
         - title: NetApp HCI documentation resources
           url: https://www.netapp.com/hybrid-cloud/hci-documentation/
