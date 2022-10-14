@@ -119,14 +119,12 @@ homepage:
           url: /concept_vcp_product_overview.html
         - title: Install and deploy the plug-in
           url: /vcp_task_getstarted.html
-        - title: Understand concepts related to the plug-in
-          url: /concept_vcp_product_overview.html
     - title: Learn
       links:    
         - title: What's new
           url: /rn_whatsnew_vcp.html
         - title: Release notes
-          url: /rn_relatedrn.html 
+          url: /rn_relatedrn_vcp.html 
     - title:  SolidFire all-flash storage systems
       links:
         - title: Upgrade the Element Plug-in
