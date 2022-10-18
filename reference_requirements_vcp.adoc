@@ -47,7 +47,7 @@ Consider the following capabilities and recommendations before using the plugin:
 == NetApp Element support
 The plug-in supports the following major versions:
 
-* Element 12.x, including SolidFire Enterprise SDS
+* Element 12.x
 * Element 11.x
 
 == Network port requirements
