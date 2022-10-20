@@ -124,7 +124,7 @@ homepage:
         - title: What's new
           url: /rn_whatsnew_vcp.html
         - title: Release notes
-          url: /rn_relatedrn.html 
+          url: /rn_relatedrn_vcp.html 
     - title:  SolidFire all-flash storage systems
       links:
         - title: Upgrade the Element Plug-in
