@@ -119,8 +119,6 @@ homepage:
           url: /concept_vcp_product_overview.html
         - title: Install and deploy the plug-in
           url: /vcp_task_getstarted.html
-        - title: Understand concepts related to the plug-in
-          url: /concept_vcp_product_overview.html
     - title: Learn
       links:    
         - title: What's new
