@@ -1,10 +1,9 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_volumes_manage.html
-summary: Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+summary: Using the NetApp Element Plug-in for VMware vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 keywords: netapp, volumes, vcp, vcenter, element,
 ---
-
 
 = Manage volumes
 :hardbreaks:
@@ -14,7 +13,7 @@ keywords: netapp, volumes, vcp, vcenter, element,
 :imagesdir: ./media/
 
 [.lead]
-Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
+Using the NetApp Element Plug-in for VMware vCenter Serverr, you can create, view, edit, delete, clone, backup or restore volumes for user accounts. You can also manage each volume on a cluster, and add or remove volumes in volume access groups.
 
 .Options
 
@@ -26,7 +25,6 @@ Using the NetApp Element Plug-in for vCenter Server, you can create, view, edit,
 * <<Delete volumes>>
 * <<Purge volumes>>
 * <<Restore deleted volumes>>
-
 
 == Create a volume
 You can create a new volume and associate the volume with a given account (every volume must be associated with an account). This association gives the account access to the volume through the iSCSI initiators using the CHAP credentials. You can also specify QoS settings for a volume during creation.
@@ -68,7 +66,6 @@ After you enable datastore QoSSIOC settings, any QoS settings at the volume leve
 Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
 
 . Select *OK*.
-
 
 == View volume details
 You can review general information for all active volumes on the cluster in the NetApp Element Management extension point. You can also see details for each active volume, including efficiency, performance, QoS, as well as associated snapshots.
@@ -544,7 +541,6 @@ NOTE: If a volume is deleted and then restored, ESXi will not detect the restore
 . Select the view filter and select *Active* from the list.
 . Verify that the volume or volumes and all connections are restored.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

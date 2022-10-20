@@ -21,7 +21,7 @@ QoSSIOC is available only with standard datastores. It does not work with virtua
 
 NOTE: You cannot enable virtual volumes (VVols) functionality or make VVols available to vSphere using the QoSSIOC Settings page. See Element Plug-in for vCenter Server documentation about configuring VVols functionality for more information.
 
-For Linked Mode, the NetApp Element Plug-in for vCenter Server registers all vCenter Servers using the QoSSIOC settings you provide on a single vCenter Server.
+For Linked Mode, the Element vCenter plug-in registers all vCenter Servers using the QoSSIOC settings you provide on a single vCenter Server.
 
 Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:
 
@@ -170,7 +170,6 @@ You can clear the QoSSIOC configuration details for the Element storage manageme
 +
 The *QoSSIOC Status* field displays `Not Configured` after the process is complete.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

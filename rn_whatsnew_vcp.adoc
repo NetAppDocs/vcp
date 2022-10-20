@@ -1,41 +1,44 @@
 ---
 sidebar: sidebar
 permalink: rn_whatsnew_vcp.html
-summary: Learn what's new in this version of NetApp Element Plug-in for vCenter Server.
+summary: Learn what's new in this version of NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 ---
 
-= What's new in NetApp Element Plug-in for vCenter Server
+= What's new in NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ../media/
-:keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 [.lead]
-NetApp Element Plug-in for vCenter Server 4.9 restores support for vSphere 6.5, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
+NetApp Element Plug-in for vCenter Server 4.10 contains resolved issues, including security vulnerabilities, that might significantly reduce disruptions seen during upgrades and enhance daily operation in some environments. In version 4.10 of the plug-in, the online help links have transitioned to this link:index.html[documentation link]. To access the online help links from within the plug-in, you must have network access. 
 
-NetApp Element Plug-in for vCenter Server 4.9 is available with the 2.20 release of management services.
+Element vCenter plug-in 4.10 is available with the 2.21.61 release of management services.
+
+== NetApp Element Plug-in for vCenter Server 4.9
+NetApp Element Plug-in for VMware vCenter Server 4.9 restores support for vSphere 6.5, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
+
+Element vCenter plug-in 4.9 is available with the 2.20.69 release of management services.
 
 == NetApp Element Plug-in for vCenter Server 4.8
-NetApp Element Plug-in for vCenter Server 4.8 contains security improvements, memory utilization improvements, and third-party library upgrades.
+Element vCenter plug-in 4.7 4.8 contains security improvements, memory utilization improvements, and third-party library upgrades.
 
-NetApp Element Plug-in for vCenter Server 4.8 is available with the 2.19 release of management services.
+Element vCenter plug-in 4.8 is available with the 2.19 release of management services.
 
-== NetApp Element Plug-in for vCenter Server 4.7
-NetApp Element Plug-in for vCenter Server 4.7 contains important security improvements that further develop improvements made in the https://security.netapp.com/advisory/ntap-20210315-0001/[recent management services 2.17.56 patch] release.
+== NetApp Element Plug-in for VMware vCenter Server 4.7
+Element vCenter plug-in 4.7 contains important security improvements that further develop improvements made in the https://security.netapp.com/advisory/ntap-20210315-0001/[recent management services 2.17.56 patch] release.
 
 With version 4.7, the plug-in now supports components of vSphere 7.0 Update 2, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
 
-NetApp Element Plug-in for vCenter Server 4.7 is available with the 2.18 release of management services.
+Element vCenter plug-in 4.7 is available with the 2.18 release of management services.
 
-== NetApp Element Plug-in for vCenter Server 4.6
+== NetApp Element Plug-in for VMware vCenter Server 4.6
 With version 4.6, the plug-in now supports components of vSphere 7.0 Update 1, including vCenter Server, ESXi, and vSphere HTML5 Web Client.
 
-NetApp Element Plug-in for vCenter Server 4.6 is available with the 2.16 release of management services.
+Element vCenter plug-in 4.6 is available with the 2.16 release of management services.
 
-[discrete]
 == Find more information
 * link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes KB^]

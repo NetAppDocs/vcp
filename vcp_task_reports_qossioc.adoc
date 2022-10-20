@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_qossioc.html
-summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
+summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster, performance
 ---
 
@@ -15,11 +15,11 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster,
 [.lead]
 You can view events related to QoSSIOC when a VM with a QoS-enabled datastore is reconfigured or issued a power or guest event.
 
-You can view QoSSIOC events from the NetApp Element Configuration extension point in the NetApp Element Plug-in for vCenter Server.
+You can view QoSSIOC events from the NetApp Element Configuration extension point in the NetApp Element Plug-in for VMware vCenter Server.
 
 QoSSIOC events are displayed from locally added clusters. In a Linked Mode environment, log into the vSphere Web Client that has the cluster added locally to view QoSSIOC events for that cluster.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+NOTE: Using the Element vCenter plug-in to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
 
 .What you'll need
 
@@ -44,7 +44,6 @@ NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster reso
 * *Burst IOPs*: The current maximum burst QoS setting of the volume.
 * *Burst Time*: The length of time a burst is allowed.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

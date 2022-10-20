@@ -13,7 +13,7 @@ keywords: netapp, quality of service, volume performance, sioc, storage I/O cont
 :imagesdir: ../media/
 
 [.lead]
-The NetApp Element Plug-in for vCenter Server enables, as an optional setting, automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC^]) settings of all VMs on a standard datastore. QoS and SIOC integration (QoSSIOC), which can be enabled for any standard datastore, runs a scan of all SIOC settings on all associated VMs.
+The NetApp Element Plug-in for VMware vCenter Server enables, as an optional setting, automatic quality of service (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html[QoS^]) based on Storage I/O Control (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html[SIOC^]) settings of all VMs on a standard datastore. QoS and SIOC integration (QoSSIOC), which can be enabled for any standard datastore, runs a scan of all SIOC settings on all associated VMs.
 
 QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity. The QoSSIOC service uses the sum of all SIOC reservations or shares and the sum of IOPS limits to determine minimum and maximum QoS for the underlying volume of each datastore. A configurable burst factor is also available.
 
@@ -30,7 +30,6 @@ TIP: It is possible to set a reservation value through vSphere API. If a reserva
 
 TIP: https://activeiq.solidfire.com[SolidFire Active IQ^] has a QoS recommendations page that provides advice on optimal configuration and set up of QoS settings.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

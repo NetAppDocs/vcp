@@ -13,7 +13,7 @@ keywords: netapp, datastore, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-Using the NetApp Element Plug-in for vCenter Server, you can manage datastores that are backed by Element volumes. You can create, extend, clone, share, or delete datastores. You can also use VAAI UNMAP to allow a cluster to reclaim freed block space from thinly provisioned VMFS datastores.
+Using the NetApp Element Plug-in for VMware vCenter Server, you can manage datastores that are backed by Element volumes. You can create, extend, clone, share, or delete datastores. You can also use VAAI UNMAP to allow a cluster to reclaim freed block space from thinly provisioned VMFS datastores.
 
 .What you'll need
 * To create and manage datastores, you must first create at least one user account.
@@ -365,9 +365,6 @@ NOTE: You can also choose to retain the volume and later associate it with anoth
 
 . Select *Yes*.
 
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

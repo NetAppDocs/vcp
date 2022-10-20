@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_reference_reports_alert_errors.html
-summary: Here is a list of system alerts, which are information, warnings, or errors that indicate how well the cluster is running by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+summary: Here is a list of system alerts, which are information, warnings, or errors that indicate how well the cluster is running by using the Reporting pages of the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance
 ---
 
@@ -451,9 +451,6 @@ In order to maintain data redundancy, the system reduces the capacity of the lar
 +
 *To resolve*: Contact NetApp Support for assistance.
 
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

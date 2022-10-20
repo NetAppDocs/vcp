@@ -31,7 +31,6 @@ Storage containers are logical constructs that map to NetApp Element accounts an
 Storage containers function like traditional accounts and can contain both virtual volumes and traditional volumes. A maximum of four storage containers per cluster is supported. A minimum of one storage container is required to use VVols functionality. On the *VVols > Storage Containers* page of the NetApp Element Management extension point, you can create, delete, and view details about storage containers. You can discover storage containers in vCenter during VVols creation.
 
 == VASA provider
-
 To make vSphere aware of the vVol feature on the NetApp Element cluster, the vSphere admin must register the NetApp Element VASA Provider with vCenter. The VASA provider is the out-of-band control path between vSphere and the Element cluster. It is responsible for executing requests on the Element cluster on behalf of vSphere, such as creating VMs, making VMs available to vSphere, and advertising storage capabilities to vSphere.
 
 The VASA provider runs as part of the cluster master in Element software. The cluster master is a highly available service that fails over to any node in the cluster as needed. If the cluster master fails over, the VASA provider moves with it, ensuring high availability for the VASA provider. All provisioning and storage management tasks use the VASA provider, which handles any changes needed on the Element cluster.
@@ -41,7 +40,6 @@ a second NetApp Element VASA provider is added, this renders all VVOL datastores
 
 NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you have already registered a VASA provider with your vCenter. To install, follow the directions in the VASA39 manifest and download the .tar.gz file from the link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39[NetApp Software Downloads^] site. The NetApp Element VASA provider uses a NetApp certificate. With this patch, the certificate is used unmodified by vCenter to support multiple vCenters for VASA and VVols use. Do not modify the certificate. Custom SSL certificates are not supported by VASA.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

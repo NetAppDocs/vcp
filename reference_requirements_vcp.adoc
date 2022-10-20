@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: reference_requirements_vcp.html
-summary: Before you begin using the NetApp Element Plug-in for vCenter Server, you need to understand prerequisites for product installation and use.
+summary: Before you begin using the NetApp Element Plug-in for VMware vCenter Server, you need to understand prerequisites for product installation and use.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
 
-= Requirements for the Element Plug-in for vCenter Server
+= Requirements for the NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,17 +13,18 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :imagesdir: ../media/
 
 [.lead]
-Before you use NetApp Element Plug-in for vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.
+Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you need to be sure that your system meets the requirements for plug-in use.
 
 == VMware vSphere prerequisites
-VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the NetApp Element Plug-in for vCenter Server.
+VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the Element vCenter Plug-in.
 
 === VMware vSphere versions supported by the plug-in
 The plug-in supports the following major versions of VMware software:
 
-* vSphere 7.0 and 7.0 Update 1, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+* vSphere 7.0 and 7.0 Update 1 and 2 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+* vSphere 7.0 Update 3 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores using Spring Framework 4
 +
-IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, all versions of the NetApp Element Plug-in for vCenter Server fail to deploy. To resolve this issue, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
+IMPORTANT: When you upgrade to VMware vCenter Server 7.0 U3, the Element Plug-in fails to deploy. To resolve this issue using Spring Framework 4, see https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[this KB article^].
 
 * vSphere 6.7 and 6.7 Update 1 and 3, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 +
@@ -47,13 +48,12 @@ Consider the following capabilities and recommendations before using the plugin:
 == NetApp Element support
 The plug-in supports the following major versions:
 
-* Element 12.x, including SolidFire Enterprise SDS
+* Element 12.x
 * Element 11.x
 
 == Network port requirements
 You need to allow some TCP ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. For a comprehensive list of ports used in NetApp HCI and SolidFire systems, see this link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html[page].
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

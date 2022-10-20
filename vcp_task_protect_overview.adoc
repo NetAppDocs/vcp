@@ -5,7 +5,7 @@ summary: You can ensure that copies of your data are created and stored where yo
 keywords: netapp, vcp, vcenter, element, protect, data
 ---
 
-= Protect data with the NetApp Element Plug-in for vCenter Server
+= Protect data with the NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ keywords: netapp, vcp, vcenter, element, protect, data
 :imagesdir: ./media/
 
 [.lead]
-You can ensure that copies of your data are created and stored where you need them by using the NetApp Element Plug-in for vCenter Server. To do this, you can create and manage volume and group snapshots, set up snapshot schedules, and create volume and cluster pair relationships for replication between remote clusters.
+You can ensure that copies of your data are created and stored where you need them by using the NetApp Element Plug-in for VMware vCenter Server. To do this, you can create and manage volume and group snapshots, set up snapshot schedules, and create volume and cluster pair relationships for replication between remote clusters.
 
 .Options
 
@@ -22,9 +22,6 @@ You can ensure that copies of your data are created and stored where you need th
 * link:vcp_task_protect_snapshots_schedules.html[Create snapshot schedules]
 * link:vcp_task_protect_remote_replication.html[Perform remote replication between clusters]
 
-
-
-[discrete]
 == Find more information
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

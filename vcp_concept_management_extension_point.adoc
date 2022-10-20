@@ -15,7 +15,7 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 [.lead]
 The NetApp Element Management extension point enables you to add and manage clusters, assign storage clusters to vCenter Servers for Linked Mode, and configure management node settings for QoSSIOC.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+NOTE: Using the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
@@ -37,9 +37,8 @@ The following tabs are available from the NetApp Element Management extension po
 * *Cluster*: Add and manage drives and nodes. You can also create and manage VLANs.
 * *VVols*: Manage virtual volumes and their associated storage containers, protocol endpoints, and bindings.
 
-[discrete]
 == Find more information
 * link:vcp_concept_config_extension_point[NetApp Element Configuration extension point]
-* link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* link:concept_vcp_product_overview.html[NetApp Element Plug-in for VMware vCenter Server overview]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

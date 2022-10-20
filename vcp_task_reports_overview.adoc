@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_overview.html
-summary: View information about the cluster's components and performance by using the Reporting pages of the NetApp Element Plug-in for vCenter Server.
+summary: View information about the cluster's components and performance by using the Reporting pages of the NNetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report
 ---
 
@@ -13,7 +13,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 :imagesdir: ../media/
 
 [.lead]
-You can view high-level cluster information for the selected cluster, including overall capacity, efficiency, and performance, on the Overview page of the Reporting tab from the NetApp Element Management extension point of the NetApp Element Plug-in for vCenter Server.
+You can view high-level cluster information for the selected cluster, including overall capacity, efficiency, and performance, on the Overview page of the Reporting tab from the NetApp Element Management extension point of the NetApp Element Plug-in for VMware vCenter Server.
 
 .Steps
 . From the vCenter Plug-in, select *NetApp Element Management*.
@@ -68,7 +68,6 @@ NOTE: For example, if there are four volumes in the cluster, each with minimum I
 ** *Write*: The write activity in MB/s for the cluster.
 * *Performance Utilization*: The percentage of cluster IOPS being consumed. For example, a 250K IOPS cluster running at 100K IOPS would show 40% consumption.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
