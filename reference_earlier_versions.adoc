@@ -15,7 +15,7 @@ summary: Documentation is available for releases earlier than version 4.6 of the
 [.lead]
 Documentation is also available for releases earlier than version 4.10 of the NetApp Element Plug-in for VMware vCenter Server.
 
-NOTE: This link:index.html[documentation link] for Element vCenter plug-in 4.10 and also includes versions 4.9, 4.6, 4.7, and 4.8.
+NOTE: This link:index.html[documentation link] for Element vCenter plug-in 4.10 and also includes versions 4.6, 4.7, 4.8, and 4.9.
 
 [cols=4*,options="header"]
 |===
