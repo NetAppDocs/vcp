@@ -23,7 +23,7 @@ NetApp Element Plug-in for VMware vCenter Server 4.9 restores support for vSpher
 Element vCenter plug-in 4.9 is available with the 2.20.69 release of management services.
 
 == NetApp Element Plug-in for vCenter Server 4.8
-Element vCenter plug-in 4.7 4.8 contains security improvements, memory utilization improvements, and third-party library upgrades.
+Element vCenter plug-in 4.8 contains security improvements, memory utilization improvements, and third-party library upgrades.
 
 Element vCenter plug-in 4.8 is available with the 2.19 release of management services.
 
