@@ -15,18 +15,29 @@ keywords: netapp, vcp, element, plugin, plug-in, linked mode
 [.lead]
 You can use the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using vCenter Linked Mode.
 
-You can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
+You must register the Element Plugin with each vCenter Server that will be managing NetApp SolidFire storage clusters.
 
 To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
 
 .Steps
-.	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
-. Log in once to the vSphere Web Client for each linked vCenter Server.
+
+. Deploy the Element Plug-in.
+.. Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
+.. For vSphere 7.0, log in once to the vSphere Web Client for each linked vCenter Server.
 +
 Logging in initiates installation of the plug-in on the web client.
-. Log in to the web client of the destination vCenter that you want to manage the storage cluster.
-.	Add the storage cluster to the Element Plug-in inventory.
++
+NOTE: For all other vSphere versions, installation of the plug-in on the web client is automatically initiated and does not require a login.
 
+. Use the Element Plug-in.
+.. Log in to the web client of any vCenter Server in the Linked Mode environment.
+.. On the *NetApp Element Remote Plugin* line, remove the *Instance* list.
+.. Select the vCenter Server that you want to work with.
++
+After you have selected the target vCenter Server, you can add and manage the clusters for that vCenter Server environment.
++
+NOTE: You can only view and manage the storage clusters associated with the selected vCenter Server. 
+ 
 .Example
 You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2. To set up the storage cluster management, after registering the plug-in with each vCenter Server, you perform the following steps:
 
