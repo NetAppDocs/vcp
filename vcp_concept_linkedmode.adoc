@@ -41,10 +41,13 @@ NOTE: You can only view and manage the storage clusters associated with the sele
 .Example
 You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2. To set up the storage cluster management, after registering the plug-in with each vCenter Server, you perform the following steps:
 
-. Log in to the vCenter1 web client.
-. To manage cluster1 from the vCenter1 web client, add cluster1 to the Element Plug-in inventory.
-. Log in to the vCenter2 web client.
-. To manage cluster2 from the vCenter2 web client, add cluster2 to the Element Plug-in inventory.
+. Log in to the web client of any vCenter Server in the Linked Mode environment.
+. On the *NetApp Element Remote Plugin* line, remove the *Instance* list.
+. To manage cluster1 from the vCenter1 web client, select *vCenter1* from the list.
+. Add cluster1 to the Element Plug-in inventory.
+. On the *NetApp Element Remote Plugin* line, drop the *Instance* list
+. To manage cluster2 from the vCenter2 web client, select *vCenter2* from the list. 
+. Add cluster2 to the Element Plug-in inventory.
 
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
