@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: vcp_task_datastores_manage.html
+permalink: vcp_task_datastores_manage_5_0.html
 summary: You can add a manage datastores that are created on Element volumes using the plug-in.
 keywords: netapp, datastore, vcp, vcenter, element
 ---

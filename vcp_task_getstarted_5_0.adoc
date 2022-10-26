@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: vcp_task_getstarted.html
-summary: You can install and configure your Element Plug-in for vCenter Server 4.10 and earlier to use with Element storage.
+permalink: vcp_task_getstarted_5_0.html
+summary: You can install and configure your Element Plug-in for vCenter Server 5.0 and later to use with Element storage.
 keywords: netapp, hci, vcp, vcenter, element, install, setup
 ---
 
-= Install and configure the NetApp Element Plug-in for vCenter Server 4.10 and earlier
+= Install and configure the NetApp Element Plug-in for vCenter Server 5.0 and later
 :url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
@@ -23,7 +23,6 @@ Read and complete each step to install and begin using the plug-in:
 * <<Prepare for installation>>
 * <<Install the management node>>
 * <<Register the plug-in with vCenter>>
-* <<Modify vCenter properties for a dark site HTTP server>>
 * <<Access the plug-in and verify successful installation>>
 * <<Add storage clusters for use with the plug-in>>
 * <<Configure QoSSIOC settings using the plug-in>>
@@ -114,132 +113,23 @@ NOTE: This action completes the installation in the vSphere Web Client. If the v
 
 . In the vSphere Web Client, look for the following completed tasks in the task monitor to ensure installation has completed: `Download plug-in` and `Deploy plug-in`.
 
-== Modify vCenter properties for a dark site HTTP server
-
-If you intend to customize a URL for an in-house (dark site) HTTP server during vCenter Plug-in registration, you must modify the vSphere Web Client properties file `webclient.properties`. You can use vCSA or Windows to make the changes.
-
-.What you'll need
-
-Permissions to download software from the NetApp Support Site.
-
-.Steps using vCSA
-. SSH into the vCenter Server:
-+
-----
-Connected to service
-    * List APIs: "help api list"
-    * List Plugins: "help pi list"
-    * Launch BASH: "shell"
-Command>
-----
-
-. Enter `shell` in the command prompt to access root:
-+
-----
-Command> shell
-Shell access is granted to root
-----
-
-. Stop the VMware vSphere Web Client service:
-+
-
-----
-service-control --stop vsphere-client
-service-control --stop vsphere-ui
-----
-
-. Change the directory:
-+
-----
-cd /etc/vmware/vsphere-client
-----
-
-. Edit the `webclient.properties` file and add `allowHttp=true`.
-
-. Change the directory:
-+
-----
-cd /etc/vmware/vsphere-ui
-----
-
-. Edit the `webclient.properties` file and add `allowHttp=true`.
-. Start the VMware vSphere Web Client service:
-+
-----
-service-control --start vsphere-client
-service-control --start vsphere-ui
-----
-+
-NOTE: After you have completed the registration procedure, you can remove `allowHttp=true` from the files you modified.
-
-. Reboot vCenter.
-
-.Steps using Windows
-
-. Change the directory from a command prompt:
-+
-----
-cd c:\Program Files\VMware\vCenter Server\bin
-----
-
-. Stop the VMware vSphere Web Client service:
-+
-----
-service-control --stop vsphere-client
-service-control --stop vsphere-ui
-----
-
-. Change the directory:
-+
-----
-cd c:\ProgramData\VMware\vCenterServer\cfg\vsphere-client
-----
-
-. Edit the `webclient.properties` file and add `allowHttp=true`.
-. Change the directory:
-+
-----
-cd  c:\ProgramData\VMware\vCenterServer\cfg\vsphere-ui
-----
-
-. Edit the `webclient.properties` file and add `allowHttp=true`.
-
-. Change the directory from a command prompt:
-+
-----
-cd c:\Program Files\VMware\vCenter Server\bin
-----
-
-. Start the VMware vSphere Web Client service:
-+
-----
-service-control --start vsphere-client
-service-control --start vsphere-ui
-----
-+
-NOTE: After you have completed the registration procedure, you can remove `allowHttp=true` from the files you modified.
-
-. Reboot vCenter.
-
-
 == Access the plug-in and verify successful installation
 
-After successful installation or upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
+After successful installation or upgrade the NetApp Element Remote Plugin extension point appears in the Shortcuts tab of the vSphere Web Client in the side panel. 
 
-image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 4.10 and earlier]
+image::vcp_remote_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 5.0 and later]
 
 NOTE: If the vCenter Plug-in icons are not visible, see the link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
 
 == Add storage clusters for use with the plug-in
-You can add a cluster running Element software using the NetApp Element Configuration extension point so that it can be managed by the plug-in.
-
-After a connection has been established to the cluster, the cluster can then be managed using the NetApp Element Management extension point.
+You can add and manage a cluster running Element software using the NetApp Element Remote Plugin extension point. 
 
 .What you'll need
 
 * At least one cluster must be available and its IP or FQDN address known.
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
+* Beginning with Element vCenter plug-in 5.0, firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the remote plug-in on TCP port 8333.
 
 NOTE: You must add at least one cluster to use the plug-in extension point functions.
 
@@ -252,7 +142,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 
 .Steps
 
-. Select *NetApp Element Configuration > Clusters*.
+. Select *NetApp Element Remote Plugin > Configuration > Clusters*.
 . Select *Add Cluster*.
 . Enter the following information:
 +
@@ -279,7 +169,7 @@ You can set up automatic quality of service based on Storage I/O Control link:vc
 After you have configured valid QoSSIOC settings for the management node, these settings become the default. The QoSSIOC settings revert to the last known valid QoSSIOC settings until you provide valid QoSSIOC settings for a new management node. You must clear the QoSSIOC settings for the configured management node before setting the QoSSIOC credentials for a new management node.
 
 .Steps
-. Select *NetApp Element Configuration > QoSSIOC Settings*.
+. Select *NetApp Element Remote Plugin > Configuration > QoSSIOC Settings*.
 . Select *Actions*.
 . In the resulting menu, select *Configure*.
 . In the *Configure QoSSIOC Settings* dialog box, enter the following information:

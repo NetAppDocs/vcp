@@ -44,27 +44,51 @@ sidebar:
         - title: Pre-deployment requirements
           url: /reference_requirements_vcp.html
         - title: Install and configure the NetApp Element Plug-in for vCenter Server
-          url: /vcp_task_getstarted.html
+          entries:
+            - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
+              url: /vcp_task_getstarted_5_0.html
+            - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
+              url: /vcp_task_getstarted.html
         - title: Upgrade the plug-in
           url: /task_vcp_upgrades.html
         - title: Manage storage with the vCenter Plug-in
           entries:
-            - title: Manage clusters
-              url: /vcp_task_clusters_manage.html
-            - title: Manage datastores
-              url: /vcp_task_datastores_manage.html
-            - title: Manage volumes
-              url: /vcp_task_volumes_manage.html
-            - title: Create and manage user accounts
-              url: /vcp_task_create_manage_user_accounts.html
-            - title: Create and manage access groups
-              url: /vcp_task_create_manage_access_groups.html
-            - title: Create and manage initiators
-              url: /vcp_task_create_manage_initiators.html
-            - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
-              url: /vcp_task_qossioc.html
-            - title: Create and manage volume QoS policies
-              url: /vcp_task_qos_policies.html
+            - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
+              entries: 
+                - title: Manage clusters
+                  url: /vcp_task_clusters_manage_5_0.html
+                - title: Manage datastores
+                  url: /vcp_task_datastores_manage_5_0.html
+                - title: Manage volumes
+                  url: /vcp_task_volumes_manage_5_0.html
+                - title: Create and manage user accounts
+                  url: /vcp_task_create_manage_user_accounts_5_0.html
+                - title: Create and manage access groups
+                  url: /vcp_task_create_manage_access_groups_5_0.html
+                - title: Create and manage initiators
+                  url: /vcp_task_create_manage_initiators_5_0.html
+                - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
+                  url: /vcp_task_qossioc_5_0.html
+                - title: Create and manage volume QoS policies
+                  url: /vcp_task_qos_policies_5_0.html
+            - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
+              entries:
+                - title: Manage clusters
+                  url: /vcp_task_clusters_manage.html
+                - title: Manage datastores
+                  url: /vcp_task_datastores_manage.html
+                - title: Manage volumes
+                  url: /vcp_task_volumes_manage.html
+                - title: Create and manage user accounts
+                  url: /vcp_task_create_manage_user_accounts.html
+                - title: Create and manage access groups
+                  url: /vcp_task_create_manage_access_groups.html
+                - title: Create and manage initiators
+                  url: /vcp_task_create_manage_initiators.html
+                - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
+                  url: /vcp_task_qossioc.html
+                - title: Create and manage volume QoS policies
+                  url: /vcp_task_qos_policies.html
         - title: Manage cluster hardware and virtual networks
           entries:
             - title: Manage cluster hardware and virtual networks overview
