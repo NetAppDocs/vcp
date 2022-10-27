@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_volume_performance.html
-summary: You can view performance information for all volumes in the selected cluster from the Volume Performance page on the Reporting tab of the NetApp Element Plug-in for vCenter Server.
+summary: You can view performance information for all volumes in the selected cluster from the Volume Performance page on the Reporting tab of the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance
 ---
 
@@ -51,7 +51,6 @@ Possible values:
 * *Queue Depth*: The number of outstanding read and write operations to the volume.
 * *Average IO Size*: Average size in bytes of recent I/O to the volume in the last 500 milliseconds.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

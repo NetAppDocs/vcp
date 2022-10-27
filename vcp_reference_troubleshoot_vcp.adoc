@@ -14,10 +14,10 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 :imagesdir: media/
 
 [.lead]
-You need to be aware of some of the common issues with the NetApp Element Plug-in for vCenter Server and the steps to resolve them.
+You need to be aware of some of the common issues with the NetApp Element Plug-in for VMware vCenter Server and the steps to resolve them.
 
 * <<Plug-in registration successful but icons do not appear in web client>>
-* <<Errors after NetApp Element Plug-in for vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1>>
+* <<Errors after NetApp Element Plug-in for VMware vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1>>
 * <<Error registering plug-in using Registration UI>>
 * <<Error updating plug-in using Registration UI>>
 * <<Error message that NetApp extension cannot be upgraded>>
@@ -64,11 +64,11 @@ NOTE: You might need to correct an unreachable or bad URL. Update the plug-in re
 .. If the problem persists and the ZIP is unreachable, inspect the ZIP URL to determine if there is an issue with the management node address used. In some cases, it might be necessary to customize a URL using the registration utility for the plug-in so that the ZIP file can be downloaded.
 
 [[error_vcp48_67u1]]
-== Errors after NetApp Element Plug-in for vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1
+== Errors after NetApp Element Plug-in for VMware vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1
 
 .Description
 
-After you upgrade to NetApp Element Plug-in for vCenter Server 4.8 or later with VMware vCenter Server 6.7U1, you might encounter the following issues:
+After you upgrade to Element vCenter plug-in 4.8 or later with VMware vCenter Server 6.7U1, you might encounter the following issues:
 
 * The clusters are not listed in the *Clusters* section in the plug-in extension point.
 * A server error appears in the *Clusters* and *QoSSIOC Settings* sections.

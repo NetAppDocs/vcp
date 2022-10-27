@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_task_reports_iscsi.html
-summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
+summary: You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 ---
 
@@ -13,8 +13,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 :imagesdir: ../media/
 
 [.lead]
-You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for vCenter Server.
-
+You can view information about iSCSI sessions that are connected to the selected cluster in the NetApp Element Plug-in for VMware vCenter Server.
 
 .Steps
 
@@ -38,7 +37,6 @@ You can view information about iSCSI sessions that are connected to the selected
 * *Target IQN*: The IQN of the volume.
 * *Created On*: Date the session was established.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

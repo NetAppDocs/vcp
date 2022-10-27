@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 :imagesdir: ./media/
 
 [.lead]
-You can install the most recent version of the NetApp Element Plug-in for vCenter Server directly to your vCenter and access the plug-in with the vSphere Web Client.
+You can install the most recent version of the NetApp Element Plug-in for VMware vCenter Server directly to your vCenter and access the plug-in with the vSphere Web Client.
 
 After installation is complete, you can use the quality of service based on storage I/O control (QoSSIOC) service as well as other services of the vCenter Plug-in.
 
@@ -310,7 +310,6 @@ To enable access to volumes, you'll need to create at least one link:vcp_task_cr
 == Create datastores and volumes
 You can create link:vcp_task_datastores_manage.html#create-a-datastore[datastores and Element volumes] to start allocating storage.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]

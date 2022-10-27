@@ -1,33 +1,9 @@
 ---
+layout: astra
 sidebar: sidebar
 permalink: index.html
-summary: Use the NetApp Element Plug-in for vCenter Server, a plug-in to the VMware vSphere interface, to manage and monitor storage clusters running NetApp Element software.
-keywords: netapp, vcp, on premise, hybrid cloud control, hcc
+lead: "NetApp Element Plug-in for VMware vCenter Server provides a plug-in to the VMware vSphere interface so that you can manage and monitor storage clusters running NetApp Element software. You can use this documentation to learn about and use the plug-in. This documentation addresses Element vCenter plug-in 4.6 and later. For versions 4.5 and earlier, see the earlier versions of the documentation."
+summary: Use the NetApp Element Plug-in for VMware vCenter Server, a plug-in to the VMware vSphere interface, to manage and monitor storage clusters running NetApp Element software.
 ---
 
-= NetApp Element Plug-in for vCenter Server documentation
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ../media/
-
-[.lead]
-NetApp Element Plug-in for vCenter Server provides a plug-in to the VMware vSphere interface so that you can manage and monitor storage clusters running NetApp Element software.
-
-You can use this documentation to learn about and use the plug-in. This documentation addresses 4.6 and later versions. For older versions of the plug-in, see link:reference_earlier_versions.html[this page].
-
-== Discover what's new
-
-* link:rn_whatsnew_vcp.html[What's new in NetApp Element Plug-in for vCenter Server]
-* http://docs.netapp.com/sfe-122/index.jsp[What's new in NetApp Element software^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[What's new in management services for Element software and NetApp HCI^]
-
-== Get started with NetApp Element Plug-in for vCenter Server
-
-* link:vcp_task_getstarted.html[NetApp Element Plug-in for vCenter Server installation and deployment overview]
-* link:concept_vcp_product_overview.html[Understand concepts related to the plug-in]
-
-[discrete]
-== Find more information
-https://www.netapp.com/support-and-training/documentation/[NetApp Product Documentation^]
+= NetApp Element Plug-in for VMware vCenter Server documentation

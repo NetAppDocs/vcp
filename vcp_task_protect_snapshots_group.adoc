@@ -159,7 +159,6 @@ NOTE: If two or more clusters are added, ensure that the cluster that you intend
 * *Retain members*: Deletes the group snapshot but keeps all member snapshots.
 . Confirm the action.
 
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

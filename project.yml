@@ -8,7 +8,7 @@ settings:
     harmony_enabled: true
 sidebar:
   entries:
-    - title: NetApp Element Plug-in for vCenter Server documentation
+    - title: NetApp Element Plug-in for VMware vCenter Server documentation
       url: /index.html
       entries:
         - title: NetApp Element Plug-in for vCenter Server product overview

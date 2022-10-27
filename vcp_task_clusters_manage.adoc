@@ -97,7 +97,7 @@ You can remove the profile of a cluster that you no longer want to manage from t
 
 If you set up a Linked Mode group and want to reassign a cluster to another vCenter Server, you can remove the cluster profile and add it again with a different linked vCenter Server IP.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
+NOTE: Using the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
 
 .Steps
 . Select *NetApp Element Configuration > Clusters*.
@@ -230,9 +230,6 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 . Select *Actions*.
 . Select *Expand your NetApp HCI*.
 
-
-
-[discrete]
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

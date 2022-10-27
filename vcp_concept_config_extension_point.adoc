@@ -15,6 +15,8 @@ keywords: netapp, vcp, element, plugin, plug-in, config, extension point
 [.lead]
 The NetApp Element Configuration extension point enables you to add and manage clusters, assign storage clusters to vCenter Servers for Linked Mode, and configure management node settings for QoSSIOC.
 
+NOTE: Using the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
 image::vcp_config_extension_point.png[configuration extension point]
@@ -27,9 +29,8 @@ The following tabs are available from the NetApp Element Configuration extension
 * *QoSSIOC Events*: Displays information about all detected QoSSIOC events.
 * *About*: Displays plug-in version information and provides a service bundle download option.
 
-[discrete]
 == Find more information
 * link:vcp_concept_management_extension_point[NetApp Element Management extension point]
-* link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]
+* link:concept_vcp_product_overview.html[NetApp Element Plug-in for VMware vCenter Server overview]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
