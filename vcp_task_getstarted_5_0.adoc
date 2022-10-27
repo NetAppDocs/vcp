@@ -49,10 +49,7 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 * You have deployed a management node OVA running Element software 11.3 or later.
 * Your management node is powered on with its IP address or DHCP address configured.
 * You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
-* Your firewall rules allow the following open link:reference_requirements_vcp.html[network communication]:
-** Between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete.
-** Beginning with Element vCenter plug-in 5.0, between the vCenter and the remote plug-in on TCP port 8333.
-** If you have enabled virtual volumes functionality on the cluster, TCP port 8444 is open for VASA provider access.
+* Your firewall rules allow the following open link:reference_requirements_vcp.html[network communication] between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, 8333, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.
 
 .About this task
 
@@ -60,7 +57,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, the plug-in must be registered with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
+NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you must register the remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
 
 .Steps
 
@@ -83,7 +80,7 @@ NOTE: After you submit changes, the QoSSIOC service automatically restarts.
 
 . Select *vCenter Plug-in Registration*.
 +
-image::vcp_registration_ui.png[registration utility UI]
+image::vcp_remote_plugin_registration_ui.png[remote plug-in registration utility UI]
 
 . Enter the following information:
 
@@ -107,10 +104,6 @@ NOTE: Most installations use the default path. To customize the URL if you are u
 * The vCenter Administrator password
 .. Select *Check Status* to verify that the new version of the plug-in is registered on the vCenter Server.
 
-. (For vSphere 6.5 and 6.7 users) Log in to the vSphere Web Client as a vCenter Administrator.
-+
-NOTE: This action completes the installation in the vSphere Web Client. If the vCenter Plug-in icons are not visible from vSphere, see link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
-
 . In the vSphere Web Client, look for the following completed tasks in the task monitor to ensure installation has completed: `Download plug-in` and `Deploy plug-in`.
 
 == Access the plug-in and verify successful installation
@@ -128,8 +121,7 @@ You can add and manage a cluster running Element software using the NetApp Eleme
 
 * At least one cluster must be available and its IP or FQDN address known.
 * Current full Cluster Admin user credentials for the cluster.
-* Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
-* Beginning with Element vCenter plug-in 5.0, firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the remote plug-in on TCP port 8333.
+* Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443, 8333, and 8443.
 
 NOTE: You must add at least one cluster to use the plug-in extension point functions.
 
@@ -154,7 +146,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* Using the NetApp Element Plug-in for vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only and is not supported for Element Plug-in for vCenter 5.0.
+* NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you must register the remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
 ====
 
 . Select *OK*.
