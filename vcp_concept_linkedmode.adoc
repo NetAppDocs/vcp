@@ -75,7 +75,7 @@ NOTE: You can only view and manage the storage clusters associated with the sele
 .Example
 You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2.
 
-image::../media/two_vcenter_topology.png[Select the instance]
+image::../media/two_vcenter_topology.png[vCenter and cluster topology]
 
 Set up the storage cluster management, after registering the plug-in with each vCenter Server using the following procedure.
 
