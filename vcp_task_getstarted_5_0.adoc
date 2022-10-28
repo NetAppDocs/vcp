@@ -44,7 +44,7 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 
 .What you'll need
 
-* For vSphere 6.5 and 6.7, ensure you have logged out of the vSphere Web Client. The web client for these versions will not recognize updates made during this process to your plug-in if you do not log out. For vSphere 7.0, you do not need to log out of the web client.
+* For vSphere 8.0 and 7.0, you do not need to log out of the web client.
 * You have vCenter Administrator role privileges to register a plug-in.
 * You have deployed a management node OVA running Element software 11.3 or later.
 * Your management node is powered on with its IP address or DHCP address configured.
@@ -110,7 +110,7 @@ NOTE: Most installations use the default path. To customize the URL if you are u
 
 After successful installation or upgrade the NetApp Element Remote Plugin extension point appears in the Shortcuts tab of the vSphere Web Client in the side panel. 
 
-image::vcp_remote_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 5.0 and later]
+image::vcp_remote_plugin_icons_home_page.png[depicts the plug-in extension point after a successful upgrade or install]
 
 NOTE: If the vCenter Plug-in icons are not visible, see the link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
 
@@ -123,7 +123,7 @@ You can add and manage a cluster running Element software using the NetApp Eleme
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443, 8333, and 8443.
 
-NOTE: You must add at least one cluster to use the plug-in extension point functions.
+NOTE: You must add at least one cluster to use Management functions.
 
 .About this task
 This procedure describes how to add a cluster profile so that the cluster can be managed by the plug-in. You cannot modify cluster administrator credentials using the plug-in.
@@ -146,7 +146,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you must register the remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
+* To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you must register the remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
 ====
 
 . Select *OK*.
