@@ -4,7 +4,6 @@ permalink: task_vcp_unregister.html
 summary: You can unregister the NetApp Element Plug-in for VMware vCenter Server from vCenter.
 keywords: netapp, vcp, vcenter, plugin, element, unregister
 ---
-
 = Unregister the vCenter Plug-in
 :hardbreaks:
 :nofooter:
