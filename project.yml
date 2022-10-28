@@ -110,7 +110,7 @@ sidebar:
           url: /vcp_task_reports_alerts.html
           entries:
             - title: System alerts list
-              url: vcp_reference_reports_alert_errors.html
+              url: /vcp_reference_reports_alert_errors.html
         - title: Monitor event logs for troubleshooting
           url: /vcp_task_reports_event_logs.html
         - title: Monitor volume performance
