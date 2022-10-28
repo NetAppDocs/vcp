@@ -4,7 +4,6 @@ permalink: vcp_concept_management_extension_point.html
 summary:
 keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 ---
-
 = NetApp Element Management extension point
 :hardbreaks:
 :nofooter:
