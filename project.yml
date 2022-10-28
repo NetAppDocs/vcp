@@ -23,6 +23,8 @@ sidebar:
           entries:
             - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
               entries:
+                - title: Remote plug-in architecture overview
+                  url: /vcp_concept_remote_plugin_architecture.html
                 - title: NetApp Element Remote Plugin extension point
                   url: /vcp_concept_remote_plugin_extension_point.html
             - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
