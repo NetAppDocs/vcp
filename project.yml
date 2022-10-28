@@ -144,3 +144,45 @@ sidebar:
           url: /reference_earlier_versions.html
         - title: Legal notices
           url: /legal-notices.html
+homepage:
+  tiles:
+    - title: Get started
+      links:
+        - title: Product overview
+          url: /concept_vcp_product_overview.html
+        - title: Install and deploy the plug-in
+          url: /vcp_task_getstarted.html
+    - title: Learn
+      links:    
+        - title: What's new
+          url: /rn_whatsnew_vcp.html
+        - title: Release notes
+          url: /rn_relatedrn_vcp.html 
+    - title:  SolidFire all-flash storage systems
+      links:
+        - title: What's new in NetApp Element software
+          url: https://docs.netapp.com/us-en/element-software/concepts/concept_rn_whats_new_element.html
+        - title: Upgrade the Element Plug-in
+          url: https://docs.netapp.com/us-en/element-software/upgrade/task_vcp_upgrade_plugin.html
+        - title: Upgrade your vSphere components
+          url: https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all_vsphere.html  
+    - title:  NetApp HCI systems
+      links:
+        - title: Upgrade the Element Plug-in
+          url: https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html
+        - title: Upgrade your vSphere components
+          url: https://docs.netapp.com/us-en/hci/docs/task_hci_upgrade_all_vsphere.html 
+    - title: Earlier versions
+      links:
+        - title: NetApp Element Plug-in documentation 4.5 and earlier
+          url: /reference_earlier_versions.html
+    - title: More resources
+      links:
+        - title: SolidFire and Element documentation resources
+          url: https://www.netapp.com/data-storage/solidfire/documentation
+        - title: NetApp HCI documentation resources
+          url: https://www.netapp.com/hybrid-cloud/hci-documentation/
+        - title: NetApp Hybrid Cloud Control and Management Services Release Notes KB
+          url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
+        - title: NetApp Product Documentation
+          url: https://www.netapp.com/support-and-training/documentation/
