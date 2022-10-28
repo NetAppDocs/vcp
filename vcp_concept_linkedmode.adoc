@@ -17,7 +17,6 @@ You can use the NetApp Element Plug-in for VMware vCenter Server to manage clust
 
 [role="tabbed-block"] 
 ====
---
 .Element Plug-in 5.0 or later
 --
 Beginning with Element Plug-in 5.0 or later, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
@@ -67,7 +66,8 @@ Set up the storage cluster management, after registering the plug-in with each v
 . Add cluster2 to the Element Plug-in inventory.
 -- 
 
-.Element Plug-in 4.10 or earlier 
+.Element Plug-in 4.10 or earlier
+--
 For Element Plug-in 4.10 or earlier, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
 
 To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
