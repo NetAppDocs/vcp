@@ -18,28 +18,6 @@ You can use the NetApp Element Plug-in for VMware vCenter Server to manage clust
 [role="tabbed-block"] 
 ====
 --
-.Element Plug-in 4.10 or earlier 
-For Element Plug-in 4.10 or earlier, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
-
-To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
-
-.Steps
-.	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
-. Log in once to the vSphere Web Client for each linked vCenter Server.
-+
-Logging in initiates installation of the plug-in on the web client.
-. Log in to the web client of the destination vCenter that you want to manage the storage cluster.
-.	Add the storage cluster to the Element Plug-in inventory.
-
-.Example
-You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2. To set up the storage cluster management, after registering the plug-in with each vCenter Server, you perform the following steps:
-
-. Log in to the vCenter1 web client.
-. To manage cluster1 from the vCenter1 web client, add cluster1 to the Element Plug-in inventory.
-. Log in to the vCenter2 web client.
-. To manage cluster2 from the vCenter2 web client, add cluster2 to the Element Plug-in inventory.
---
-
 .Element Plug-in 5.0 or later
 --
 Beginning with Element Plug-in 5.0 or later, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
@@ -64,7 +42,7 @@ NOTE: For all other vSphere versions, installation of the plug-in on the web cli
 .. Log in to the web client of any vCenter Server in the Linked Mode environment.
 .. On the *NetApp Element Remote Plugin* line, select the *Instance* list.
 +
-image::../media/select_instance.png[Select the instance]
+image::../media/select_instance.PNG[Select the instance]
 
 .. Select the vCenter Server that you want to work with.
 +
@@ -75,7 +53,7 @@ NOTE: You can only view and manage the storage clusters associated with the sele
 .Example
 You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2.
 
-image::../media/two_vcenter_topology.png[vCenter and cluster topology]
+image::../media/two_vcenter_topology.PNG[vCenter and cluster topology]
 
 Set up the storage cluster management, after registering the plug-in with each vCenter Server using the following procedure.
 
@@ -88,6 +66,28 @@ Set up the storage cluster management, after registering the plug-in with each v
 . To manage cluster2 from the vCenter2 web client, select *vCenter2* from the list. 
 . Add cluster2 to the Element Plug-in inventory.
 -- 
+
+.Element Plug-in 4.10 or earlier 
+For Element Plug-in 4.10 or earlier, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
+
+To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
+
+.Steps
+.	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
+. Log in once to the vSphere Web Client for each linked vCenter Server.
++
+Logging in initiates installation of the plug-in on the web client.
+. Log in to the web client of the destination vCenter that you want to manage the storage cluster.
+.	Add the storage cluster to the Element Plug-in inventory.
+
+.Example
+You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2. To set up the storage cluster management, after registering the plug-in with each vCenter Server, you perform the following steps:
+
+. Log in to the vCenter1 web client.
+. To manage cluster1 from the vCenter1 web client, add cluster1 to the Element Plug-in inventory.
+. Log in to the vCenter2 web client.
+. To manage cluster2 from the vCenter2 web client, add cluster2 to the Element Plug-in inventory.
+--
 ====
 
 == Find more information
