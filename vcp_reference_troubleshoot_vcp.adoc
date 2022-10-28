@@ -83,7 +83,7 @@ Restore the cluster and QoSSIOC settings:
 . Disable cache and refresh the browser, for example, by using Ctrl+F5.
 . Check if the clusters and QoSSIOC settings are restored.
 +
-If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters].
+If the issue persists, you need to link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters for Element Plug-in 5.0 or later] or link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[re-add the clusters for Element Plug-in 4.10 or earlier].
 
 == Error registering plug-in using Registration UI
 

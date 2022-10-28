@@ -13,7 +13,7 @@ keywords: netapp, vcp, vcenter, plugin, element, upgrade
 :imagesdir: ../media/
 
 [.lead]
-For vCenter Plug-in 2.5 or later used with vSphere 6.7 or earlier, you must complete the following process to remove all files associated with the plug-in manually from vCenter Server. For vSphere 7.0, all files will be removed automatically after you unregister the plugin.
+For vCenter Plug-in 2.5 or later used with vSphere 6.7 or earlier, you must complete the following process to remove all files associated with the plug-in manually from vCenter Server. For vSphere 7.0 and later, all files will be removed automatically after you unregister the plugin.
 
 .What you'll need
 * vCenter Plug-in 2.5 or later

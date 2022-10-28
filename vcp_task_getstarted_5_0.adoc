@@ -35,7 +35,7 @@ Before you begin the installation, review link:reference_requirements_vcp.html[p
 
 == Install the management node
 
-You can manually https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html[install the management node] for your cluster running NetApp Element software using the appropriate image for your configuration.
+You can manually https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html[install the management node^] for your cluster running NetApp Element software using the appropriate image for your configuration.
 
 This manual process is intended for SolidFire all-flash storage administrators and NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
 
@@ -90,9 +90,6 @@ image::vcp_remote_plugin_registration_ui.png[remote plug-in registration utility
 NOTE: The user name and password credentials you enter must be for a user with vCenter Administrator role privileges.
 
 * The vCenter Administrator password.
-* (For in-house servers/dark sites) A custom URL for the plug-in ZIP.
-+
-NOTE: Most installations use the default path. To customize the URL if you are using an HTTP or HTTPS server (dark site) or have modified the ZIP file name or network settings, select *Custom URL*. For additional steps if you intend to customize a URL, see <<Modify vCenter properties for a dark site HTTP server, Modify vCenter properites for a dark site HTTP server>>.
 
 . Select *Register*.
 . (Optional) Verify registration status:
@@ -187,10 +184,10 @@ See this {url-peak}[KB^] to troubleshoot if the status is any of the following:
 After the QoSSIOC service is enabled, you can configure QoSSIOC performance on individual datastores.
 
 == Configure user accounts
-To enable access to volumes, you'll need to create at least one link:vcp_task_create_manage_user_accounts.html#create-an-account[user account].
+To enable access to volumes, you'll need to create at least one link:vcp_task_create_manage_user_accounts_5_0.html#create-an-account[user account].
 
 == Create datastores and volumes
-You can create link:vcp_task_datastores_manage.html#create-a-datastore[datastores and Element volumes] to start allocating storage.
+You can create link:vcp_task_datastores_manage_5_0.html#create-a-datastore[datastores and Element volumes] to start allocating storage.
 
 [discrete]
 == Find more information

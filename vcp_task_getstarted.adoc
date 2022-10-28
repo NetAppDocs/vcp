@@ -36,7 +36,7 @@ Before you begin the installation, review link:reference_requirements_vcp.html[p
 
 == Install the management node
 
-You can manually https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html[install the management node] for your cluster running NetApp Element software using the appropriate image for your configuration.
+You can manually https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html[install the management node^] for your cluster running NetApp Element software using the appropriate image for your configuration.
 
 This manual process is intended for SolidFire all-flash storage administrators and NetApp HCI administrators who are not using the NetApp Deployment Engine for management node installation.
 

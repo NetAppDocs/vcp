@@ -17,7 +17,7 @@ Using the NetApp Element Plug-in for vCenter Server, you can manage datastores t
 
 .What you'll need
 * To create and manage datastores, you must first create at least one user account.
-* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from plug-in extension point.
+* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from plug-in extension point.
 * Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
 
 .Options
@@ -43,7 +43,7 @@ You can create a datastore from the NetApp Element Management extension.
 NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
 
 * At least one user account must be created.
-* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
+* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
 
 .Steps
 
@@ -105,7 +105,7 @@ The volume access groups listed in *Required by Selected Initiators* are already
 +
 TIP: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
 +
-If the QoSSIOC service is not available, first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure QoSSIOC settings].
+If the QoSSIOC service is not available, first link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[configure QoSSIOC settings].
 
 .. Select *Enable QoS & SIOC*.
 
@@ -251,7 +251,7 @@ If a host initiator is already associated with a volume access group, the field 
 IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override and adjust QoS values for volume QoS settings.
 
 +
-If the QoSSIOC service is not available, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
+If the QoSSIOC service is not available, you must first link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
 
 .. Select *Enable QoS & SIOC*.
 .. Configure the *Burst Factor*.

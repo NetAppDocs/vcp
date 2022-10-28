@@ -21,10 +21,10 @@ Before you use NetApp Element Plug-in for VMware vCenter Server to manage your N
 -- 
 Verify that your system meets the requirements for use of Element vCenter Plug-in 5.0 or later.
 
-== VMware vSphere prerequisites
+.VMware vSphere prerequisites
 VMware vSphere 8.0 and 7.0 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the Element vCenter Plug-in.
 
-=== VMware vSphere versions supported by the plug-in
+.VMware vSphere versions supported by the plug-in
 The plug-in supports the following major versions of VMware software:
 
 * vSphere 8.0 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
@@ -36,10 +36,11 @@ IMPORTANT: VMware vSphere 6.5 and 6.7 reached end of support status on October 1
 .Element vCenter Plug-in 4.10 or earlier
 -- 
 Verify that your system meets the requirements for use of Element vCenter Plug-in 4.10 or earlier.
-== VMware vSphere prerequisites
+
+.VMware vSphere prerequisites
 VMware vSphere 7.0, 6.7, or 6.5 including vCenter and ESXi with software iSCSI adapter and iSCSI networking configured, is required to use the Element vCenter Plug-in.
 
-=== VMware vSphere versions supported by the plug-in
+.VMware vSphere versions supported by the plug-in
 The plug-in supports the following major versions of VMware software:
 
 * vSphere 7.0 and 7.0 Update 1 and 2 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
@@ -55,7 +56,7 @@ IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of t
 +
 IMPORTANT: The plug-in is not compatible with version 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
 
-=== End of vSphere 6.0 support
+.End of vSphere 6.0 support
 
 IMPORTANT: VMware vSphere 6.0 reached end of support status on March 12, 2020. Beginning with NetApp HCI 1.8 and Element 12, vSphere 6.0 is no longer supported. For details, see this https://mysupport.netapp.com/info/communications/ECMLP2863840.html[product communiqué].
 --

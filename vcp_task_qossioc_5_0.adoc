@@ -26,7 +26,7 @@ For Linked Mode, the Element vCenter plug-in registers all vCenter Servers using
 Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing the following tasks:
 
 == Setup tasks
-* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure QoSSIOC settings]
+* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure QoSSIOC settings]
 * <<Enabling QoSSIOC automation on datastores>>
 
 == Management tasks
@@ -40,7 +40,7 @@ Using the vCenter Plug-in, you can configure and manage QoSSIOC by completing th
 You can enable QoSSIOC automation and customize virtual machine disk (VMDK) performance levels for datastores after you enable the QoSSIOC service for the plug-in.
 
 .What you'll need
-You have link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configured the QoSSIOC service settings] on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
+You have link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[configured the QoSSIOC service settings] on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
 
 .About this task
 QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols). QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration
