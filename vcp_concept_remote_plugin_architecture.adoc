@@ -28,7 +28,7 @@ The vSphere Client remote plug-in architecture is designed to integrate plug-in 
 ==  Remote Element Plug-in for vCenter Server high level architecture
 Using NetApp Hybrid Cloud Control, the remote Element Plug-in is deployed in a docker container inside a management node along with management services.
  
-image:vcp_remote_plugin_high_level_architecture.PNG[Remote plug-in high level architecture]
+image:vcp_remote_plugin_high_level_architecture.png[Remote plug-in high level architecture]
 
 The remote Element Plug-in vCenter Server, registration service, and storage I/O control (SIOC) service share the same docker service but listen on different ports.
 

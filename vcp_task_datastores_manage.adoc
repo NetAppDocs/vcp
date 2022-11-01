@@ -45,7 +45,9 @@ You can create a datastore from the NetApp Element Management extension.
 NOTE: If you are using vCenter Linked Mode, be sure that you have added your cluster with the correct vCenter Server.
 
 * At least one user account must be created.
-* To use QoSSIOC service with datastores, you must first link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[configure settings] on the QoSSIOC Settings page from the plug-in extension point.
+* To use QoSSIOC service with datastores, you must first configure settings on the QoSSIOC Settings page from the plug-in extension point:
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 5.0 and later]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 4.10 and earlier]
 
 .Steps
 

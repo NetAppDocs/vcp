@@ -13,7 +13,7 @@ keywords: netapp, storage, accounts, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-link:vcp_concept_accounts.html[User accounts^] are used to control access to the storage resources on a NetApp Element software-based network.
+link:vcp_concept_accounts.html[User accounts] are used to control access to the storage resources on a NetApp Element software-based network.
 
 .Options
 * <<Create an account>>
