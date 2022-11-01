@@ -17,7 +17,7 @@ Before you use NetApp Element Plug-in for VMware vCenter Server to manage your N
 
 [role="tabbed-block"] 
 ==== 
-.Element vCenter Plug-in 5.10 or later
+.Element vCenter Plug-in 5.0 or later
 -- 
 Verify that your system meets the requirements for use of Element vCenter Plug-in 5.0 or later.
 

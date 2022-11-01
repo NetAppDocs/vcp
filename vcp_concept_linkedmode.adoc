@@ -5,7 +5,7 @@ summary:
 keywords: netapp, vcp, element, plugin, plug-in, linked mode
 ---
 
-= Linked mode and the plug-in
+= Linked mode and the vCenter Plug-in
 :hardbreaks:
 :nofooter:
 :icons: font

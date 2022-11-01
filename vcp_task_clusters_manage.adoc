@@ -17,12 +17,18 @@ You can edit a cluster running Element software, manage SSH configuration, set p
 
 .What you'll need
 
-* At least one cluster must be link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[added].
+* At least one cluster must be added: 
+
+** link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element vCenter Plug-in 5.0 and later]
+** link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element vCenter Plug-in 4.10 and earlier]
+
 +
 NOTE: You must add at least one cluster to use the plug-in extension point functions.
 
 * Current full Cluster Admin user credentials for the cluster.
-* Firewall rules enable open network communication between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
+* Firewall rules enable open network communication between the vCenter and the cluster MVIP the following TCP ports:
+** Beginning with Element vCenter Plug-in 5.0, on ports 443, 8333, and 8443.
+** For Element vCenter Plug-in 4.10 or earlier, on ports 443 and 8443.
 
 .Options
 
@@ -42,7 +48,10 @@ NOTE: You must add at least one cluster to use the plug-in extension point funct
 You can view cluster details from the vCenter Plug-in extension point.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster you want to edit.
 . Select *Actions*.
 . Select *Details*.
@@ -74,12 +83,15 @@ You can view cluster details from the vCenter Plug-in extension point.
 
 
 == Edit a cluster profile
-You can change the cluster User ID and password from the NetApp Element Configuration extension point.
+You can change the cluster User ID and password from the plug-in extension point.
 
 NOTE: This procedure describes how to change the cluster admin user name and password used by the plug-in. You cannot change the cluster admin credentials from the plug-in. See https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html[managing cluster administrator user accounts^] for instructions on changing credentials for a cluster administrator account.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Edit*.
@@ -93,36 +105,49 @@ NOTE: You cannot change the IP address or FQDN of a cluster after a cluster is a
 . Select *OK*.
 
 == Remove a cluster profile
-You can remove the profile of a cluster that you no longer want to manage from the vCenter Plug-in using the NetApp Element Configuration extension point.
+You can remove the profile of a cluster that you no longer want to manage from the vCenter Plug-in using the plug-in extension point.
 
 If you set up a Linked Mode group and want to reassign a cluster to another vCenter Server, you can remove the cluster profile and add it again with a different linked vCenter Server IP.
 
-NOTE: Using NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+[NOTE]
+====
+* Beginning with Element vCenter plug-in 5.0, to use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you must register the remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
+* Using Element vCenter plug-in 4.10 and earlier to manage cluster resources from other vCenter Servers using link:vcp_concept_linkedmode.html[vCenter Linked Mode] is limited to local storage clusters only.
+====
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster you want to remove.
 . Select *Actions*.
 . Select *Remove*.
 . Confirm the action.
 
 == Enable Encryption at Rest
-You can manually enable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+You can manually enable encryption at rest (EAR) functionality using the plug-in extension point.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select the cluster on which you want to enable encryption at rest.
 . Select *Actions*.
 . In the resulting menu, select *Enable EAR*.
 . Confirm the action.
 
 == Disable Encryption at Rest
-You can manually disable encryption at rest (EAR) functionality using the NetApp Element Configuration extension point.
+You can manually disable encryption at rest (EAR) functionality using the plug-in extension point.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tabb:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Select the check box for the cluster.
 . Select *Actions*.
 . In the resulting menu, select *Disable EAR*.
@@ -130,12 +155,15 @@ You can manually disable encryption at rest (EAR) functionality using the NetApp
 
 == Enable SSH
 
-You can manually enable a Secure Shell (SSH) session using the NetApp Element Configuration extension point. Enabling SSH allows NetApp technical support engineers access to storage nodes for troubleshooting for the duration you determine.
+You can manually enable a Secure Shell (SSH) session using the plug-in extension point. Enabling SSH allows NetApp technical support engineers access to storage nodes for troubleshooting for the duration you determine.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Enable SSH*.
@@ -153,7 +181,10 @@ You can enter a new duration for an SSH session.
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Change SSH*.
@@ -167,20 +198,22 @@ NOTE: To continue, you need to enter a value.
 . Select *Yes*.
 
 == Disable SSH
-You can manually disable Secure Shell (SSH) access to nodes in the storage cluster using the NetApp Element Configuration extension point.
-
+You can manually disable Secure Shell (SSH) access to nodes in the storage cluster using the plug-in extension point.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Disable SSH*.
 . Select *Yes*.
 
 == Set protection domain monitoring
-You can manually enable link:vcp_concept_protection_domains.html[protection domain monitoring] using the NetApp Element Configuration extension point. You can select a protection domain threshold based on node or chassis domains.
+You can manually enable link:vcp_concept_protection_domains.html[protection domain monitoring] using the plug-in extension point. You can select a protection domain threshold based on node or chassis domains.
 
 .What you'll need
 
@@ -188,7 +221,10 @@ You can manually enable link:vcp_concept_protection_domains.html[protection doma
 * Your cluster must have more than two nodes to use the protection domains feature. Compatibility with two-node clusters is not available.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Set Protection Domain Monitoring*.
@@ -202,7 +238,7 @@ You can manually enable link:vcp_concept_protection_domains.html[protection doma
 After you have set monitoring preferences, you can monitor protection domains from the link:vcp_task_reports_overview.html#reporting-overview-page-data[Reporting] tab of the NetApp Element Management extension point.
 
 == Shut down a cluster
-You can manually shut down all active nodes in a storage cluster using the NetApp Element Configuration extension point.
+You can manually shut down all active nodes in a storage cluster using the plug-in extension point.
 
 If you want to link:vcp_task_add_manage_nodes.html#restart-a-node[restart] rather than shut down the cluster, you can select all nodes from the Cluster page in the NetApp Element Management extension point and perform a restart.
 
@@ -212,7 +248,10 @@ NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 You have stopped I/O and disconnected all iSCSI sessions.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Shutdown*.
@@ -220,12 +259,18 @@ You have stopped I/O and disconnected all iSCSI sessions.
 
 
 == Expand your NetApp HCI infrastructure
-You can manually expand your NetApp HCI infrastructure by adding nodes using NetApp HCI. A link to a NetApp HCI UI for scaling your system is provided from the NetApp Element extension point. Additional links are provided within the NetApp Element Management extension point from the Getting Started and Cluster pages.
+You can manually expand your NetApp HCI infrastructure by adding nodes using NetApp HCI. A link to a NetApp HCI UI for scaling your system is provided from the plug-in extension point. Additional links are provided from the Getting Started and Cluster pages:
+
+* Beginning with Element vCenter plug-in 5.0, select NetApp Element Remote Plugin > Management.
+* For Element vCenter plug-in 4.10 and earlier, select the NetApp Element Management extension point.
 
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Configuration > Clusters*.
+. In your vSphere Web Client, open the *Clusters* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Configuration > Clusters*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Configuration > Clusters*.
 . Check the cluster.
 . Select *Actions*.
 . Select *Expand your NetApp HCI*.

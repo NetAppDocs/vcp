@@ -12,9 +12,9 @@ keywords: netapp, vcp, vcenter, plugin, element, remote, architecture
 :imagesdir: ./media/
 
 [.lead]
-Beginning with NetApp Element Plug-in for vCenter Server 5.0, the plug-in architecture changes from local to remote. With the introduction of the remote architecture, the plug-in is longer deployed inside a vCenter server. For Element Plug-in for vCenter Server 4.10 or earlier, the plug-in deployment remains local to the vCenter server to which it is registered.
+Beginning with NetApp Element Plug-in for vCenter Server 5.0, the plug-in architecture changes from local to remote. With the introduction of the remote architecture, the plug-in is no longer deployed inside a vCenter server. For Element Plug-in for vCenter Server 4.10 or earlier, the plug-in deployment remains local to the vCenter server to which it is registered.
 
-This page describes the remote plug-in architecture and its implementation by NetApp Element Plug-in for vCenter Server.
+This page describes the implementation of the remote NetApp Element Plug-in for vCenter Server.
 
 The vSphere Client remote plug-in architecture is designed to integrate plug-in functionality into the vSphere Client without having to run inside vCenter Server. The remote plug-in architecture supports plug-in isolation, enables scale-out of plug-ins that operate in large vSphere environments, and provides the following benefits:
 
@@ -23,27 +23,7 @@ The vSphere Client remote plug-in architecture is designed to integrate plug-in 
 * An incompatible plug-in does not interfere with vCenter Server operation.
 * You can deploy a number of plug-in versions within the same vSphere environment.
 * The remote plug-in user interface only needs to communicate with a single back-end server.
-* The topology of deployed plug-ins is well defined and easy to understand which supports troubleshooting.
-
-== Communication paths within the remote plug-in architecture
-This following diagram shows the communication paths between a plug-in, its user interface, and the vCenter Server to which the user interface is connected. The remote plug-in server is deployed on a management node along with management services which includes NetApp Hybrid Cloud Control.
-
-image:remote_plugin_architecture.PNG[]
-
-[cols=2*,cols="25,75"]
-|===
-|1 
-|The remote plug-in identifier registers the plug-in manifest file with the vCenter Server Extension Manager by using the Web Services API.
-|2 |A web browser downloads user interface elements of the vSphere Client from the `vsphere-ui` service in vCenter Server.
-|3 |The `vsphere-ui` service downloads and parses the plug-in manifest file to determine where the plug-in extends the user interface.
-|4 |The browser downloads user interface elements of the plug-in from the plug-in server which is deployed on the management node.
-|5 |The plug-in user interface requests data from the plug-in server.
-|6 |The plug-in server uses the Web Services API to interact with vCenter Server.
-|===
-
-On the front end, the `vsphere-ui` service downloads and parses the plug-in manifest and serves the UI components to the browser, including references to the plug-in components, which are served by the plug-in server. These paths use simple HTTPS communications.
-
-The back-end communication paths between the plug-in server, which is deployed on a management node, and the vCenter Server Web Services API use SOAP messages over HTTPS.
+* Deployed plug-in topology is well defined and easy to understand which supports troubleshooting.
 
 ==  Remote Element Plug-in for vCenter Server high level architecture
 Using NetApp Hybrid Cloud Control, the remote Element Plug-in is deployed in a docker container inside a management node along with management services.
@@ -62,13 +42,13 @@ The remote Element Plug-in vCenter Server, registration service, and storage I/O
 
 == Remote Element Plug-in communication paths overview
 
-You must first register the remote plug-in with the vCenter Server using the registration service running on management node (`https://<mnode-ip>:9443/`). On the registration page, you can see the vCenter server username, password, and the `plugin.json` manifest file path. 
+You must first register the remote plug-in with the vCenter Server using the registration service running on a management node (`https://<mnode-ip>:9443/`). On the registration page, you can see the vCenter server username, password, and the `plugin.json` manifest file path. 
 
 NOTE: The default path is populated in the UI. No action is required.
 
 If the details provided are correct, the registration service registers the plug-in with vCenter Server and enters the vCenter details in the plug-in server database.
 
-After registration successfully completes, the plug-in server downloads the `plugin.json` manifest file and initiates the remote plug-in deployment which involves configuring the remote plugin as an extension with the `vsphere-ui` client. After the deployment completes, you can access the *NetApp Element Remote Plugin* extension point from the `vsphere-ui` web client.
+After registration completes, the plug-in server downloads the `plugin.json` manifest file and initiates the remote plug-in deployment which involves configuring the remote plugin as an extension with the `vsphere-ui` client. After the deployment completes, you can access the *NetApp Element Remote Plugin* extension point from the `vsphere-ui` web client.
 
 All communication from the plug-in UI occurs through the vCenter Server which runs a reverse proxy service using HTTPS protocol that is responsible for forwarding the requests for the remote plug-in service. The plug-in server interacts with the SIOC service using HTTPS basic authentication and an Element cluster using the Element Java software development kit (SDK).
 
