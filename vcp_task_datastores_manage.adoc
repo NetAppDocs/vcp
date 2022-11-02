@@ -36,7 +36,7 @@ TIP: Monitor datastore operations for completion using task monitoring in vSpher
 
 == Create a datastore
 
-You can create a datastore from the NetApp Element Management extension.
+You can create a datastore from the plug-in extension.
 
 .What you'll need
 * At least one host must be connected to the vCenter Server.

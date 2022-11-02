@@ -5,7 +5,7 @@ summary:
 keywords: netapp, vcp, element, plugin, plug-in, linked mode
 ---
 
-= Linked mode and the vCenter Plug-in
+= Linked Mode and the vCenter Plug-in
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ You can use the NetApp Element Plug-in for VMware vCenter Server to manage clust
 ====
 .Element Plug-in 5.0 or later
 --
-Beginning with Element vCenter Plug-in 5.0, you register the Element Plug-in from a separate management node with each vCenter Server that will be managing NetApp SolidFire storage clusters.  
+Beginning with Element vCenter Plug-in 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters.  
 
 .Example
 
@@ -42,7 +42,7 @@ NOTE: For all other vSphere versions, installation of the plug-in on the web cli
 .. Log in to the web client of any vCenter Server in the Linked Mode environment.
 .. On the *NetApp Element Remote Plugin* line, select the *Instance* list.
 +
-image:select_instance.PNG[Select the instance]
+image:select_instance.png[Select the instance]
 
 .. Select the vCenter Server that you want to work with.
 +

@@ -36,7 +36,7 @@ sidebar:
           url: /vcp_concept_accounts.html
         - title: Protection domains
           url: /vcp_concept_protection_domains.html
-        - title: Linked mode and the vCenter Plug-in
+        - title: Linked Mode and the vCenter Plug-in
           url: /vcp_concept_linkedmode.html
         - title: QoSSIOC
           url: /vcp_concept_qossioc.html
@@ -48,7 +48,7 @@ sidebar:
       entries:
         - title: Install and configure Element Plug-in 5.0 and later for vCenter Server 7.0 and later
           url: /vcp_task_getstarted_5_0.html
-        - title: Install and configure Element Plug-in 4.10 and earlier for vCenter Server 7.0 and earlier
+        - title: Install and configure Element Plug-in 4.10 and earlier
           url: /vcp_task_getstarted.html
     - title: Upgrade the plug-in
       url: /task_vcp_upgrades.html

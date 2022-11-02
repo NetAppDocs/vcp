@@ -4,7 +4,7 @@ permalink: vcp_task_getstarted.html
 summary: You can install and configure your Element Plug-in for vCenter Server 4.10 and earlier to use with Element storage.
 keywords: netapp, hci, vcp, vcenter, element, install, setup
 ---
-= Install and configure Element Plug-in 4.10 and earlier for vCenter Server 7.0 and earlier
+= Install and configure Element Plug-in 4.10 and earlier
 :url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
