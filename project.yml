@@ -28,7 +28,7 @@ sidebar:
           url: /vcp_concept_accounts.html
         - title: Protection domains
           url: /vcp_concept_protection_domains.html
-        - title: Linked mode and the vCenter Plug-in
+        - title: Linked Mode and the vCenter Plug-in
           url: /vcp_concept_linkedmode.html
         - title: QoSSIOC
           url: /vcp_concept_qossioc.html
