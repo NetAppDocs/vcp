@@ -4,8 +4,7 @@ permalink: vcp_task_getstarted_5_0.html
 summary: You can install and configure your Element Plug-in for vCenter Server 5.0 and later to use with Element storage.
 keywords: netapp, hci, vcp, vcenter, element, install, setup
 ---
-
-= Install and configure the NetApp Element Plug-in for vCenter Server 5.0 and later
+= Install and configure Element Plug-in 5.0 and later for vCenter Server 7.0 and later
 :url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :hardbreaks:
 :nofooter:
@@ -56,7 +55,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, you must register separate plug-ins with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register a separate remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
+NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node with each vCenter Server that will be managing NetApp SolidFire storage clusters. 
 
 .Steps
 
@@ -142,7 +141,7 @@ IMPORTANT: The vSphere HTML5 web client and Flash web client have separate datab
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register a separate remote Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node.
+* To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node with each vCenter Server that will be managing NetApp SolidFire storage clusters. 
 ====
 
 . Select *OK*.

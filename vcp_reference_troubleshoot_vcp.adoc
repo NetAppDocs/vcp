@@ -30,6 +30,7 @@ You need to be aware of some of the common issues with the NetApp Element Plug-i
 * <<Error message for QoSSIOC status>>
 * <<QoSSIOC service shown as available but is unavailable>>
 * <<QoSSIOC is enabled for datastore but unavailable>>
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3[vCenter plug-in deployment fails after upgrading to VMware vSphere 7.0 Update 3^]
 
 == Plug-in registration successful but icons do not appear in web client
 

@@ -46,9 +46,9 @@ sidebar:
       url: /reference_requirements_vcp.html
     - title: Install and configure the NetApp Element Plug-in for vCenter Server
       entries:
-        - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
+        - title: Install and configure Element Plug-in 5.0 and later for vCenter Server 7.0 and later
           url: /vcp_task_getstarted_5_0.html
-        - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
+        - title: Install and configure Element Plug-in 4.10 and earlier for vCenter Server 7.0 and earlier
           url: /vcp_task_getstarted.html
     - title: Upgrade the plug-in
       url: /task_vcp_upgrades.html

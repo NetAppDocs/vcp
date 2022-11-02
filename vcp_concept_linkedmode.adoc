@@ -19,9 +19,12 @@ You can use the NetApp Element Plug-in for VMware vCenter Server to manage clust
 ====
 .Element Plug-in 5.0 or later
 --
-Beginning with Element Plug-in 5.0, you must register the Element Plug-in with each vCenter Server that will be managing NetApp SolidFire storage clusters from a separate management node. For example:
-Register vCenter1: `https://[mnode1]:9443/solidfire-mnode/registration`
-Register vCenter2: `https://[mnode2]:9443/solidfire-mnode/registration`
+Beginning with Element vCenter Plug-in 5.0, you register the Element Plug-in from a separate management node with each vCenter Server that will be managing NetApp SolidFire storage clusters.  
+
+.Example
+
+* Register vCenter1: `https://[mnode1]:9443/solidfire-mnode/registration`
+* Register vCenter2: `https://[mnode2]:9443/solidfire-mnode/registration`
 
 To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
 

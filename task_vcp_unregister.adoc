@@ -53,12 +53,6 @@ $em.ExtensionList | ft -property Key
 Disconnect-VIServer * -Confirm:$false
 ----
 
-* For vCenter Plug-in 2.6.1 or earlier:
-.. Enter the URL for the registration utility in a browser or locate the utility in the program directory:
-** `https://<FDVAorManagementNodeIP>:8443`
-** `/opt/solidfire/vcp/bin/vcp-reg.sh`
-.. In the vCenter Plugin Register/Unregister window, select *Unregister*.
-
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
