@@ -17,7 +17,7 @@ NetApp Element Plug-in for vCenter Server 5.0 contains the remote plug-in archit
 
 NetApp Element Plug-in for VMware vCenter Server 5.0 supports vSphere 8.0 and vSphere 7.0 including vCenter Server, ESXi, and vSphere HTML5 Web Client. Version 5.0 also contains resolved issues, including security vulnerabilities, that might significantly reduce disruptions seen during upgrades and enhance daily operation in some environments.
 
-Element vCenter plug-in 5.0 is available with the 2.22.7 release of management services.
+Element vCenter plug-in 5.0 is available with the 2.22.7 release of management services. If you do not use the plug-in, this upgrade is optional.
 
 == NetApp Element Plug-in for vCenter Server 4.10
 NetApp Element Plug-in for vCenter Server 4.10 contains resolved issues, including security vulnerabilities, that might significantly reduce disruptions seen during upgrades and enhance daily operation in some environments. In version 4.10 of the plug-in, the online help links have transitioned to this link:index.html[documentation link]. To access the online help links from within the plug-in, you must have network access. 
