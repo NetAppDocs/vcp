@@ -125,7 +125,6 @@ This procedure describes how to add a cluster profile so that the cluster can be
 
 See https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html[managing cluster administrator user accounts^] for instructions on changing credentials for a cluster administrator account.
 
-IMPORTANT: The vSphere HTML5 web client and Flash web client have separate databases that cannot be combined. Clusters added in one client will not be visible in the other. If you intend to use both clients, add your clusters in both.
 
 .Steps
 
