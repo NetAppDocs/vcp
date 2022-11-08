@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: vcp_concept_linkedmode.html
-summary:
+summary: You can use the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using vCenter Linked Mode.
 keywords: netapp, vcp, element, plugin, plug-in, linked mode
 ---
 
@@ -17,9 +17,9 @@ You can use the NetApp Element Plug-in for VMware vCenter Server to manage clust
 
 [role="tabbed-block"] 
 ====
-.Element Plug-in 5.0 or later
+.Element Plug-in for vCenter 5.0 or later
 --
-Beginning with Element vCenter Plug-in 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters.  
+Beginning with Element Plug-in 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters.
 
 .Example
 
@@ -30,19 +30,13 @@ To set up storage cluster management in a vSphere Linked Mode environment, you c
 
 .Steps
 
-. Deploy the Element Plug-in.
-.. Register the plug-in from a separate management node for each vCenter Server in the Linked Mode environment that will be using the plug-in.
-.. For vSphere 7.0 and later, log in once to the vSphere Web Client for each linked vCenter Server.
-+
-Logging in initiates installation of the plug-in on the web client.
-+
-NOTE: For all other vSphere versions, installation of the plug-in on the web client is automatically initiated and does not require a login.
+. Deploy the Element Plug-in by registering the plug-in from a separate management node for each vCenter Server in the Linked Mode environment that uses the plug-in.
 
 . Use the Element Plug-in.
 .. Log in to the web client of any vCenter Server in the Linked Mode environment.
 .. On the *NetApp Element Remote Plugin* line, select the *Instance* list.
 +
-image:select_instance.png[Select the instance]
+image:select_instance.png[select the instance from the list]
 
 .. Select the vCenter Server that you want to work with.
 +
@@ -67,14 +61,14 @@ After registering the plug-in with a separate management node for each vCenter S
 . Add cluster2 to the Element Plug-in inventory.
 -- 
 
-.Element Plug-in 4.10 or earlier
+.Element Plug-in for vCenter 4.10 or earlier
 --
 For Element Plug-in 4.10 or earlier, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
 
 To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
 
 .Steps
-.	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
+.	Register the plug-in with each vCenter Server in the Linked Mode environment that uses the plug-in.
 . Log in once to the vSphere Web Client for each linked vCenter Server.
 +
 Logging in initiates installation of the plug-in on the web client.
@@ -94,3 +88,4 @@ You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage c
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
