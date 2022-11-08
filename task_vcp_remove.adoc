@@ -4,7 +4,6 @@ permalink: task_vcp_remove.html
 summary: Upgrade to the latest NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, vcp, vcenter, plugin, element, upgrade
 ---
-
 = Remove the vCenter Plug-in
 :hardbreaks:
 :nofooter:
