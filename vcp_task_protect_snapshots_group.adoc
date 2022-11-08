@@ -30,7 +30,11 @@ You can create a snapshot of a group of volumes immediately or create a schedule
 You can later change replication settings or the retention period for a group snapshot. The retention period you specify begins when you enter the new interval. When you set a retention period, you can select a period that begins at the current time (retention is not calculated from the snapshot creation time). You can specify intervals in minutes, hours, and days.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Management*.
+. From the vCenter Plug-in, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -63,7 +67,11 @@ NOTE: When you set a retention period, you select a period that begins at the cu
 You might want to verify that the snapshot was added.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -81,7 +89,11 @@ NOTE: If two or more clusters are added, ensure that the cluster that you intend
 You can clone a group of volumes from a point-in-time group snapshot. After you create the volumes, you can use them like any other volume in the system.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -106,7 +118,11 @@ NOTE: Volume size and current cluster load affect the time needed to complete a 
 You can roll back a group of active volumes to a group snapshot. This restores all the associated volumes in a group snapshot to their state at the time the group snapshot was created. This procedure also restores volume sizes to the size recorded in the original snapshot. If the system has purged a volume, all snapshots of that volume were also deleted at the time of the purge; the system does not restore any deleted volume snapshots.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+. From the vCenter Plug-in, open the *Protection* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 
@@ -126,7 +142,11 @@ You can delete a group snapshot from the system. When you delete the group snaps
 If you delete a volume or snapshot that is a member of a group snapshot, you can no longer roll back to the group snapshot. However, you can roll back each volume individually.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management* > *Protection*.
+.  From the vCenter Plug-in, open the *Protection* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Protection*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Protection*.
+
 +
 NOTE: If two or more clusters are added, ensure that the cluster that you intend to use is selected in the navigation bar.
 

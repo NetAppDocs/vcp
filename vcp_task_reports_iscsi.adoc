@@ -17,8 +17,11 @@ You can view information about iSCSI sessions that are connected to the selected
 
 .Steps
 
-. From the vCenter Plug-in, select *NetApp Element Management*.
-. Select *Reporting* > *iSCSI Sessions*.
+. From the vCenter Plug-in, open the *Reporting* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Reporting*.
+. Select *iSCSI Sessions*.
 
 == iSCSI session data
 

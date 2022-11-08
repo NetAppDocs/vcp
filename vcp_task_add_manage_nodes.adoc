@@ -13,7 +13,7 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-Using the vCenter Plug-in, you can add https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes[storage nodes] when a cluster is created or when more storage is needed. Storage nodes running Element software can be added using the NetApp Element Management extension point. NetApp HCI compute nodes must be added and managed outside of the plug-in in vSphere.
+Using the plug-in, you can add https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes[storage nodes] when a cluster is created or when more storage is needed. You can also add storage nodes running Element software. You must add NetApp HCI compute nodes outside of the plug-in in vSphere.
 
 * <<Add a node to a cluster>>
 * <<View node details>>
@@ -33,14 +33,18 @@ You can add storage nodes to your cluster using the vCenter Plug-in.
 NOTE: If the node you are adding has a different major or minor version of NetApp Element software than the version running on the cluster, the cluster asynchronously updates the node to the version of NetApp Element software running on the cluster master. After the node is updated, it automatically adds itself to the cluster. During this asynchronous process, the node will be in a `pendingActive` state.
 
 .About this task
-Nodes require initial configuration when they are first powered on. When the node has been set up and configured, it registers itself on the cluster identified when the node was configured and appears in the list of pending nodes on the *Cluster > Nodes* page of the NetApp Element Management extension point.
+Nodes require initial configuration when they are first powered on. When the node has been set up and configured, it registers itself on the cluster identified when the node was configured and appears in the list of pending nodes on the *Cluster > Nodes* page of the plugin extension point.
 
 You can add nodes of smaller or larger capacities to an existing cluster.
 
-The procedure is the same for adding Fibre Channel nodes or storage nodes that are running NetApp Element software.
+The procedure is the same for adding FC nodes or storage nodes that are running NetApp Element software.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -55,10 +59,14 @@ When the action is complete, the node appears in the list of active nodes for th
 
 == View node details
 
-You can view a list of the nodes in the cluster on the Nodes page of the Cluster tab from the NetApp Element Management extension point. You must select Active view to see the list of active nodes. You can change the view by selecting `Pending`, `PendingActive`, and `All` options using the drop-down filter.
+You can view a list of the nodes in the cluster on the Nodes page of the Cluster tab from the plug-in extension point. You must select Active view to see the list of active nodes. You can change the view by selecting `Pending`, `PendingActive`, and `All` options using the drop-down filter.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -70,7 +78,7 @@ You can view information such as node IDs, the name and state of each node, conf
 
 == Restart a node
 
-You can restart one or more active nodes in a cluster using the NetApp Element Management extension point.
+You can restart one or more active nodes in a cluster using the plug-in extension point.
 
 .What you'll need
 You have stopped I/O and disconnected all iSCSI sessions if you are restarting more than one node simultaneously.
@@ -83,7 +91,11 @@ IMPORTANT: This method restarts all networking services on a node, causing tempo
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -95,7 +107,7 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 
 == Shut down a node
 
-You can shut down one or more active nodes in a cluster using the NetApp Element Management extension point. To shut down the cluster, you can select all cluster nodes and perform a simultaneous shutdown.
+You can shut down one or more active nodes in a cluster using the plug-in extension point. To shut down the cluster, you can select all cluster nodes and perform a simultaneous shutdown.
 
 .What you'll need
 You have stopped I/O and disconnected all iSCSI sessions if you are restarting more than one node simultaneously.
@@ -105,7 +117,11 @@ You have stopped I/O and disconnected all iSCSI sessions if you are restarting m
 NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -125,10 +141,14 @@ You can remove nodes from a cluster without service interruption when their stor
 You have removed all the drives in the node from the cluster. You cannot remove a node until the `RemoveDrives` process has completed and all data has been migrated away from the node.
 
 .About this task
-At least two Fibre Channel nodes are required for Fibre Channel connectivity in a NetApp Element cluster. If only one Fibre Channel node is connected, the system triggers alerts in the Event Log until you add another Fibre Channel node to the cluster, even though all Fibre Channel network traffic continues to operate with only one Fibre Channel node.
+At least two FC nodes are required for FC connectivity in a NetApp Element cluster. If only one FC node is connected, the system triggers alerts in the Event Log until you add another FC node to the cluster, even though all FC network traffic continues to operate with only one FC node.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -140,3 +160,7 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 . Confirm the action.
 +
 Any nodes removed from a cluster appear in the list of Pending nodes.
+
+== Find more information
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
