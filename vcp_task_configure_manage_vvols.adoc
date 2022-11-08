@@ -134,7 +134,7 @@ NOTE: If you are using vCenter Linked Mode, only hosts available to the vCenter 
 . Verify that the associated datastore has also been created on the selected host in vCenter.
 
 == Monitor virtual volume resources
-You can review virtual volume component performance and settings from the plug-in:
+You can review virtual volume component performance and settings from the plug-in extension point:
 
 ** <<Monitoring VVols>>
 ** <<Monitoring storage containers>>

@@ -49,7 +49,7 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 * You have deployed a management node OVA running Element software 11.3 or later.
 * Your management node is powered on with its IP address or DHCP address configured.
 * You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
-* Your firewall rules allow the following open link:reference_requirements_vcp.html[network communication] between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.
+* Your firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.
 
 .About this task
 
@@ -222,7 +222,7 @@ NOTE: After you have completed the registration procedure, you can remove `allow
 
 After successful installation or upgrade, NetApp Element Configuration and Management extension points appear in the Shortcuts tab of the vSphere Web Client and in the side panel.
 
-image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere 4.10 and earlier]
+image::vcp_plugin_icons_home_page.png[The plug-in extension points appear in vSphere]
 
 NOTE: If the vCenter Plug-in icons are not visible, see the link:vcp_reference_troubleshoot_vcp.html#plug-in-registration-successful-but-icons-do-not-appear-in-web-client[troubleshooting documentation].
 

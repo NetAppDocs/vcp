@@ -42,8 +42,8 @@ You can enable QoSSIOC automation and customize virtual machine disk (VMDK) perf
 .What you'll need
 You have configured the QoSSIOC service settings on the QoSSIOC Settings page and the *QoSSIOC Status* field displays `UP`.
 
-** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 5.0 and later]
-** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 4.10 and earlier]
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 5.0 and later]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 4.10 and earlier]
 
 .About this task
 QoSSIOC is available only with standard datastores. It does not work with virtual volumes (VVols). QoSSIOC adjusts QoS values on standard Element volumes when virtual machine events occur, such as power on or power off events, guest restarts or shutdown, or reconfiguration activity.
