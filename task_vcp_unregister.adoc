@@ -22,7 +22,7 @@ You can unregister the NetApp Element Plug-in for VMware vCenter Server from vCe
 .About this task
 For vSphere 6.7 and earlier, unregistering the plug-in has the same effect as disabling it but does not remove all associated files and folders that are installed locally.  To remove all plug-in files, see instructions on link:task_vcp_remove.html[removing the plugin].
 
-For vSphere 8.0 and 7.0, all files are removed automatically after you unregister the plugin.
+For vSphere 7.0 and later, it is not necessary to remove files after you unregister the plugin.
 
 .Steps
 . To unregister the plug-in, follow the procedure for your installed version:

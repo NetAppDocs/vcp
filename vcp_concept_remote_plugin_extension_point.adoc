@@ -24,7 +24,7 @@ The following tabs are available from the NetApp Element Remote Plugin extension
 
 == Getting Started
 
-Introduces the extension points for the plug-in and the actions that can be performed. You can hide Getting Started pages from each page or restore them from the *About* tab.
+The Getting Started tab introduces the extension points for the plug-in and the actions that can be performed. You can hide the Getting Started pages from each page or restore them from the *About* tab.
 
 == Configuration
 
@@ -42,7 +42,11 @@ The following tabs are available from the *Configuration* tab:
 
 == Management
 
-The *Management* tab allows you to view cluster information, manage datastores, volumes, user accounts, access groups, and initiators, manage individual group snapshots, and add and manage drives and nodes.
+Using the *Management* tab, you can perform the following activities:
+ 
+* View cluster information
+* Manage datastores, volumes, user accounts, access groups, and initiators 
+* Manage individual group snapshots and add and manage drives and nodes
 
 NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
 
@@ -57,7 +61,7 @@ The cluster navigation bar allows you to quickly switch between clusters that ha
 
 The following tabs are available from the *Management* tab:
 
-* *Reporting*: Displays information about cluster components and provides a cluster performance overview. You can also find information about events, alerts, iSCSI sessions, running tasks, and volume performance from the tab.
+* *Reporting*: Displays information about cluster components and provides a cluster performance overview. You can also find information about events, alerts, iSCSI sessions, running tasks, and performance volumes from the tab.
 * *Management*: Create and manage datastores, volumes, user accounts, access groups, and initiators. You can also perform backup operations, clones, and snapshots. QoS policies are available to be created and managed using NetApp Element software 10 or later.
 * *Protection*: Manage individual and group snapshots. You can also create schedules for snapshot creation, pair clusters for real-time replication, and manage volume pairs.
 * *Cluster*: Add and manage drives and nodes. You can also create and manage VLANs.

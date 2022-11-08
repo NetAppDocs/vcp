@@ -55,7 +55,7 @@ You must register the vCenter Plug-in on every vCenter Server where you need to 
 
 For Linked Mode environments, you must register separate plug-ins with each vCenter Server in the environment to keep MOB data in sync and to be able to upgrade the plug-in. When a vSphere Web Client connects to a vCenter Server where your plug-in is not registered, the plug-in is not visible to the client.
 
-NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters. 
+NOTE: To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
 
 .Steps
 
@@ -140,7 +140,7 @@ See https://docs.netapp.com/us-en/element-software/storage/concept_system_manage
 [NOTE]
 ====
 * The hosts for a cluster are exclusive to each vCenter Server. Be sure that the vCenter Server you select has access to the intended hosts. You can remove a cluster, reassign it to another vCenter Server, and add it again if you decide later to use different hosts.
-* To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node for each vCenter Server that will be managing NetApp SolidFire storage clusters. 
+* To use link:vcp_concept_linkedmode.html[vCenter Linked Mode], you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
 ====
 
 . Select *OK*.

@@ -17,7 +17,7 @@ Before you use NetApp Element Plug-in for VMware vCenter Server to manage your N
 
 [role="tabbed-block"] 
 ==== 
-.Element vCenter Plug-in 5.0 or later
+.Element Plug-in for vCenter 5.0 or later
 -- 
 Verify that your system meets the requirements for use of Element vCenter Plug-in 5.0 or later.
 
@@ -33,7 +33,7 @@ The plug-in supports the following major versions of VMware software:
 IMPORTANT: VMware vSphere 6.5 and 6.7 reached end of support status on October 15, 2022. Beginning with Element Plug-in 5.0, vSphere 6.5 and 6.7 are no longer supported. For details, see this https://core.vmware.com/blog/reminder-vsphere-6567-end-general-support[article^].
 --
 
-.Element vCenter Plug-in 4.10 or earlier
+.Element Plug-in for vCenter 4.10 or earlier
 -- 
 Verify that your system meets the requirements for use of Element vCenter Plug-in 4.10 or earlier.
 
@@ -54,7 +54,7 @@ IMPORTANT: The plug-in is not compatible with version 6.7 U2 build 13007421 of t
 
 * vSphere 6.5, including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 +
-IMPORTANT: The plug-in is not compatible with version 6.5 for Element Plug-in for VMware vCenter Server 4.6, 4.7, and 4.8.
+IMPORTANT: The plug-in is not compatible with version 6.5 for Element Plug-in for vCenter 4.6, 4.7, and 4.8.
 
 .End of vSphere 6.0 support
 
