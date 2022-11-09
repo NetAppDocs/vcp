@@ -21,7 +21,7 @@ You can use the plug-in user interface to discover and configure clusters, and t
 
 * *Registration utility*: A tool that allows you to manage the link:vcp_concept_qossioc.html[QoSSIOC] service and plug-in registration with vCenter.
 +
-NOTE: Beginning with Element vCenter Plug-in 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
+NOTE: Beginning with Element Plug-in for vCenter 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
 
 * *Management services*: Microservices that include the QoSSIOC service for the vCenter Plug-in. Upgrades to the plug-in are released as part of a management services bundle.
 +

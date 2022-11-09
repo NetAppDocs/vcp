@@ -138,7 +138,7 @@ TIP: By default, the maximum SIOC disk shares are set to `Unlimited`. In a large
 . To view the progress of the task, use Task Monitoring in vSphere. If the datastore does not appear in the list, refresh the view.
 
 == View the datastore list
-You can view available datastores on the Datastores page from the NetApp Element Management extension point.
+You can view available datastores on the Datastores page from plug-in extension point.
 
 . In your vSphere Web Client, open the *Management* tab:
 +

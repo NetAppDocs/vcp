@@ -413,10 +413,10 @@ When you restore a volume from a backup on an object store such as OpenStack Swi
 ==== Restore a volume from backup on an Amazon S3 object store
 You can restore a volume from a backup on an Amazon S3 object store using the plug-in.
 
-. From the vCenter Plug-in, open the *Management* tab:
+. From the vCenter Plug-in, open the *Reporting* tab:
 +
-* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
-* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Reporting*.
 . If two or more clusters are added, select the cluster in the navigation bar.
 . Select the *Event Log* subtab.
 . Select the backup event that created the backup you need to restore.
