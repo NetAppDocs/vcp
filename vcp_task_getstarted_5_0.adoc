@@ -13,7 +13,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 :imagesdir: ./media/
 
 [.lead]
-You can install the most recent version of the NetApp Element Plug-in for vCenter Server directly to your vCenter and access the plug-in with the vSphere Web Client.
+Beginning with NetApp Element Plug-in for vCenter Server 5.0, you can install the most recent version of the Element Plug-in directly to your vCenter and access the plug-in with the vSphere Web Client.
 
 After installation is complete, you can use the quality of service based on storage I/O control (QoSSIOC) service as well as other services of the vCenter Plug-in.
 
@@ -44,7 +44,7 @@ Deploying the vCenter Plug-in package in the vSphere Web Client involves registe
 .What you'll need
 
 * You have vCenter Administrator role privileges to register a plug-in.
-* You have deployed a management node OVA running Element software 11.3 or later.
+* You have deployed a management node OVA running Element software 12.3.x or later.
 * Your management node is powered on with its IP address or DHCP address configured.
 * You are using an SSH client or web browser (Chrome 56 or later or Firefox 52 or later).
 * Your firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the storage cluster MVIP on TCP ports 443, 8443, 8333, and 9443. Port 9443 is used for registration and can be closed after registration is complete. If you have enabled virtual volumes functionality on the cluster, ensure TCP port 8444 is also open for VASA provider access.

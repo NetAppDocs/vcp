@@ -19,16 +19,16 @@ You can edit a cluster running Element software, manage SSH configuration, set p
 
 * At least one cluster must be added: 
 
-** link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element vCenter Plug-in 5.0 and later]
-** link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element vCenter Plug-in 4.10 and earlier]
+** link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element Plug-in for vCenter 5.0 and later]
+** link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in[Add a cluster using Element Plug-in for vCenter 4.10 and earlier]
 
 +
 NOTE: You must add at least one cluster to use the plug-in extension point functions.
 
 * Current full Cluster Admin user credentials for the cluster.
-* Firewall rules enable open network communication between the vCenter and the cluster MVIP the following TCP ports:
-** Beginning with Element vCenter Plug-in 5.0, on ports 443, 8333, and 8443.
-** For Element vCenter Plug-in 4.10 or earlier, on ports 443 and 8443.
+* Firewall rules allow open network communication between the vCenter and the cluster MVIP on the following TCP ports:
+** Beginning with Element Plug-in for vCenter 5.0, on ports 443, 8333, and 8443.
+** For Element Plug-in for vCenter 4.10 or earlier, on ports 443 and 8443.
 
 .Options
 
@@ -259,7 +259,9 @@ You have stopped I/O and disconnected all iSCSI sessions.
 
 
 == Expand your NetApp HCI infrastructure
-You can manually expand your NetApp HCI infrastructure by adding nodes using NetApp HCI. A link to a NetApp HCI UI for scaling your system is provided from the plug-in extension point. Additional links are provided from the Getting Started and Cluster pages:
+You can manually expand your NetApp HCI infrastructure by adding nodes using NetApp HCI. A link to a NetApp HCI UI for scaling your system is provided from the plug-in extension point. 
+
+Additional links are provided from the Getting Started and Cluster pages:
 
 * Beginning with Element vCenter plug-in 5.0, select NetApp Element Remote Plugin > Management.
 * For Element vCenter plug-in 4.10 and earlier, select the NetApp Element Management extension point.

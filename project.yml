@@ -10,11 +10,11 @@ sidebar:
   entries:
     - title: NetApp Element Plug-in for VMware vCenter Server documentation
       url: /index.html
-    - title: NetApp Element Plug-in for vCenter Server product overview
+    - title: NetApp Element Plug-in for VMware vCenter Server product overview
       url: /concept_vcp_product_overview.html
     - title: Release Notes
       entries:
-        - title: What's new in NetApp Element Plug-in for vCenter Server
+        - title: What's new in NetApp Element Plug-in for VMware vCenter Server
           url: /rn_whatsnew_vcp.html
         - title: Additional release information
           url: /rn_relatedrn_vcp.html
