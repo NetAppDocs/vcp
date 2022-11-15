@@ -237,7 +237,7 @@ After a connection has been established to the cluster, the cluster can then be 
 * Current full Cluster Admin user credentials for the cluster.
 * Firewall rules allow open link:reference_requirements_vcp.html[network communication] between the vCenter and the cluster MVIP on TCP ports 443 and 8443.
 
-NOTE: You must add at least one cluster to use the plug-in extension point functions.
+NOTE: You must add at least one cluster to use the NetApp Element Management extension point functions.
 
 .About this task
 This procedure describes how to add a cluster profile so that the cluster can be managed by the plug-in. You cannot modify cluster administrator credentials using the plug-in.
