@@ -18,8 +18,8 @@ Using the NetApp Element Plug-in for VMware vCenter Server, you can manage datas
 .What you'll need
 * To create and manage datastores, you must first create at least one user account.
 * To use QoSSIOC service with datastores, you must first configure settings on the QoSSIOC Settings page from plug-in extension point.
-** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 5.0 and later]
-** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 4.10 and earlier]
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 5.0 and later]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 4.10 and earlier]
 * Because datastores are created using the highest VMFS version supported by the selected ESXi host, all cluster members should run the same version of vSphere and ESXi to avoid VMFS compatibility issues.
 
 .Options
@@ -116,8 +116,8 @@ TIP: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will override
 
 If the QoSSIOC service is not available, you must first configure QoSSIOC settings:
 
-* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 5.0 and later]
-* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 4.10 and earlier]
+* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 5.0 and later]
+* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 4.10 and earlier]
 --
 .. Select *Enable QoS & SIOC*.
 
@@ -277,8 +277,8 @@ IMPORTANT: If you are using QoS policies, do not enable QoSSIOC. QoSSIOC will ov
 
 If the QoSSIOC service is not available, you must first configure settings on the QoSSIOC Settings page from the plug-in extension point:
 
-* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 5.0 and later]
-* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter Plug-in 4.10 and earlier]
+* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 5.0 and later]
+* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in[Configure settings using Element vCenter plug-in 4.10 and earlier]
 --
 
 .. Select *Enable QoS & SIOC*.
