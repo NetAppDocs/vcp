@@ -13,9 +13,9 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-A link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html[volume access group^] is a collection of volumes that users can access using either iSCSI initiators or Fibre Channel initiators.
+A link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html[volume access group] is a collection of volumes that users can access using either iSCSI initiators or FC initiators.
 
-You can create access groups by mapping iSCSI initiator IQNs or Fibre Channel WWPNs in a collection of volumes. Each IQN that you add to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN that you add to an access group enables Fibre Channel network access to the volumes in the access group.
+You can create access groups by mapping iSCSI initiator IQNs or FC WWPNs in a collection of volumes. Each IQN that you add to an access group can access each volume in the group without requiring CHAP authentication. Each WWPN that you add to an access group enables FC network access to the volumes in the access group.
 
 .Options
 * <<Create an access group>>
@@ -28,7 +28,11 @@ You can create access groups by mapping iSCSI initiator IQNs or Fibre Channel WW
 You can create volume access groups with one or more initiators. Mapping Fibre Channel (WWPN) or iSCSI (IQN) client initiators to the volumes in a volume access group enables secure data I/O between a network and a volume.
 
 .Steps
-. Select *NetApp Element Management > Management*.
+. In your vSphere Web Client, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -45,10 +49,14 @@ NOTE: Initiators may be added or deleted after the volume access group has been 
 . Click *OK* to create the access group.
 
 == Edit an access group
-You can edit volume access group names or add or remove initiators from the NetApp Element Management extension point.
+You can edit volume access group names or add or remove initiators from the plug-in extension point.
 
 .Steps
-. Select *NetApp Element Management > Management*.
+. In your vSphere Web Client, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -62,7 +70,7 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 +
 NOTE: If you are removing an initiator, click the trash icon to remove it. When you remove the initiator, it can no longer access the volumes in that volume access group. Normal account access to the volume is not disrupted.
 
-. Click *OK*.
+. Select *OK*.
 
 == Add volumes to an access group
 
@@ -76,7 +84,11 @@ You can add volumes to a volume access group. Each volume can belong to more tha
 
 .Steps
 
-. Select *NetApp Element Management > Management*.
+. In your vSphere Web Client, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -95,7 +107,11 @@ When you remove a volume from an access group, the group no longer has access to
 
 IMPORTANT: Removing a volume from an access group can disrupt host access to the volume.
 
-. Select *NetApp Element Management > Management*.
+. In your vSphere Web Client, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -107,10 +123,14 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 . Select *OK*.
 
 == Delete an access group
-You can delete volume access groups using the NetApp Element Management extension point. You do not need to delete initiator IDs or disassociate volumes from the volume access group prior to deleting the group. After you delete the access group, group access to the volumes is discontinued.
+You can delete volume access groups using the plug-in extension point. You do not need to delete initiator IDs or disassociate volumes from the volume access group prior to deleting the group. After you delete the access group, group access to the volumes is discontinued.
 
 .Steps
-. Select *NetApp Element Management > Management*.
+. In your vSphere Web Client, open the *Management* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Management*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Management*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 

@@ -13,7 +13,7 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 :imagesdir: ../media/
 
 [.lead]
-You can add drives to a cluster, view existing drives, and remove drives using the NetApp Element Management extension point.
+You can add drives to a cluster, view existing drives, and remove drives using the plug-in extension point.
 
 * <<Add available drives to a cluster>>
 * <<View drive details>>
@@ -21,7 +21,7 @@ You can add drives to a cluster, view existing drives, and remove drives using t
 
 == Add available drives to a cluster
 
-You can add drives to a cluster using the NetApp Element Management extension point. When you add a node to the cluster or install new drives in an existing node, the drives automatically register as `Available`. You must add the drives to the cluster before each drive can participate in the cluster.
+You can add drives to a cluster using the plug-in extension point. When you add a node to the cluster or install new drives in an existing node, the drives automatically register as `Available`. You must add the drives to the cluster before each drive can participate in the cluster.
 
 .About this task
 Drives are not displayed in the Available list when the following conditions exist:
@@ -30,7 +30,11 @@ Drives are not displayed in the Available list when the following conditions exi
 * The node of which the drive is a part is in `Pending` state.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -42,14 +46,18 @@ NOTE:  If two or more clusters are added, ensure that the cluster you intend to 
 
 == View drive details
 
-You can view a list of the active drives in the cluster using the Active view on the Drives page of the Cluster tab from the NetApp Element Management extension point. You can change the view by selecting available options using the drop-down filter.
+You can view a list of the active drives in the cluster using the Active view on the Drives page of the Cluster tab from the plug-in extension point. You can change the view by selecting available options using the drop-down filter.
 
 .About this task
 When you first initialize a cluster, the active drives list is empty. You can add drives that are unassigned to a cluster and listed in the Available tab after a new cluster is created.
 
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
 +
 NOTE:  If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
 
@@ -61,14 +69,20 @@ You can view information such as drive IDs, the capacity and status of each driv
 
 == Remove a drive
 
-You can remove a drive from a cluster using the NetApp Element Management extension point. You might do this when reducing cluster capacity or preparing to replace drives nearing the end of their service life. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster before the drive is removed from the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
+You can remove a drive from a cluster using the plug-in extension point. You might do this when reducing cluster capacity or preparing to replace drives nearing the end of their service life. Removing a drive takes the drive offline. Any data on the drive is removed and migrated to other drives in the cluster before the drive is removed from the cluster. The data migration to other active drives in the system can take a few minutes to an hour depending on capacity utilization and active I/O on the cluster.
 
 .About this task
 When you remove a drive in a `Failed` state, the drive is not returned to `Available` or `Active` states. Instead, the drive is unavailable for use in the cluster.
 
 .Steps
-. Select *NetApp Element Management > Cluster*.
-. If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+. In your vSphere Web Client, open the *Cluster* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Cluster*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Cluster*.
+
++
+NOTE: If two or more clusters are added, ensure that the cluster you intend to use for the task is selected in the navigation bar.
+
 . Select *All* from the drop-down list to view the complete list of drives.
 . Remove drives as follows:
 .. Select the check box for each drive you want to remove.
@@ -76,3 +90,7 @@ When you remove a drive in a `Failed` state, the drive is not returned to `Avail
 . Confirm the action.
 +
 NOTE: If there is not enough capacity to remove active drives before removing a node, an error message appears when you confirm the drive removal.
+
+== Find more information
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

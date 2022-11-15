@@ -1,26 +1,74 @@
 ---
 sidebar: sidebar
 permalink: vcp_concept_linkedmode.html
-summary:
+summary: You can use the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using vCenter Linked Mode.
 keywords: netapp, vcp, element, plugin, plug-in, linked mode
 ---
 
-= Linked mode and the plug-in
+= Linked Mode and the vCenter Plug-in
 :hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 You can use the NetApp Element Plug-in for VMware vCenter Server to manage cluster resources from other vCenter Servers using vCenter Linked Mode.
 
-You can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
+[role="tabbed-block"] 
+====
+.Element Plug-in for vCenter 5.0 or later
+--
+Beginning with Element Plug-in 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters.
+
+.Example
+
+* Register vCenter1: `https://[mnode1]:9443/solidfire-mnode/registration`
+* Register vCenter2: `https://[mnode2]:9443/solidfire-mnode/registration`
 
 To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
 
 .Steps
-.	Register the plug-in with each vCenter Server in the Linked Mode environment that will be using the plug-in.
+
+. Deploy the Element Plug-in by registering the plug-in from a separate management node for each vCenter Server in the Linked Mode environment that uses the plug-in.
+
+. Use the Element Plug-in.
+.. Log in to the web client of any vCenter Server in the Linked Mode environment.
+.. On the *NetApp Element Remote Plugin* line, select the *Instance* list.
++
+image:select_instance.png[select the instance from the list]
+
+.. Select the vCenter Server that you want to work with.
++
+After you have selected the target vCenter Server, you can add and manage the clusters for that vCenter Server environment.
++
+NOTE: You can only view and manage the storage clusters associated with the selected vCenter Server. 
+ 
+.Example
+You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage cluster2. You want vCenter1 to manage cluster1 and vCenter2 to manage cluster2.
+
+image:two_vcenter_topology.PNG[depicts the vCenter and cluster topology]
+
+After registering the plug-in with a separate management node for each vCenter Server, set up the storage cluster management.
+
+.Steps
+. Log in to the web client of any vCenter Server in the Linked Mode environment.
+. On the *NetApp Element Remote Plugin* line, select the *Instance* list.
+. To manage cluster1 from the vCenter1 web client, select *vCenter1* from the list.
+. Add cluster1 to the Element Plug-in inventory.
+. On the *NetApp Element Remote Plugin* line, select the *Instance* list
+. To manage cluster2 from the vCenter2 web client, select *vCenter2* from the list. 
+. Add cluster2 to the Element Plug-in inventory.
+-- 
+
+.Element Plug-in for vCenter 4.10 or earlier
+--
+For Element Plug-in 4.10 or earlier, you can only manage the storage cluster in the Element Plug-in when you are logged in to the destination vCenter web client.
+
+To set up storage cluster management in a vSphere Linked Mode environment, you can use the following procedure to manually add the storage clusters.
+
+.Steps
+.	Register the plug-in with each vCenter Server in the Linked Mode environment that uses the plug-in.
 . Log in once to the vSphere Web Client for each linked vCenter Server.
 +
 Logging in initiates installation of the plug-in on the web client.
@@ -34,7 +82,10 @@ You have vCenter1 and vCenter2 in Linked Mode and storage cluster1 and storage c
 . To manage cluster1 from the vCenter1 web client, add cluster1 to the Element Plug-in inventory.
 . Log in to the vCenter2 web client.
 . To manage cluster2 from the vCenter2 web client, add cluster2 to the Element Plug-in inventory.
+--
+====
 
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
