@@ -20,6 +20,8 @@ You can use the plug-in user interface to discover and configure clusters, and t
 == NetApp components related to the plug-in
 
 * *Registration utility*: A tool that allows you to manage the link:vcp_concept_qossioc.html[QoSSIOC] service and plug-in registration with vCenter.
++
+NOTE: Beginning with Element Plug-in for vCenter 5.0, you register the Element Plug-in from a separate management node for each vCenter Server that manages NetApp SolidFire storage clusters. 
 
 * *Management services*: Microservices that include the QoSSIOC service for the vCenter Plug-in. Upgrades to the plug-in are released as part of a management services bundle.
 +
@@ -58,3 +60,4 @@ In addition to vSphere, these are some of the common URLs you use with vCenter p
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
 * link:vcp_concept_config_extension_point.html[NetApp Element Configuration extension point]
 * link:vcp_concept_management_extension_point.html[NetApp Element Configuration extension point]
+* link:vcp_concept_remote_plugin_extension_point.html[NetApp Element Remote Plugin extension point]

@@ -20,44 +20,56 @@ sidebar:
           url: /rn_relatedrn_vcp.html
     - title: Concepts
       entries:
-        - title: NetApp Element Configuration extension point
-          url: /vcp_concept_config_extension_point.html
-        - title: NetApp Element Management extension point
-          url: /vcp_concept_management_extension_point.html
+        - title: NetApp Element Plug-in for VMware vCenter Server 5.0 or later
+          entries:
+            - title: Remote plug-in architecture overview
+              url: /vcp_concept_remote_plugin_architecture.html
+            - title: NetApp Element Remote Plugin extension point
+              url: /vcp_concept_remote_plugin_extension_point.html
+        - title: NetApp Element Plug-in for VMware vCenter Server 4.10 or earlier
+          entries:
+            - title: NetApp Element Configuration extension point
+              url: /vcp_concept_config_extension_point.html
+            - title: NetApp Element Management extension point
+              url: /vcp_concept_management_extension_point.html
         - title: User accounts
           url: /vcp_concept_accounts.html
         - title: Protection domains
           url: /vcp_concept_protection_domains.html
-        - title: Linked mode and the vCenter Plug-in
+        - title: Linked Mode and the vCenter Plug-in
           url: /vcp_concept_linkedmode.html
         - title: QoSSIOC
           url: /vcp_concept_qossioc.html
         - title: Virtual volumes (vVols)
           url: /vcp_concept_vvols.html
     - title: Pre-deployment requirements
-      url: reference_requirements_vcp.html
-    - title: Install and configure the NetApp Element Plug-in for VMware vCenter Server
-      url: /vcp_task_getstarted.html
+      url: /reference_requirements_vcp.html
+    - title: Install and configure the NetApp Element Plug-in for vCenter Server
+      entries:
+        - title: Install and configure Element Plug-in 5.0 and later for vCenter Server 7.0 and later
+          url: /vcp_task_getstarted_5_0.html
+        - title: Install and configure Element Plug-in 4.10 and earlier
+          url: /vcp_task_getstarted.html
     - title: Upgrade the plug-in
       url: /task_vcp_upgrades.html
     - title: Manage storage with the vCenter Plug-in
       entries:
-        - title: Manage clusters
-          url: /vcp_task_clusters_manage.html
-        - title: Manage datastores
-          url: /vcp_task_datastores_manage.html
-        - title: Manage volumes
-          url: /vcp_task_volumes_manage.html
-        - title: Create and manage user accounts
-          url: /vcp_task_create_manage_user_accounts.html
-        - title: Create and manage access groups
-          url: /vcp_task_create_manage_access_groups.html
-        - title: Create and manage initiators
-          url: /vcp_task_create_manage_initiators.html
-        - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
-          url: /vcp_task_qossioc.html
-        - title: Create and manage volume QoS policies
-          url: /vcp_task_qos_policies.html
+      - title: Manage clusters
+        url: /vcp_task_clusters_manage.html
+      - title: Manage datastores
+        url: /vcp_task_datastores_manage.html
+      - title: Manage volumes
+        url: /vcp_task_volumes_manage.html
+      - title: Create and manage user accounts
+        url: /vcp_task_create_manage_user_accounts.html
+      - title: Create and manage access groups
+        url: /vcp_task_create_manage_access_groups.html
+      - title: Create and manage initiators
+        url: /vcp_task_create_manage_initiators.html
+      - title: Set up and manage QoSSIOC for Element volumes and VMware datastores
+        url: /vcp_task_qossioc.html
+      - title: Create and manage volume QoS policies
+        url: /vcp_task_qos_policies.html
     - title: Manage cluster hardware and virtual networks
       entries:
         - title: Manage cluster hardware and virtual networks overview
@@ -153,3 +165,4 @@ homepage:
           url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
         - title: NetApp Product Documentation
           url: https://www.netapp.com/support-and-training/documentation/
+

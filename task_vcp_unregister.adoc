@@ -4,7 +4,6 @@ permalink: task_vcp_unregister.html
 summary: You can unregister the NetApp Element Plug-in for VMware vCenter Server from vCenter.
 keywords: netapp, vcp, vcenter, plugin, element, unregister
 ---
-
 = Unregister the vCenter Plug-in
 :hardbreaks:
 :nofooter:
@@ -16,7 +15,6 @@ keywords: netapp, vcp, vcenter, plugin, element, unregister
 You can unregister the NetApp Element Plug-in for VMware vCenter Server from vCenter using one of these procedures.
 
 .What you'll need
-
 • vCenter Administrator role privileges to unregister a plug-in.
 • The IP address of the management node.
 • URL and credentials for the vCenter from which you are unregistering the plug-in.
@@ -54,12 +52,6 @@ $em.UpdateViewData()
 $em.ExtensionList | ft -property Key
 Disconnect-VIServer * -Confirm:$false
 ----
-
-* For vCenter Plug-in 2.6.1 or earlier:
-.. Enter the URL for the registration utility in a browser or locate the utility in the program directory:
-** `https://<FDVAorManagementNodeIP>:8443`
-** `/opt/solidfire/vcp/bin/vcp-reg.sh`
-.. In the vCenter Plugin Register/Unregister window, select *Unregister*.
 
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]

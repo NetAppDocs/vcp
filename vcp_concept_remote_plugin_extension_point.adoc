@@ -1,0 +1,77 @@
+---
+sidebar: sidebar
+permalink: vcp_concept_remote_plugin_extension_point.html
+summary:
+keywords: netapp, vcp, element, plugin, plug-in, management, extension point, remote
+---
+
+= NetApp Element Remote Plugin extension point
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Beginning with NetApp Element vCenter plug-in 5.0, you can access the remote Element Plug-in by using the NetApp Element Remote Plugin extension point, which enables you to configure and manage clusters, nodes, and drives and view cluster information.
+
+The following tabs are available from the NetApp Element Remote Plugin extension point:
+
+* <<Getting Started>>
+* <<Configuration>>
+* <<Management>>
+* <<About>>
+
+== Getting Started
+
+The Getting Started tab introduces the extension points for the plug-in and the actions that can be performed. You can hide the Getting Started pages from each page or restore them from the *About* tab.
+
+== Configuration
+
+The *Configuration* tab allows you to add and manage clusters, and configure management node settings for QoSSIOC.
+
+NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
+
+image::vcp_config_tab.png[Configuration tab]
+
+The following tabs are available from the *Configuration* tab:
+
+* *Clusters*: Manages the NetApp Element clusters controlled by the plug-in. You can also enable, disable, or configure cluster-specific features.
+* *QoSSIOC Settings*: Configures your credentials for the QoSSIOC service on the management node to communicate with vCenter.
+* *QoSSIOC Events*: Displays information about all detected QoSSIOC events.
+
+== Management
+
+Using the *Management* tab, you can perform the following activities:
+ 
+* View cluster information
+* Manage datastores, volumes, user accounts, access groups, and initiators 
+* Manage individual group snapshots and add and manage drives and nodes
+
+NOTE: Your vSphere Web Client might differ slightly from what is shown in the following image depending on the version of vSphere installed.
+
+image::vcp_management_tab.png[Management tab]
+
+The cluster navigation bar allows you to quickly switch between clusters that have been added to the plug-in:
+
+* *Cluster*: If two or more clusters are added, ensure that the cluster you intend to use for management tasks is selected in the navigation bar. Select other added clusters from the drop-down list.
+* *MVIP*: The management virtual IP address of the selected cluster.
+* *SVIP*: The storage virtual IP address of the selected cluster.
+* *vCenter*: The vCenter Server which the selected cluster can access. The cluster is assigned access to a vCenter Server when the cluster is added to the plug-in.
+
+The following tabs are available from the *Management* tab:
+
+* *Reporting*: Displays information about cluster components and provides a cluster performance overview. You can also find information about events, alerts, iSCSI sessions, running tasks, and performance volumes from the tab.
+* *Management*: Create and manage datastores, volumes, user accounts, access groups, and initiators. You can also perform backup operations, clones, and snapshots. QoS policies are available to be created and managed using NetApp Element software 10 or later.
+* *Protection*: Manage individual and group snapshots. You can also create schedules for snapshot creation, pair clusters for real-time replication, and manage volume pairs.
+* *Cluster*: Add and manage drives and nodes. You can also create and manage VLANs.
+* *VVols*: Manage virtual volumes and their associated storage containers, protocol endpoints, and bindings.
+
+== About
+Displays plug-in version information and provides a service bundle download option.
+
+[discrete]
+== Find more information
+* link:concept_vcp_product_overview.html[NetApp Element Plug-in for vCenter Server overview]
+*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

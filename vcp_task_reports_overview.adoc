@@ -16,9 +16,11 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 You can view high-level cluster information for the selected cluster, including overall capacity, efficiency, and performance, on the Overview page of the Reporting tab from the NetApp Element Management extension point of the NetApp Element Plug-in for VMware vCenter Server.
 
 .Steps
-. From the vCenter Plug-in, select *NetApp Element Management*.
-. Select *Reporting*.
-. Monitor the data on the Overview page.
+. From the vCenter Plug-in, open the *Reporting* tab:
++
+* Beginning with Element vCenter plug-in 5.0, select *NetApp Element Remote Plugin > Management > Reporting*.
+* For Element vCenter plug-in 4.10 and earlier, select *NetApp Element Management > Reporting*.
+. Monitor the data on the *Overview* page.
 
 == Reporting Overview page data
 
