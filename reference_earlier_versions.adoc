@@ -13,13 +13,15 @@ summary: Documentation is available for releases earlier than version 4.6 of the
 :imagesdir: ../media/
 
 [.lead]
-Documentation is also available for releases earlier than version 5.0 of the NetApp Element Plug-in for VMware vCenter Server.
+Documentation is also available for releases earlier than version 5.1 of the NetApp Element Plug-in for VMware vCenter Server.
 
-NOTE: This link:index.html[documentation link] for Element vCenter plug-in 5.0 also includes versions 4.6, 4.7, 4.8, 4.9, and 4.10.
+NOTE: This link:index.html[documentation link] for Element vCenter plug-in 5.1 also includes versions 4.6, 4.7, 4.8, 4.9, 4.10, and 5.0.
 
 [cols=4*,options="header"]
 |===
 | Version | Plug-in release notes | Management services release notes | User guide
+
+| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[2.21.61^] | link:index.html[Link]
 
 | 4.10 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458[2.21.61^] | link:index.html[Link]
 
