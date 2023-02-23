@@ -21,3 +21,5 @@ The system reports error codes with each alert that help you determine what comp
 The following list outlines the different types of system alerts.
 
 include::https://raw.githubusercontent.com/NetAppDocs/element-software/main/_include/reference_monitor_cluster_fault_codes.adoc[]
+
+// 2022 FEB 7, DOC-4671
