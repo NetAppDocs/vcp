@@ -92,7 +92,7 @@ For vCenter Servers 7.0 and 8.0, you can create a "VCProle" in vCenter for an El
 . Select *Add*.
 . Complete the fields in the *Add User* screen, and select *Add*.
 +
-image:vcp_add_user.png[screenshot of the Add User fields]
+image:vcp_add_user.PNG[screenshot of the Add User fields]
 . Select *Access Control* > *Roles*, and select *New*.
 . In the *New role* screen, complete the following steps:
 .. Under *Role name*, enter "VCProle".
@@ -101,7 +101,7 @@ image:vcp_add_user.png[screenshot of the Add User fields]
 .. Select *Create*.
 
 +
-image:vcp_create_vcprole.png[screenshot of the New Role fields]
+image:vcp_create_vcprole.PNG[screenshot of the New Role fields]
 . Select *Global Permissions*, and select *Add*.
 
 . In the *Add Permission* screen, complete the following steps:
@@ -113,7 +113,7 @@ image:vcp_create_vcprole.png[screenshot of the New Role fields]
 .. Select *Propagate to children* and select *OK*.
 --
 +
-image:vcp_assign_vcprole.png[screenshot of the Add Permission fields]
+image:vcp_assign_vcprole.PNG[screenshot of the Add Permission fields]
 +
 You can now log into the vSphere Web Client using the "vcpuser" account.
 
