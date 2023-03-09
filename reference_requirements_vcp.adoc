@@ -15,7 +15,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 [.lead]
 Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you must verify that your system meets the requirements for plug-in use. 
 
-You also have the option to <<create_vcp_role,create a *VCProle* in vCenter>> for an Element plug-in user to give them permission to register or upgrade the Element Plug-in for vCenter Server and perform administration tasks.
+For vCenter Servers 7.0 and 8.0, you can <<create_vcp_role,create a "VCProle" in vCenter>> for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 [role="tabbed-block"] 
 ==== 
@@ -82,8 +82,7 @@ You need to allow some TCP ports through your datacenter's edge firewall so that
 
 [[create_vcp_role]]
 == (Optional) Create a "VCProle" in vCenter
-For vCenter Servers 7.0 and 8.0, you can create a *VCProle* in vCenter to give an Element plug-in user permissions to register or upgrade the Element Plug-in for vCenter Server 
-and perform Element plug-in administration tasks.
+For vCenter Servers 7.0 and 8.0, you can create a "VCProle" in vCenter for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 .Steps
 . Log into the vSphere Web Client as an administrator.
@@ -93,7 +92,7 @@ and perform Element plug-in administration tasks.
 . Select *Add*.
 . Complete the fields in the *Add User* screen, and select *Add*.
 +
-image::vcp_add_user.png[screenshot of the Add User fields]
+image:vcp_add_user.png[screenshot of the Add User fields]
 . Select *Access Control* > *Roles*, and select *New*.
 . In the *New role* screen, complete the following steps:
 .. Under *Role name*, enter "VCProle".
@@ -102,18 +101,21 @@ image::vcp_add_user.png[screenshot of the Add User fields]
 .. Select *Create*.
 
 +
-image::vcp_create_vcprole.png[screenshot of the New Role fields]
+image:vcp_create_vcprole.png[screenshot of the New Role fields]
 . Select *Global Permissions*, and select *Add*.
 
 . In the *Add Permission* screen, complete the following steps:
++
+--
 .. Select the target domain from the *Domain* list.
 .. In the *User/Group* field, enter the Element plug-in user ID.
 .. Select *VCProle* from the *Role* list.
 .. Select *Propagate to children* and select *OK*.
-
+--
 +
-image::vcp_assign_vcprole.png[screenshot of the Add Permission fields]
-
+image:vcp_assign_vcprole.png[screenshot of the Add Permission fields]
++
+You can now log into the vSphere Web Client using the "vcpuser" account.
 
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
