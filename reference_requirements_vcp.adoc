@@ -98,7 +98,7 @@ image:vcp_add_user.PNG[screenshot of the Add User fields]
 .. Under *Role name*, enter "VCProle".
 .. Ender a description.
 .. From the *Show* list, select the permissions for your vCenter Server version:
-... Select the following permissions For vCenter Server 8.0:
+... Select the permissions for vCenter Server 8.0:
 * Cryptographic operations > Register VM
 * Datastore > Select All
 * Extension > Select All
@@ -113,7 +113,7 @@ image:vcp_add_user.PNG[screenshot of the Add User fields]
 * Virtual machine > Edit Inventory > Register
 * VM storage policies > VM storage policies view permissions > View VM storage policies
 
-... Select the following permissions For vCenter Server 7.x:
+... Select the permissions for vCenter Server 7.x:
 * Cryptographic operations > Register VM
 * Datastore > Select All
 * Extension > Select All
