@@ -97,7 +97,7 @@ image:vcp_add_user.PNG[screenshot of the Add User fields]
 . In the *New role* screen, complete the following steps:
 .. Under *Role name*, enter "VCProle".
 .. Ender a description.
-.. From the *Show* list, select the permissions for you vCenter version: *Permissions For vCenter 7.x* or *Permissions For vCenter 8*.
+.. From the *Show* list, select the permissions for your vCenter Server version: *Permissions For vCenter 7.x* or *Permissions For vCenter 8*.
 .. Select *Create*.
 
 +
