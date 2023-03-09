@@ -15,7 +15,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 [.lead]
 Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you must verify that your system meets the requirements for plug-in use. 
 
-For vCenter Servers 7.0 and 8.0, you can <<create_vcp_role,create a "VCProle" in vCenter>> for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
+For vCenter Servers 8.0 and 7.0, you can <<create_vcp_role,create a "VCProle" in vCenter>> for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 [role="tabbed-block"] 
 ==== 
@@ -82,7 +82,7 @@ You need to allow some TCP ports through your datacenter's edge firewall so that
 
 [[create_vcp_role]]
 == (Optional) Create a "VCProle" in vCenter
-For vCenter Servers 7.0 and 8.0, you can create a "VCProle" in vCenter for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
+For vCenter Servers 8.0 and 7.0, you can create a "VCProle" in vCenter for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 .Steps
 . Log into the vSphere Web Client as an administrator.
@@ -97,7 +97,37 @@ image:vcp_add_user.PNG[screenshot of the Add User fields]
 . In the *New role* screen, complete the following steps:
 .. Under *Role name*, enter "VCProle".
 .. Ender a description.
-.. From the *Show* list, select the permissions for your vCenter Server version: *Permissions For vCenter 7.x* or *Permissions For vCenter 8*.
+.. From the *Show* list, select the permissions for your vCenter Server version:
+... Select the following permissions For vCenter Server 8.0:
+* Cryptographic operations > Register VM
+* Datastore > Select All
+* Extension > Select All
+* Host > Configuration > Change settings
+* Host > Configuration > Connection
+* Host > Configuration > Maintenance
+* Host > Configuration > Storage partition configuration
+* Host > Configuration > System Management
+* Host > Configuration > System resources
+* Privilege.Task.Update.Task.Update.label > privilege.Task.Update.Task.Update.label
+* Tasks > Select All
+* Virtual machine > Edit Inventory > Register
+* VM storage policies > VM storage policies view permissions > View VM storage policies
+
+... Select the following permissions For vCenter Server 7.x:
+* Cryptographic operations > Register VM
+* Datastore > Select All
+* Extension > Select All
+* Host > Configuration > Change settings
+* Host > Configuration > Connection
+* Host > Configuration > Maintenance
+* Host > Configuration > Storage partition configuration
+* Host > Configuration > System Management
+* Host > Configuration > System Resources
+* Plugin > SELECT ALL
+* Scheduled task > SELECT ALL
+* Storage Views >  SELECT ALL
+* Tasks > SELECT ALL
+
 .. Select *Create*.
 
 +
