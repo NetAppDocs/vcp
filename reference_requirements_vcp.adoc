@@ -123,10 +123,10 @@ image:vcp_add_user.PNG[screenshot of the Add User fields]
 * Host > Configuration > Storage partition configuration
 * Host > Configuration > System Management
 * Host > Configuration > System resources
-* Plugin > SELECT ALL
-* Scheduled task > SELECT ALL
-* Storage Views > SELECT ALL
-* Tasks > SELECT ALL
+* Plugin > Select All
+* Scheduled task > Select All
+* Storage Views > Select All
+* Tasks > Select All
 
 .. Select *Create*.
 
