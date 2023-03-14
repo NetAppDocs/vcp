@@ -10,10 +10,12 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :nofooter:
 :icons: font
 :linkattrs:
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
-Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you must verify that your system meets the requirements for plug-in use.
+Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you must verify that your system meets the requirements for plug-in use. 
+
+For vCenter Servers 8.0 and 7.0, you can <<create_vcp_role,create a "VCP role" in vCenter>> for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 [role="tabbed-block"] 
 ==== 
@@ -78,6 +80,75 @@ The plug-in supports the following major versions:
 == Network port requirements
 You need to allow some TCP ports through your datacenter's edge firewall so that you can manage the system remotely and allow clients outside of your datacenter to connect to resources. For a comprehensive list of ports used in NetApp HCI and SolidFire systems, see this link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html[page].
 
+[[create_vcp_role]]
+== (Optional) Create a "VCP role" in vCenter
+For vCenter Servers 8.0 and 7.0, you can create a "VCP role" in vCenter for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
+
+.Steps
+. Log into the vSphere Web Client as an administrator.
+. Select *Administration*.
+. Select *Single Sign On* > *Users and Groups*.
+. Select the *Users* tab and from the *Domain* list, select the target domain.
+. Select *Add*.
+. Complete the fields in the *Add User* screen, and select *Add*.
++
+image:vcp_add_user.PNG[screenshot of the Add User fields]
+. Select *Access Control* > *Roles*, and select *New*.
+. In the *New role* screen, complete the following steps:
+.. Under *Role name*, enter "VCProle".
+.. Ender a description.
+.. From the *Show* list, select the permissions for your vCenter Server version:
+... Select the permissions for vCenter Server 8.0:
+* Cryptographic operations > Register VM
+* Datastore > Select All
+* Extension > Select All
+* Host > Configuration > Change settings
+* Host > Configuration > Connection
+* Host > Configuration > Maintenance
+* Host > Configuration > Storage partition configuration
+* Host > Configuration > System Management
+* Host > Configuration > System resources
+* Privilege.Task.Update.Task.Update.label > privilege.Task.Update.Task.Update.label
+* Tasks > Select All
+* Virtual machine > Edit Inventory > Register
+* VM storage policies > VM storage policies view permissions > View VM storage policies
+
+... Select the permissions for vCenter Server 7.x:
+* Cryptographic operations > Register VM
+* Datastore > Select All
+* Extension > Select All
+* Host > Configuration > Change settings
+* Host > Configuration > Connection
+* Host > Configuration > Maintenance
+* Host > Configuration > Storage partition configuration
+* Host > Configuration > System Management
+* Host > Configuration > System Resources
+* Plugin > Select All
+* Scheduled task > Select All
+* Storage Views > Select All
+* Tasks > Select All
+
+.. Select *Create*.
+
++
+image:vcp_create_vcprole.PNG[screenshot of the New Role fields]
+. Select *Global Permissions*, and select *Add*.
+
+. In the *Add Permission* screen, complete the following steps:
++
+--
+.. Select the target domain from the *Domain* list.
+.. In the *User/Group* field, enter the Element plug-in user ID.
+.. Select *VCProle* from the *Role* list.
+.. Select *Propagate to children* and select *OK*.
+--
++
+image:vcp_assign_vcprole.PNG[screenshot of the Add Permission fields]
++
+You can now log into the vSphere Web Client using the "vcpuser" account.
+
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2023-MAR-8, DOC-4677
