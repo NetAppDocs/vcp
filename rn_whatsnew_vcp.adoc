@@ -4,7 +4,6 @@ permalink: rn_whatsnew_vcp.html
 summary: Learn what's new in this version of NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 ---
-
 = What's new in NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
