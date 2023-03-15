@@ -51,5 +51,7 @@ Element vCenter plug-in 4.6 is available with the 2.16 release of management ser
 == Find more information
 * link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes KB^]
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2022 FEB 03, DOC-4651
