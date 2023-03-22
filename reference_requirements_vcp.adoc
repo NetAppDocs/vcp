@@ -4,7 +4,6 @@ permalink: reference_requirements_vcp.html
 summary: Before you begin using the NetApp Element Plug-in for VMware vCenter Server, you need to understand prerequisites for product installation and use.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
-
 = Requirements for the NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
