@@ -4,7 +4,6 @@ permalink: rn_whatsnew_vcp.html
 summary: Learn what's new in this version of NetApp Element Plug-in for VMware vCenter Server.
 keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 ---
-
 = What's new in NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
@@ -13,7 +12,10 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 :imagesdir: ../media/
 
 [.lead]
-NetApp Element Plug-in for vCenter Server 5.0 contains the remote plug-in architecture which is designed to integrate the plug-in functionality into a vSphere Client without having to run inside the vCenter Server. The remote architecture supports plug-in isolation and enables scale-out of plug-ins that operate in large vSphere environments. The remote Element Plug-in is deployed in a docker container inside a management node along with management services. link:vcp_concept_remote_plugin_architecture.html[Learn more.] 
+NetApp Element Plug-in for vCenter Server 5.1 provides security and performance improvements. https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734[Learn more^].
+
+== NetApp Element Plug-in for vCenter Server 5.0
+NetApp Element Plug-in for vCenter Server 5.0 contains the remote plug-in architecture which is designed to integrate the plug-in functionality into a vSphere Client without having to run inside the vCenter Server. The remote architecture supports plug-in isolation and enables scale-out of plug-ins that operate in large vSphere environments. The remote Element Plug-in is deployed in a docker container inside a management node along with management services. link:vcp_concept_remote_plugin_architecture.html[Learn more]. 
 
 Element vCenter plug-in 5.0 supports VMware vSphere 8.0, 7.0, and 7.0 Update 1, 2 and 3 including vCenter Server, ESXi, and vSphere HTML5 Web Client.
 
@@ -49,5 +51,7 @@ Element vCenter plug-in 4.6 is available with the 2.16 release of management ser
 == Find more information
 * link:reference_earlier_versions.html[Earlier versions of NetApp Element Plug-in documentation]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes KB^]
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2022 FEB 03, DOC-4651
