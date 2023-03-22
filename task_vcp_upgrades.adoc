@@ -13,12 +13,12 @@ keywords: netapp, vcp, vcenter, plugin, element, upgrade
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade the NetApp Element Plug-in for vCenter Server by following the steps described for your installation. NetApp Element vCenter plug-in 5.0 is available outside of Element and NetApp HCI releases as part of a management services bundle.
+You can upgrade the NetApp Element Plug-in for vCenter Server by following the steps described for your installation. NetApp Element vCenter plug-in 5.1 is available outside of Element and NetApp HCI releases as part of a management services bundle.
 
 [NOTE]
 ====
 * Beginning with Element Plug-in for vCenter 5.0, only VMware vSphere 8.0 and 7.0 are supported. 
-* When you upgrade from Element Plug-in for vCenter 4.x to 5.0, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local to a remote plug-in.
+* When you upgrade from Element Plug-in for vCenter 4.x to 5.x, the clusters already configured with the plug-in are lost because the data cannot be copied from a vCenter instance to a remote plug-in. You must re-add the clusters to the remote plug-in. This is a one-time activity when upgrading from a local to a remote plug-in.
 ====
 
 .Steps
@@ -28,8 +28,10 @@ To upgrade the plug-in, follow the instructions in the upgrade documentation for
 * https://docs.netapp.com/us-en/element-software/upgrade/task_vcp_upgrade_plugin.html[Upgrade your SolidFire all-flash storage system^]
 
 == Find more information
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[vCenter Plug-in 5.0 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734[vCenter Plug-in 5.1 Release Notes^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes^]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2022 FEB 03, DOC-4651
