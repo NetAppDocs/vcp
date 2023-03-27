@@ -4,7 +4,6 @@ permalink: reference_requirements_vcp.html
 summary: Before you begin using the NetApp Element Plug-in for VMware vCenter Server, you need to understand prerequisites for product installation and use.
 keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
-
 = Requirements for the NetApp Element Plug-in for VMware vCenter Server
 :hardbreaks:
 :nofooter:
@@ -15,7 +14,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 [.lead]
 Before you use NetApp Element Plug-in for VMware vCenter Server to manage your NetApp HCI or SolidFire all-flash array storage, you must verify that your system meets the requirements for plug-in use. 
 
-For vCenter Servers 8.0 and 7.0, you can <<create_vcp_role,create a "VCP role" in vCenter>> for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
+For vCenter Servers 8.0 and 7.0, you can <<create_vcp_role,create a "VCP role" in vCenter>> for an Element plug-in user account, and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 [role="tabbed-block"] 
 ==== 
@@ -82,7 +81,7 @@ You need to allow some TCP ports through your datacenter's edge firewall so that
 
 [[create_vcp_role]]
 == (Optional) Create a "VCP role" in vCenter
-For vCenter Servers 8.0 and 7.0, you can create a "VCP role" in vCenter for an Element plug-in user account and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
+For vCenter Servers 8.0 and 7.0, you can create a "VCP role" in vCenter for an Element plug-in user account, and assign permissions to register or upgrade the Element Plug-in for vCenter Server and perform Element plug-in administration tasks.
 
 .Steps
 . Log into the vSphere Web Client as an administrator.

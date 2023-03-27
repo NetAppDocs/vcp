@@ -20,7 +20,7 @@ You can unregister the NetApp Element Plug-in for VMware vCenter Server from vCe
 • URL and credentials for the vCenter from which you are unregistering the plug-in.
 
 .About this task
-For vSphere 6.7 and earlier, unregistering the plug-in has the same effect as disabling it but does not remove all associated files and folders that are installed locally.  To remove all plug-in files, see instructions on link:task_vcp_remove.html[removing the plugin].
+For vSphere 6.7 and earlier, unregistering the plug-in has the same effect as disabling it but does not remove all associated files and folders that are installed locally. To remove all plug-in files, see instructions on link:task_vcp_remove.html[removing the plugin].
 
 For vSphere 7.0, all files are removed automatically after you unregister the plugin.
 
@@ -54,5 +54,5 @@ Disconnect-VIServer * -Confirm:$false
 ----
 
 == Find more information
-*	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
+* https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
