@@ -21,7 +21,7 @@ NOTE: This link:index.html[documentation link] for Element vCenter plug-in 5.1 a
 |===
 | Version | Plug-in release notes | Management services release notes | User guide
 
-| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[2.21.61^] | link:index.html[Link]
+| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992[2.22.7^] | link:index.html[Link]
 
 | 4.10 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458[PDF^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458[2.21.61^] | link:index.html[Link]
 
