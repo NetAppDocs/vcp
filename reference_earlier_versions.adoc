@@ -4,7 +4,6 @@ permalink: reference_earlier_versions.html
 keywords: documentation, earlier, previous, versions
 summary: Documentation is available for releases earlier than version 4.6 of the NetApp Element Plug-in for VMware vCenter Server.
 ---
-
 = Earlier versions of NetApp Element Plug-in for VMware vCenter Server documentation
 :hardbreaks:
 :nofooter:
