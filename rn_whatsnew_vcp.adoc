@@ -12,6 +12,11 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 :imagesdir: ../media/
 
 [.lead]
+NetApp Element Plug-in for vCenter Server 5.2 provides security and performance improvements.......
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272 [Learn more^].
+
+
+== NetApp Element Plug-in for vCenter Server 5.1
 NetApp Element Plug-in for vCenter Server 5.1 provides security and performance improvements. https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734[Learn more^].
 
 == NetApp Element Plug-in for vCenter Server 5.0
