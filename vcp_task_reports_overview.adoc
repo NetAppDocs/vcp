@@ -45,15 +45,17 @@ The following data appears on the Reporting Overview page:
 +
 NOTE: The protection domains feature is not compatible with two-node clusters.
 
-**  *Custom Protection Domain Health*: Displays the custom Protection Domain health status for the cluster when a Custom Protection domain is configured on the cluster.
+**  *Custom Protection Domain Health*: Displays the custom Protection Domain health status for the cluster when a custom Protection domain is configured on the cluster.
 +
-*** *Protection Level*: Indicates the overall protection level status against the failure of one of the custom Protection Domains for the cluster.
-*** *Block Capacity*: Indicates the current protection level status of the block services subsystem against the failure of one of the custom Protection Domains for the cluster.
+The following data indicates the protection available against the failure of one of the custom Protection Domains for the cluster.
+
+*** *Protection Level*: Indicates the overall protection level status. 
+*** *Block Capacity*: Indicates the current protection level status of the block services subsystem.
 +
 It also indicates the free block capacity for which the block services subsystem can maintain the "Fault Resilient Protection level" status.
 
-*** *Metadata Capacity*: Indicates the current protection level status of the metadata services subsystem against the failure of one of the custom Protection Domains for the cluster.
-*** *Ensemble Nodes*: Indicates the current protection level status of the ensemble members subsystem against the failure of one of the custom Protection Domains for the cluster.
+*** *Metadata Capacity*: Indicates the current protection level status of the metadata services subsystem.
+*** *Ensemble Nodes*: Indicates the current protection level status of the ensemble members subsystem.
 
 ** *Protection Domains Monitoring Level*: The protection domain resiliency levels as selected by the user. Possible values are Chassis or Node. Green indicates that the cluster is capable of the selected monitoring level. Red indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
 ** *Remaining Block Capacity*: Indicates the percentage of block capacity that is remaining to maintain the selected resiliency level.
