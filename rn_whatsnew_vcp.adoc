@@ -12,7 +12,9 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 :imagesdir: ../media/
 
 [.lead]
-NetApp Element Plug-in for vCenter Server 5.2 provides important supportability and security improvements and an enhancement to the reporting for custom Protection Domains. With version 5.2, the plug-in now displays Custom Protection Domain Health information when a custom Protection Domain is configured on an Element cluster. link:vcp_task_reports_overview.html#reporting-overview-page-data[Learn more].
+NetApp Element Plug-in for vCenter Server 5.2 contains supportability improvements and an enhancement to the custom Protection Domains display. 
+
+With version 5.2, the plug-in displays the Custom Protection Domain Health information when a custom Protection Domain is configured on an Element cluster. link:vcp_task_reports_overview.html#reporting-overview-page-data[Learn more].
 
 == NetApp Element Plug-in for vCenter Server 5.1
 NetApp Element Plug-in for vCenter Server 5.1 provides security and performance improvements. https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734[Learn more^].
