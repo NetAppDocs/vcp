@@ -134,7 +134,7 @@ homepage:
         - title: Product overview
           url: /concept_vcp_product_overview.html
         - title: Install and deploy the plug-in
-          url: /vcp_task_getstarted.html
+          url: /vcp_task_getstarted_5_0.html
     - title:  SolidFire all-flash storage systems
       links:
         - title: What's new in NetApp Element software
