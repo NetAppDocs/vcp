@@ -127,16 +127,14 @@ homepage:
   tiles:
     - title: Get started
       links:
+        - title: Release notes
+          url: /rn_relatedrn_vcp.html
+        - title: What's new
+          url: /rn_whatsnew_vcp.html 
         - title: Product overview
           url: /concept_vcp_product_overview.html
         - title: Install and deploy the plug-in
           url: /vcp_task_getstarted.html
-    - title: Learn
-      links:    
-        - title: What's new
-          url: /rn_whatsnew_vcp.html
-        - title: Release notes
-          url: /rn_relatedrn_vcp.html 
     - title:  SolidFire all-flash storage systems
       links:
         - title: What's new in NetApp Element software
