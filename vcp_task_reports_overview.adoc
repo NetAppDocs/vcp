@@ -48,7 +48,7 @@ NOTE: The protection domains feature is not compatible with two-node clusters.
 ** *Protection Domains Monitoring Level*: The protection domain resiliency levels as selected by the user. Possible values are Chassis or Node. Green indicates that the cluster is capable of the selected monitoring level. Red indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
 ** *Remaining Block Capacity*: Indicates the percentage of block capacity that is remaining to maintain the selected resiliency level.
 ** *Metadata Capacity*: Indicates if there is sufficient metadata capacity to heal from failure while also maintaining undisrupted data availability. Normal (green) indicates that the cluster has sufficient metadata to maintain the selected monitoring level. Full (red) indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
-*  *Custom Protection Domain Health*: Displays the custom Protection Domain health status for the cluster when a custom Protection domain is configured on the cluster.
+*  *Custom Protection Domain Health*: Displays the custom Protection Domain health status for the cluster when a custom Protection Domain is configured on the cluster.
 +
 The following data indicates the protection available against the failure of one of the custom Protection Domains for the cluster.
 
