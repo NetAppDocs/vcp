@@ -28,7 +28,7 @@ VMware vSphere 8.0 and 7.0 including vCenter and ESXi with software iSCSI adapte
 .VMware vSphere versions supported by the plug-in
 The plug-in supports the following major versions of VMware software:
 
-* vSphere 8.0 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
+* vSphere 8.0 Update 1 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 * vSphere 7.0 and 7.0 Update 1, 2 and 3 including vCenter Server, ESXi, and VMFS5 and VMFS6 datastores
 
 IMPORTANT: VMware vSphere 6.5 and 6.7 reached end of support status on October 15, 2022. Beginning with Element Plug-in 5.0, vSphere 6.5 and 6.7 are no longer supported. For details, see this https://core.vmware.com/blog/reminder-vsphere-6567-end-general-support[article^].
