@@ -27,7 +27,7 @@ To upgrade the plug-in, follow the instructions in the upgrade documentation for
 * https://docs.netapp.com/us-en/element-software/upgrade/task_vcp_upgrade_plugin.html[Upgrade your SolidFire all-flash storage system^]
 
 == Find more information
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272 [vCenter Plug-in 5.2 Release Notes^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272[vCenter Plug-in 5.2 Release Notes^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes^]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
