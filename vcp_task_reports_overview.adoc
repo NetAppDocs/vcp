@@ -48,6 +48,18 @@ NOTE: The protection domains feature is not compatible with two-node clusters.
 ** *Protection Domains Monitoring Level*: The protection domain resiliency levels as selected by the user. Possible values are Chassis or Node. Green indicates that the cluster is capable of the selected monitoring level. Red indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
 ** *Remaining Block Capacity*: Indicates the percentage of block capacity that is remaining to maintain the selected resiliency level.
 ** *Metadata Capacity*: Indicates if there is sufficient metadata capacity to heal from failure while also maintaining undisrupted data availability. Normal (green) indicates that the cluster has sufficient metadata to maintain the selected monitoring level. Full (red) indicates that the cluster is no longer capable of the selected monitoring level and corrective action is needed.
+*  *Custom Protection Domain Health*: Displays the custom Protection Domain health status for the cluster when a custom Protection Domain is configured on the cluster.
++
+The following data indicates the protection available against the failure of one of the custom Protection Domains for the cluster.
+
+** *Protection Level*: Indicates the overall protection level status. 
+** *Block Capacity*: Indicates the current protection level status of the block services subsystem.
++
+It also indicates the total capacity threshold at which resiliency is lost.
+
+** *Metadata Capacity*: Indicates the current protection level status of the metadata services subsystem.
+** *Ensemble Nodes*: Indicates the current protection level status of the ensemble members subsystem.
+
 * *Provisioned IOPS*: A summary of how volume IOPS might be overprovisioned on the cluster. Provisioned IOPS calculations are determined by the sum of the total minimum IOPS, maximum IOPS, and burst IOPS for all volumes on the cluster divided by the maximum IOPS rated for the cluster.
 +
 NOTE: For example, if there are four volumes in the cluster, each with minimum IOPS of 500, maximum IOPS of 15,000, and burst IOPS of 15,000, the total number of minimum IOPS would be 2,000, total maximum IOPS would be 60,000, and total burst IOPS would be 60,000. If the cluster is rated at maximum IOPS of 50,000,then the calculations would be the following:
@@ -73,3 +85,5 @@ NOTE: For example, if there are four volumes in the cluster, each with minimum I
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2023 AUG 14, DOC-4707
