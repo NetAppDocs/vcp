@@ -74,11 +74,11 @@ NOTE: You need at least one connected host before you can create a new datastore
 +
 [role="tabbed-block"]
 ====
-.Select exiting volume
+.Select existing volume
 --
 If you select an existing volume, you must meet the following prerequisites:
 
-* To use a Volume Access Group:
+* To use a volume access group:
 .. Create a new volume with 512e enabled.
 .. Add the volume to an access group that contains the one or more target hos initiators.
 * To use CHAP:
