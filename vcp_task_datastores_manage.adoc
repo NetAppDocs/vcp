@@ -80,12 +80,12 @@ If you select an existing volume, you must meet the following prerequisites:
 
 * To use a volume access group:
 .. Create a new volume with 512e enabled.
-.. Add the volume to an access group that contains the one or more target hos initiators.
+.. Add the volume to an access group that contains the one or more target host initiators.
 * To use CHAP:
 .. Ensure CHAP is configured for each target host iSCSI adapter.
 .. Create a new volume with 512e enabled using one of the following options:
-*** Use an account with appropriate CHAP settings for each target hosts.
-*** Create an account and configure target and initiator secrets.
+*** Use an account with the appropriate CHAP settings for each target host.
+*** Create an account and configure the target and initiator secrets.
 .. View the volume details.
 .. Add the volume IQN to each target host iSCSI adapter static discovery table.
 --
