@@ -70,9 +70,28 @@ TIP: Use a unique name for each datastore in a data center. For multiple cluster
 NOTE: You need at least one connected host before you can create a new datastore. If your host has multiple initiators, select an initiator or the host to select all initiators. If you are using vCenter Linked Mode, only hosts available to the vCenter Server to which the cluster is assigned are available to select.
 
 . Select *Next*.
-. In the *Configure Volume* pane, select an existing volume and proceed to the next step, or create a new volume for the new datastore:
+. In the *Configure Volume* pane, select an existing volume or create a new volume for the new datastore:
 +
-NOTE: If you select an existing volume to create a new datastore, existing data will be lost. For existing VMFS volumes, see VMware documentation about https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html[mounting a VMFS datastore copy^] and https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html[managing duplicate VMFS datastores^].
+[role="tabbed-block"]
+====
+.Select existing volume
+--
+If you select an existing volume, you must meet the following prerequisites:
+
+* To use a volume access group:
+.. Create a new volume with 512e enabled.
+.. Add the volume to an access group that contains the one or more target host initiators.
+* To use CHAP:
+.. Ensure CHAP is configured for each target host iSCSI adapter.
+.. Create a new volume with 512e enabled using one of the following options:
+*** Use an account with the appropriate CHAP settings for each target host.
+*** Create an account and configure the target and initiator secrets.
+.. View the volume details.
+.. Add the volume IQN to each target host iSCSI adapter static discovery table.
+--
+
+.Create new volume
+--
 
 .. Enter a name for the volume that backs the datastore.
 .. Select a user account from the account list.
@@ -91,6 +110,8 @@ By default, 512 byte emulation is set to ON for all the new volumes.
 TIP: QoS policies are best for service environments, for example, with database, application, or infrastructure servers that rarely reboot and need constant equal access to storage. Custom QoSSIOC automation is best for light use VMs, such as virtual desktops or specialized kiosk-type VMs, that may be rebooted, powered on, or powered off daily or several times a day. QoSSIOC automation and QoS policies should not be used together.
 +
 TIP: Volumes that have a Max or Burst IOPS value greater than 20,000 IOPS might require high queue depth or multiple sessions to achieve this level of IOPS on a single volume.
+--
+====
 
 . Select *Next*.
 . Configure the authorization type for host access by choosing one of the following:
@@ -409,3 +430,5 @@ NOTE: You can also choose to retain the volume and later associate it with anoth
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+
+// 2024 FEB 26, DOC-4738
