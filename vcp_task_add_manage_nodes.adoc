@@ -88,8 +88,6 @@ To restart the cluster, you can select all cluster nodes and perform a restart.
 
 IMPORTANT: This method restarts all networking services on a node, causing temporary loss of networking connectivity.
 
-NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
-
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
 +
@@ -111,10 +109,6 @@ You can shut down one or more active nodes in a cluster using the plug-in extens
 
 .What you'll need
 You have stopped I/O and disconnected all iSCSI sessions if you are restarting more than one node simultaneously.
-
-.About this task
-
-NOTE: This feature is unavailable in SolidFire Enterprise SDS clusters.
 
 .Steps
 . In your vSphere Web Client, open the *Cluster* tab:
