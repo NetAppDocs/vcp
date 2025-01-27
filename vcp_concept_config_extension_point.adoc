@@ -4,7 +4,6 @@ permalink: vcp_concept_config_extension_point.html
 summary:
 keywords: netapp, vcp, element, plugin, plug-in, config, extension point
 ---
-
 = NetApp Element Configuration extension point
 :hardbreaks:
 :nofooter:
