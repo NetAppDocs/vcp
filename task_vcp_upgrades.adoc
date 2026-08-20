@@ -30,7 +30,6 @@ To upgrade the plug-in, follow the instructions in the upgrade documentation for
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864[NetApp Element vCenter plug-in 5.5 Release Notes^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes[Hybrid Cloud Control and Management Services Release Notes^]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-*	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+*	https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation resources^]
 
 // 2022 FEB 03, DOC-4651

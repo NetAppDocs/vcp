@@ -95,14 +95,14 @@ You can change the QoSSIOC and vCenter credentials of an active Element manageme
 * *QoSSIOC User ID*: The user ID for the QoSSIOC service. The QoSSIOC service default user ID is `admin`. For NetApp HCI, the user ID is the same one entered during installation using the NetApp Deployment Engine.
 * *QoSSIOC Password*: The password for the Element QoSSIOC service. The QoSSIOC service default password is `solidfire`. If you have not created a custom password, you can create one from the registration utility UI (`https://[management node IP]:9443`).
 +
-NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)[KB^] article.
+NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP[KB^] article.
 
 * *vCenter User ID*: The user name for the vCenter admin with full Administrator role privileges.
 * *vCenter Password*: The password for the vCenter admin with full Administrator role privileges.
 . Select *OK*.
 The QoSSIOC Status field displays `UP` when the plug-in can successfully communicate with the service.
 +
-NOTE: See this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_VCP[KB^] to troubleshoot if the status is any of the following:
+NOTE: See this https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP[KB^] to troubleshoot if the status is any of the following:
 * `Down`: QoSSIOC is not enabled.
 * `Not Configured`: QoSSIOC settings have not been configured.
 * `Network Down`: vCenter cannot communicate with the QoSSIOC service on the network. The
@@ -141,7 +141,7 @@ image::vcp_registration_ui_qossioc.png[NetApp Element Plug-in for vCenter Server
 . Enter the following information:
 .. *Old Password*: The current password of the QoSSIOC service. If you have not yet assigned a password, type the default password of `solidfire`.
 +
-NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_VCP[KB^] article.
+NOTE: For NetApp HCI deployments, the default password is randomly generated during installation. To determine the password, see procedure 4 in this https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP[KB^] article.
 
 .. *New Password*: The new password for the QoSSIOC service.
 .. *Confirm Password*: Enter the new password again.

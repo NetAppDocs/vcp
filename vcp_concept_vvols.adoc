@@ -49,5 +49,4 @@ NOTE: VASA support for up to 10 vCenters is available as an upgrade patch if you
 
 == Find more information
 * https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-* http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation resources^]

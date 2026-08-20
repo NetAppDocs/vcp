@@ -308,5 +308,4 @@ You can create link:vcp_task_datastores_manage.html#create-a-datastore[datastore
 
 == Find more information
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
-*	http://mysupport.netapp.com/hci/resources[NetApp HCI Resources page^]
-* https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
+* https://docs.netapp.com/us-en/element-software/index.html[SolidFire and Element documentation resources^]
