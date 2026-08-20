@@ -37,7 +37,7 @@ The following tabs are available from the NetApp Element Management extension po
 * *VVols*: Manage virtual volumes and their associated storage containers, protocol endpoints, and bindings.
 
 == Find more information
-* link:vcp_concept_config_extension_point[NetApp Element Configuration extension point]
+* link:vcp_concept_config_extension_point.html[NetApp Element Configuration extension point]
 * link:concept_vcp_product_overview.html[NetApp Element Plug-in for VMware vCenter Server overview]
 * https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 * https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]

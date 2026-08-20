@@ -29,7 +29,7 @@ The following tabs are available from the NetApp Element Configuration extension
 * *About*: Displays plug-in version information and provides a service bundle download option.
 
 == Find more information
-* link:vcp_concept_management_extension_point[NetApp Element Management extension point]
+* link:vcp_concept_management_extension_point.html[NetApp Element Management extension point]
 * link:concept_vcp_product_overview.html[NetApp Element Plug-in for VMware vCenter Server overview]
 *	https://docs.netapp.com/us-en/hci/index.html[NetApp HCI Documentation^]
 *	https://www.netapp.com/data-storage/solidfire/documentation[SolidFire and Element Resources page^]
