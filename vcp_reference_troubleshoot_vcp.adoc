@@ -6,7 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 ---
 
 = Troubleshoot the vCenter Plug-in
-:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
+:url-peak: https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,7 +17,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 You need to be aware of some of the common issues with the NetApp Element Plug-in for VMware vCenter Server and the steps to resolve them.
 
 * <<Plug-in registration successful but icons do not appear in web client>>
-* <<Errors after NetApp Element Plug-in for VMware vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1>>
+* <<error_vcp48_67u1,Errors after NetApp Element Plug-in for VMware vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1>>
 * <<Error registering plug-in using Registration UI>>
 * <<Error updating plug-in using Registration UI>>
 * <<Error message that NetApp extension cannot be upgraded>>
